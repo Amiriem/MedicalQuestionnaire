@@ -1,54 +1,24 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MedicalQuestionnaire.Default1" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <!DOCTYPE html>
-<html lang="en">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<head>
-    <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Colorlib Templates">
-    <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
-
-    <!-- Title Page-->
-    <title>Au Register Forms by Colorlib</title>
-
-    <!-- Icons font CSS-->
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-    <!-- Vendor CSS-->
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
-
-    <!-- Main CSS-->
-    <link href="css/main.css" rel="stylesheet" media="all">
-</head>
-
-<body>
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
-        <div class="wrapper wrapper--w680">
+        <div class="wrapper wrapper--w780">
             <div class="card card-4">
                 <div class="card-body">
-                    <h2 class="title">Registration Form</h2>
+                    <h2 class="title">Background Information</h2>
                     <form method="POST">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">first name</label>
-                                    <input class="input--style-4" type="text" name="first_name">
+                                    <input class="input--style-4" type="text" id="first_name" name="first_name">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">last name</label>
-                                    <input class="input--style-4" type="text" name="last_name">
+                                    <input class="input--style-4" type="text" id="last_name" name="last_name">
                                 </div>
                             </div>
                         </div>
@@ -57,7 +27,7 @@
                                 <div class="input-group">
                                     <label class="label">Birthday</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="birthday">
+                                        <input class="input--style-4 js-datepicker" type="text" id="birthday" name="birthday">
                                         <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                     </div>
                                 </div>
@@ -68,12 +38,17 @@
                                     <div class="p-t-10">
                                         <label class="radio-container m-r-45">
                                             Male
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" checked="checked" id="gender" name="gender">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">
                                             Female
-                                            <input type="radio" name="gender">
+                                            <input type="radio" id="gender_Female" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">
+                                            Other/Prefer not to answer
+                                            <input type="radio" id="gender_Other" name="gender">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -82,6 +57,26 @@
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Medicare Number</label>
+                                    <input class="input--style-4" type="text" id="medicare_number" name="medicare_number">
+                                </div>
+                            </div>
+                            <div class="col-2" style="padding-top: 40px;">
+                                <label class="radio-container">
+                                    Yes
+                                        <input type="radio" id="yes_medicare_card" checked="checked" name="_medicare_card" onclick="yes_medicare_card_changed(this)">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">
+                                    No Medicare Card
+                                        <input type="radio" id="no_medicare_card" name="_medicare_card" onclick="no_medicare_card_changed(this)">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2 m-r-45">
                                 <div class="input-group">
                                     <label class="label">Email</label>
                                     <input class="input--style-4" type="email" name="email">
@@ -137,8 +132,37 @@
     <!-- Main JS-->
     <script src="js/global.js"></script>
 
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+    <script type='text/javascript' src="js/jquery.mycart.js"></script>
+    <script type="text/javascript">
 
-</html>
+        $(document).ready(function () {
+
+            // alert();
+        });
+
+        function no_medicare_card_changed(termsCheckBox) {
+
+            if (termsCheckBox.checked) {
+                $("#medicare_number").prop("disabled", true);
+                $("#medicare_number").prop("style", "background-color: #D3D3D3;");
+                $("#medicare_number").val("");
+            } else {
+                $("#medicare_number").prop("disabled", false);
+                $("#medicare_number").prop("style", "background-color: #fafafa;");
+            }
+        }
+        function yes_medicare_card_changed(termsCheckBox) {
+
+            if (termsCheckBox.checked) {
+                $("#medicare_number").prop("disabled", false);
+                $("#medicare_number").prop("style", "background-color: #fafafa;");
+            } else {
+                $("#medicare_number").prop("disabled", true);
+                $("#medicare_number").prop("style", "background-color: #D3D3D3;");
+                $("#medicare_number").val("");
+            }
+        }
+
+    </script>
 
 </asp:Content>

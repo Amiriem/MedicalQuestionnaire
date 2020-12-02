@@ -224,6 +224,10 @@ h6 {
   margin-right: 45px;
 }
 
+.m-r-40 {
+    margin: 40px;
+}
+
 /* ==========================================================================
    #WRAPPER
    ========================================================================== */
@@ -415,7 +419,7 @@ input {
 .radio-container {
   display: inline-block;
   position: relative;
-  padding-left: 30px;
+  padding-left: 38px;
   cursor: pointer;
   font-size: 16px;
   color: #666;
