@@ -74,13 +74,13 @@
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <div class="input-group" style="display:block;"id="expiration_date_Box">
-                          <label class="label">Expiration Date</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="expiration_date" name="expiration_date">
-                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                    </div>
+                            <div class="input-group" style="display: block;" id="expiration_date_Box">
+                                <label class="label">Expiration Date</label>
+                                <div class="input-group-icon">
+                                    <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="expiration_date" name="expiration_date">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>
+                            </div>
                         </div>
                         <div class="row row-space">
                             <div class="col-2 m-r-45">
@@ -96,31 +96,31 @@
                                 </div>
                             </div>
                         </div>
-                              <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Are you working now?</label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">
-                                            Yes
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Are you working now?</label>
+                                <div class="p-t-10">
+                                    <label class="radio-container m-r-45">
+                                        Yes
                                             <input type="radio" checked="checked" id="yes_working_question" name="working_question" onclick="yes_offworking_changed(this)">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">
-                                            No
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">
+                                        No
                                             <input type="radio" id="no_working_question" name="working_question" onclick="no_offworking_changed(this)">
-                                            <span class="checkmark"></span>
-                                        </label>
-    
-                                    </div>
-                                </div>
-                                       <div class="input-group" style="display:none;"id="date_offwork_Box">
-                          <label class="label">If no, since when have you been off work?</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="date_offwork" name="expiration_date">
-                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                    </div>
+                                        <span class="checkmark"></span>
+                                    </label>
+
                                 </div>
                             </div>
+                            <div class="input-group" style="display: none;" id="date_offwork_Box">
+                                <label class="label">If no, since when have you been off work?</label>
+                                <div class="input-group-icon">
+                                    <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="date_offwork" name="expiration_date">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
                         <div class="input-group">
                             <label class="label">What do you do for a living/what is your profession?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
@@ -145,7 +145,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                          <div class="input-group">
+                        <div class="input-group">
                             <label class="label">How often?(per week)</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
@@ -176,336 +176,336 @@
                                     <option disabled="disabled" selected="selected">Choose option</option>
                                     <option>Right</option>
                                     <option>Left</option>
-                                    <option>Ambidextrous</option> 
+                                    <option>Ambidextrous</option>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
                         <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Do you smoke? </label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">
-                                            Yes
+                            <div class="input-group">
+                                <label class="label">Do you smoke? </label>
+                                <div class="p-t-10">
+                                    <label class="radio-container m-r-45">
+                                        Yes
                                             <input type="radio" checked="checked" id="yes_smoke" name="smoke" onclick="yes_smoke_changed(this)">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">
-                                            No
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">
+                                        No
                                             <input type="radio" id="no_smoke" name="smoke" onclick="no_smoke_changed(this)">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container" style="bottom: 25px;left: 222px;">
-                                            Never Smoked
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container" style="bottom: 25px; left: 222px;">
+                                        Never Smoked
                                             <input type="radio" id="never_smoke" name="smoke" onclick="never_smoke_changed(this)">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
+                                        <span class="checkmark"></span>
+                                    </label>
                                 </div>
-                                       <div class="input-group" style="display:none;"id="smoke_off_Box">
-                          <label class="label">If no, since when have you been off work?</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="smoke_off" name="smoke_off">
-                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                    </div>
+                            </div>
+                            <div class="input-group" style="display: none;" id="smoke_off_Box">
+                                <label class="label">If no, since when have you been off work?</label>
+                                <div class="input-group-icon">
+                                    <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="smoke_off" name="smoke_off">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>
+                            </div>
 
-                             <div class="input-group" id="How_many_years_smoke" style="display:block;">
-                            <label class="label">If yes, for how many years?</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option> 
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option> 
-                                    <option>7</option>
-                                    <option>8</option> 
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>11</option> 
-                                    <option>12</option>
-                                    <option>13</option> 
-                                    <option>14</option>
-                                    <option>15</option>
-                                    <option>16</option> 
-                                    <option>17</option> 
-                                    <option>18</option> 
-                                    <option>19</option> 
-                                    <option>20</option> 
-                                    <option>More than 20 years</option> 
-                                </select>
-                                <div class="select-dropdown"></div>
+                            <div class="input-group" id="How_many_years_smoke" style="display: block;">
+                                <label class="label">If yes, for how many years?</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="subject">
+                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>More than 20 years</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                            <div class="input-group" id="how_many_cigarettes_perday" style="display: block;">
+                                <label class="label">How many cigarettes per day?</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="subject">
+                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>More than 1 Box</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
                             </div>
                         </div>
-                            <div class="input-group" id="how_many_cigarettes_perday" style="display:block;">
-                            <label class="label">How many cigarettes per day?</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option> 
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option> 
-                                    <option>7</option>
-                                    <option>8</option> 
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>11</option> 
-                                    <option>12</option>
-                                    <option>13</option> 
-                                    <option>14</option>
-                                    <option>15</option>
-                                    <option>16</option> 
-                                    <option>17</option> 
-                                    <option>18</option> 
-                                    <option>19</option> 
-                                    <option>20</option> 
-                                    <option>More than 1 Box</option> 
-                                </select>
-                                <div class="select-dropdown"></div>
-                            </div>
-                        </div>
-                            </div>
-                                   <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Do you drink alcohol?</label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">
-                                            Yes
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Do you drink alcohol?</label>
+                                <div class="p-t-10">
+                                    <label class="radio-container m-r-45">
+                                        Yes
                                             <input type="radio" checked="checked" id="yes_alcohol" name="alcohol" onclick="yes_alcohol_changed(this)">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">
-                                            No
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">
+                                        No
                                             <input type="radio" id="no_alcohol" name="alcohol" onclick="no_alcohol_changed(this)">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container" style="bottom: 25px;left: 222px;">
-                                            Never alcoholed
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container" style="bottom: 25px; left: 222px;">
+                                        Never alcoholed
                                             <input type="radio" id="never_alcohol" name="alcohol" onclick="never_alcohol_changed(this)">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
+                                        <span class="checkmark"></span>
+                                    </label>
                                 </div>
-                                       <div class="input-group" style="display:none;"id="alcohol_off_Box">
-                          <label class="label">If no, since when have you been off work?</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="alcohol_off" name="alcohol_off">
-                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                    </div>
+                            </div>
+                            <div class="input-group" style="display: none;" id="alcohol_off_Box">
+                                <label class="label">If no, since when have you been off work?</label>
+                                <div class="input-group-icon">
+                                    <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="alcohol_off" name="alcohol_off">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>
+                            </div>
 
-                             <div class="input-group" id="How_many_weeks_alcohol" style="display:block;">
-                            <label class="label">If yes, how many drinks per week?</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option> 
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option> 
-                                    <option>7</option>
-                                    <option>8</option> 
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>11</option> 
-                                    <option>12</option>
-                                    <option>13</option> 
-                                    <option>14</option>
-                                    <option>15</option>
-                                    <option>16</option> 
-                                    <option>17</option> 
-                                    <option>18</option> 
-                                    <option>19</option> 
-                                    <option>20</option> 
-                                    <option>More than 20</option> 
-                                </select>
-                                <div class="select-dropdown"></div>
+                            <div class="input-group" id="How_many_weeks_alcohol" style="display: block;">
+                                <label class="label">If yes, how many drinks per week?</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="subject">
+                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>More than 20</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
                             </div>
                         </div>
-                         </div>
 
-                           <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Do you any recreational drugs?</label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">
-                                            Yes
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Do you any recreational drugs?</label>
+                                <div class="p-t-10">
+                                    <label class="radio-container m-r-45">
+                                        Yes
                                             <input type="radio" checked="checked" id="yes_drug" name="drug" onclick="yes_drug_changed(this)">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">
-                                            No
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">
+                                        No
                                             <input type="radio" id="no_drug" name="drug" onclick="no_drug_changed(this)">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container" style="bottom: 25px;left: 222px;">
-                                            Never druged
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container" style="bottom: 25px; left: 222px;">
+                                        Never druged
                                             <input type="radio" id="never_drug" name="drug" onclick="never_drug_changed(this)">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
+                                        <span class="checkmark"></span>
+                                    </label>
                                 </div>
-                                       <div class="input-group" style="display:none;"id="drug_off_Box">
-                          <label class="label">If no, since when have you been off drug?</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="drug_off" name="alcohol_off">
-                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                    </div>
+                            </div>
+                            <div class="input-group" style="display: none;" id="drug_off_Box">
+                                <label class="label">If no, since when have you been off drug?</label>
+                                <div class="input-group-icon">
+                                    <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="drug_off" name="alcohol_off">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>
-
-                             <div class="input-group" id="How_many_weeks_drug" style="display:block;">
-                            <label class="label">If yes, how often use drug?</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option> 
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option> 
-                                    <option>7</option>
-                                    <option>8</option> 
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>11</option> 
-                                    <option>12</option>
-                                    <option>13</option> 
-                                    <option>14</option>
-                                    <option>15</option>
-                                    <option>16</option> 
-                                    <option>17</option> 
-                                    <option>18</option> 
-                                    <option>19</option> 
-                                    <option>20</option> 
-                                    <option>More than 20</option> 
-                                </select>
-                                <div class="select-dropdown"></div>
                             </div>
-                           </div>
-                                <div class="input-group" id="what_drug" style="display:block;">
-                            <label class="label">If yes, what drug use drug?</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option> 
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option> 
-                                    <option>7</option>
-                                    <option>8</option> 
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>11</option> 
-                                    <option>12</option>
-                                    <option>13</option> 
-                                    <option>14</option>
-                                    <option>15</option>
-                                    <option>16</option> 
-                                    <option>17</option> 
-                                    <option>18</option> 
-                                    <option>19</option> 
-                                    <option>20</option> 
-                                    <option>More than 20</option> 
-                                </select>
-                                <div class="select-dropdown"></div>
-                            </div>
-                           </div>
 
-                                 <div class="col-2">
+                            <div class="input-group" id="How_many_weeks_drug" style="display: block;">
+                                <label class="label">If yes, how often use drug?</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="subject">
+                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>More than 20</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                            <div class="input-group" id="what_drug" style="display: block;">
+                                <label class="label">If yes, what drug use drug?</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="subject">
+                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>More than 20</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-2">
                                 <div class="input-group">
                                     <label style="width: 500px;" class="label">Do you have any of the following medical conditions?</label>
                                     <div class="p-t-10">
                                         <label class="radio-container m-r-45" style="width: 150px;">
                                             AIDS or HIV
-                                            <input type="checkbox" id="AIDS_or_HIV" name="AIDS_or_HIV" >
+                                            <input type="checkbox" id="AIDS_or_HIV" name="AIDS_or_HIV">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container" style="width: 300px;">
                                             Alcohol Dependency or Abuse
-                                            <input type="checkbox" id="Alcohol_Dependency_or_Abuse" name="Alcohol_Dependency_or_Abuse" >
+                                            <input type="checkbox" id="Alcohol_Dependency_or_Abuse" name="Alcohol_Dependency_or_Abuse">
                                             <span class="checkmark"></span>
                                         </label>
-                                        <label class="radio-container" >
+                                        <label class="radio-container">
                                             Anemia
-                                            <input type="checkbox" id="Anemia" name="Anemia" >
+                                            <input type="checkbox" id="Anemia" name="Anemia">
                                             <span class="checkmark"></span>
                                         </label>
-                                           <label class="radio-container">
+                                        <label class="radio-container">
                                             Anxiety
-                                            <input type="checkbox" id="Anxiety" name="Anxiety"   >
+                                            <input type="checkbox" id="Anxiety" name="Anxiety">
                                             <span class="checkmark"></span>
                                         </label>
-                                           <label class="radio-container">
+                                        <label class="radio-container">
                                             Arthritis
-                                            <input type="checkbox" id="Arthritis" name="Arthritis" >
+                                            <input type="checkbox" id="Arthritis" name="Arthritis">
                                             <span class="checkmark"></span>
                                         </label>
-                                               <label class="radio-container">
+                                        <label class="radio-container">
                                             Asthma
-                                            <input type="checkbox" id="Asthma" name="Asthma"  >
+                                            <input type="checkbox" id="Asthma" name="Asthma">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
-                                </div> 
-                           </div>
-
-                                   <div class="input-group" id="bleeding_problems" >
-                            <label class="label">Bleeding Problems. Type?</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>None</option>
-                                    <option>Blood Clots</option>
-                                    <option>More than 20</option> 
-                                </select>
-                                <div class="select-dropdown"></div>
+                                </div>
                             </div>
-                           </div>
 
-                                <div class="input-group" id="cancer_type" >
-                            <label class="label">Cancer. Type? </label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>Dementia</option>
-                                    <option>Chronic Obstructive Pulmonary Disease or Emphysema</option>
-                                    <option>Drug Dependency or Abuse</option> 
-                                </select>
-                                <div class="select-dropdown"></div>
+                            <div class="input-group" id="bleeding_problems">
+                                <label class="label">Bleeding Problems. Type?</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="subject">
+                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option>None</option>
+                                        <option>Blood Clots</option>
+                                        <option>More than 20</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
                             </div>
-                           </div>
 
-                                    <div class="input-group" id="hepatitis_type" >
-                            <label class="label">Hepatitis. Type? </label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>Osteoporosis</option>
-                                    <option>Pancreatitis</option>
-                                    <option>Peripheral Vascular Disease</option> 
-                                    <option>Pulmonary Embolism</option> 
-                                    <option>Reflux or GERD</option> 
-                                    <option>Seizures</option> 
-                                    <option>Sleep Apnea</option> 
-                                    <option>Stroke</option>  
-                                    <option>Other</option>
-                                </select>
-                                <div class="select-dropdown"></div>
+                            <div class="input-group" id="cancer_type">
+                                <label class="label">Cancer. Type? </label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="subject">
+                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option>Dementia</option>
+                                        <option>Chronic Obstructive Pulmonary Disease or Emphysema</option>
+                                        <option>Drug Dependency or Abuse</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
                             </div>
-                           </div>
 
-                                       <div class="col-2">
+                            <div class="input-group" id="hepatitis_type">
+                                <label class="label">Hepatitis. Type? </label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="subject">
+                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option>Osteoporosis</option>
+                                        <option>Pancreatitis</option>
+                                        <option>Peripheral Vascular Disease</option>
+                                        <option>Pulmonary Embolism</option>
+                                        <option>Reflux or GERD</option>
+                                        <option>Seizures</option>
+                                        <option>Sleep Apnea</option>
+                                        <option>Stroke</option>
+                                        <option>Other</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-2">
                                 <div class="input-group">
                                     <label class="label" style="width: 200px;">Have you had surgery?</label>
                                     <div class="p-t-10">
@@ -521,81 +521,142 @@
                                         </label>
                                     </div>
                                 </div>
-                                            
-                             <div class="input-group" id="surgery_names" style="display:block;">
-                            <label class="label" style="width: 500px;">What was the surgery name?</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option> 
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option> 
-                                    <option>7</option>
-                                    <option>8</option> 
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>11</option> 
-                                    <option>12</option>
-                                    <option>13</option> 
-                                    <option>14</option>
-                                    <option>15</option>
-                                    <option>16</option> 
-                                    <option>17</option> 
-                                    <option>18</option> 
-                                    <option>19</option> 
-                                    <option>20</option> 
-                                    <option>More than 20</option> 
-                                </select>
-                                <div class="select-dropdown"></div>
-                            </div>
-                           </div>
 
-                                             <div class="input-group" style="display:block;"id="surgery_date_Box">
-                          <label class="label" style="width: 200px;">When was your surgery?</label>
+                                <div class="input-group" id="surgery_names" style="display: block;">
+                                    <label class="label" style="width: 500px;">What was the surgery name?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                            <option>17</option>
+                                            <option>18</option>
+                                            <option>19</option>
+                                            <option>20</option>
+                                            <option>More than 20</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group" style="display: block;" id="surgery_date_Box">
+                                    <label class="label" style="width: 200px;">When was your surgery?</label>
                                     <div class="input-group-icon">
                                         <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="surgery_date" name="alcohol_off">
                                         <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                     </div>
                                 </div>
-         
 
-                                <div class="input-group" id="surgon_name" style="display:block;">
-                            <label class="label"style="width: 500px;">What was the surgon name?</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option> 
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option> 
-                                    <option>7</option>
-                                    <option>8</option> 
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>11</option> 
-                                    <option>12</option>
-                                    <option>13</option> 
-                                    <option>14</option>
-                                    <option>15</option>
-                                    <option>16</option> 
-                                    <option>17</option> 
-                                    <option>18</option> 
-                                    <option>19</option> 
-                                    <option>20</option> 
-                                    <option>More than 20</option> 
-                                </select>
-                                <div class="select-dropdown"></div>
+
+                                <div class="input-group" id="surgon_name" style="display: block;">
+                                    <label class="label" style="width: 500px;">What was the surgon name?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                            <option>17</option>
+                                            <option>18</option>
+                                            <option>19</option>
+                                            <option>20</option>
+                                            <option>More than 20</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
                             </div>
-                           </div>
-                        </div>
-                        <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
-                        </div>
+                             <br />
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <label class="label" style="width: 500px;">Do you take any medications regularly?</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container" style="width: 500px;">
+                                            Yes
+                                            <input type="radio" checked="checked" id="yes_question_file_medication" name="question_file_medication" onclick="yes_file_medication_changed(this)">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container m-r-45" style="width: 500px;">
+                                            No
+                                            <input type="radio" id="no_question_file_medication" name="question_file_medication" onclick="no_file_medication_changed(this)">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="p-t-12" id="Box_medical_file_form" style="display: block;">
+                                    <form action="#" id="medical_file_form" enctype="multipart/form-data">
+
+                                        <label class="label" for="capture">Please Upload your medication file</label>
+
+                                        <input type="file" id="medical_file" accept="image/*" onchange="change_file_medication_click()" hidden="hidden" capture multiple />
+                                        <button class="btn btn--radius-2 btn--blue" style="background: #a338cd;" id="medical_file_button" onclick="button_file_medication_click()" type="button">Choose</button>
+                                        <span id="text_medical_file">No file chosen, yet.</span>
+                                         <br /> 
+                                    </form>
+                                </div>
+                                 <br />
+
+                                 <div class="col-6">
+                                <div class="input-group">
+                                    <label class="label" style="width: 500px;">Do you have Referral Information?</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container" style="width: 500px;">
+                                            Yes
+                                            <input type="radio" checked="checked" id="yes_Referral" name="Referral_information" onclick="yes_referral_changed(this)">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container m-r-45" style="width: 500px;">
+                                            No
+                                            <input type="radio" id="no_Referral" name="Referral_information" onclick="no_referral_changed(this)">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="p-t-12" id="Box_referral_form" style="display: block;">
+                                    <form action="#" id="referral_form" enctype="multipart/form-data">
+
+                                        <label class="label" for="capture">Please Upload your medication file</label>
+
+                                        <input type="file" id="referral_file" accept="image/*" onchange="change_referral_click()" hidden="hidden" capture multiple />
+                                        <button class="btn btn--radius-2 btn--blue" style="background: #a338cd;" id="referral_button" onclick="button_referral_click()" type="button">Choose</button>
+                                        <span id="text_referral_file">No file chosen, yet.</span>
+                                         <br />
+                                    </form>
+                                </div>
+                                 <br />
+                            </div>
+
+                            <div class="p-t-15">
+                                 <br /><br /> 
+                                <button class="btn btn--radius-2 btn--blue" type="button" onclick="submit_button_click()">Submit</button>
+                            </div>
                     </form>
                 </div>
             </div>
@@ -614,6 +675,7 @@
 
     <script type='text/javascript' src="js/jquery.mycart.js"></script>
     <script type="text/javascript">
+
 
         $(document).ready(function () {
 
@@ -649,20 +711,20 @@
                 $("#expiration_date_Box").hide();
             }
         }
-            function no_offworking_changed(termsCheckBox) {
+        function no_offworking_changed(termsCheckBox) {
 
-                if (termsCheckBox.checked) {
-                    $("#date_offwork_Box").show();
-                } else {
-                    $("#date_offwork_Box").hide();
-                }
+            if (termsCheckBox.checked) {
+                $("#date_offwork_Box").show();
+            } else {
+                $("#date_offwork_Box").hide();
             }
+        }
         function yes_offworking_changed(termsCheckBox) {
 
             if (termsCheckBox.checked) {
                 $("#date_offwork_Box").hide();
 
-            } else { 
+            } else {
                 $("#date_offwork_Box").show();
             }
         }
@@ -784,6 +846,91 @@
 
             }
         }
+        function yes_file_medication_changed(termsCheckBox) {
+            if (termsCheckBox.checked) {
+                $("#Box_medical_file_form").show();
+            } else {
+                $("#Box_medical_file_form").hide();
+            }
+        }
+        function no_file_medication_changed(termsCheckBox) {
+
+            if (termsCheckBox.checked) {
+                $("#Box_medical_file_form").hide();
+            } else {
+                $("#Box_medical_file_form").show();
+
+            } yes_file_medication_changed
+        }
+        
+        function yes_referral_changed(termsCheckBox) {
+            if (termsCheckBox.checked) {
+                $("#Box_referral_form").show();
+            } else {
+                $("#Box_referral_form").hide();
+            }
+        }
+        function no_referral_changed(termsCheckBox) {
+
+            if (termsCheckBox.checked) {
+                $("#Box_referral_form").hide();
+            } else {
+                $("#Box_referral_form").show();
+
+            } 
+        }
+        function button_file_medication_click() {
+            document.getElementById('medical_file').click();
+        }
+        function change_file_medication_click() {
+            let input = document.getElementById('medical_file');
+            console.dir(input.files[0]);
+            if (input.value) {
+                alert('File has been successfully uploaded');
+                document.getElementById('text_medical_file').innerHTML = input.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+            }
+            else {
+                document.getElementById('text_medical_file').innerHTML = "No file chosen, yet.";
+            }
+        }
+
+        function button_referral_click() {
+            document.getElementById('referral_file').click();
+        }
+        function change_referral_click() {
+            let input = document.getElementById('referral_file');
+            console.dir(input.files[0]);
+            if (input.value) {
+                alert('File has been successfully uploaded');
+                document.getElementById('text_referral_file').innerHTML = input.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+            }
+            else {
+                document.getElementById('text_referral_file').innerHTML = "No file chosen, yet.";
+            }
+        } 
+
+        function submit_button_click() {
+            
+        }
+        // this is very similat to a start event function
+        //   document.addEventListener('DOMContentLoaded', (ev) => {
+        //                  alert('Hiiiiii');
+        //const input_medical_file = document.getElementById('medical_file');
+
+        //input_medical_file.addEventListener('change', (ev) => {
+        //        alert('nooo');
+
+        //        console.dir(input_medical_file.files[0]);
+        //        if (input.files[0].type.indexOf('image/*') > -1) {
+        //            let imge = document.getElementById('');
+        //            text_file.innerHTML = input_medical_file.value;
+        //        }
+        //        else {
+        //            text_file.innerHTML = "No file chosen, yet.";
+        //        }
+        //        //})
+        //})
+
     </script>
 
 </asp:Content>
