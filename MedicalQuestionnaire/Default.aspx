@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MedicalQuestionnaire.Default1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MedicalQuestionnaire.Default" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"  EnablePageMethods="true">
 
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w780">
@@ -38,7 +38,7 @@
                                     <div class="p-t-10">
                                         <label class="radio-container m-r-45">
                                             Male
-                                            <input type="radio" checked="checked" id="gender" name="gender">
+                                            <input type="radio" checked="checked" id="gender_Male" name="gender">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">
@@ -86,13 +86,13 @@
                             <div class="col-2 m-r-45">
                                 <div class="input-group">
                                     <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email">
+                                    <input class="input--style-4" id="email" type="email" name="email">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Phone Number</label>
-                                    <input class="input--style-4" type="text" name="phone">
+                                    <input class="input--style-4" id="phone_number" type="text" name="phone">
                                 </div>
                             </div>
                         </div>
@@ -124,7 +124,7 @@
                         <div class="input-group">
                             <label class="label">What do you do for a living/what is your profession?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
+                                <select name="subject" id="living_activities">
                                     <option disabled="disabled" selected="selected">Choose option</option>
                                     <option>Employee</option>
                                     <option>Subject 2</option>
@@ -136,7 +136,7 @@
                         <div class="input-group">
                             <label class="label">What sports/activities do you do?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
+                                <select name="subject" id="sports_activites">
                                     <option disabled="disabled" selected="selected">Choose option</option>
                                     <option>Subject 1</option>
                                     <option>Subject 2</option>
@@ -148,7 +148,7 @@
                         <div class="input-group">
                             <label class="label">How often?(per week)</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
+                                <select name="subject" id="how_often_sports">
                                     <option disabled="disabled" selected="selected">Choose option</option>
                                     <option>Subject 1</option>
                                     <option>Subject 2</option>
@@ -160,7 +160,7 @@
                         <div class="input-group">
                             <label class="label">What is the name of your family Doctor?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
+                                <select name="subject" id="name_of_doctor">
                                     <option disabled="disabled" selected="selected">Choose option</option>
                                     <option>Subject 1</option>
                                     <option>Subject 2</option>
@@ -172,7 +172,7 @@
                         <div class="input-group">
                             <label class="label">What hand do you write with?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
+                                <select name="subject" id="hand_write">
                                     <option disabled="disabled" selected="selected">Choose option</option>
                                     <option>Right</option>
                                     <option>Left</option>
@@ -213,7 +213,7 @@
                             <div class="input-group" id="How_many_years_smoke" style="display: block;">
                                 <label class="label">If yes, for how many years?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject">
+                                    <select name="subject" id="smoke_howmany_years">
                                         <option disabled="disabled" selected="selected">Choose option</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -243,7 +243,7 @@
                             <div class="input-group" id="how_many_cigarettes_perday" style="display: block;">
                                 <label class="label">How many cigarettes per day?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject">
+                                    <select name="subject" id="smoke_howmany_perday">
                                         <option disabled="disabled" selected="selected">Choose option</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -303,7 +303,7 @@
                             <div class="input-group" id="How_many_weeks_alcohol" style="display: block;">
                                 <label class="label">If yes, how many drinks per week?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject">
+                                    <select name="subject" id="alcohol_howmany_perweek">
                                         <option disabled="disabled" selected="selected">Choose option</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -364,7 +364,7 @@
                             <div class="input-group" id="How_many_weeks_drug" style="display: block;">
                                 <label class="label">If yes, how often use drug?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject">
+                                    <select name="subject" id="recreationalDrug_howmany_perweeks">
                                         <option disabled="disabled" selected="selected">Choose option</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -394,7 +394,7 @@
                             <div class="input-group" id="what_drug" style="display: block;">
                                 <label class="label">If yes, what drug use drug?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject">
+                                    <select name="subject" id="recreationalDrug_whatDrugs">
                                         <option disabled="disabled" selected="selected">Choose option</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -463,7 +463,7 @@
                             <div class="input-group" id="bleeding_problems">
                                 <label class="label">Bleeding Problems. Type?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject">
+                                    <select name="subject" id="bleeding_problemstypes">
                                         <option disabled="disabled" selected="selected">Choose option</option>
                                         <option>None</option>
                                         <option>Blood Clots</option>
@@ -476,7 +476,7 @@
                             <div class="input-group" id="cancer_type">
                                 <label class="label">Cancer. Type? </label>
                                 <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject">
+                                    <select name="subject" id="cancer_problemstypes">
                                         <option disabled="disabled" selected="selected">Choose option</option>
                                         <option>Dementia</option>
                                         <option>Chronic Obstructive Pulmonary Disease or Emphysema</option>
@@ -489,7 +489,7 @@
                             <div class="input-group" id="hepatitis_type">
                                 <label class="label">Hepatitis. Type? </label>
                                 <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject">
+                                    <select name="subject" id="hepatitis_problemtypes">
                                         <option disabled="disabled" selected="selected">Choose option</option>
                                         <option>Osteoporosis</option>
                                         <option>Pancreatitis</option>
@@ -525,7 +525,7 @@
                                 <div class="input-group" id="surgery_names" style="display: block;">
                                     <label class="label" style="width: 500px;">What was the surgery name?</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="subject">
+                                        <select name="subject" id="surgerynames">
                                             <option disabled="disabled" selected="selected">Choose option</option>
                                             <option>1</option>
                                             <option>2</option>
@@ -565,7 +565,7 @@
                                 <div class="input-group" id="surgon_name" style="display: block;">
                                     <label class="label" style="width: 500px;">What was the surgon name?</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="subject">
+                                        <select name="subject" id="surgonname">
                                             <option disabled="disabled" selected="selected">Choose option</option>
                                             <option>1</option>
                                             <option>2</option>
@@ -593,7 +593,7 @@
                                     </div>
                                 </div>
                             </div>
-                             <br />
+                            <br />
                             <div class="col-6">
                                 <div class="input-group">
                                     <label class="label" style="width: 500px;">Do you take any medications regularly?</label>
@@ -618,45 +618,49 @@
                                         <input type="file" id="medical_file" accept="image/*" onchange="change_file_medication_click()" hidden="hidden" capture multiple />
                                         <button class="btn btn--radius-2 btn--blue" style="background: #a338cd;" id="medical_file_button" onclick="button_file_medication_click()" type="button">Choose</button>
                                         <span id="text_medical_file">No file chosen, yet.</span>
-                                         <br /> 
+                                        <br />
                                     </form>
                                 </div>
-                                 <br />
+                                <br />
 
-                                 <div class="col-6">
-                                <div class="input-group">
-                                    <label class="label" style="width: 500px;">Do you have Referral Information?</label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container" style="width: 500px;">
-                                            Yes
+                                <div class="col-6">
+                                    <div class="input-group">
+                                        <label class="label" style="width: 500px;">Do you have Referral Information?</label>
+                                        <div class="p-t-10">
+                                            <label class="radio-container" style="width: 500px;">
+                                                Yes
                                             <input type="radio" checked="checked" id="yes_Referral" name="Referral_information" onclick="yes_referral_changed(this)">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container m-r-45" style="width: 500px;">
-                                            No
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container m-r-45" style="width: 500px;">
+                                                No
                                             <input type="radio" id="no_Referral" name="Referral_information" onclick="no_referral_changed(this)">
-                                            <span class="checkmark"></span>
-                                        </label>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
                                     </div>
+                                    <div class="p-t-12" id="Box_referral_form" style="display: block;">
+                                        <form action="#" id="referral_form" enctype="multipart/form-data">
+
+                                            <label class="label" for="capture">Please Upload your medication file</label>
+
+                                            <input type="file" id="referral_file" accept="image/*" onchange="change_referral_click()" hidden="hidden" capture multiple />
+                                            <button class="btn btn--radius-2 btn--blue" style="background: #a338cd;" id="referral_button" onclick="button_referral_click()" type="button">Choose</button>
+                                            <span id="text_referral_file">No file chosen, yet.</span>
+                                            <br />
+                                        </form>
+                                    </div>
+                                    <br />
                                 </div>
-                                <div class="p-t-12" id="Box_referral_form" style="display: block;">
-                                    <form action="#" id="referral_form" enctype="multipart/form-data">
+                                <div class="p-t-15">
+                                    <br />
+                                    <br />
+                                    <button class="btn btn--radius-2 btn--blue" id="submit-_button" onclick="submit_button_click()" type="button">Submit</button>
+                                                                    <img id="imagePreview" />
+                                    <textarea id="dataUrl" rows="4" cols="100"> </textarea>
+                                    <canvas id="myCanvas"></canvas>
 
-                                        <label class="label" for="capture">Please Upload your medication file</label>
-
-                                        <input type="file" id="referral_file" accept="image/*" onchange="change_referral_click()" hidden="hidden" capture multiple />
-                                        <button class="btn btn--radius-2 btn--blue" style="background: #a338cd;" id="referral_button" onclick="button_referral_click()" type="button">Choose</button>
-                                        <span id="text_referral_file">No file chosen, yet.</span>
-                                         <br />
-                                    </form>
                                 </div>
-                                 <br />
-                            </div>
-
-                            <div class="p-t-15">
-                                 <br /><br /> 
-                                <button class="btn btn--radius-2 btn--blue" type="button" onclick="submit_button_click()">Submit</button>
-                            </div>
                     </form>
                 </div>
             </div>
@@ -862,7 +866,7 @@
 
             } yes_file_medication_changed
         }
-        
+
         function yes_referral_changed(termsCheckBox) {
             if (termsCheckBox.checked) {
                 $("#Box_referral_form").show();
@@ -877,7 +881,7 @@
             } else {
                 $("#Box_referral_form").show();
 
-            } 
+            }
         }
         function button_file_medication_click() {
             document.getElementById('medical_file').click();
@@ -907,12 +911,888 @@
             else {
                 document.getElementById('text_referral_file').innerHTML = "No file chosen, yet.";
             }
-        } 
+        }
+
 
         function submit_button_click() {
-            
+            //window.open("exit.html", "Thanks for Visiting!");
+
+
+
+            var txtFirstName = document.getElementById('first_name');
+            var txtLastName = document.getElementById('last_name');
+            var txtBirthday = document.getElementById('birthday');
+            var txtMedicareNumber = document.getElementById('medicare_number');
+            var txtExpirationDate = document.getElementById('expiration_date');
+            var txtEmail = document.getElementById('email');
+            var txtPhoneNumber = document.getElementById('phone_number');
+            var livingActivities = document.getElementById('living_activities');
+            var dateOffWork = document.getElementById('date_offwork');
+            var sportsActivites = document.getElementById('sports_activites');
+            var nameOfDoctor = document.getElementById('name_of_doctor');
+            var handWrite = document.getElementById('hand_write');
+            var smokeHowmanyYears = document.getElementById('smoke_howmany_years');
+            var smokeHowmanyPerday = document.getElementById('smoke_howmany_perday');
+            var smokeOffDate = document.getElementById('smoke_off');
+
+            var alcoholHowmanyPerweek = document.getElementById('alcohol_howmany_perweek');
+            var alcoholOffDate = document.getElementById('alcohol_off');
+
+            var recreationalDrugHowmanyPerweeks = document.getElementById('recreationalDrug_howmany_perweeks');
+            var recreationalDrugWhatDrugs = document.getElementById('recreationalDrug_whatDrugs');
+            var recreationalDrugOffDate = document.getElementById('drug_off');
+
+            var bleedingProblemsTypes = document.getElementById('bleeding_problemstypes');
+            var cancerProblemsTypes = document.getElementById('cancer_problemstypes');
+            var hepatitisProblemTypes = document.getElementById('hepatitis_problemtypes');
+
+            var surgeryNames = document.getElementById('surgerynames');
+            var surgeryDate = document.getElementById('surgery_date');
+            var surgonName = document.getElementById('surgonname');
+
+            let medicalFile = document.getElementById('medical_file');
+            let referralFile = document.getElementById('referral_file');
+
+
+
+
+            //var txtGenderMale = document.getElementById('gender_Male');
+            //var txtGenderFemale = document.getElementById('gender_Female');
+            //var txtGenderOther = document.getElementById('gender_Female');
+
+            txtFirstName.style.backgroundColor = "#fafafa";
+            txtLastName.style.backgroundColor = "#fafafa";
+            txtBirthday.style.backgroundColor = "#fafafa";
+
+
+            //if (txtFirstName.value == "") {
+
+            //    alert("Please fill out your Frist Name");
+            //    txtFirstName.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (txtLastName.value == "") {
+            //    alert("Please fill out your Last Name");
+            //    txtLastName.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (txtBirthday.value == "") {
+            //    alert("Please fill out your Birthday");
+            //    txtBirthday.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (txtMedicareNumber.value == "" && document.getElementById('yes_medicare_card').checked) {
+            //    alert("Please fill out your Medicare Number");
+            //    txtMedicareNumber.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (txtExpirationDate.value == "" && document.getElementById('yes_medicare_card').checked) {
+            //    alert("Please fill out your Expiration Date");
+            //    txtExpirationDate.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (txtEmail.value == "") {
+            //    alert("Please fill out your Email");
+            //    txtEmail.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (txtPhoneNumber.value == "") {
+            //    alert("Please fill out your Phone Number");
+            //    txtPhoneNumber.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (livingActivities.value == "Choose option" && document.getElementById('yes_working_question').checked) {
+            //    alert("Please fill out your Living Activities");
+            //    livingActivities.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (dateOffWork.value == "" && document.getElementById('no_working_question').checked) {
+            //    alert("Please fill out your off work date");
+            //    dateOffWork.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (sportsActivites.value == "Choose option") {
+            //    alert("Please fill out your Sport Activities");
+            //    sportsActivites.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (nameOfDoctor.value == "Choose option") {
+            //    alert("Please fill out your Doctor Name");
+            //    nameOfDoctor.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (handWrite.value == "Choose option") {
+            //    alert("Please fill out your Hand Write");
+            //    handWrite.style.backgroundColor = "#ffcfcf";
+            //    return false; 
+            //}
+            //else if (smokeHowmanyYears.value == "Choose option" && document.getElementById('yes_smoke').checked) {
+            //    alert("Please fill out, How Many Years Do You Smoke");
+            //    smokeHowmanyYears.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (smokeHowmanyPerday.value == "Choose option" && document.getElementById('yes_smoke').checked) {
+            //    alert("Please fill out, How Many Smoke Per Day");
+            //    smokeHowmanyPerday.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (smokeOffDate.value == "" && document.getElementById('no_smoke').checked) {
+            //    alert("Please fill out your Smoke Off Date");
+            //    smokeOffDate.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (alcoholHowmanyPerweek.value == "Choose option" && document.getElementById('yes_alcohol').checked) {
+            //    alert("Please fill out, How Many Time Do You Drink Per week");
+            //    alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (alcoholOffDate.value == "" && document.getElementById('no_alcohol').checked) {
+            //    alert("Please fill out your Drinking Off Date");
+            //    alcoholOffDate.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (alcoholHowmanyPerweek.value == "Choose option" && document.getElementById('yes_alcohol').checked) {
+            //    alert("Please fill out, How Many Time Do You Drink Per week");
+            //    alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (alcoholOffDate.value == "" && document.getElementById('no_alcohol').checked) {
+            //    alert("Please fill out your Drinking Off Date");
+            //    alcoholOffDate.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+
+            //else if (recreationalDrugHowmanyPerweeks.value == "Choose option" && document.getElementById('yes_drug').checked) {
+            //    alert("Please fill out, How Many Recreational Drug Per Week");
+            //    recreationalDrugHowmanyPerweeks.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (recreationalDrugWhatDrugs.value == "Choose option" && document.getElementById('yes_drug').checked) {
+            //    alert("Please fill out, What Recreational Drug Do you Use");
+            //    recreationalDrugWhatDrugs.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (recreationalDrugOffDate.value == "" && document.getElementById('no_drug').checked) {
+            //    alert("Please fill out your Recreational Drug Off Date");
+            //    recreationalDrugOffDate.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (bleedingProblemsTypes.value == "Choose option") {
+            //    alert("Please select your Bleeding Problem Type");
+            //    bleedingProblemsTypes.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (cancerProblemsTypes.value == "Choose option") {
+            //    alert("Please select your Cancer Problem Type");
+            //    cancerProblemsTypes.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (hepatitisProblemTypes.value == "Choose option") {
+            //    alert("Please select your Hepatit Problem Type");
+            //    hepatitisProblemTypes.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+
+
+            //else if (surgeryNames.value == "Choose option" && document.getElementById('yes_surgery').checked) {
+            //    alert("Please select your Surgery Name");
+            //    surgeryNames.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (surgeryDate.value == "" && document.getElementById('yes_surgery').checked) {
+            //    alert("Please fill out your Surgery Date");
+            //    surgeryDate.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (surgonName.value == "Choose option" && document.getElementById('yes_surgery').checked) {
+            //    alert("Please select your Surgon Name");
+            //    surgonName.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+
+            //else if (medicalFile.value == "" && document.getElementById('yes_question_file_medication').checked) {
+            //    alert("Please upload your Medical File");
+            //    medicalFile.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (referralFile.value == "" && document.getElementById('yes_Referral').checked) {
+            //    alert("Please upload your Referral File");
+            //    referralFile.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+
+            //  else {
+
+            var userArray = {};
+
+            //alert(document.getElementById("referral_file").src);
+            // alert(referralFile.value);
+
+            userArray.Name = txtFirstName.value;
+            userArray.Family = txtLastName.value;
+            userArray.Email = txtEmail.value;
+            userArray.Gender = txtFirstName.value;
+            userArray.PhoneNumber = txtPhoneNumber.value;
+            userArray.MedicareNumber = txtMedicareNumber.value;
+            userArray.ExpirationDate = txtExpirationDate.value;
+            userArray.Birthday = txtBirthday.value;
+
+
+
+            //  questionnaireArray.ReferralImage = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+
+            //  questionnaireArray.MedicationFile = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+
+
+
+
+
+
+
+            //if (referralFile.files && referralFile.files[0]) {
+            //    var reader = new FileReader();
+
+            //    reader.addEventListener(
+            //        "load",
+            //        function () {
+            //            var avatarImg = new Image();
+            //            var src = reader.result;
+            //            avatarImg.src = src;
+
+            //        //    document.getElementById("dataUrl").innerText = src;
+
+            //             questionnaireArray.ReferralImage = src;
+
+
+            //            $.ajax({
+            //                url: 'Default.aspx/addUserQuestionnaire',
+            //                contentType: 'application/json;charset=utf-8',
+            //                method: 'post',
+            //                data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
+            //                success: function () {
+            //                    //$("#MoneyType").val = "";
+            //                    //$("#progress").hide();
+            //                    alert("ok");
+            //                    //$("#saveSuccess").show();
+            //                    //fetchMoneyTypeData();
+            //                },
+            //                error: function (er) {
+            //                    alert(er);
+            //                    //$("#saveError").show();
+            //                },
+
+            //            });
+
+            //            //avatarImg.onload = function () {
+            //            //    var c = document.getElementById("myCanvas");
+            //            //    var ctx = c.getContext("2d");
+            //            //    ctx.canvas.width = avatarImg.width;
+            //            //    ctx.canvas.height = avatarImg.height;
+
+            //            //    ctx.drawImage(avatarImg, 0, 0);
+            //            //};
+            //        },
+            //        false
+            //    );
+
+            //    reader.readAsDataURL(referralFile.files[0]);
+            //}
+
+
+
+            //questionnaireArray.MedicationFile = medicalFile.value;
+
+
+            //alert($('#referral_file')[0].files.toDataURL("image/png"));
+            //      alert(questionnaireArray.MedicationFile);
+
+            //questionnaireArray.ReferralImage = referralFile.value;
+            //questionnaireArray.MedicationFile = medicalFile.value;
+            //questionnaireArray.ReferralImage = window.URL.createObjectURL(referralFile.files[0]);
+            //questionnaireArray.MedicationFile = window.URL.createObjectURL(medicalFile.files[0]);
+            //userArray.PersonalPhoto = txtFirstName.value;
+            //userArray.MedicarePhoto = txtFirstName.value;
+            //userArray.UserId =null;
+
+
+
+            // this is ok for user
+            //$.ajax({
+            //    url: 'Default.aspx/addUser',
+            //    contentType: 'application/json;charset=utf-8',
+            //    method: 'post',
+            //    data: '{user:' + JSON.stringify(userArray) + '}',
+            //    success: function () {
+            //        //$("#MoneyType").val = "";
+            //        //$("#progress").hide();
+            //        alert("ok");
+            //        //$("#saveSuccess").show();
+            //        //fetchMoneyTypeData();
+            //    },
+            //    error: function (er) {
+            //        alert(er);
+            //        //$("#saveError").show();
+            //    }, 
+            //});
+
+
+            // THIS IS OK FOR addUserQuestionnaire
+
+            //$.ajax({
+            //    url: 'Default.aspx/addUserQuestionnaire',
+            //    contentType: 'application/json;charset=utf-8',
+            //    method: 'post',
+            //    data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
+            //    success: function () {
+            //        //$("#MoneyType").val = "";
+            //        //$("#progress").hide();
+            //        alert("ok");
+            //        //$("#saveSuccess").show();
+            //        //fetchMoneyTypeData();
+            //    },
+            //    error: function (er) {
+            //        alert(er);
+            //        //$("#saveError").show();
+            //    },
+
+            //});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            var file1 = $("#referral_file").get(0).files;
+            var file2 = $("#medical_file").get(0).files;
+            //var data = new FormData;
+            // data.append("ImageFile", file[0]);
+
+            var questionnaireArray = {};
+
+            questionnaireArray.QuestionnaireAnswer = 'uhhu';
+            questionnaireArray.LanguageType = 'uhuh';
+            questionnaireArray.UserId = 5;
+            questionnaireArray.Date = txtBirthday.value;
+
+            var s = document.getElementById('imagePreview');
+            s.src = URL.createObjectURL(file1[0]);
+            document.getElementById("dataUrl").innerText = URL.createObjectURL(file1[0]);
+
+            //  questionnaireArray.ImageFile = file[0];
+            questionnaireArray.ReferralImage = "";
+            questionnaireArray.MedicationFile = "";
+            //  questionnaireArray.MedicationFile = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+
+            //questionnaireArray.ReferralImage = URL.createObjectURL(file1[0]);
+            //questionnaireArray.MedicationFile = URL.createObjectURL(file2[0]);
+            questionnaireArray.ReferralImageName = "";
+            //questionnaireArray.ReferralImageName = medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+            questionnaireArray.MedicationFileName = referralFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+            //alert(questionnaireArray.MedicationFile);
+            //alert(questionnaireArray.ReferralImage);
+
+            //  questionnaireArray.ReferralImage ="sads";
+            //   questionnaireArray.MedicationFile = "asd";
+
+            // questionnaireArray.ReferralImage = getBase64Images(s);
+
+            //  alert(file.toDataURL());
+            //data.append("QuestionnaireAnswer", 'ssss');
+            //data.append("LanguageType", 'ssss');
+            //data.append("UserId",1);
+            //data.append("Date", txtBirthday.value);
+            //data.append("ReferralImage", 'Images/MedicalFile');
+            //data.append("MedicationFile", 'Images/MedicalFile');
+
+            //$.ajax({
+            //    type: "POST",
+            //    url: "Default.aspx/ImageUpload",
+            //    data: data,
+            //   //   contentType: 'application/json;charset=utf-8',
+
+            //    contentType: false,
+            //     processData: false, 
+            //     success: function () {
+            //        alert("ok" );
+            //    },
+            //    error: function (er) {
+            //        alert(er.message );
+            //        //$("#saveError").show();
+            //    }
+            //});
+
+            // in karrr mikoneeeeee
+            //    $.ajax({
+            //        url: 'Default.aspx/addUserQuestionnaire',
+            //        contentType: 'application/json;charset=utf-8',
+            //        method: 'post',
+            //        //processData: false,
+            //        data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
+            //        success: function () {
+            //            //$("#MoneyType").val = "";
+            //            //$("#progress").hide();
+            //            alert("ok");
+            //            //$("#saveSuccess").show();
+            //            //fetchMoneyTypeData();
+            //        },
+            //        error: function (er) {
+            //            alert('error');
+            //            //$("#saveError").show();
+            //        },
+
+            //    });
+            //}
+
+
+            //var formData = new FormData();
+            //var file = referralFile.files[0];
+
+            //formData.append("QuestionnaireAnswer", 'ssd');
+            //formData.append("countryLanguageType", 'sdsd');
+            //formData.append("file", file);
+
+
+            //var formData = new FormData();
+            //var formData = new FormData();
+
+            //var file = referralFile.files[0];
+            //formData.append("PhotoPath", file);
+            //formData.append('Title', 'dsfsf');
+            //formData.append('Description','sdfsdf');
+            //formData.append('Priority', 'sdfsfsdf');
+            //formData.append('City', 'sdfsdfd');
+            //formData.append('Region','sdfsf');
+            //var fileData = formData;
+
+                         //fd.append('file', 'file');
+
+
+            var fd = new FormData();
+            fd.append('file', referralFile.files[0]);
+            var fileData = fd;
+
+            $.ajax({
+                //url: 'Default.aspx/sendFile',
+                url: 'Default.aspx/CreatePostIssue',
+                data: fileData,
+                            //    contentType: 'application/json;charset=utf-8',
+                type: "POST",
+                cache: false,
+                contentType: false, // Not to set any content header
+                processData: false, // Not to process data
+                traditional: true,
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                },
+                success: function (result) {
+                    alert(result);
+                }
+            });
+
+
+            //$.ajax({
+            //    type: "POST",
+            //    url: 'Default.aspx/sendFile',
+            //    //'@Default.Action("Index", "Company")',
+            //    data: formData,
+            //    //dataType: 'json',
+            //    //contentType: false,
+            //    //processData: false,
+            //    success: function (response) {
+            //      alert("ok"); 
+            //    },
+            //    error: function (jqXHR, textStatus, errorThrown) {
+            //        alert(errorThrown + '  ' + jqXHR + '  ' + textStatus); 
+            //    } 
+            //});
+
+
+
+
+
+
+
+
+
+
+            //var img = new Image();
+            //img.scr = URL.createObjectURL(referralFile.files[0]);
+            //const dataUrl = _getBase64Image(img);
+            //console.log(dataUrl);
+        
+            //const dataUrl2 = toDataURLs(URL.createObjectURL(referralFile.files[0]));
+            //    // do something with dataURL
+            //  //  document.getElementById('result').innerHTML = dataURL;
+            //    console.log(dataUrl2);
+
+
+            //if (referralFile.files && referralFile.files[0]) {
+            //    var reader = new FileReader();
+
+            //    reader.addEventListener(
+            //        "load",
+            //        function () {
+            //            //var avatarImg = new Image();
+            //            var src = reader.result;
+            //            //avatarImg.src = src;
+            //            questionnaireArray.ReferralImage = src;
+            //            //questionnaireArray.MedicationFile = URL.createObjectURL(file2[0]);
+
+            //            $.ajax({
+            //                url: 'Default.aspx/addUserQuestionnaire',
+            //                contentType: 'application/json;charset=utf-8',
+            //                method: 'post',
+            //                //processData: false,
+            //                data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
+            //                success: function () {
+            //                    //$("#MoneyType").val = "";
+            //                    //$("#progress").hide();
+            //                    alert("ok");
+            //                    //$("#saveSuccess").show();
+            //                    //fetchMoneyTypeData();
+            //                },
+            //                error: function (er) {
+            //                    alert('error');
+            //                    //$("#saveError").show();
+            //                },
+
+            //            });
+
+                        //   document.getElementById("dataUrl").innerText = src;
+                        alert('hi');
+
+                        //avatarImg.onload = function () {
+                        //    var c = document.getElementById("myCanvas");
+                        //    var ctx = c.getContext("2d");
+                        //    ctx.canvas.width = avatarImg.width;
+                        //    ctx.canvas.height = avatarImg.height;
+
+                        //    ctx.drawImage(avatarImg, 0, 0);
+                        //};
+            //        },
+            //        false
+            //    );
+
+            //    reader.readAsDataURL(referralFile.files[0]);
+            //}
+
+
         }
-        // this is very similat to a start event function
+
+            //questionnaireArray.QuestionnaireAnswer = 'uhhu';
+            //questionnaireArray.LanguageType = 'uhuh';
+            //questionnaireArray.UserId = 1;
+            //questionnaireArray.Date = txtBirthday.value;
+            //questionnaireArray.ReferralImage = 'Images/ReferralImage/' + makeid(10) + referralFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+            //questionnaireArray.MedicationFile = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s
+
+
+
+            // $.ajax({
+            //    url: 'Default.aspx/addUserQuestionnaire',
+            //    contentType: 'application/json;charset=utf-8',
+            //    method: 'post',
+            //     //data: '{questionnaireForm:' + JSON.stringify(data) + '}',
+            //     data, data,
+            //    success: function () {
+            //        //$("#MoneyType").val = "";
+            //        //$("#progress").hide();
+            //        alert("ok");
+            //        //$("#saveSuccess").show();
+            //        //fetchMoneyTypeData();
+            //    },
+            //    error: function (er) {
+            //        alert(er);
+            //        //$("#saveError").show();
+            //    },
+
+            //});
+           
+
+
+        //var file = $("#referral_file").get(0).files;
+
+ 
+        //    $.ajax({
+        //        url: 'Default.aspx/addUserQuestionnaire',
+        //        contentType: 'application/json;charset=utf-8',
+        //        method: 'post',
+        //        //data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
+        //        data: file[0],
+        //        success: function () {
+        //            //$("#MoneyType").val = "";
+        //            //$("#progress").hide();
+        //            alert("ok");
+        //            //$("#saveSuccess").show();
+        //            //fetchMoneyTypeData();
+        //        },
+        //        error: function (er) {
+        //            alert(er);
+        //            //$("#saveError").show();
+        //        },
+
+        //    });
+
+
+
+
+
+
+
+
+
+
+
+            //var fd = new FormData();
+            //var files = $('#referral_file')[0].files;
+
+            //// Check file selected or not
+            //if (files.length > 0) {
+            //    fd.append('file', files[0]);
+
+
+            //    alert('value'+fd.value);
+
+
+
+
+
+
+
+
+            //    $.ajax({
+            //        url: 'Default.aspx/addUserQuestionnaire',
+            //         contentType: 'application/json;charset=utf-8',
+            //        type: 'post',
+            //        data: '{questionnaireForms:' + fd /*JSON.stringify(referralFile.value)*/ + '}',
+
+            //        //data: fd,
+            //        contentType: false,
+            //        processData: false,
+
+            //        success: function () {
+            //            //$("#MoneyType").val = "";
+            //            //$("#progress").hide();
+            //            alert("ok");
+            //            //$("#saveSuccess").show();
+            //            //fetchMoneyTypeData();
+            //        },
+            //        error: function (er) {
+            //            alert(er);
+            //            //$("#saveError").show();
+            //        },
+
+
+            //    });
+            //}
+
+
+            //var canvasData = referralFile.toDataURL("image/png");
+            //var ajax = new XMLHttpRequest();
+            //ajax.open("POST", 'Default.aspx/addUserQuestionnaire', false);
+            //ajax.setRequestHeader('Content-Type', 'application/upload');
+            //ajax.send(canvasData);
+
+            //var file_data = referralFile.value;
+            //var form_data = new FormData();
+            //form_data.append('file', file_data);
+            //alert(form_data);
+            //$.ajax({
+            //    url: 'Default.aspx/addUserQuestionnaire',
+            //    contentType: 'application/json;charset=utf-8',
+            //    dataType: 'text',  // what to expect back from the PHP script, if anything
+            //    cache: false,
+            //    contentType: false,
+            //    processData: false,
+            //    data: '{questionnaireForm:' + form_data /*JSON.stringify(referralFile.value)*/ + '}',
+            //     type: 'post',
+            //    success: function (php_script_response) {
+            //        alert(php_script_response); // display response from the PHP script, if any
+            //    }
+            //});
+
+            //    $.ajax({
+            //        url: 'Default.aspx/addUserQuestionnaire',
+            //        contentType: 'application/json;charset=utf-8',
+            //        method: 'post',
+            //        data: '{questionnaireForm:' + referralFile.value /*JSON.stringify(referralFile.value)*/ + '}',
+            //        //data: JSON.stringify({ user: JSON.stringify(userArray), questionnaireForm: JSON.stringify(questionnaireArray) }),
+            //        //data: JSON.stringify({ user: s, questionnaireForm: y }),
+
+            //        success: function () {
+            //            //$("#MoneyType").val = "";
+            //            //$("#progress").hide();
+            //            alert("ok");
+            //            //$("#saveSuccess").show();
+            //            //fetchMoneyTypeData();
+            //        },
+            //        error: function (er) {
+            //            alert(er);
+            //            //$("#saveError").show();
+            //        },
+
+
+            //    });
+            //}
+
+
+
+            //var txtReferralFile = window.URL.createObjectURL(fileinput.files[0]);
+
+            //alert(txtFirstName.value + txtLastName + txtBirthday + txtGender.value + fileinput.value);
+
+        function getDataUrl(img) {
+            // Create canvas
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            // Set width and height
+            canvas.width = img.width;
+            canvas.height = img.height;
+            // Draw the image
+            ctx.drawImage(img, 0, 0);
+            return canvas.toDataURL( );
+
+            //return canvas.toDataURL('image/jpeg');
+        }
+        // Select the image
+
+        //const img = document.querySelector('#my-image');
+        //img.addEventListener('load', function (event) {
+        //    const dataUrl = getDataUrl(event.currentTarget);
+        //    console.log(dataUrl);
+        //});
+
+        function toDataURLs(src) {
+            var image = new Image();
+            image.crossOrigin = 'Anonymous';
+
+            image.onload = function () {
+                var canvas = document.createElement('canvas');
+                var context = canvas.getContext('2d');
+                canvas.height = this.naturalHeight;
+                canvas.width = this.naturalWidth;
+                context.drawImage(this, 0, 0);
+                var dataURL = canvas.toDataURL('image/jpeg');
+                console.log(dataURL);
+                return   dataURL ;
+            };
+
+            image.src = src;
+        }
+
+        
+
+
+        function makeid(length) {
+            var result = '';
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            var charactersLength = characters.length;
+            for (var i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+        }
+        function getBase64Images(img) {
+            // Create an empty canvas element
+            var canvas = document.createElement("canvas");
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+            // Copy the image contents to the canvas
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0);
+
+            // Get the data-URL formatted image
+            // Firefox supports PNG and JPEG. You could check img.src to
+            // guess the original format, but be aware the using "image/jpg"
+            // will re-encode the image.
+            var dataURL = canvas.toDataURL("image/png");
+            alert(dataURL);
+            return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+        }
+        function getBase64Image(imgElem) {
+            // imgElem must be on the same server otherwise a cross-origin error will be thrown "SECURITY_ERR: DOM Exception 18"
+            var canvas = document.createElement("canvas");
+            canvas.width = imgElem.clientWidth;
+            canvas.height = imgElem.clientHeight;
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(imgElem, 0, 0);
+            var dataURL = canvas.toDataURL("image/png");
+            return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+        }
+
+        function _getBase64Image(img) {
+            // Create an empty canvas element
+            var canvas = document.createElement("canvas");
+            canvas.width = img.width;
+            canvas.height = img.height;
+            console.log(canvas.width);
+            // Copy the image contents to the canvas
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0);
+
+            // Get the data-URL formatted image
+            // Firefox supports PNG and JPEG. You could check img.src to
+            // guess the original format, but be aware the using "image/jpg"
+            // will re-encode the image.
+            var dataURL = canvas.toDataURL("image/png");
+
+            return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+        }
+        //$('#submitfile').ajaxForm({
+        //    complete: function (xhr) {
+        //        alert("Upload complete");
+        //    }
+        //}); 
+
+        function saveData(object, url) {
+
+
+        }
+            //if (txtMoneyType == "") {
+
+            //    $("#scopeTitle").attr("class", "col-lg-6 has-error");
+            //    $("#validateText").css({ "display": "block" });
+            //    return false;
+            //}
+            //else {
+            //    $("#progress").show();
+            //    var moneyArray = {};
+            //    moneyArray.moneyType1 = $("#MoneyType").val();
+            //    $.ajax({
+            //        url: 'MoneyTypePage.aspx/addMoneyType',
+            //        contentType: 'application/json;charset=utf-8',
+            //        method: 'post',
+            //        data: '{moneyType:' + JSON.stringify(moneyArray) + '}',
+            //        success: function () {
+            //            $("#MoneyType").val = "";
+            //            $("#progress").hide();
+            //            //alert("ok");
+            //            $("#saveSuccess").show();
+            //            fetchMoneyTypeData();
+            //        },
+            //        error: function (er) {
+            //            //alert(er);
+            //            $("#saveError").show();
+            //        },
+
+
+            //    });
+
+         // this is very similat to a start event function
         //   document.addEventListener('DOMContentLoaded', (ev) => {
         //                  alert('Hiiiiii');
         //const input_medical_file = document.getElementById('medical_file');

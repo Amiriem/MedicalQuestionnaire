@@ -30,8 +30,9 @@ namespace MedicalQuestionnaire
         public string PhoneNumber { get; set; }
         public string MedicareNumber { get; set; }
         public Nullable<System.DateTime> ExpirationDate { get; set; }
-        public byte[] PersonalPhoto { get; set; }
-        public byte[] MedicarePhoto { get; set; }
+        public System.DateTime Birthday { get; set; }
+        public string PersonalPhoto { get; set; }
+        public string MedicarePhoto { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Login> Login { get; set; }

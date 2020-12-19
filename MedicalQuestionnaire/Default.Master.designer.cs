@@ -10,7 +10,7 @@
 namespace MedicalQuestionnaire {
     
     
-    public partial class Default {
+    public partial class DefaultMaster {
         
         /// <summary>
         /// form1 control.

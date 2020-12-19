@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace MedicalQuestionnaire
 {
-    public partial class Default : System.Web.UI.MasterPage
+    public partial class DefaultMaster : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
