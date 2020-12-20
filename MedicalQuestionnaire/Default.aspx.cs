@@ -15,7 +15,7 @@ namespace MedicalQuestionnaire
     public partial class Default : Page
     {
         private static MedicalQuestionnaire_Entities entities = new MedicalQuestionnaire_Entities();
-
+        static QuestionnaireForm _questionnaireForm = new QuestionnaireForm();
         protected void Page_Load(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("fddfdf");
@@ -23,6 +23,7 @@ namespace MedicalQuestionnaire
             //fileUploadReferal = FileUploadReferal;
 
             //getFileUploadReferal();
+            Page.Form.Attributes.Add("enctype", "multipart/form-data");
 
         }
         //public void RaisePostBackEvent(string eventArgument)
@@ -294,7 +295,7 @@ namespace MedicalQuestionnaire
 
             //entities.User.Add(_user);
 
-            QuestionnaireForm _questionnaireForm = new QuestionnaireForm();
+            //QuestionnaireForm _questionnaireForm = new QuestionnaireForm();
 
             try
             {
@@ -305,8 +306,6 @@ namespace MedicalQuestionnaire
 
                 _questionnaireForm.MedicationFile = questionnaireForm.MedicationFile;
                 _questionnaireForm.ReferralImage = questionnaireForm.ReferralImage;
-
-                string varr = fileUploadReferal.FileName;
 
 
                 //string s = questionnaireForm.MedicationFileName;
@@ -335,8 +334,7 @@ namespace MedicalQuestionnaire
 
                 //}
 
-                entities.QuestionnaireForm.Add(_questionnaireForm);
-                entities.SaveChanges();
+               
             }
             catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
             {
@@ -358,8 +356,6 @@ namespace MedicalQuestionnaire
 
         }
 
-        public static FileUpload fileUploadMedical;
-        public static FileUpload fileUploadReferal;
 
         public void getFileUploadReferal()
         {
@@ -370,19 +366,24 @@ namespace MedicalQuestionnaire
             Console.WriteLine(FileUploadMedical.FileName.ToString());
             Console.WriteLine();
             string medicalPath = "Images/MedicalFiles/" + GenerateRandomString(10) + FileUploadMedical.FileName.ToString();
-            //string referalPath = "Images/ReferalFiles/" + GenerateRandomString(10) + FileUploadReferal.FileName.ToString();
+            string referalPath = "Images/ReferalFiles/" + GenerateRandomString(10) + FileUploadReferal_.FileName.ToString();
+            string d = Submit_Button.Text;
+            //    FileUploadMedical.SaveAs(Request.PhysicalApplicationPath + "./" + "Images/MedicalFiles/hi");
 
-            FileUploadMedical.SaveAs(Request.PhysicalApplicationPath + "./" + "Images/MedicalFiles/hi");
-
-            if (FileUploadMedical.FileName.ToString() != "")
+            if (FileUploadMedical.HasFile)
             {
-
-                //if (File.Exists(Server.MapPath("~/" + oldMenuPicName)))
-                //{
-                //    File.Delete(Server.MapPath("~/" + oldMenuPicName));
-                //}
+                _questionnaireForm.MedicationFile = medicalPath;
                 FileUploadMedical.SaveAs(Request.PhysicalApplicationPath + "./" + medicalPath);
             }
+
+            if (FileUploadReferal_.HasFile)
+            {
+                _questionnaireForm.ReferralImage = referalPath;
+                FileUploadReferal_.SaveAs(Request.PhysicalApplicationPath + "./" + referalPath);
+            }
+            
+            entities.QuestionnaireForm.Add(_questionnaireForm);
+            entities.SaveChanges();
         }
 
 
