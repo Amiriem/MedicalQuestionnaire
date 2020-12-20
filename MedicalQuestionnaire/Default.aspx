@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MedicalQuestionnaire.Default" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"  EnablePageMethods="true">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
 
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w780">
@@ -614,8 +614,8 @@
                                     <form action="#" id="medical_file_form" enctype="multipart/form-data">
 
                                         <label class="label" for="capture">Please Upload your medication file</label>
-
-                                        <input type="file" id="medical_file" accept="image/*" onchange="change_file_medication_click()" hidden="hidden" capture multiple />
+                                        <asp:FileUpload ID="FileUploadMedical" runat="server" onchange="change_file_medication_click()" style="display: none;" accept="image/*" capture/>
+                                        <%--<input type="file" id="medical_file" accept="image/*" onchange="change_file_medication_click()" hidden="hidden" capture multiple />--%>
                                         <button class="btn btn--radius-2 btn--blue" style="background: #a338cd;" id="medical_file_button" onclick="button_file_medication_click()" type="button">Choose</button>
                                         <span id="text_medical_file">No file chosen, yet.</span>
                                         <br />
@@ -643,8 +643,10 @@
                                         <form action="#" id="referral_form" enctype="multipart/form-data">
 
                                             <label class="label" for="capture">Please Upload your medication file</label>
+<%--                                            <asp:FileUpload ID="FileUploadReferal" runat="server" />--%>
+                                            <%--<input type="file" id="referral_file" accept="image/*" onchange="change_referral_click()" hidden="hidden" capture multiple />--%>
+                                            <asp:FileUpload class="btn btn--radius-2 btn--blue" ID="FileUploadReferal" onchange="change_referral_click()" runat="server" accept="image/*" capture/>
 
-                                            <input type="file" id="referral_file" accept="image/*" onchange="change_referral_click()" hidden="hidden" capture multiple />
                                             <button class="btn btn--radius-2 btn--blue" style="background: #a338cd;" id="referral_button" onclick="button_referral_click()" type="button">Choose</button>
                                             <span id="text_referral_file">No file chosen, yet.</span>
                                             <br />
@@ -655,12 +657,12 @@
                                 <div class="p-t-15">
                                     <br />
                                     <br />
-                                    <button class="btn btn--radius-2 btn--blue" id="submit-_button" onclick="submit_button_click()" type="button">Submit</button>
-                                                                    <img id="imagePreview" />
-                                    <textarea id="dataUrl" rows="4" cols="100"> </textarea>
-                                    <canvas id="myCanvas"></canvas>
+                                    <button class="btn btn--radius-2 btn--blue" id="submit-_button" onclick="submit_button_click()" type="button">Submit</button>                              
+<%--                                    <asp:RadioButton ID="Submit_Button" runat="server" Text="Button" OnCheckedChanged="Submit_Button_CheckedChanged" />--%>
+                                    <asp:Button ID="Submit_Button" runat="server" Text="Button" OnClick="btnSubmitButton_Click"/>
 
                                 </div>
+                                
                     </form>
                 </div>
             </div>
@@ -884,29 +886,38 @@
             }
         }
         function button_file_medication_click() {
-            document.getElementById('medical_file').click();
+         //   document.getElementById('medical_file').click();
+            $("[id$=FileUploadMedical]").click();  
         }
         function change_file_medication_click() {
-            let input = document.getElementById('medical_file');
-            console.dir(input.files[0]);
-            if (input.value) {
+
+            //let input = document.getElementById('medical_file');
+            let input = $("[id$=FileUploadMedical]");
+
+            console.dir(input);
+            if (input!=null && input.length > 0) {
                 alert('File has been successfully uploaded');
-                document.getElementById('text_medical_file').innerHTML = input.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                //document.getElementById('text_medical_file').innerHTML = input.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                document.getElementById('text_medical_file').innerHTML = input.val().substring(input.val().lastIndexOf('\\') + 1);
             }
+
             else {
                 document.getElementById('text_medical_file').innerHTML = "No file chosen, yet.";
             }
         }
 
         function button_referral_click() {
-            document.getElementById('referral_file').click();
+            // document.getElementById('referral_file').click(); FileUploadReferal
+            $("[id$=FileUploadReferal]").click();
         }
         function change_referral_click() {
-            let input = document.getElementById('referral_file');
-            console.dir(input.files[0]);
-            if (input.value) {
+             //let input = document.getElementById('referral_file');
+            let input = $("[id$=FileUploadReferal]");
+
+            //console.dir(input.files[0]);
+            if (input != null && input.length > 0) {
                 alert('File has been successfully uploaded');
-                document.getElementById('text_referral_file').innerHTML = input.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                document.getElementById('text_referral_file').innerHTML = input.val().substring(input.val().lastIndexOf('\\') + 1);
             }
             else {
                 document.getElementById('text_referral_file').innerHTML = "No file chosen, yet.";
@@ -950,10 +961,14 @@
             var surgeryDate = document.getElementById('surgery_date');
             var surgonName = document.getElementById('surgonname');
 
-            let medicalFile = document.getElementById('medical_file');
-            let referralFile = document.getElementById('referral_file');
+           // let medicalFile = document.getElementById('medical_file');    
+            // let referralFile = document.getElementById('referral_file');
+            let medicalFile = $("[id$=FileUploadMedical]");
+      
+            let referralFile =  $("[id$=FileUploadReferal]");
 
 
+            $("[id$=Submit_Button]").click(); 
 
 
             //var txtGenderMale = document.getElementById('gender_Male');
@@ -1274,8 +1289,8 @@
 
 
 
-            var file1 = $("#referral_file").get(0).files;
-            var file2 = $("#medical_file").get(0).files;
+            //var file1 = $("#referral_file").get(0).files;
+            //var file2 = $("#medical_file").get(0).files;
             //var data = new FormData;
             // data.append("ImageFile", file[0]);
 
@@ -1286,20 +1301,23 @@
             questionnaireArray.UserId = 5;
             questionnaireArray.Date = txtBirthday.value;
 
-            var s = document.getElementById('imagePreview');
-            s.src = URL.createObjectURL(file1[0]);
-            document.getElementById("dataUrl").innerText = URL.createObjectURL(file1[0]);
+            //var s = document.getElementById('imagePreview');
+            //s.src = URL.createObjectURL(file1[0]);
+            //document.getElementById("dataUrl").innerText = URL.createObjectURL(file1[0]);
 
             //  questionnaireArray.ImageFile = file[0];
             questionnaireArray.ReferralImage = "";
             questionnaireArray.MedicationFile = "";
+
+            //alert($("[id$=FileUploadReferal]").get(0).files);
+
             //  questionnaireArray.MedicationFile = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
 
             //questionnaireArray.ReferralImage = URL.createObjectURL(file1[0]);
             //questionnaireArray.MedicationFile = URL.createObjectURL(file2[0]);
-            questionnaireArray.ReferralImageName = "";
+        //    questionnaireArray.ReferralImageName = "";
             //questionnaireArray.ReferralImageName = medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-            questionnaireArray.MedicationFileName = referralFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+        //    questionnaireArray.MedicationFileName = referralFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
             //alert(questionnaireArray.MedicationFile);
             //alert(questionnaireArray.ReferralImage);
 
@@ -1334,26 +1352,28 @@
             //});
 
             // in karrr mikoneeeeee
-            //    $.ajax({
-            //        url: 'Default.aspx/addUserQuestionnaire',
-            //        contentType: 'application/json;charset=utf-8',
-            //        method: 'post',
-            //        //processData: false,
-            //        data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
-            //        success: function () {
-            //            //$("#MoneyType").val = "";
-            //            //$("#progress").hide();
-            //            alert("ok");
-            //            //$("#saveSuccess").show();
-            //            //fetchMoneyTypeData();
-            //        },
-            //        error: function (er) {
-            //            alert('error');
-            //            //$("#saveError").show();
-            //        },
+                $.ajax({
+                    url: 'Default.aspx/addUserQuestionnaire',
+                    contentType: 'application/json;charset=utf-8',
+                    method: 'post',
+                    //processData: false,
+                    data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
+                    success: function () {
+                        //$("#MoneyType").val = "";
+                        //$("#progress").hide();
+                        alert("ok");
+                        //$("#saveSuccess").show();
+                        //fetchMoneyTypeData();
+                    },
+                    error: function (er) {
+                        alert('error');
+                        //$("#saveError").show();
+                    },
 
-            //    });
-            //}
+                });
+
+
+            }
 
 
             //var formData = new FormData();
@@ -1376,33 +1396,41 @@
             //formData.append('Region','sdfsf');
             //var fileData = formData;
 
-                         //fd.append('file', 'file');
+            //fd.append('file', 'file');
 
 
-            var fd = new FormData();
-            fd.append('file', referralFile.files[0]);
-            var fileData = fd;
-
-            $.ajax({
-                //url: 'Default.aspx/sendFile',
-                url: 'Default.aspx/CreatePostIssue',
-                data: fileData,
-                            //    contentType: 'application/json;charset=utf-8',
-                type: "POST",
-                cache: false,
-                contentType: false, // Not to set any content header
-                processData: false, // Not to process data
-                traditional: true,
-                error: function (xhr, ajaxOptions, thrownError) {
-                    alert(xhr.status);
-                    alert(thrownError);
-                },
-                success: function (result) {
-                    alert(result);
-                }
-            });
+        //    var fd = new FormData();
+        //    fd.append('ImageFile', referralFile.files[0]);
+        //    var fileData = fd;
 
 
+        //    //PageMethods.GetCurrentTime("Hiii", OnSuccess);
+
+
+
+        //    $.ajax({
+        //        //url: 'Default.aspx/sendFile',
+        //        //url: '@Url.Action("Default.aspx", "ImageUpload")',
+        //        url: 'Default.aspx/ImageUploads',
+        //        //url: 'WebService1.cs/',
+        //        data: fd,
+        //        //data: '{ImageFile:' +'ImageFile'+ '}',
+        //        //    contentType: 'application/json;charset=utf-8',
+        //        type: "POST",
+        //        cache: false,
+        //        contentType: false, // Not to set any content header
+        //        processData: false, // Not to process data
+        //        traditional: true,
+        //        error: function (xhr, ajaxOptions, thrownError) {
+        //            alert(xhr.status);
+        //            alert(thrownError);
+        //        },
+        //        success: function (result) {
+        //            alert(result);
+        //        }
+        //    });
+
+        //}
             //$.ajax({
             //    type: "POST",
             //    url: 'Default.aspx/sendFile',
@@ -1439,58 +1467,58 @@
             //    console.log(dataUrl2);
 
 
-            //if (referralFile.files && referralFile.files[0]) {
-            //    var reader = new FileReader();
+        //    if (referralFile.files && referralFile.files[0]) {
+        //        var reader = new FileReader();
 
-            //    reader.addEventListener(
-            //        "load",
-            //        function () {
-            //            //var avatarImg = new Image();
-            //            var src = reader.result;
-            //            //avatarImg.src = src;
-            //            questionnaireArray.ReferralImage = src;
-            //            //questionnaireArray.MedicationFile = URL.createObjectURL(file2[0]);
+        //        reader.addEventListener(
+        //            "load",
+        //            function () {
+        //                //var avatarImg = new Image();
+        //                var src = reader.result;
+        //                //avatarImg.src = src;
+        //                questionnaireArray.ReferralImage = src;
+        //                //questionnaireArray.MedicationFile = URL.createObjectURL(file2[0]);
 
-            //            $.ajax({
-            //                url: 'Default.aspx/addUserQuestionnaire',
-            //                contentType: 'application/json;charset=utf-8',
-            //                method: 'post',
-            //                //processData: false,
-            //                data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
-            //                success: function () {
-            //                    //$("#MoneyType").val = "";
-            //                    //$("#progress").hide();
-            //                    alert("ok");
-            //                    //$("#saveSuccess").show();
-            //                    //fetchMoneyTypeData();
-            //                },
-            //                error: function (er) {
-            //                    alert('error');
-            //                    //$("#saveError").show();
-            //                },
+        //                $.ajax({
+        //                    url: 'Default.aspx/addUserQuestionnaire',
+        //                    contentType: 'application/json;charset=utf-8',
+        //                    method: 'post',
+        //                    //processData: false,
+        //                    data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
+        //                    success: function () {
+        //                        //$("#MoneyType").val = "";
+        //                        //$("#progress").hide();
+        //                        alert("ok");
+        //                        //$("#saveSuccess").show();
+        //                        //fetchMoneyTypeData();
+        //                    },
+        //                    error: function (jqXHR, textStatus, errorThrown) {
+        //                       alert(errorThrown + '  ' + jqXHR + '  ' + textStatus);
+                  
+        //                    },
 
-            //            });
+        //                });
 
-                        //   document.getElementById("dataUrl").innerText = src;
-                        alert('hi');
+        //                //   document.getElementById("dataUrl").innerText = src;
+        //                alert('hi');
 
-                        //avatarImg.onload = function () {
-                        //    var c = document.getElementById("myCanvas");
-                        //    var ctx = c.getContext("2d");
-                        //    ctx.canvas.width = avatarImg.width;
-                        //    ctx.canvas.height = avatarImg.height;
+        //                //avatarImg.onload = function () {
+        //                //    var c = document.getElementById("myCanvas");
+        //                //    var ctx = c.getContext("2d");
+        //                //    ctx.canvas.width = avatarImg.width;
+        //                //    ctx.canvas.height = avatarImg.height;
 
-                        //    ctx.drawImage(avatarImg, 0, 0);
-                        //};
-            //        },
-            //        false
-            //    );
+        //                //    ctx.drawImage(avatarImg, 0, 0);
+        //                //};
+        //            },
+        //            false
+        //        );
 
-            //    reader.readAsDataURL(referralFile.files[0]);
-            //}
+        //        reader.readAsDataURL(referralFile.files[0]);
+        //    }
 
 
-        }
+        //}
 
             //questionnaireArray.QuestionnaireAnswer = 'uhhu';
             //questionnaireArray.LanguageType = 'uhuh';
@@ -1694,7 +1722,9 @@
         }
 
         
-
+        function OnSuccess(response, userContext, methodName) {
+            alert(response);
+        }
 
         function makeid(length) {
             var result = '';

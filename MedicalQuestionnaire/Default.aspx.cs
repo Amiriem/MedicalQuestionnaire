@@ -5,22 +5,30 @@ using System.Web.Services;
 using MedicalQuestionnaire.Model;
 using System.Web.Http;
 using System.Web.UI;
+using System.Web.Http.Results;
+using System.Collections.Generic;
+using System.Web.UI.WebControls;
+using System.IO;
 
 namespace MedicalQuestionnaire
 {
-    public partial class Default : Page, IPostBackEventHandler
+    public partial class Default : Page
     {
         private static MedicalQuestionnaire_Entities entities = new MedicalQuestionnaire_Entities();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("Page_Load");
+            System.Diagnostics.Debug.WriteLine("fddfdf");
+            //fileUploadMedical = FileUploadMedical;
+            //fileUploadReferal = FileUploadReferal;
+
+            //getFileUploadReferal();
 
         }
-        public void RaisePostBackEvent(string eventArgument)
-        {
+        //public void RaisePostBackEvent(string eventArgument)
+        //{
 
-        }
+        //}
 
         [WebMethod]
         public static void addUser(User user)
@@ -105,123 +113,163 @@ namespace MedicalQuestionnaire
         //    }
         //    return null;
         //}
-        public class AA
-        {
-            public HttpPostedFileBase file { get; set; }
-        }
-        public class BB
-        {
-            public string file { get; set; }
-        }
-        public class PostIssueDTO
-        {
-            public int Id { get; set; }
-            public string PostType { get; set; }
-            public DateTime AddedTime { get; set; }
-            public string Title { get; set; }
-            public string Description { get; set; }
-            public string Priority { get; set; }
-            public string City { get; set; }
-            public string Region { get; set; }
-            public HttpPostedFileBase PhotoPath { get; set; }
-            public DateTime? UpdatedOn { get; set; }
-            public bool IsPinned { get; set; }
-            public bool IsDelected { get; set; }
-        }
+        //public class AA
+        //{
+        //    public HttpPostedFileBase ImageFile { get; set; }
+        //}
+        //public class BB
+        //{
+        //    public string file { get; set; }
+        //}
+        //public class PostIssueDTO
+        //{
+        //    public int Id { get; set; }
+        //    public string PostType { get; set; }
+        //    public DateTime AddedTime { get; set; }
+        //    public string Title { get; set; }
+        //    public string Description { get; set; }
+        //    public string Priority { get; set; }
+        //    public string City { get; set; }
+        //    public string Region { get; set; }
+        //    public HttpPostedFileBase PhotoPath { get; set; }
+        //    public DateTime? UpdatedOn { get; set; }
+        //    public bool IsPinned { get; set; }
+        //    public bool IsDelected { get; set; }
+        //}
 
-        [WebMethod]
-        public static void sendFile(AA file)
+        //[WebMethod]
+        //public static void sendFile(AA file)
+        //{
+        //    if (file.file.FileName == "")
+        //    {
+
+        //    }
+        //}
+        //[Route("ImageUpload")]
+        //[HttpPost]
+        //public static Microsoft.AspNetCore.Mvc.JsonResult ImageUpload(ImageViewModel model)
+        //{
+        //    Console.WriteLine("Hiiiiiii" + model.ImageFile.FileName);
+
+        //    MedicalQuestionnaire_Entities entities = new MedicalQuestionnaire_Entities();
+        //    var file = model.ImageFile;
+        //    byte[] imagebyte = null;
+        //    if (file != null)
+        //    { }
+        //    return null;
+        //}
+        //[HttpPost]
+        //public Microsoft.AspNetCore.Mvc.JsonResult TestAction(HttpPostedFileBase fileToUpload)
+        //{
+        //    List<Object> files = new List<Object>();
+
+        //    for (int i = 0; i < Request.Files.Count; i++)
+        //    {
+
+        //        // string targetPath = Path.Combine("C:/", Request.Files[i].FileName);
+        //        //equest.Files[i].SaveAs(targetPath);
+        //    }
+        //    return null;
+        //}
+        //[System.Web.Services.WebMethod]
+        //[System.Web.Script.Services.ScriptMethod()]
+        //public static string GetCurrentTime(string name)
+        //{
+        //    return "Hello " + name + Environment.NewLine + "The Current Time is: "
+        //+ DateTime.Now.ToString();
+        //}
+        //[Route("CreatePostIssue")]
+        //[HttpPost]
+        // [HttpPost]
+        //public static void CreatePostIssue(AA ImageFile)
+        //  public static void CreatePostIssue(string ImageFile)
+        //public static IHttpActionResult CreatePostIssue(AA file)
+        //{
+        //     Console.WriteLine("Hiiiiiii"+file.ImageFile.FileName);
+        //    HttpPostedFileBase bb = ImageFile.ImageFile;
+        //  return null;
+        //HttpPostedFileBase files = file.file;
+        //if(files)
+        //{
+
+        //}
+        //return null;
+        //if (ModelState.IsValid)
+        //{
+        //    try
+        //    {
+        //string fname = null;
+        //var userid = User.Identity.GetUserId();
+        //var httpRequest = HttpContext.Current.Request;
+        //if (httpRequest.Files.Count > 0)
+        //{
+        //    var docfiles = new List<string>();
+        //    foreach (string file in httpRequest.Files)
+        //    {
+        //        var postedFile = httpRequest.Files[file];
+        //        fname = userid + postedFile.FileName;
+        //        var filePath = HttpContext.Current.Server.MapPath("~/Images/" + fname);
+        //        postedFile.SaveAs(filePath);
+        //        docfiles.Add(filePath);
+        //    }
+        //}
+        //else
+        //{ }
+        //Post post = new Post();
+        //post.PostType = "PostIssue";
+        //post.AddedTime = DateTime.Now;
+        //post.Title = postissueDTO.Title;
+        //post.Description = postissueDTO.Description;
+        //post.Priority = postissueDTO.Priority;
+        //post.City = postissueDTO.City;
+        //post.Region = postissueDTO.Region;
+        //post.PhotoUrl = fname;
+        //post.UserId = User.Identity.GetUserId();
+        //_db.Posts.Add(post);
+        //_db.SaveChanges();
+        //        return Json("success");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //       return Json("somethimg went wrong" + ex);
+        //    }
+
+        //}
+        //else
+        //{
+        //   return Json("Model State wrong"); 
+        //}
+
+        //}
+        protected void btnSubmitButton_Click(object sender, EventArgs e)
         {
-            if (file.file.FileName == "")
+            Console.WriteLine("btnSubmitButton_Click");
+            getFileUploadReferal();
+        }
+        public string GenerateRandomString(int length)
+        {
+            string allowedChars = "";
+            allowedChars = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,";
+            allowedChars += "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,";
+            allowedChars += "1,2,3,4,5,6,7,8,9,0,!,@,#,$,%,&,?";
+            char[] sep = { ',' };
+            string[] arr = allowedChars.Split(sep);
+            string passwordString = "";
+            string temp = "";
+            Random rand = new Random();
+            for (int i = 0; i < length; i++)
             {
-
+                temp = arr[rand.Next(0, arr.Length)];
+                passwordString += temp;
             }
-        }
-        [Route("CreatePostIssue")]
-        [HttpPost]
-        [WebMethod]
-        public static IHttpActionResult CreatePostIssue(BB file)
-        {
-            string bb = file.file;
-            //HttpPostedFileBase files = file.file;
-            //if(files)
-            //{
-
-            //}
-            return null;
-            //if (ModelState.IsValid)
-            //{
-            //    try
-            //    {
-                    //string fname = null;
-                    //var userid = User.Identity.GetUserId();
-                    //var httpRequest = HttpContext.Current.Request;
-                    //if (httpRequest.Files.Count > 0)
-                    //{
-                    //    var docfiles = new List<string>();
-                    //    foreach (string file in httpRequest.Files)
-                    //    {
-                    //        var postedFile = httpRequest.Files[file];
-                    //        fname = userid + postedFile.FileName;
-                    //        var filePath = HttpContext.Current.Server.MapPath("~/Images/" + fname);
-                    //        postedFile.SaveAs(filePath);
-                    //        docfiles.Add(filePath);
-                    //    }
-                    //}
-                    //else
-                    //{ }
-                    //Post post = new Post();
-                    //post.PostType = "PostIssue";
-                    //post.AddedTime = DateTime.Now;
-                    //post.Title = postissueDTO.Title;
-                    //post.Description = postissueDTO.Description;
-                    //post.Priority = postissueDTO.Priority;
-                    //post.City = postissueDTO.City;
-                    //post.Region = postissueDTO.Region;
-                    //post.PhotoUrl = fname;
-                    //post.UserId = User.Identity.GetUserId();
-                    //_db.Posts.Add(post);
-                    //_db.SaveChanges();
-            //        return Json("success");
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //       return Json("somethimg went wrong" + ex);
-            //    }
-
-            //}
-            //else
-            //{
-            //   return Json("Model State wrong"); 
-            //}
-
+            return passwordString;
         }
 
         [WebMethod]
-        public static void addUserQuestionnaire(QuestionnaireFormModelVeiw questionnaireForm)
+        public static void addUserQuestionnaire(QuestionnaireForm questionnaireForm)
         {
 
-
-            //System.Drawing.Image imgs = DownloadImageFromUrl(questionnaireForm.ReferralImage);
-
-
-            //using (WebClient webClient = new WebClient())
-            //{
-            //    byte[] data = webClient.DownloadData(questionnaireForm.ReferralImage);
-
-            //    using (MemoryStream mem = new MemoryStream(data))
-            //    {
-            //        using (var yourImage = System.Drawing.Image.FromStream(mem))
-            //        {
-            //            // If you want it as Png
-            //          //  yourImage.Save("path_to_your_file.png", ImageFormat.Png);
-
-            //            // If you want it as Jpeg
-            //            yourImage.Save("path_to_your_file.jpg", ImageFormat.Jpeg);
-            //        }
-            //    }
-
-            //}​
+            Console.WriteLine("addUserQuestionnaire");
 
             //string rootPath = questionnaireForm.ReferralImage;
             //SaveImage(rootPath, ImageFormat.Png, txtInputUrl.Text.Trim());
@@ -257,8 +305,12 @@ namespace MedicalQuestionnaire
 
                 _questionnaireForm.MedicationFile = questionnaireForm.MedicationFile;
                 _questionnaireForm.ReferralImage = questionnaireForm.ReferralImage;
-                string s = questionnaireForm.MedicationFileName;
-                string ss = questionnaireForm.ReferralImageName;
+
+                string varr = fileUploadReferal.FileName;
+
+
+                //string s = questionnaireForm.MedicationFileName;
+                //string ss = questionnaireForm.ReferralImageName;
 
                 // DownloadRemoteImageFile(questionnaireForm.ReferralImage, ss);
                 //    SaveImage(ss , _questionnaireForm.ReferralImage, ImageFormat.Png);
@@ -306,6 +358,54 @@ namespace MedicalQuestionnaire
 
         }
 
+        public static FileUpload fileUploadMedical;
+        public static FileUpload fileUploadReferal;
+
+        public void getFileUploadReferal()
+        {
+            //fileUploadMedical = FileUploadMedical;
+            //fileUploadReferal = FileUploadReferal;
+            //fileUploadMedical = FileUploadMedical;
+
+            Console.WriteLine(FileUploadMedical.FileName.ToString());
+            Console.WriteLine();
+            string medicalPath = "Images/MedicalFiles/" + GenerateRandomString(10) + FileUploadMedical.FileName.ToString();
+            //string referalPath = "Images/ReferalFiles/" + GenerateRandomString(10) + FileUploadReferal.FileName.ToString();
+
+            FileUploadMedical.SaveAs(Request.PhysicalApplicationPath + "./" + "Images/MedicalFiles/hi");
+
+            if (FileUploadMedical.FileName.ToString() != "")
+            {
+
+                //if (File.Exists(Server.MapPath("~/" + oldMenuPicName)))
+                //{
+                //    File.Delete(Server.MapPath("~/" + oldMenuPicName));
+                //}
+                FileUploadMedical.SaveAs(Request.PhysicalApplicationPath + "./" + medicalPath);
+            }
+        }
+
+
+        //System.Drawing.Image imgs = DownloadImageFromUrl(questionnaireForm.ReferralImage);
+
+
+        //using (WebClient webClient = new WebClient())
+        //{
+        //    byte[] data = webClient.DownloadData(questionnaireForm.ReferralImage);
+
+        //    using (MemoryStream mem = new MemoryStream(data))
+        //    {
+        //        using (var yourImage = System.Drawing.Image.FromStream(mem))
+        //        {
+        //            // If you want it as Png
+        //          //  yourImage.Save("path_to_your_file.png", ImageFormat.Png);
+
+        //            // If you want it as Jpeg
+        //            yourImage.Save("path_to_your_file.jpg", ImageFormat.Jpeg);
+        //        }
+        //    }
+
+        //}​
         //[HttpPost]
         //public ActionResult Index(QuestionnaireForm company, HttpPostedFileBase file)
         //{
@@ -389,6 +489,17 @@ namespace MedicalQuestionnaire
             entities.User.Add(_user);
             entities.QuestionnaireForm.Add(_questionnaireForm);
             entities.SaveChanges();
+        }
+
+        protected void FileUploadReferal_Changed(object sender, EventArgs e)
+        {
+            Console.WriteLine("FileUploadReferal_Changed");
+            getFileUploadReferal();
+        }
+        protected void Submit_Button_CheckedChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine("btnSubmitButton_Click");
+            getFileUploadReferal();
         }
     }
 }
