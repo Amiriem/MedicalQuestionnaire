@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Web;
 using System.Web.Services;
-
-using MedicalQuestionnaire.Model;
-using System.Web.Http;
 using System.Web.UI;
-using System.Web.Http.Results;
-using System.Collections.Generic;
-using System.Web.UI.WebControls;
-using System.IO;
 
 namespace MedicalQuestionnaire
 {
@@ -23,7 +15,7 @@ namespace MedicalQuestionnaire
             //fileUploadReferal = FileUploadReferal;
 
             //getFileUploadReferal();
-            Page.Form.Attributes.Add("enctype", "multipart/form-data");
+          //  Page.Form.Attributes.Add("enctype", "multipart/form-data");
 
         }
         //public void RaisePostBackEvent(string eventArgument)
@@ -334,7 +326,7 @@ namespace MedicalQuestionnaire
 
                 //}
 
-               
+
             }
             catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
             {
@@ -381,7 +373,7 @@ namespace MedicalQuestionnaire
                 _questionnaireForm.ReferralImage = referalPath;
                 FileUploadReferal_.SaveAs(Request.PhysicalApplicationPath + "./" + referalPath);
             }
-            
+
             entities.QuestionnaireForm.Add(_questionnaireForm);
             entities.SaveChanges();
         }

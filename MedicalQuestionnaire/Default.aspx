@@ -1348,7 +1348,8 @@
             //    }
             //});
 
-            // in karrr mikoneeeeee
+            // in karrr mikoneeeeee $$$$$$$$$$$
+
             $.ajax({
                 url: 'Default.aspx/addUserQuestionnaire',
                 contentType: 'application/json;charset=utf-8',
@@ -1373,6 +1374,25 @@
 
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         //var formData = new FormData();
