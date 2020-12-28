@@ -96,8 +96,9 @@
                                 </div>
                             </div>
                         </div>
+                    <div class="col-2"> 
                         <div class="col-2">
-                            <div class="input-group">
+                             <div class="input-group">
                                 <label class="label">Are you working now?</label>
                                 <div class="p-t-10">
                                     <label class="radio-container m-r-45">
@@ -106,22 +107,38 @@
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container">
-                                        No
+                                        No; Retired
                                             <input type="radio" id="no_working_question" name="working_question" onclick="no_offworking_changed(this)">
                                         <span class="checkmark"></span>
                                     </label>
-
+                                     <label class="radio-container">
+                                        Never
+                                            <input type="radio" id="never_working_question" name="working_question" onclick="never_offworking_changed(this)">
+                                        <span class="checkmark"></span>
+                                    </label>
                                 </div>
-                            </div>
+                            </div>  
+                        </div>
                             <div class="input-group" style="display: none;" id="date_offwork_Box">
                                 <label class="label">If no, since when have you been off work?</label>
                                 <div class="input-group-icon">
                                     <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="date_offwork" name="expiration_date">
                                     <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                </div>
+                                </div> 
                             </div>
-                        </div>
-                        <div class="input-group">
+                            <div class="input-group" style="display: none;" id="never_offwork_Box">
+                             <label class="label">If never, Could you select one of these options?</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="subject" id="never_work_option">
+                                    <option disabled="disabled" selected="selected">Choose option</option>
+                                    <option>Students</option>
+                                    <option>Housewives</option>
+                                    <option>None</option>
+                                 </select>
+                                <div class="select-dropdown"></div>
+                             </div>
+                         </div>
+                        <div class="input-group" style="display: none;" id="living_activities_Box">
                             <label class="label">What do you do for a living/what is your profession?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="living_activities">
@@ -133,6 +150,8 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
+                       </div>
+
                         <div class="input-group">
                             <label class="label">What sports/activities do you do?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
@@ -182,6 +201,7 @@
                             </div>
                         </div>
                         <div class="col-2">
+                            <div class="col-2"> 
                             <div class="input-group">
                                 <label class="label">Do you smoke? </label>
                                 <div class="p-t-10">
@@ -195,13 +215,15 @@
                                             <input type="radio" id="no_smoke" name="smoke" onclick="no_smoke_changed(this)">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="radio-container" style="bottom: 25px; left: 222px;">
-                                        Never Smoked
+<%--                                    style="bottom: 25px; left: 222px;"--%>
+                                    <label class="radio-container">
+                                        Never
                                             <input type="radio" id="never_smoke" name="smoke" onclick="never_smoke_changed(this)">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
                             </div>
+                             </div>
                             <div class="input-group" style="display: none;" id="smoke_off_Box">
                                 <label class="label">If no, since when have you been off work?</label>
                                 <div class="input-group-icon">
@@ -272,6 +294,7 @@
                             </div>
                         </div>
                         <div class="col-2">
+                             <div class="col-2">
                             <div class="input-group">
                                 <label class="label">Do you drink alcohol?</label>
                                 <div class="p-t-10">
@@ -285,12 +308,14 @@
                                             <input type="radio" id="no_alcohol" name="alcohol" onclick="no_alcohol_changed(this)">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="radio-container" style="bottom: 25px; left: 222px;">
-                                        Never alcoholed
+                                    <%--style="bottom: 25px; left: 222px;"--%>
+                                    <%--<label class="radio-container">
+                                        Never
                                             <input type="radio" id="never_alcohol" name="alcohol" onclick="never_alcohol_changed(this)">
                                         <span class="checkmark"></span>
-                                    </label>
+                                    </label>--%>
                                 </div>
+                            </div>
                             </div>
                             <div class="input-group" style="display: none;" id="alcohol_off_Box">
                                 <label class="label">If no, since when have you been off work?</label>
@@ -334,7 +359,7 @@
 
                         <div class="col-2">
                             <div class="input-group">
-                                <label class="label">Do you any recreational drugs?</label>
+                                <label class="label">Do you take any recreational drugs or herbal/natural remedies?</label>
                                 <div class="p-t-10">
                                     <label class="radio-container m-r-45">
                                         Yes
@@ -362,31 +387,15 @@
                             </div>
 
                             <div class="input-group" id="How_many_weeks_drug" style="display: block;">
-                                <label class="label">If yes, how often use drug?</label>
+                                <label class="label">If yes, How often do you take the drug or herbal/natural remedies?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="recreationalDrug_howmany_perweeks">
                                         <option disabled="disabled" selected="selected">Choose option</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                        <option>7</option>
-                                        <option>8</option>
-                                        <option>9</option>
-                                        <option>10</option>
-                                        <option>11</option>
-                                        <option>12</option>
-                                        <option>13</option>
-                                        <option>14</option>
-                                        <option>15</option>
-                                        <option>16</option>
-                                        <option>17</option>
-                                        <option>18</option>
-                                        <option>19</option>
-                                        <option>20</option>
-                                        <option>More than 20</option>
+                                        <option>Rarely</option>
+                                        <option>Monthly</option>
+                                        <option>Waeekly</option>
+                                        <option>Daily</option>
+                                        <option>More than 2 times a day</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
@@ -396,35 +405,20 @@
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="recreationalDrug_whatDrugs">
                                         <option disabled="disabled" selected="selected">Choose option</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                        <option>7</option>
-                                        <option>8</option>
-                                        <option>9</option>
-                                        <option>10</option>
-                                        <option>11</option>
-                                        <option>12</option>
-                                        <option>13</option>
-                                        <option>14</option>
-                                        <option>15</option>
-                                        <option>16</option>
-                                        <option>17</option>
-                                        <option>18</option>
-                                        <option>19</option>
-                                        <option>20</option>
-                                        <option>More than 20</option>
+                                        <option>Stimulants (e.g. cocaine)</option>
+                                        <option>Opium-related painkillers (e.g. heroin)</option>
+                                        <option>Hallucinogens (e.g. LSD)</option>
+                                        <option>Other</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
                             </div>
+                           </div>
 
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label style="width: 500px;" class="label">Do you have any of the following medical conditions?</label>
+                                    <%--style="width: 500px;"--%>
+                                    <label  class="label">Do you have any of the following medical conditions?</label>
                                     <div class="p-t-10">
                                         <label class="radio-container m-r-45" style="width: 150px;">
                                             AIDS or HIV
@@ -452,15 +446,150 @@
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">
-                                            Asthma
-                                            <input type="checkbox" id="Asthma" name="Asthma">
+                                            Bleeding Problems
+                                            <input type="checkbox" id="BleedingProblems" name="BleedingProblems" onclick="BleedingProblems_changed(this)">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                            Blood Clots
+                                            <input type="checkbox" id="BloodClots" name="BloodClots">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                            Cancer
+                                            <input type="checkbox" id="Cancer" name="Cancer" onclick="Cancer_changed(this)" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                            Dementia
+                                            <input type="checkbox" id="Dementia" name="Dementia">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container" style="width: 500px;">
+                                            Chronic Obstructive Pulmonary Disease or Emphysema
+                                            <input type="checkbox" id="ChronicObstructive" name="ChronicObstructive">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                            Depression
+                                            <input type="checkbox" id="Depression" name="Depression">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                            Drug Dependency or Abuse
+                                            <input type="checkbox" id="DrugDependency" name="Drug Dependency or Abuse">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                            Diabetes
+                                            <input type="checkbox" id="Diabetes" name="Diabetes">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                            Gout
+                                            <input type="checkbox" id="Gout" name="Gout">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                            Heart Disease
+                                            <input type="checkbox" id="HeartDisease" name="HeartDisease">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                            Heart Arrythmia
+                                            <input type="checkbox" id="HeartArrythmia" name="Drug Dependency or Abuse">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                            High Cholesterol
+                                            <input type="checkbox" id="HighCholesterol" name="HighCholesterol">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                          <label class="radio-container">
+                                            High Blood Pressure
+                                            <input type="checkbox" id="HighBloodPressure" name="HighBloodPressure">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                          <label class="radio-container">
+                                           Hypothyroidism
+                                            <input type="checkbox" id="Hypothyroidism" name="Hypothyroidism">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                          <label class="radio-container">
+                                           Hyperthyroidism
+                                            <input type="checkbox" id="Hyperthyroidism" name="Hyperthyroidism">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                           Kidney Disease
+                                            <input type="checkbox" id="KidneyDisease" name="KidneyDisease">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">
+                                           Leukemia
+                                            <input type="checkbox" id="Leukemia" name="Leukemia">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                           Liver Disease
+                                            <input type="checkbox" id="LiverDisease" name="LiverDisease">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                           Hepatitis
+                                            <input type="checkbox" id="Hepatitis" name="Hepatitis" onclick="Hepatitis_changed(this)" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                           Osteoporosis
+                                            <input type="checkbox" id="Osteoporosis" name="Osteoporosis">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">
+                                           Pancreatitis
+                                            <input type="checkbox" id="Pancreatitis" name="Pancreatitis">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">
+                                           Peripheral Vascular Disease
+                                            <input type="checkbox" id="PeripheralVascularDisease" name="PeripheralVascularDisease">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">
+                                           Pulmonary 
+                                            <input type="checkbox" id="Pulmonary" name="Pulmonary">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">
+                                           Reflux or GERD 
+                                            <input type="checkbox" id="RefluxorGERD" name="RefluxorGERD">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">
+                                           Seizures 
+                                            <input type="checkbox" id="Seizures" name="Seizures">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container">
+                                           Sleep Apnea 
+                                            <input type="checkbox" id="SleepApnea" name="SleepApnea">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">
+                                           Stroke 
+                                            <input type="checkbox" id="Stroke" name="Stroke">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">
+                                           Other  
+                                            <input type="checkbox" id="Other" name="Other">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="input-group" id="bleeding_problems">
+                            <div class="input-group" id="bleeding_problems"  style="display: none;">
                                 <label class="label">Bleeding Problems. Type?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="bleeding_problemstypes">
@@ -473,7 +602,7 @@
                                 </div>
                             </div>
 
-                            <div class="input-group" id="cancer_type">
+                            <div class="input-group" id="cancer_type" style="display: none;">
                                 <label class="label">Cancer. Type? </label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="cancer_problemstypes">
@@ -486,7 +615,7 @@
                                 </div>
                             </div>
 
-                            <div class="input-group" id="hepatitis_type">
+                            <div class="input-group" id="hepatitis_type" style="display: none;">
                                 <label class="label">Hepatitis. Type? </label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="hepatitis_problemtypes">
@@ -561,37 +690,14 @@
                                     </div>
                                 </div>
 
-
                                 <div class="input-group" id="surgon_name" style="display: block;">
-                                    <label class="label" style="width: 500px;">What was the surgon name?</label>
+                                    <label class="label" style="width: 500px;">What was the Surgeon's name?</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="subject" id="surgonname">
-                                            <option disabled="disabled" selected="selected">Choose option</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8</option>
-                                            <option>9</option>
-                                            <option>10</option>
-                                            <option>11</option>
-                                            <option>12</option>
-                                            <option>13</option>
-                                            <option>14</option>
-                                            <option>15</option>
-                                            <option>16</option>
-                                            <option>17</option>
-                                            <option>18</option>
-                                            <option>19</option>
-                                            <option>20</option>
-                                            <option>More than 20</option>
-                                        </select>
-                                        <div class="select-dropdown"></div>
-                                    </div>
+                                       <input class="input--style-4" type="text" id="surgonname" name="surgonname">
+                                      
+                                     </div>
                                 </div>
+
                             </div>
                             <br />
                             <div class="col-6">
@@ -610,16 +716,18 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="p-t-12" id="Box_medical_file_form" style="display: block;">
-                                    <form action="#" id="medical_file_form" enctype="multipart/form-data">
+                                <div class="p-t-12" >
+                                    <form action="#" id="medical_file_form_Box" enctype="multipart/form-data">
 
-                                        <label class="label" for="capture">Please Upload your medication file</label>
                                         <asp:FileUpload ID="FileUploadMedical" runat="server" onchange="change_file_medication_click()" Style="display: none;" accept="image/*" capture />
                                         <asp:FileUpload ID="FileUploadReferal_" runat="server" onchange="change_referral_click()" Style="display: none;" accept="image/*" capture />
 
                                         <%--<input type="file" id="medical_file" accept="image/*" onchange="change_file_medication_click()" hidden="hidden" capture multiple />--%>
+                                        <div id="Box_medical_file_form" style="display: block;">
+                                        <label class="label" for="capture">Please Upload your medication file</label>
                                         <button class="btn btn--radius-2 btn--blue" style="background: #a338cd;" id="medical_file_button" onclick="button_file_medication_click()" type="button">Choose</button>
                                         <span id="text_medical_file">No file chosen, yet.</span>
+                                            </div>
                                         <br />
                                     </form>
                                 </div>
@@ -643,8 +751,7 @@
                                     </div>
                                     <div class="p-t-12" id="Box_referral_form" style="display: block;">
                                         <form action="#" id="referral_form" enctype="multipart/form-data">
-                                            Add a trigger for your UpdatePanel
-                                            <label class="label" for="capture">Please Upload your medication file</label>
+                                             <label class="label" for="capture">Please Upload your Referral file</label>
                                              <%--<input type="file" id="referral_file" accept="image/*" onchange="change_referral_click()" hidden="hidden" capture multiple />--%>
                                             <button class="btn btn--radius-2 btn--blue" style="background: #a338cd;" id="referral_button" onclick="button_referral_click()" type="button">Choose</button>
                                             <span id="text_referral_file">No file chosen, yet.</span>
@@ -659,9 +766,7 @@
                                     <button class="btn btn--radius-2 btn--blue" id="submit-_button" onclick="submit_button_click()" type="button">Submit</button>
                                     <%--<asp:RadioButton ID="Submit_Button" runat="server" Text="Button" OnCheckedChanged="Submit_Button_CheckedChanged" />--%>
                                     <asp:Button ID="Submit_Button" runat="server" Style="display: none;" Text="Button" OnClick="btnSubmitButton_Click" />
-
                                 </div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -715,10 +820,23 @@
                 $("#expiration_date_Box").hide();
             }
         }
+        function never_offworking_changed(termsCheckBox) {
+
+            if (termsCheckBox.checked) {
+                $("#date_offwork_Box").hide();
+                $("#never_offwork_Box").show();
+                $("#living_activities_Box").hide(); 
+
+            } else {
+                 $("#never_offwork_Box").hide();
+            }
+        }
         function no_offworking_changed(termsCheckBox) {
 
             if (termsCheckBox.checked) {
                 $("#date_offwork_Box").show();
+                $("#never_offwork_Box").hide();
+                $("#living_activities_Box").hide(); 
             } else {
                 $("#date_offwork_Box").hide();
             }
@@ -727,9 +845,11 @@
 
             if (termsCheckBox.checked) {
                 $("#date_offwork_Box").hide();
-
-            } else {
-                $("#date_offwork_Box").show();
+                $("#never_offwork_Box").hide();
+                $("#living_activities_Box").show();
+            }
+            else {
+                $("#living_activities_Box").hide();
             }
         }
         function no_smoke_changed(termsCheckBox) {
@@ -767,29 +887,29 @@
         function no_alcohol_changed(termsCheckBox) {
 
             if (termsCheckBox.checked) {
-                $("#alcohol_off_Box").show();
+                //$("#alcohol_off_Box").show();
                 $("#How_many_weeks_alcohol").hide();
             } else {
-                $("#alcohol_off_Box").hide();
+                //$("#alcohol_off_Box").hide();
                 $("#How_many_weeks_alcohol").show();
             }
         }
         function yes_alcohol_changed(termsCheckBox) {
 
             if (termsCheckBox.checked) {
-                $("#alcohol_off_Box").hide();
+                //$("#alcohol_off_Box").hide();
                 $("#How_many_weeks_alcohol").show();
 
             } else {
-                $("#alcohol_off_Box").show();
+                //$("#alcohol_off_Box").show();
                 $("#How_many_weeks_alcohol").hide();
             }
         }
         function never_alcohol_changed(termsCheckBox) {
-            if (termsCheckBox.checked) {
-                $("#alcohol_off_Box").hide();
-                $("#How_many_weeks_alcohol").hide();
-            }
+            //if (termsCheckBox.checked) {
+            //    $("#alcohol_off_Box").hide();
+            //    $("#How_many_weeks_alcohol").hide();
+            //}
         }
 
         function no_drug_changed(termsCheckBox) {
@@ -883,6 +1003,28 @@
 
             }
         }
+        function BleedingProblems_changed(termsCheckBox) {
+            if (termsCheckBox.checked) {
+                $("#bleeding_problems").show();
+            } else {
+                $("#bleeding_problems").hide();
+
+            }
+        }
+        function Cancer_changed(termsCheckBox) {
+            if (termsCheckBox.checked) {
+                $("#cancer_type").show();
+            } else {
+                $("#cancer_type").hide(); 
+            }
+        }
+        function Hepatitis_changed(termsCheckBox) {
+            if (termsCheckBox.checked) {
+                $("#hepatitis_type").show();
+            } else {
+                $("#hepatitis_type").hide();
+            }
+        } 
         function button_file_medication_click() {
             //   document.getElementById('medical_file').click();
             $("[id$=FileUploadMedical]").click();
