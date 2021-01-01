@@ -138,14 +138,68 @@
                                 <div class="select-dropdown"></div>
                              </div>
                          </div>
-                        <div class="input-group" style="display: none;" id="living_activities_Box">
+                        <div class="input-group" style="display: block;" id="living_activities_Box">
                             <label class="label">What do you do for a living/what is your profession?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="living_activities">
                                     <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>Employee</option>
-                                    <option>Subject 2</option>
-                                    <option>Subject 3</option>
+                                    <option>Accountant</option>
+                                    <option>Actor/Actress</option>
+                                    <option>Architect</option>
+                                    <option>Astronomer</option>
+                                    <option>Author</option>
+                                    <option>Baker</option>
+                                    <option>Bricklayer</option> 
+                                    <option>Bus driver</option>
+                                    <option>Butcher</option>
+                                    <option>Carpenter</option>
+                                    <option>Cleaner</option>
+                                    <option>Chef/Cook</option>
+                                    <option>Dentist</option>
+                                    <option>Doctor</option>
+                                    <option>Refuse collector</option>
+                                    <option>Electrician</option>
+                                    <option>Engineer</option>
+                                    <option>Factory worker</option>
+                                    <option>Farmer</option>
+                                    <option>Fireman/Fire fighter</option>
+                                    <option>Fisherman</option>
+                                    <option>Florist</option>
+                                    <option>Gardener</option>
+                                    <option>Hairdresser</option>
+                                    <option>Journalist</option>
+                                    <option>Judge</option>
+                                    <option>Lawyer</option>
+                                    <option>Lecturer</option>
+                                    <option>Librarian</option>
+                                    <option>Lifeguard</option>
+                                    <option>Mechanic</option>
+                                    <option>Model</option>
+                                    <option>Nurse</option>
+                                    <option>Optician</option>
+                                    <option>Painter</option>
+                                    <option>Pharmacist</option>
+                                    <option>Photographer</option>
+                                    <option>Pilot</option>
+                                    <option>Plumber</option>
+                                    <option>Politician</option>
+                                    <option>Policeman/Policewoman</option>
+                                    <option>Postman</option>
+                                    <option>Real estate agent</option>
+                                    <option>Receptionist</option>
+                                    <option>Scientist</option>
+                                    <option>Secretary</option>
+                                    <option>Shop assistant</option>
+                                    <option>Soldier</option>
+                                    <option>Tailor</option>
+                                    <option>Taxi driver</option>
+                                    <option>Teacher</option>
+                                    <option>Translator</option>
+                                    <option>Travel agent</option>
+                                    <option>Veterinary doctor (Vet)</option>
+                                    <option>Waiter/Waitress</option>
+                                    <option>Window cleaner</option>  
+                                    <option>Other</option>  
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
@@ -157,9 +211,44 @@
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="sports_activites">
                                     <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>Subject 1</option>
-                                    <option>Subject 2</option>
-                                    <option>Subject 3</option>
+                                    <option>I don't</option>
+                                    <option>kayaking</option>
+                                    <option>bobsleigh</option>
+                                    <option>canoeing</option>
+                                    <option>cross-country skiing</option>
+                                    <option>rafting</option>
+                                    <option>snorkeling</option>
+                                    <option>swimming</option>
+                                    <option>bodyboarding</option>
+                                    <option>freediving</option>
+                                    <option>paddle boarding</option>
+                                    <option>scuba diving</option>
+                                    <option>surfing</option>
+                                    <option>aerobics</option>
+                                    <option>archery</option>
+                                    <option>artistic gymnastics</option>
+                                    <option>bodybuilding</option>
+                                    <option>boxing</option>
+                                    <option>cross-country running</option>
+                                    <option>cycling</option>
+                                    <option>figure skating</option>
+                                    <option>horseback riding</option>
+                                    <option>kickboxing</option>
+                                    <option>ultimate frisbee</option>
+                                    <option>walking</option>
+                                    <option>weightlifting</option>
+                                    <option>wrestling</option>
+                                    <option>baseball</option>
+                                    <option>basketball</option>
+                                    <option>tennis</option>
+                                    <option>badminton</option>
+                                    <option>bowling</option>
+                                    <option>cricket</option>
+                                    <option>curling</option>
+                                    <option>football</option>
+                                    <option>Ski</option>
+                                    <option>Hockey</option>
+                                    <option>Other</option>  
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
@@ -169,14 +258,17 @@
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="how_often_sports">
                                     <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>Subject 1</option>
-                                    <option>Subject 2</option>
-                                    <option>Subject 3</option>
+                                    <option>Daily</option>
+                                    <option>3 times in a Week</option>
+                                    <option>2 times in a Week</option>
+                                    <option>Monthly</option>
+                                    <option>Rarely</option>
+                                    <option></option>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <%--<div class="input-group">
                             <label class="label">What is the name of your family Doctor?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="name_of_doctor">
@@ -187,7 +279,14 @@
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
-                        </div>
+                        </div>--%>
+
+                           <div class="input-group" id="family_Doctor_Box" style="display: block;">
+                                    <label class="label" style="width: 500px;">What is the name of your family Doctor?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                       <input class="input--style-4" type="text" id="family_Doctor" name="family_Doctor"> 
+                                     </div>
+                                </div>
                         <div class="input-group">
                             <label class="label">What hand do you write with?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
@@ -372,7 +471,7 @@
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container" style="bottom: 25px; left: 222px;">
-                                        Never druged
+                                       Never taken
                                             <input type="radio" id="never_drug" name="drug" onclick="never_drug_changed(this)">
                                         <span class="checkmark"></span>
                                     </label>
@@ -408,7 +507,33 @@
                                         <option>Stimulants (e.g. cocaine)</option>
                                         <option>Opium-related painkillers (e.g. heroin)</option>
                                         <option>Hallucinogens (e.g. LSD)</option>
-                                        <option>Other</option>
+                                        <option>ativan</option>
+                                        <option>Benzodiazepines</option>
+                                        <option>Valium</option>
+                                        <option>canabis</option>
+                                        <option>marijuana</option>
+                                        <option>pot</option>
+                                        <option>chondroitin</option>
+                                        <option>cocaine</option>
+                                        <option>glucosamine</option>
+                                        <option>ginger</option>
+                                        <option>ginkgo</option>
+                                        <option>biloba</option>
+                                        <option>ginseng</option>
+                                        <option>ketamine</option>
+                                        <option>heroine</option>
+                                        <option>st-John's wort</option>
+                                        <option>methamphetamine</option>
+                                        <option>amphetamines</option>
+                                        <option>morphine</option>
+                                        <option>fentanyl</option>
+                                        <option>oxycodone</option>
+                                        <option>dilaudid</option>
+                                        <option>MDMA</option>
+                                         <option>ecstacy</option>
+                                        <option>ritalin</option>
+                                        <option>turmeric</option>
+                                         <option>Other</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
@@ -419,7 +544,7 @@
                                 <div class="input-group">
                                     <%--style="width: 500px;"--%>
                                     <label  class="label">Do you have any of the following medical conditions?</label>
-                                    <div class="p-t-10">
+                                    <div class="p-t-10" style="width: 50px;">
                                         <label class="radio-container m-r-45" style="width: 150px;">
                                             AIDS or HIV
                                             <input type="checkbox" id="AIDS_or_HIV" name="AIDS_or_HIV">
@@ -445,12 +570,12 @@
                                             <input type="checkbox" id="Arthritis" name="Arthritis">
                                             <span class="checkmark"></span>
                                         </label>
-                                        <label class="radio-container">
+                                        <label class="radio-container" style="width: 300px;">
                                             Bleeding Problems
                                             <input type="checkbox" id="BleedingProblems" name="BleedingProblems" onclick="BleedingProblems_changed(this)">
                                             <span class="checkmark"></span>
                                         </label>
-                                         <label class="radio-container">
+                                         <label class="radio-container"  style="width: 300px;">
                                             Blood Clots
                                             <input type="checkbox" id="BloodClots" name="BloodClots">
                                             <span class="checkmark"></span>
@@ -475,7 +600,7 @@
                                             <input type="checkbox" id="Depression" name="Depression">
                                             <span class="checkmark"></span>
                                         </label>
-                                         <label class="radio-container">
+                                         <label class="radio-container"  style="width: 300px;">
                                             Drug Dependency or Abuse
                                             <input type="checkbox" id="DrugDependency" name="Drug Dependency or Abuse">
                                             <span class="checkmark"></span>
@@ -490,22 +615,22 @@
                                             <input type="checkbox" id="Gout" name="Gout">
                                             <span class="checkmark"></span>
                                         </label>
-                                         <label class="radio-container">
+                                         <label class="radio-container"  style="width: 300px;">
                                             Heart Disease
                                             <input type="checkbox" id="HeartDisease" name="HeartDisease">
                                             <span class="checkmark"></span>
                                         </label>
-                                         <label class="radio-container">
+                                         <label class="radio-container"  style="width: 300px;">
                                             Heart Arrythmia
                                             <input type="checkbox" id="HeartArrythmia" name="Drug Dependency or Abuse">
                                             <span class="checkmark"></span>
                                         </label>
-                                         <label class="radio-container">
+                                         <label class="radio-container"  style="width: 300px;">
                                             High Cholesterol
                                             <input type="checkbox" id="HighCholesterol" name="HighCholesterol">
                                             <span class="checkmark"></span>
                                         </label>
-                                          <label class="radio-container">
+                                          <label class="radio-container"  style="width: 300px;">
                                             High Blood Pressure
                                             <input type="checkbox" id="HighBloodPressure" name="HighBloodPressure">
                                             <span class="checkmark"></span>
@@ -520,7 +645,7 @@
                                             <input type="checkbox" id="Hyperthyroidism" name="Hyperthyroidism">
                                             <span class="checkmark"></span>
                                         </label>
-                                         <label class="radio-container">
+                                         <label class="radio-container"  style="width: 300px;">
                                            Kidney Disease
                                             <input type="checkbox" id="KidneyDisease" name="KidneyDisease">
                                             <span class="checkmark"></span>
@@ -530,7 +655,7 @@
                                             <input type="checkbox" id="Leukemia" name="Leukemia">
                                             <span class="checkmark"></span>
                                         </label>
-                                         <label class="radio-container">
+                                         <label class="radio-container"  style="width: 300px;">
                                            Liver Disease
                                             <input type="checkbox" id="LiverDisease" name="LiverDisease">
                                             <span class="checkmark"></span>
@@ -550,7 +675,7 @@
                                             <input type="checkbox" id="Pancreatitis" name="Pancreatitis">
                                             <span class="checkmark"></span>
                                         </label>
-                                        <label class="radio-container">
+                                        <label class="radio-container"  style="width: 300px;">
                                            Peripheral Vascular Disease
                                             <input type="checkbox" id="PeripheralVascularDisease" name="PeripheralVascularDisease">
                                             <span class="checkmark"></span>
@@ -560,7 +685,7 @@
                                             <input type="checkbox" id="Pulmonary" name="Pulmonary">
                                             <span class="checkmark"></span>
                                         </label>
-                                        <label class="radio-container">
+                                        <label class="radio-container"  style="width: 300px;">
                                            Reflux or GERD 
                                             <input type="checkbox" id="RefluxorGERD" name="RefluxorGERD">
                                             <span class="checkmark"></span>
@@ -570,7 +695,7 @@
                                             <input type="checkbox" id="Seizures" name="Seizures">
                                             <span class="checkmark"></span>
                                         </label>
-                                         <label class="radio-container">
+                                         <label class="radio-container"  style="width: 300px;">
                                            Sleep Apnea 
                                             <input type="checkbox" id="SleepApnea" name="SleepApnea">
                                             <span class="checkmark"></span>
@@ -652,7 +777,7 @@
                                 </div>
 
                                 <div class="input-group" id="surgery_names" style="display: block;">
-                                    <label class="label" style="width: 500px;">What was the surgery name?</label>
+                                    <label class="label" style="width: 500px;">What type of surgery?</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="subject" id="surgerynames">
                                             <option disabled="disabled" selected="selected">Choose option</option>
@@ -785,9 +910,10 @@
     <script type='text/javascript' src="js/jquery.mycart.js"></script>
     <script type="text/javascript">
 
+        var txtFirstName;
 
         $(document).ready(function () {
-
+            txtFirstName = document.getElementById('first_name');
             // alert();
         });
 
@@ -1068,9 +1194,7 @@
         function submit_button_click() {
             //window.open("exit.html", "Thanks for Visiting!");
 
-
-
-            var txtFirstName = document.getElementById('first_name');
+            //var txtFirstName = document.getElementById('first_name');
             var txtLastName = document.getElementById('last_name');
             var txtBirthday = document.getElementById('birthday');
             var txtMedicareNumber = document.getElementById('medicare_number');
@@ -1080,7 +1204,7 @@
             var livingActivities = document.getElementById('living_activities');
             var dateOffWork = document.getElementById('date_offwork');
             var sportsActivites = document.getElementById('sports_activites');
-            var nameOfDoctor = document.getElementById('name_of_doctor');
+            var nameOfDoctor = document.getElementById('family_Doctor');
             var handWrite = document.getElementById('hand_write');
             var smokeHowmanyYears = document.getElementById('smoke_howmany_years');
             var smokeHowmanyPerday = document.getElementById('smoke_howmany_perday');
@@ -1101,8 +1225,8 @@
             var surgeryDate = document.getElementById('surgery_date');
             var surgonName = document.getElementById('surgonname');
 
-            // let medicalFile = document.getElementById('medical_file');    
-            // let referralFile = document.getElementById('referral_file');
+
+
             let medicalFile = $("[id$=FileUploadMedical]");
 
             let referralFile = $("[id$=FileUploadReferal_]");
@@ -1110,172 +1234,203 @@
 
 
 
-            //var txtGenderMale = document.getElementById('gender_Male');
-            //var txtGenderFemale = document.getElementById('gender_Female');
-            //var txtGenderOther = document.getElementById('gender_Female');
+
 
             txtFirstName.style.backgroundColor = "#fafafa";
             txtLastName.style.backgroundColor = "#fafafa";
             txtBirthday.style.backgroundColor = "#fafafa";
 
 
-            //if (txtFirstName.value == "") {
+             txtMedicareNumber.style.backgroundColor = "#fafafa";;
+             txtExpirationDate .style.backgroundColor = "#fafafa";
+            txtEmail.style.backgroundColor = "#fafafa";
+             txtPhoneNumber.style.backgroundColor = "#fafafa";
+             livingActivities.style.backgroundColor = "#fafafa";
+            dateOffWork.style.backgroundColor = "#fafafa";
+             sportsActivites .style.backgroundColor = "#fafafa";
+             nameOfDoctor .style.backgroundColor = "#fafafa";
+             handWrite.style.backgroundColor = "#fafafa";
+            smokeHowmanyYears.style.backgroundColor = "#fafafa";
+             smokeHowmanyPerday.style.backgroundColor = "#fafafa";
+            smokeOffDate.style.backgroundColor = "#fafafa";
 
-            //    alert("Please fill out your Frist Name");
-            //    txtFirstName.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (txtLastName.value == "") {
-            //    alert("Please fill out your Last Name");
-            //    txtLastName.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (txtBirthday.value == "") {
-            //    alert("Please fill out your Birthday");
-            //    txtBirthday.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (txtMedicareNumber.value == "" && document.getElementById('yes_medicare_card').checked) {
-            //    alert("Please fill out your Medicare Number");
-            //    txtMedicareNumber.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (txtExpirationDate.value == "" && document.getElementById('yes_medicare_card').checked) {
-            //    alert("Please fill out your Expiration Date");
-            //    txtExpirationDate.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (txtEmail.value == "") {
-            //    alert("Please fill out your Email");
-            //    txtEmail.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (txtPhoneNumber.value == "") {
-            //    alert("Please fill out your Phone Number");
-            //    txtPhoneNumber.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (livingActivities.value == "Choose option" && document.getElementById('yes_working_question').checked) {
-            //    alert("Please fill out your Living Activities");
-            //    livingActivities.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (dateOffWork.value == "" && document.getElementById('no_working_question').checked) {
-            //    alert("Please fill out your off work date");
-            //    dateOffWork.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (sportsActivites.value == "Choose option") {
-            //    alert("Please fill out your Sport Activities");
-            //    sportsActivites.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (nameOfDoctor.value == "Choose option") {
-            //    alert("Please fill out your Doctor Name");
-            //    nameOfDoctor.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (handWrite.value == "Choose option") {
-            //    alert("Please fill out your Hand Write");
-            //    handWrite.style.backgroundColor = "#ffcfcf";
-            //    return false; 
-            //}
-            //else if (smokeHowmanyYears.value == "Choose option" && document.getElementById('yes_smoke').checked) {
-            //    alert("Please fill out, How Many Years Do You Smoke");
-            //    smokeHowmanyYears.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (smokeHowmanyPerday.value == "Choose option" && document.getElementById('yes_smoke').checked) {
-            //    alert("Please fill out, How Many Smoke Per Day");
-            //    smokeHowmanyPerday.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (smokeOffDate.value == "" && document.getElementById('no_smoke').checked) {
-            //    alert("Please fill out your Smoke Off Date");
-            //    smokeOffDate.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (alcoholHowmanyPerweek.value == "Choose option" && document.getElementById('yes_alcohol').checked) {
-            //    alert("Please fill out, How Many Time Do You Drink Per week");
-            //    alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (alcoholOffDate.value == "" && document.getElementById('no_alcohol').checked) {
-            //    alert("Please fill out your Drinking Off Date");
-            //    alcoholOffDate.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (alcoholHowmanyPerweek.value == "Choose option" && document.getElementById('yes_alcohol').checked) {
-            //    alert("Please fill out, How Many Time Do You Drink Per week");
-            //    alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (alcoholOffDate.value == "" && document.getElementById('no_alcohol').checked) {
-            //    alert("Please fill out your Drinking Off Date");
-            //    alcoholOffDate.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
+             alcoholHowmanyPerweek .style.backgroundColor = "#fafafa";
+            alcoholOffDate.style.backgroundColor = "#fafafa";
 
-            //else if (recreationalDrugHowmanyPerweeks.value == "Choose option" && document.getElementById('yes_drug').checked) {
-            //    alert("Please fill out, How Many Recreational Drug Per Week");
-            //    recreationalDrugHowmanyPerweeks.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (recreationalDrugWhatDrugs.value == "Choose option" && document.getElementById('yes_drug').checked) {
-            //    alert("Please fill out, What Recreational Drug Do you Use");
-            //    recreationalDrugWhatDrugs.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (recreationalDrugOffDate.value == "" && document.getElementById('no_drug').checked) {
-            //    alert("Please fill out your Recreational Drug Off Date");
-            //    recreationalDrugOffDate.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (bleedingProblemsTypes.value == "Choose option") {
-            //    alert("Please select your Bleeding Problem Type");
-            //    bleedingProblemsTypes.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (cancerProblemsTypes.value == "Choose option") {
-            //    alert("Please select your Cancer Problem Type");
-            //    cancerProblemsTypes.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (hepatitisProblemTypes.value == "Choose option") {
-            //    alert("Please select your Hepatit Problem Type");
-            //    hepatitisProblemTypes.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
+             recreationalDrugHowmanyPerweeks .style.backgroundColor = "#fafafa";
+            recreationalDrugWhatDrugs.style.backgroundColor = "#fafafa";
+             recreationalDrugOffDate .style.backgroundColor = "#fafafa";
+
+            bleedingProblemsTypes.style.backgroundColor = "#fafafa";
+             cancerProblemsTypes .style.backgroundColor = "#fafafa";
+            hepatitisProblemTypes.style.backgroundColor = "#fafafa";
+
+             surgeryNames .style.backgroundColor = "#fafafa";
+             surgeryDate .style.backgroundColor = "#fafafa";
+             surgonName .style.backgroundColor = "#fafafa";
+
+            //medicalFile.style.backgroundColor = "#fafafa";
+
+            //referralFile.style.backgroundColor = "#fafafa";
 
 
-            //else if (surgeryNames.value == "Choose option" && document.getElementById('yes_surgery').checked) {
-            //    alert("Please select your Surgery Name");
-            //    surgeryNames.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (surgeryDate.value == "" && document.getElementById('yes_surgery').checked) {
-            //    alert("Please fill out your Surgery Date");
-            //    surgeryDate.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (surgonName.value == "Choose option" && document.getElementById('yes_surgery').checked) {
-            //    alert("Please select your Surgon Name");
-            //    surgonName.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
 
-            //else if (medicalFile.value == "" && document.getElementById('yes_question_file_medication').checked) {
-            //    alert("Please upload your Medical File");
-            //    medicalFile.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            //else if (referralFile.value == "" && document.getElementById('yes_Referral').checked) {
-            //    alert("Please upload your Referral File");
-            //    referralFile.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
+            if (txtFirstName.value == "") {
 
-            //  else {
+                alert("Please fill out your Frist Name");
+                txtFirstName.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (txtLastName.value == "") {
+                alert("Please fill out your Last Name");
+                txtLastName.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (txtBirthday.value == "") {
+                alert("Please fill out your Birthday");
+                txtBirthday.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (txtMedicareNumber.value == "" && document.getElementById('yes_medicare_card').checked) {
+                alert("Please fill out your Medicare Number");
+                txtMedicareNumber.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (txtExpirationDate.value == "" && document.getElementById('yes_medicare_card').checked) {
+                alert("Please fill out your Expiration Date");
+                txtExpirationDate.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (txtEmail.value == "") {
+                alert("Please fill out your Email");
+                txtEmail.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (txtPhoneNumber.value == "") {
+                alert("Please fill out your Phone Number");
+                txtPhoneNumber.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (livingActivities.value == "Choose option" && document.getElementById('yes_working_question').checked) {
+                alert("Please fill out your Living Activities");
+                livingActivities.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (dateOffWork.value == "" && document.getElementById('no_working_question').checked) {
+                alert("Please fill out your off work date");
+                dateOffWork.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (sportsActivites.value == "Choose option") {
+                alert("Please fill out your Sport Activities");
+                sportsActivites.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (nameOfDoctor.value == "Choose option") {
+                alert("Please fill out your Doctor Name");
+                nameOfDoctor.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (handWrite.value == "Choose option") {
+                alert("Please fill out your Hand Write");
+                handWrite.style.backgroundColor = "#ffcfcf";
+                return false; 
+            }
+            else if (smokeHowmanyYears.value == "Choose option" && document.getElementById('yes_smoke').checked) {
+                alert("Please fill out, How Many Years Do You Smoke");
+                smokeHowmanyYears.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (smokeHowmanyPerday.value == "Choose option" && document.getElementById('yes_smoke').checked) {
+                alert("Please fill out, How Many Smoke Per Day");
+                smokeHowmanyPerday.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (smokeOffDate.value == "" && document.getElementById('no_smoke').checked) {
+                alert("Please fill out your Smoke Off Date");
+                smokeOffDate.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (alcoholHowmanyPerweek.value == "Choose option" && document.getElementById('yes_alcohol').checked) {
+                alert("Please fill out, How Many Time Do You Drink Per week");
+                alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (alcoholOffDate.value == "" && document.getElementById('no_alcohol').checked) {
+                alert("Please fill out your Drinking Off Date");
+                alcoholOffDate.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (alcoholHowmanyPerweek.value == "Choose option" && document.getElementById('yes_alcohol').checked) {
+                alert("Please fill out, How Many Time Do You Drink Per week");
+                alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (alcoholOffDate.value == "" && document.getElementById('no_alcohol').checked) {
+                alert("Please fill out your Drinking Off Date");
+                alcoholOffDate.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+
+            else if (recreationalDrugHowmanyPerweeks.value == "Choose option" && document.getElementById('yes_drug').checked) {
+                alert("Please fill out, How Many Recreational Drug Per Week");
+                recreationalDrugHowmanyPerweeks.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (recreationalDrugWhatDrugs.value == "Choose option" && document.getElementById('yes_drug').checked) {
+                alert("Please fill out, What Recreational Drug Do you Use");
+                recreationalDrugWhatDrugs.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (recreationalDrugOffDate.value == "" && document.getElementById('no_drug').checked) {
+                alert("Please fill out your Recreational Drug Off Date");
+                recreationalDrugOffDate.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (bleedingProblemsTypes.value == "Choose option") {
+                alert("Please select your Bleeding Problem Type");
+                bleedingProblemsTypes.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (cancerProblemsTypes.value == "Choose option") {
+                alert("Please select your Cancer Problem Type");
+                cancerProblemsTypes.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (hepatitisProblemTypes.value == "Choose option") {
+                alert("Please select your Hepatit Problem Type");
+                hepatitisProblemTypes.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+
+            else if (surgeryNames.value == "Choose option" && document.getElementById('yes_surgery').checked) {
+                alert("Please select your Surgery Name");
+                surgeryNames.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (surgeryDate.value == "" && document.getElementById('yes_surgery').checked) {
+                alert("Please fill out your Surgery Date");
+                surgeryDate.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (surgonName.value == "Choose option" && document.getElementById('yes_surgery').checked) {
+                alert("Please select your Surgon Name");
+                surgonName.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+
+            else if (medicalFile.value == "" && document.getElementById('yes_question_file_medication').checked) {
+                alert("Please upload your Medical File");
+                medicalFile.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+            else if (referralFile.value == "" && document.getElementById('yes_Referral').checked) {
+                alert("Please upload your Referral File");
+                referralFile.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
+
+
 
             var userArray = {};
 
