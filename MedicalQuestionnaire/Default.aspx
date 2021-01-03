@@ -5,7 +5,7 @@
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w780">
             <div class="card card-4">
-                <div class="card-body">
+                <div class="card-body" id="questionnaire_format">
                     <h2 class="title">Background Information</h2>
                     <form method="POST">
                         <div class="row row-space">
@@ -96,6 +96,17 @@
                                 </div>
                             </div>
                         </div>
+
+                                                    <div class="col-2">
+
+                                       <div class="input-group" id="family_Doctor_Box" style="display: block;">
+                                    <label class="label" style="width: 500px;" >What is the name of your family Doctor?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                       <input class="input--style-4" type="text" id="family_Doctor" name="family_Doctor"> 
+                                     </div>
+                                </div>
+                               </div>
+
                     <div class="col-2"> 
                         <div class="col-2">
                              <div class="input-group">
@@ -127,7 +138,7 @@
                                 </div> 
                             </div>
                             <div class="input-group" style="display: none;" id="never_offwork_Box">
-                             <label class="label">If never, Could you select one of these options?</label>
+                             <label class="label">If Never, Please Select One of the Following ​Options?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="never_work_option">
                                     <option disabled="disabled" selected="selected">Choose option</option>
@@ -146,7 +157,6 @@
                                     <option>Accountant</option>
                                     <option>Actor/Actress</option>
                                     <option>Architect</option>
-                                    <option>Astronomer</option>
                                     <option>Author</option>
                                     <option>Baker</option>
                                     <option>Bricklayer</option> 
@@ -168,15 +178,13 @@
                                     <option>Gardener</option>
                                     <option>Hairdresser</option>
                                     <option>Journalist</option>
-                                    <option>Judge</option>
                                     <option>Lawyer</option>
-                                    <option>Lecturer</option>
                                     <option>Librarian</option>
-                                    <option>Lifeguard</option>
                                     <option>Mechanic</option>
                                     <option>Model</option>
                                     <option>Nurse</option>
                                     <option>Optician</option>
+                                    <option>Orderly</option> 
                                     <option>Painter</option>
                                     <option>Pharmacist</option>
                                     <option>Photographer</option>
@@ -186,19 +194,14 @@
                                     <option>Policeman/Policewoman</option>
                                     <option>Postman</option>
                                     <option>Real estate agent</option>
-                                    <option>Receptionist</option>
                                     <option>Scientist</option>
                                     <option>Secretary</option>
-                                    <option>Shop assistant</option>
                                     <option>Soldier</option>
-                                    <option>Tailor</option>
+                                    <option>Tailor/Seamstress</option>
                                     <option>Taxi driver</option>
                                     <option>Teacher</option>
-                                    <option>Translator</option>
-                                    <option>Travel agent</option>
                                     <option>Veterinary doctor (Vet)</option>
                                     <option>Waiter/Waitress</option>
-                                    <option>Window cleaner</option>  
                                     <option>Other</option>  
                                 </select>
                                 <div class="select-dropdown"></div>
@@ -213,37 +216,29 @@
                                     <option disabled="disabled" selected="selected">Choose option</option>
                                     <option>I don't</option>
                                     <option>kayaking</option>
-                                    <option>bobsleigh</option>
                                     <option>canoeing</option>
                                     <option>cross-country skiing</option>
-                                    <option>rafting</option>
-                                    <option>snorkeling</option>
                                     <option>swimming</option>
-                                    <option>bodyboarding</option>
                                     <option>freediving</option>
                                     <option>paddle boarding</option>
                                     <option>scuba diving</option>
-                                    <option>surfing</option>
                                     <option>aerobics</option>
                                     <option>archery</option>
-                                    <option>artistic gymnastics</option>
-                                    <option>bodybuilding</option>
                                     <option>boxing</option>
-                                    <option>cross-country running</option>
                                     <option>cycling</option>
-                                    <option>figure skating</option>
+                                    <option>skating</option>
                                     <option>horseback riding</option>
                                     <option>kickboxing</option>
                                     <option>ultimate frisbee</option>
                                     <option>walking</option>
                                     <option>weightlifting</option>
                                     <option>wrestling</option>
+                                    <option>Softball</option> 
                                     <option>baseball</option>
                                     <option>basketball</option>
                                     <option>tennis</option>
                                     <option>badminton</option>
                                     <option>bowling</option>
-                                    <option>cricket</option>
                                     <option>curling</option>
                                     <option>football</option>
                                     <option>Ski</option>
@@ -254,13 +249,15 @@
                             </div>
                         </div>
                         <div class="input-group">
-                            <label class="label">How often?(per week)</label>
+                            <label class="label">How often?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="how_often_sports">
                                     <option disabled="disabled" selected="selected">Choose option</option>
                                     <option>Daily</option>
-                                    <option>3 times in a Week</option>
-                                    <option>2 times in a Week</option>
+                                    <option>3 times a Week</option>
+                                    <option>2 times a Week</option>
+                                    <option>1 time per week</option>
+                                    <option>2-3 times per Month</option>
                                     <option>Monthly</option>
                                     <option>Rarely</option>
                                     <option></option>
@@ -281,12 +278,7 @@
                             </div>
                         </div>--%>
 
-                           <div class="input-group" id="family_Doctor_Box" style="display: block;">
-                                    <label class="label" style="width: 500px;">What is the name of your family Doctor?</label>
-                                    <div class="rs-select2 js-select-simple select--no-search">
-                                       <input class="input--style-4" type="text" id="family_Doctor" name="family_Doctor"> 
-                                     </div>
-                                </div>
+            
                         <div class="input-group">
                             <label class="label">What hand do you write with?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
@@ -324,7 +316,7 @@
                             </div>
                              </div>
                             <div class="input-group" style="display: none;" id="smoke_off_Box">
-                                <label class="label">If no, since when have you been off work?</label>
+                                <label class="label">If no, since when have you been off?</label>
                                 <div class="input-group-icon">
                                     <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="smoke_off" name="smoke_off">
                                     <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
@@ -386,7 +378,7 @@
                                         <option>18</option>
                                         <option>19</option>
                                         <option>20</option>
-                                        <option>More than 1 Box</option>
+                                        <option>More than 1 Pack</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
@@ -478,7 +470,7 @@
                                 </div>
                             </div>
                             <div class="input-group" style="display: none;" id="drug_off_Box">
-                                <label class="label">If no, since when have you been off drug?</label>
+                                <label class="label">If no, since when have you been off the drug?</label>
                                 <div class="input-group-icon">
                                     <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="drug_off" name="alcohol_off">
                                     <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
@@ -492,47 +484,35 @@
                                         <option disabled="disabled" selected="selected">Choose option</option>
                                         <option>Rarely</option>
                                         <option>Monthly</option>
-                                        <option>Waeekly</option>
+                                        <option>Weekly</option>
                                         <option>Daily</option>
-                                        <option>More than 2 times a day</option>
+                                        <option> 2 or more times per day</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
                             </div>
                             <div class="input-group" id="what_drug" style="display: block;">
-                                <label class="label">If yes, what drug use drug?</label>
+                                <label class="label">If yes, Which Drug or Herbal/Natural Remedy do you Use?​</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="recreationalDrug_whatDrugs">
                                         <option disabled="disabled" selected="selected">Choose option</option>
-                                        <option>Stimulants (e.g. cocaine)</option>
-                                        <option>Opium-related painkillers (e.g. heroin)</option>
+                                        <option>Stimulants (e.g. cocaine, amphetamines,methamphetamine, ecstacy [MDMA]))</option>
+                                        <option>Opium-related painkillers (e.g. heroin,  morphine, fentanyl, oxycodone, ​dilaudid);)</option>
                                         <option>Hallucinogens (e.g. LSD)</option>
-                                        <option>ativan</option>
-                                        <option>Benzodiazepines</option>
-                                        <option>Valium</option>
-                                        <option>canabis</option>
-                                        <option>marijuana</option>
-                                        <option>pot</option>
-                                        <option>chondroitin</option>
-                                        <option>cocaine</option>
-                                        <option>glucosamine</option>
+                                        <option>Benzodiazepines(e.g. ativan, valium)</option>
+                                        <option>Canabis/Marijuana</option>
+                                        <option>Ketamine</option>
+                                        <option>Ritalin</option>
+                                         <option>chondroitin</option>
+                                         <option>glucosamine</option>
                                         <option>ginger</option>
                                         <option>ginkgo</option>
                                         <option>biloba</option>
                                         <option>ginseng</option>
-                                        <option>ketamine</option>
-                                        <option>heroine</option>
-                                        <option>st-John's wort</option>
-                                        <option>methamphetamine</option>
-                                        <option>amphetamines</option>
-                                        <option>morphine</option>
-                                        <option>fentanyl</option>
-                                        <option>oxycodone</option>
-                                        <option>dilaudid</option>
-                                        <option>MDMA</option>
+                                         <option>st-John's wort</option>
+                                         <option>MDMA</option>
                                          <option>ecstacy</option>
-                                        <option>ritalin</option>
-                                        <option>turmeric</option>
+                                         <option>turmeric</option>
                                          <option>Other</option>
                                     </select>
                                     <div class="select-dropdown"></div>
@@ -681,7 +661,7 @@
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">
-                                           Pulmonary 
+                                           Pulmonary Embolism
                                             <input type="checkbox" id="Pulmonary" name="Pulmonary">
                                             <span class="checkmark"></span>
                                         </label>
@@ -719,9 +699,16 @@
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="bleeding_problemstypes">
                                         <option disabled="disabled" selected="selected">Choose option</option>
-                                        <option>None</option>
-                                        <option>Blood Clots</option>
-                                        <option>More than 20</option>
+                                        <option>Von Willebrand</option>
+                                        <option>Hemophilia A (Factor 8 deficiency)</option>
+                                        <option>Hemophilia B (Christmas disease)</option>
+                                         <option>Factor 5 Leiden</option>
+                                        <option>Factor 2 deficiency</option>
+                                        <option>Factor 5 deficiency</option>
+                                        <option>Factor 7 deficiency</option>
+                                        <option>Factor 10 deficiency</option>
+                                        <option>Factor 12 deficiency</option>
+                                        <option>Other - Input</option> 
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
@@ -732,9 +719,20 @@
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="cancer_problemstypes">
                                         <option disabled="disabled" selected="selected">Choose option</option>
-                                        <option>Dementia</option>
-                                        <option>Chronic Obstructive Pulmonary Disease or Emphysema</option>
-                                        <option>Drug Dependency or Abuse</option>
+                                        <option>Breast</option>
+                                        <option>Prostate</option>
+                                        <option>Colon/Colorectal</option>
+                                        <option>Kidney</option>
+                                        <option>Bladder</option>
+                                        <option>Thyroid</option>
+                                        <option>Lymphoma</option>
+                                        <option>Melanoma</option>
+                                        <option>Endometrial</option>
+                                        <option>Leukemia</option>
+                                        <option>Pancreatic</option>
+                                        <option>Liver</option>
+                                        <option>Other - Input​</option>
+
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
@@ -745,15 +743,18 @@
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="hepatitis_problemtypes">
                                         <option disabled="disabled" selected="selected">Choose option</option>
-                                        <option>Osteoporosis</option>
-                                        <option>Pancreatitis</option>
-                                        <option>Peripheral Vascular Disease</option>
-                                        <option>Pulmonary Embolism</option>
-                                        <option>Reflux or GERD</option>
-                                        <option>Seizures</option>
-                                        <option>Sleep Apnea</option>
-                                        <option>Stroke</option>
-                                        <option>Other</option>
+                                        <option>Auto-immune</option>
+                                        <option>Alcohol-induced</option>
+                                        <option>Hepatitis A</option>
+                                        <option>Hepatitis B – Active</option>
+                                        <option>Hepatis B - Chronic</option>
+                                        <option>Hepatitis B – Cured</option>
+                                        <option>Hepatitis C – Active</option>
+                                        <option>Hepatitis C – Chronic</option>
+                                        <option>Hepatitis C – Cured</option>
+                                        <option>Hepatitis D</option>
+                                        <option>Hepatitis E</option>
+                                        <option>Other - Input​</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
@@ -761,10 +762,10 @@
 
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label" style="width: 200px;">Have you had surgery?</label>
+                                    <label class="label" style="width: 200px;">Have you ever had surgery?</label>
                                     <div class="p-t-10">
                                         <label class="radio-container" style="width: 500px;">
-                                            Yes (then enter details)
+                                            Yes
                                             <input type="radio" checked="checked" id="yes_surgery" name="surgery" onclick="yes_surgery_changed(this)">
                                             <span class="checkmark"></span>
                                         </label>
@@ -779,33 +780,9 @@
                                 <div class="input-group" id="surgery_names" style="display: block;">
                                     <label class="label" style="width: 500px;">What type of surgery?</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="subject" id="surgerynames">
-                                            <option disabled="disabled" selected="selected">Choose option</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8</option>
-                                            <option>9</option>
-                                            <option>10</option>
-                                            <option>11</option>
-                                            <option>12</option>
-                                            <option>13</option>
-                                            <option>14</option>
-                                            <option>15</option>
-                                            <option>16</option>
-                                            <option>17</option>
-                                            <option>18</option>
-                                            <option>19</option>
-                                            <option>20</option>
-                                            <option>More than 20</option>
-                                        </select>
-                                        <div class="select-dropdown"></div>
-                                    </div>
-                                </div>
+                                       <input class="input--style-4" type="text" id="surgerynames" name="surgerynames"> 
+                                     </div>
+                                  </div>
 
                                 <div class="input-group" style="display: block;" id="surgery_date_Box">
                                     <label class="label" style="width: 200px;">When was your surgery?</label>
@@ -860,7 +837,7 @@
 
                                 <div class="col-6">
                                     <div class="input-group">
-                                        <label class="label" style="width: 500px;">Do you have Referral Information?</label>
+                                        <label class="label" style="width: 500px;">Do you have a Referral?</label>
                                         <div class="p-t-10">
                                             <label class="radio-container" style="width: 500px;">
                                                 Yes
@@ -892,6 +869,8 @@
                                     <%--<asp:RadioButton ID="Submit_Button" runat="server" Text="Button" OnCheckedChanged="Submit_Button_CheckedChanged" />--%>
                                     <asp:Button ID="Submit_Button" runat="server" Style="display: none;" Text="Button" OnClick="btnSubmitButton_Click" />
                                 </div>
+                                  <label id="test" style="font-weight: normal;"></label>
+
                 </div>
             </div>
         </div>
@@ -911,11 +890,89 @@
     <script type="text/javascript">
 
         var txtFirstName;
+        var txtLastName ;
+        var txtBirthday  ;
+        var txtMedicareNumber;
+        var genderselection;
+        var txtExpirationDate ;
+        var txtEmail ;
+        var txtPhoneNumber;
+        var livingActivities ;
+        var dateOffWork;
+        var neverworkoption;
+        var sportsActivites;
+        var howoftensports;
+        var familynameOfDoctor ;
+        var handWrite ;
+        var smokeHowmanyYears ;
+        var smokeHowmanyPerday ;
+        var smokeOffDate ;
+
+        var alcoholHowmanyPerweek ;
+        var alcoholOffDate ;
+
+        var recreationalDrugHowmanyPerweeks  ;
+        var recreationalDrugWhatDrugs  ;
+        var recreationalDrugOffDate  ;
+
+        var bleedingProblemsTypes  ;
+        var cancerProblemsTypes ;
+        var hepatitisProblemTypes  ;
+
+        var surgeryNames ;
+        var surgeryDate ;
+        var surgonName  ;
+        let medicalFile ;
+
+        let referralFile ;
+
+        let questionnaireformat;
 
         $(document).ready(function () {
+
             txtFirstName = document.getElementById('first_name');
-            // alert();
-        });
+            txtLastName = document.getElementById('last_name');
+            txtBirthday = document.getElementById('birthday');
+              txtMedicareNumber = document.getElementById('medicare_number');
+             txtExpirationDate = document.getElementById('expiration_date');
+             txtEmail = document.getElementById('email');
+             txtPhoneNumber = document.getElementById('phone_number');
+            livingActivities = document.getElementById('living_activities');
+            dateOffWork = document.getElementById('date_offwork');
+            neverworkoption = document.getElementById('never_work_option');
+            sportsActivites = document.getElementById('sports_activites');
+            howoftensports = document.getElementById('how_often_sports');
+              familynameOfDoctor = document.getElementById('family_Doctor');
+              handWrite = document.getElementById('hand_write');
+              smokeHowmanyYears = document.getElementById('smoke_howmany_years');
+              smokeHowmanyPerday = document.getElementById('smoke_howmany_perday');
+              smokeOffDate = document.getElementById('smoke_off');
+
+              alcoholHowmanyPerweek = document.getElementById('alcohol_howmany_perweek');
+              alcoholOffDate = document.getElementById('alcohol_off');
+
+              recreationalDrugHowmanyPerweeks = document.getElementById('recreationalDrug_howmany_perweeks');
+              recreationalDrugWhatDrugs = document.getElementById('recreationalDrug_whatDrugs');
+              recreationalDrugOffDate = document.getElementById('drug_off');
+
+              bleedingProblemsTypes = document.getElementById('bleeding_problemstypes');
+              cancerProblemsTypes = document.getElementById('cancer_problemstypes');
+              hepatitisProblemTypes = document.getElementById('hepatitis_problemtypes');
+
+              surgeryNames = document.getElementById('surgerynames');
+              surgeryDate = document.getElementById('surgery_date');
+              surgonName = document.getElementById('surgonname');
+
+
+            genderselection = '';
+
+              medicalFile = $("[id$=FileUploadMedical]");
+              referralFile = $("[id$=FileUploadReferal_]");
+
+               questionnaireformat = document.getElementById('questionnaire_format');
+
+ 
+         });
 
         function no_medicare_card_changed(termsCheckBox) {
 
@@ -1195,50 +1252,17 @@
             //window.open("exit.html", "Thanks for Visiting!");
 
             //var txtFirstName = document.getElementById('first_name');
-            var txtLastName = document.getElementById('last_name');
-            var txtBirthday = document.getElementById('birthday');
-            var txtMedicareNumber = document.getElementById('medicare_number');
-            var txtExpirationDate = document.getElementById('expiration_date');
-            var txtEmail = document.getElementById('email');
-            var txtPhoneNumber = document.getElementById('phone_number');
-            var livingActivities = document.getElementById('living_activities');
-            var dateOffWork = document.getElementById('date_offwork');
-            var sportsActivites = document.getElementById('sports_activites');
-            var nameOfDoctor = document.getElementById('family_Doctor');
-            var handWrite = document.getElementById('hand_write');
-            var smokeHowmanyYears = document.getElementById('smoke_howmany_years');
-            var smokeHowmanyPerday = document.getElementById('smoke_howmany_perday');
-            var smokeOffDate = document.getElementById('smoke_off');
-
-            var alcoholHowmanyPerweek = document.getElementById('alcohol_howmany_perweek');
-            var alcoholOffDate = document.getElementById('alcohol_off');
-
-            var recreationalDrugHowmanyPerweeks = document.getElementById('recreationalDrug_howmany_perweeks');
-            var recreationalDrugWhatDrugs = document.getElementById('recreationalDrug_whatDrugs');
-            var recreationalDrugOffDate = document.getElementById('drug_off');
-
-            var bleedingProblemsTypes = document.getElementById('bleeding_problemstypes');
-            var cancerProblemsTypes = document.getElementById('cancer_problemstypes');
-            var hepatitisProblemTypes = document.getElementById('hepatitis_problemtypes');
-
-            var surgeryNames = document.getElementById('surgerynames');
-            var surgeryDate = document.getElementById('surgery_date');
-            var surgonName = document.getElementById('surgonname');
+           
+            buildAnswers();
 
 
-
-            let medicalFile = $("[id$=FileUploadMedical]");
-
-            let referralFile = $("[id$=FileUploadReferal_]");
-
-
-
-
-
+            //questionnaireformat.setAttribute("style", "pointer-events: none;");
 
             txtFirstName.style.backgroundColor = "#fafafa";
             txtLastName.style.backgroundColor = "#fafafa";
             txtBirthday.style.backgroundColor = "#fafafa";
+
+            //txtLastName.style.backgroundColor = "#C0C0C0";
 
 
              txtMedicareNumber.style.backgroundColor = "#fafafa";;
@@ -1248,7 +1272,7 @@
              livingActivities.style.backgroundColor = "#fafafa";
             dateOffWork.style.backgroundColor = "#fafafa";
              sportsActivites .style.backgroundColor = "#fafafa";
-             nameOfDoctor .style.backgroundColor = "#fafafa";
+             familynameOfDoctor .style.backgroundColor = "#fafafa";
              handWrite.style.backgroundColor = "#fafafa";
             smokeHowmanyYears.style.backgroundColor = "#fafafa";
              smokeHowmanyPerday.style.backgroundColor = "#fafafa";
@@ -1321,14 +1345,19 @@
                 dateOffWork.style.backgroundColor = "#ffcfcf";
                 return false;
             }
+            else if (neverworkoption.value == "" && document.getElementById('never_working_question').checked) {
+                alert("Please select one of the work options");
+                dateOffWork.style.backgroundColor = "#ffcfcf";
+                return false;
+            }
             else if (sportsActivites.value == "Choose option") {
                 alert("Please fill out your Sport Activities");
                 sportsActivites.style.backgroundColor = "#ffcfcf";
                 return false;
             }
-            else if (nameOfDoctor.value == "Choose option") {
+            else if (familynameOfDoctor.value == "Choose option") {
                 alert("Please fill out your Doctor Name");
-                nameOfDoctor.style.backgroundColor = "#ffcfcf";
+                familynameOfDoctor.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (handWrite.value == "Choose option") {
@@ -1356,11 +1385,11 @@
                 alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
                 return false;
             }
-            else if (alcoholOffDate.value == "" && document.getElementById('no_alcohol').checked) {
-                alert("Please fill out your Drinking Off Date");
-                alcoholOffDate.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
+            //else if (alcoholOffDate.value == "" && document.getElementById('no_alcohol').checked) {
+            //    alert("Please fill out your Drinking Off Date");
+            //    alcoholOffDate.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
             else if (alcoholHowmanyPerweek.value == "Choose option" && document.getElementById('yes_alcohol').checked) {
                 alert("Please fill out, How Many Time Do You Drink Per week");
                 alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
@@ -1414,7 +1443,7 @@
                 return false;
             }
             else if (surgonName.value == "Choose option" && document.getElementById('yes_surgery').checked) {
-                alert("Please select your Surgon Name");
+                alert("Please write your Surgeon's Name");
                 surgonName.style.backgroundColor = "#ffcfcf";
                 return false;
             }
@@ -1431,249 +1460,468 @@
             }
 
 
+            if (document.getElementById('gender_Male').checked)
+            {
+                genderselection = 'Male';
+            }
+            else if (document.getElementById('gender_Female').checked)
+            {
+                genderselection = 'Female';
+            }
+            else if (document.getElementById('gender_Other').checked)
+            {
+                genderselection = 'Other/Prefer not to answer'; 
+            }
+            alert(genderselection);
 
-            var userArray = {};
+            if (confirm("Are you sure all the information above is correct?"))
+            {
 
-            //alert(document.getElementById("referral_file").src);
-            // alert(referralFile.value);
 
-            userArray.Name = txtFirstName.value;
-            userArray.Family = txtLastName.value;
-            userArray.Email = txtEmail.value;
-            userArray.Gender = txtFirstName.value;
-            userArray.PhoneNumber = txtPhoneNumber.value;
-            userArray.MedicareNumber = txtMedicareNumber.value;
-            userArray.ExpirationDate = txtExpirationDate.value;
-            userArray.Birthday = txtBirthday.value;
+                var userArray = {};
 
+                //alert(document.getElementById("referral_file").src);
+                // alert(referralFile.value);
 
+                userArray.Name = txtFirstName.value;
+                userArray.Family = txtLastName.value;
+                userArray.Email = txtEmail.value;
+                userArray.Gender = genderselection;
+                userArray.PhoneNumber = txtPhoneNumber.value;
+                userArray.MedicareNumber = txtMedicareNumber.value;
+                userArray.ExpirationDate = txtExpirationDate.value;
+                userArray.Birthday = txtBirthday.value;
 
-            //  questionnaireArray.ReferralImage = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
 
-            //  questionnaireArray.MedicationFile = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
 
+                //  questionnaireArray.ReferralImage = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
 
+                //  questionnaireArray.MedicationFile = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
 
 
 
 
 
-            //if (referralFile.files && referralFile.files[0]) {
-            //    var reader = new FileReader();
 
-            //    reader.addEventListener(
-            //        "load",
-            //        function () {
-            //            var avatarImg = new Image();
-            //            var src = reader.result;
-            //            avatarImg.src = src;
 
-            //        //    document.getElementById("dataUrl").innerText = src;
+                //if (referralFile.files && referralFile.files[0]) {
+                //    var reader = new FileReader();
 
-            //             questionnaireArray.ReferralImage = src;
+                //    reader.addEventListener(
+                //        "load",
+                //        function () {
+                //            var avatarImg = new Image();
+                //            var src = reader.result;
+                //            avatarImg.src = src;
 
+                //        //    document.getElementById("dataUrl").innerText = src;
 
-            //            $.ajax({
-            //                url: 'Default.aspx/addUserQuestionnaire',
-            //                contentType: 'application/json;charset=utf-8',
-            //                method: 'post',
-            //                data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
-            //                success: function () {
-            //                    //$("#MoneyType").val = "";
-            //                    //$("#progress").hide();
-            //                    alert("ok");
-            //                    //$("#saveSuccess").show();
-            //                    //fetchMoneyTypeData();
-            //                },
-            //                error: function (er) {
-            //                    alert(er);
-            //                    //$("#saveError").show();
-            //                },
+                //             questionnaireArray.ReferralImage = src;
 
-            //            });
 
-            //            //avatarImg.onload = function () {
-            //            //    var c = document.getElementById("myCanvas");
-            //            //    var ctx = c.getContext("2d");
-            //            //    ctx.canvas.width = avatarImg.width;
-            //            //    ctx.canvas.height = avatarImg.height;
+                //            $.ajax({
+                //                url: 'Default.aspx/addUserQuestionnaire',
+                //                contentType: 'application/json;charset=utf-8',
+                //                method: 'post',
+                //                data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
+                //                success: function () {
+                //                    //$("#MoneyType").val = "";
+                //                    //$("#progress").hide();
+                //                    alert("ok");
+                //                    //$("#saveSuccess").show();
+                //                    //fetchMoneyTypeData();
+                //                },
+                //                error: function (er) {
+                //                    alert(er);
+                //                    //$("#saveError").show();
+                //                },
 
-            //            //    ctx.drawImage(avatarImg, 0, 0);
-            //            //};
-            //        },
-            //        false
-            //    );
+                //            });
 
-            //    reader.readAsDataURL(referralFile.files[0]);
-            //}
+                //            //avatarImg.onload = function () {
+                //            //    var c = document.getElementById("myCanvas");
+                //            //    var ctx = c.getContext("2d");
+                //            //    ctx.canvas.width = avatarImg.width;
+                //            //    ctx.canvas.height = avatarImg.height;
 
+                //            //    ctx.drawImage(avatarImg, 0, 0);
+                //            //};
+                //        },
+                //        false
+                //    );
 
+                //    reader.readAsDataURL(referralFile.files[0]);
+                //}
 
-            //questionnaireArray.MedicationFile = medicalFile.value;
 
 
-            //alert($('#referral_file')[0].files.toDataURL("image/png"));
-            //      alert(questionnaireArray.MedicationFile);
+                //questionnaireArray.MedicationFile = medicalFile.value;
 
-            //questionnaireArray.ReferralImage = referralFile.value;
-            //questionnaireArray.MedicationFile = medicalFile.value;
-            //questionnaireArray.ReferralImage = window.URL.createObjectURL(referralFile.files[0]);
-            //questionnaireArray.MedicationFile = window.URL.createObjectURL(medicalFile.files[0]);
-            //userArray.PersonalPhoto = txtFirstName.value;
-            //userArray.MedicarePhoto = txtFirstName.value;
-            //userArray.UserId =null;
 
+                //alert($('#referral_file')[0].files.toDataURL("image/png"));
+                //      alert(questionnaireArray.MedicationFile);
 
-
-            // this is ok for user
-            //$.ajax({
-            //    url: 'Default.aspx/addUser',
-            //    contentType: 'application/json;charset=utf-8',
-            //    method: 'post',
-            //    data: '{user:' + JSON.stringify(userArray) + '}',
-            //    success: function () {
-            //        //$("#MoneyType").val = "";
-            //        //$("#progress").hide();
-            //        alert("ok");
-            //        //$("#saveSuccess").show();
-            //        //fetchMoneyTypeData();
-            //    },
-            //    error: function (er) {
-            //        alert(er);
-            //        //$("#saveError").show();
-            //    }, 
-            //});
-
-
-            // THIS IS OK FOR addUserQuestionnaire
-
-            //$.ajax({
-            //    url: 'Default.aspx/addUserQuestionnaire',
-            //    contentType: 'application/json;charset=utf-8',
-            //    method: 'post',
-            //    data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
-            //    success: function () {
-            //        //$("#MoneyType").val = "";
-            //        //$("#progress").hide();
-            //        alert("ok");
-            //        //$("#saveSuccess").show();
-            //        //fetchMoneyTypeData();
-            //    },
-            //    error: function (er) {
-            //        alert(er);
-            //        //$("#saveError").show();
-            //    },
-
-            //});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            //var file1 = $("#referral_file").get(0).files;
-            //var file2 = $("#medical_file").get(0).files;
-            //var data = new FormData;
-            // data.append("ImageFile", file[0]);
-
-            var questionnaireArray = {};
-
-            questionnaireArray.QuestionnaireAnswer = 'uhhu';
-            questionnaireArray.LanguageType = 'uhuh';
-            questionnaireArray.UserId = 5;
-            questionnaireArray.Date = txtBirthday.value;
-
-            //var s = document.getElementById('imagePreview');
-            //s.src = URL.createObjectURL(file1[0]);
-            //document.getElementById("dataUrl").innerText = URL.createObjectURL(file1[0]);
-
-            //  questionnaireArray.ImageFile = file[0];
-            questionnaireArray.ReferralImage = "";
-            questionnaireArray.MedicationFile = "";
-
-            //alert($("[id$=FileUploadReferal]").get(0).files);
-
-            //  questionnaireArray.MedicationFile = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-
-            //questionnaireArray.ReferralImage = URL.createObjectURL(file1[0]);
-            //questionnaireArray.MedicationFile = URL.createObjectURL(file2[0]);
-            //    questionnaireArray.ReferralImageName = "";
-            //questionnaireArray.ReferralImageName = medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-            //    questionnaireArray.MedicationFileName = referralFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-            //alert(questionnaireArray.MedicationFile);
-            //alert(questionnaireArray.ReferralImage);
-
-            //  questionnaireArray.ReferralImage ="sads";
-            //   questionnaireArray.MedicationFile = "asd";
-
-            // questionnaireArray.ReferralImage = getBase64Images(s);
-
-            //  alert(file.toDataURL());
-            //data.append("QuestionnaireAnswer", 'ssss');
-            //data.append("LanguageType", 'ssss');
-            //data.append("UserId",1);
-            //data.append("Date", txtBirthday.value);
-            //data.append("ReferralImage", 'Images/MedicalFile');
-            //data.append("MedicationFile", 'Images/MedicalFile');
-
-            //$.ajax({
-            //    type: "POST",
-            //    url: "Default.aspx/ImageUpload",
-            //    data: data,
-            //   //   contentType: 'application/json;charset=utf-8',
-
-            //    contentType: false,
-            //     processData: false, 
-            //     success: function () {
-            //        alert("ok" );
-            //    },
-            //    error: function (er) {
-            //        alert(er.message );
-            //        //$("#saveError").show();
-            //    }
-            //});
-
-            // in karrr mikoneeeeee $$$$$$$$$$$
-
-            $.ajax({
-                url: 'Default.aspx/addUserQuestionnaire',
-                contentType: 'application/json;charset=utf-8',
-                method: 'post',
-                //processData: false,
-                data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
-                success: function () {
-                    //$("#MoneyType").val = "";
-                    //$("#progress").hide();
-                    alert("ok");
-                    $("[id$=Submit_Button]").click();
-
-                    //$("#saveSuccess").show();
-                    //fetchMoneyTypeData();
-                },
-                error: function (er) {
-                    alert('error');
-                    //$("#saveError").show();
-                },
-
-            });
-
-
+                //questionnaireArray.ReferralImage = referralFile.value;
+                //questionnaireArray.MedicationFile = medicalFile.value;
+                //questionnaireArray.ReferralImage = window.URL.createObjectURL(referralFile.files[0]);
+                //questionnaireArray.MedicationFile = window.URL.createObjectURL(medicalFile.files[0]);
+                //userArray.PersonalPhoto = txtFirstName.value;
+                //userArray.MedicarePhoto = txtFirstName.value;
+                //userArray.UserId =null;
+
+
+
+                // this is ok for user
+                $.ajax({
+                    url: 'Default.aspx/addUser',
+                    contentType: 'application/json;charset=utf-8',
+                    method: 'post',
+                    data: '{user:' + JSON.stringify(userArray) + '}',
+                    success: function () {
+                        //$("#MoneyType").val = "";
+                        //$("#progress").hide();
+                        alert("ok");
+                        //$("#saveSuccess").show();
+                        //fetchMoneyTypeData();
+                    },
+                    error: function (er) {
+                        alert(er);
+                        //$("#saveError").show();
+                    }, 
+                });
+
+
+                // THIS IS OK FOR addUserQuestionnaire
+
+                //$.ajax({
+                //    url: 'Default.aspx/addUserQuestionnaire',
+                //    contentType: 'application/json;charset=utf-8',
+                //    method: 'post',
+                //    data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
+                //    success: function () {
+                //        //$("#MoneyType").val = "";
+                //        //$("#progress").hide();
+                //        alert("ok");
+                //        //$("#saveSuccess").show();
+                //        //fetchMoneyTypeData();
+                //    },
+                //    error: function (er) {
+                //        alert(er);
+                //        //$("#saveError").show();
+                //    },
+
+                //});
+
+
+
+
+
+                //var file1 = $("#referral_file").get(0).files;
+                //var file2 = $("#medical_file").get(0).files;
+                //var data = new FormData;
+                // data.append("ImageFile", file[0]);
+
+                var questionnaireArray = {};
+
+                questionnaireArray.QuestionnaireAnswer = 'uhhu';
+                questionnaireArray.LanguageType = 'uhuh';
+                questionnaireArray.UserId = 5;
+                questionnaireArray.Date = txtBirthday.value;
+
+                //var s = document.getElementById('imagePreview');
+                //s.src = URL.createObjectURL(file1[0]);
+                //document.getElementById("dataUrl").innerText = URL.createObjectURL(file1[0]);
+
+                //  questionnaireArray.ImageFile = file[0];
+                questionnaireArray.ReferralImage = "";
+                questionnaireArray.MedicationFile = "";
+
+               
+                // in karrr mikoneeeeee $$$$$$$$$$$
+
+                $.ajax({
+                    url: 'Default.aspx/addUserQuestionnaire',
+                    contentType: 'application/json;charset=utf-8',
+                    method: 'post',
+                    //processData: false,
+                    data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
+                    success: function () {
+                        //$("#MoneyType").val = "";
+                        //$("#progress").hide();
+                        alert("ok");
+                        $("[id$=Submit_Button]").click();
+
+                        //$("#saveSuccess").show();
+                        //fetchMoneyTypeData();
+                    },
+                    error: function (er) {
+                        alert('error');
+                        //$("#saveError").show();
+                    },
+
+                });
+
+            }
+            else
+            {
+                return false;
+            }
         }
 
 
+        function buildAnswers() {
 
+
+            var answer = '';
+            answer = 'Are You Working Now ?\n';
+            if (document.getElementById('yes_working_question').checked) {
+                answer += 'Yes\n';
+                answer += 'What do you do for a living/what is your profession?\n';
+                answer += livingActivities.value; answer += '\n';
+            }
+            else if (document.getElementById('no_working_question').checked)
+            {
+                answer += 'No; Retired\n';
+                answer += 'If No, Since When Have You Been Off Work?\n';
+                answer += dateOffWork.value; answer += '\n';
+            }
+            else if (document.getElementById('never_working_question').checked)
+            {
+                answer += 'Never\n';
+                answer += 'If Never, Could You Select One Of These Options?\n';
+                answer += neverworkoption.value; answer += '\n';
+            }
+
+            answer += '\n\n';
+
+            answer += 'What Sports/Activities Do You Do?\n';
+            answer += sportsActivites.value; answer += '\n';
+            answer += 'How Often?(Per Week)?\n';
+            answer += howoftensports.value; answer += '\n';
+
+            answer += '\n\n';
+
+
+            answer += 'What Is The Name Of Your Family Doctor?\n';
+            answer += familynameOfDoctor.value; answer += '\n';
+
+            answer += '\n\n';
+
+            answer += 'What Hand Do You Write With?\n';
+            answer += handWrite.value; answer += '\n';
+
+            answer += '\n\n';
+
+            answer += 'Do You Smoke?\n';
+            if (document.getElementById('yes_smoke').checked) {
+                answer += 'Yes\n';
+                answer += 'If Yes, For How Many Years?\n';
+                answer += smokeHowmanyYears.value; answer += '\n';
+
+                answer += 'How Many Cigarettes Per Day?\n';
+
+                answer += smokeHowmanyPerday.value; answer += '\n';
+
+            }
+            else if (document.getElementById('no_smoke').checked) {
+                answer += 'No\n';
+                answer += 'If No, Since When Have You Been Off?\n';
+                answer += smokeOffDate.value; answer += '\n';
+            }
+            else if (document.getElementById('never_smoke').checked) {
+                answer += 'Never\n';
+            } 
+
+            answer += '\n\n';
+
+            answer += 'Do You Drink Alcohol?\n';
+            if (document.getElementById('yes_alcohol').checked) {
+                answer += 'Yes\n';
+                answer += 'If Yes, How Many Drinks Per Week?\n';
+                answer += alcoholHowmanyPerweek.value; answer += '\n'; 
+            }
+            else if (document.getElementById('no_alcohol').checked) {
+                answer += 'No\n';
+                //answer += 'If No, Since When Have You Been Off Work?\n';
+                //answer += alcoholOffDate.value; answer += '\n';
+            }
+            
+            answer += '\n\n';
+
+            answer += 'Do You Take Any Recreational Drugs Or Herbal/Natural Remedies?\n';
+            if (document.getElementById('yes_drug').checked) {
+                answer += 'Yes\n';
+                answer += 'If Yes, How Often Do You Take The Drug Or Herbal/Natural Remedies?\n';
+                answer += recreationalDrugHowmanyPerweeks.value; answer += '\n';
+                answer += 'If Yes, What Drug Use Drug ?\n';
+                answer += recreationalDrugWhatDrugs.value; answer += '\n';
+            }
+            else if (document.getElementById('no_drug').checked) {
+                answer += 'No\n';
+                answer += 'If No, Since When Have You Been Off Drug ?';
+                answer += recreationalDrugOffDate.value; answer += '\n';
+            }
+            else if (document.getElementById('never_drug').checked) {
+                answer += 'Never taken\n';
+            }
+
+            answer += '\n\n';
+
+            answer += 'Do You Have Any Of The Following Medical Conditions?\n';
+
+            if (document.getElementById('AIDS_or_HIV').checked) {
+                answer += 'AIDS or HIV\n';
+            }
+            else if (document.getElementById('Alcohol_Dependency_or_Abuse').checked) {
+                answer += 'Alcohol Dependency or Abuse\n';
+            }
+            else if (document.getElementById('Anemia').checked) {
+                answer += 'Anemia\n';
+            }
+            else if (document.getElementById('Anxiety').checked) {
+                answer += 'Anxiety\n'; 
+            }
+            else if (document.getElementById('Arthritis').checked) {
+                answer += 'Arthritis\n'; 
+            }
+            else if (document.getElementById('BleedingProblems').checked) {
+                answer += 'Bleeding Problems\n';
+                answer += 'Bleeding Problems. Type?\n';
+                answer += bleedingProblemsTypes.value; answer += '/n';
+            }
+             else if (document.getElementById('BloodClots').checked) {
+                answer += 'BloodClots\n'; 
+            }
+            else if (document.getElementById('Cancer').checked) {
+                answer += 'Cancer\n'; 
+                answer += 'Cancer. Type?\n';
+                answer += cancerProblemsTypes.value; answer += '/n';
+            }
+            else if (document.getElementById('Dementia').checked) {
+                answer += 'Dementia\n';  
+            }
+            else if (document.getElementById('ChronicObstructive').checked) {
+                answer += 'Chronic Obstructive Pulmonary Disease or Emphysema\n';
+            }
+            else if (document.getElementById('Depression').checked) {
+                answer += 'Depression\n';
+            }
+            else if (document.getElementById('DrugDependency').checked) {
+                answer += 'Drug Dependency or Abuse\n';
+            }
+            else if (document.getElementById('Diabetes').checked) {
+                answer += 'Diabetes\n'; 
+            }
+            else if (document.getElementById('Gout').checked) {
+                answer += 'Gout\n'; 
+            }
+            else if (document.getElementById('HeartDisease').checked) {
+                answer += 'Heart Disease\n'; 
+            }
+            else if (document.getElementById('HighCholesterol').checked) {
+                answer += 'Heart Cholesterol\n';  
+            } 
+            else if (document.getElementById('HighBloodPressure').checked) {
+                answer += 'High Blood Pressure\n';  
+            }
+            else if (document.getElementById('HeartArrythmia').checked) {
+                answer += 'Heart Arrythmia\n';   
+            }
+            else if (document.getElementById('Hypothyroidism').checked) {
+                answer += 'Hypothyroidism\n';   
+            }
+            else if (document.getElementById('Hyperthyroidism').checked) {
+                answer += 'Hyperthyroidism\n';    
+            }
+            else if (document.getElementById('KidneyDisease').checked) {
+                answer += 'KidneyDisease\n';   
+            }
+            else if (document.getElementById('Leukemia').checked) {
+                answer += 'Leukemia\n';    
+            } else if (document.getElementById('LiverDisease').checked) {
+                answer += 'LiverDisease\n';    
+
+            } else if (document.getElementById('Hepatitis').checked) {
+                answer += 'Hepatitis\n';
+                answer += 'Hepatitis. Type?\n';
+                answer += hepatitisProblemTypes.value; answer += '/n';
+
+            } else if (document.getElementById('Osteoporosis').checked) {
+                answer += 'Osteoporosis\n';    
+
+            } else if (document.getElementById('Pancreatitis').checked) {
+                answer += 'Pancreatitis\n';     
+            }
+            else if (document.getElementById('PeripheralVascularDisease').checked) {
+                answer += 'Peripheral Vascular Disease\n';    
+
+            } else if (document.getElementById('Pulmonary').checked) {
+                answer += 'Pulmonary\n';    
+
+            } else if (document.getElementById('RefluxorGERD').checked) {
+                answer += 'Reflux or GERD\n';    
+
+            } else if (document.getElementById('Seizures').checked) {
+                answer += 'Seizures\n';    
+
+            } else if (document.getElementById('SleepApnea').checked) {
+                answer += 'SleepApnea\n';   
+            }
+            else if (document.getElementById('Stroke').checked) {
+                answer += 'Stroke\n';    
+            }
+            else if (document.getElementById('Other').checked) {
+                answer += 'Other\n';    
+            }
+                 
+          
+            answer += '\n\n';
+
+
+            answer += 'Have You Had Surgery?\n';
+            if (document.getElementById('yes_surgery').checked) {
+                answer += 'Yes (then enter details)\n';
+                answer += 'What Type Of Surgery?\n';
+                answer += surgeryNames.value; answer+= '\n';
+                answer += 'When Was Your Surgery?\n';
+                answer += surgeryDate.value; answer += '\n';
+                answer += 'What Was The Surgeon Name?\n';
+                answer += surgonName.value; answer += '\n';
+            }
+            else if (document.getElementById('no_surgery').checked) {
+                answer += 'No previous surgeries\n';
+            }
+
+            answer += '\n\n';
+
+            if (document.getElementById('yes_question_file_medication').checked)
+            {
+                answer += 'Do You Take Any Medications Regularly?\n';
+                answer += 'Yes\n';
+            }
+            else if (document.getElementById('no_question_file_medication').checked) {
+                answer += 'Do You Take Any Medications Regularly?\n';
+                answer += 'No\n';
+            }
+            answer += '\n\n';
+            answer += 'Do You Take Any Medications Regularly?\n';
+            if (document.getElementById('yes_question_file_medication').checked) {
+                 answer += 'Yes\n';
+            }
+            else if (document.getElementById('no_question_file_medication').checked) {
+                 answer += 'No\n';
+            }
+            answer += '\n\n';
+            answer += 'Do You Have Referral Information?\n';
+            if (document.getElementById('yes_Referral').checked) {
+                answer += 'Yes\n';
+            }
+            else if (document.getElementById('no_Referral').checked) {
+                answer += 'No\n';
+            }
+
+            console.log(answer);
+        }
 
 
 
@@ -1994,9 +2242,6 @@
 
 
 
-        //var txtReferralFile = window.URL.createObjectURL(fileinput.files[0]);
-
-        //alert(txtFirstName.value + txtLastName + txtBirthday + txtGender.value + fileinput.value);
 
         function getDataUrl(img) {
             // Create canvas
@@ -2011,13 +2256,7 @@
 
             //return canvas.toDataURL('image/jpeg');
         }
-        // Select the image
 
-        //const img = document.querySelector('#my-image');
-        //img.addEventListener('load', function (event) {
-        //    const dataUrl = getDataUrl(event.currentTarget);
-        //    console.log(dataUrl);
-        //});
 
         function toDataURLs(src) {
             var image = new Image();
@@ -2035,12 +2274,7 @@
             };
 
             image.src = src;
-        }
-
-
-        function OnSuccess(response, userContext, methodName) {
-            alert(response);
-        }
+        } 
 
         function makeid(length) {
             var result = '';
@@ -2098,64 +2332,8 @@
 
             return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
         }
-        //$('#submitfile').ajaxForm({
-        //    complete: function (xhr) {
-        //        alert("Upload complete");
-        //    }
-        //}); 
-
-        function saveData(object, url) {
-
-
-        }
-            //if (txtMoneyType == "") {
-
-            //    $("#scopeTitle").attr("class", "col-lg-6 has-error");
-            //    $("#validateText").css({ "display": "block" });
-            //    return false;
-            //}
-            //else {
-            //    $("#progress").show();
-            //    var moneyArray = {};
-            //    moneyArray.moneyType1 = $("#MoneyType").val();
-            //    $.ajax({
-            //        url: 'MoneyTypePage.aspx/addMoneyType',
-            //        contentType: 'application/json;charset=utf-8',
-            //        method: 'post',
-            //        data: '{moneyType:' + JSON.stringify(moneyArray) + '}',
-            //        success: function () {
-            //            $("#MoneyType").val = "";
-            //            $("#progress").hide();
-            //            //alert("ok");
-            //            $("#saveSuccess").show();
-            //            fetchMoneyTypeData();
-            //        },
-            //        error: function (er) {
-            //            //alert(er);
-            //            $("#saveError").show();
-            //        },
-
-
-            //    });
-
-         // this is very similat to a start event function
-        //   document.addEventListener('DOMContentLoaded', (ev) => {
-        //                  alert('Hiiiiii');
-        //const input_medical_file = document.getElementById('medical_file');
-
-        //input_medical_file.addEventListener('change', (ev) => {
-        //        alert('nooo');
-
-        //        console.dir(input_medical_file.files[0]);
-        //        if (input.files[0].type.indexOf('image/*') > -1) {
-        //            let imge = document.getElementById('');
-        //            text_file.innerHTML = input_medical_file.value;
-        //        }
-        //        else {
-        //            text_file.innerHTML = "No file chosen, yet.";
-        //        }
-        //        //})
-        //})
+     
+         
 
     </script>
 

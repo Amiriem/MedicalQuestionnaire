@@ -25,7 +25,7 @@
                            <span">Error in submiting</span><br />
                        </div>
                    <% var user = getUserDetails();%>
-                    <% var questionnaires = getQuestionnaireDetails(); %>
+                   <% var questionnaires = getQuestionnaireDetails(); %>
 
               <div class="col-lg-12">
                    
