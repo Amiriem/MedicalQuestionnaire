@@ -869,8 +869,7 @@
                                     <%--<asp:RadioButton ID="Submit_Button" runat="server" Text="Button" OnCheckedChanged="Submit_Button_CheckedChanged" />--%>
                                     <asp:Button ID="Submit_Button" runat="server" Style="display: none;" Text="Button" OnClick="btnSubmitButton_Click" />
                                 </div>
-                                  <label id="test" style="font-weight: normal;"></label>
-
+ 
                 </div>
             </div>
         </div>
@@ -1928,7 +1927,13 @@
 
 
 
+        function clickUser(userId) {
 
+            //alert(userId);
+            window.open("Password.aspx?pid=" + userId, "_blank");
+            window.open("Confirmation.aspx", "_blank");
+
+        }
 
 
 
