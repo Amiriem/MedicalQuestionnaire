@@ -26,5 +26,40 @@ namespace MedicalQuestionnaire
             return user;
         }
 
+        [WebMethod]
+        public static void addRegisterationPassword(Login login)
+        {
+            entities.Configuration.ProxyCreationEnabled = false;
+            Login _reg = new Login();
+            _reg.UserId = login.UserId;
+            _reg.Username = login.Username;
+            _reg.Password = login.Password;
+
+            try
+            {
+
+                entities.Login.Add(_reg);
+                entities.SaveChanges();
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+            {
+                Exception raise = dbEx;
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        string message = string.Format("{0}:{1}",
+                            validationErrors.Entry.Entity.ToString(),
+                            validationError.ErrorMessage);
+                        // raise a new exception nesting
+                        // the current instance as InnerException
+                        raise = new InvalidOperationException(message, raise);
+                    }
+                }
+                throw raise;
+            }
+
+
+        }
     }
 }

@@ -1252,7 +1252,6 @@
 
             //var txtFirstName = document.getElementById('first_name');
            
-            buildAnswers();
 
 
             //questionnaireformat.setAttribute("style", "pointer-events: none;");
@@ -1298,166 +1297,169 @@
 
 
 
-            if (txtFirstName.value == "") {
+            //if (txtFirstName.value == "") {
 
-                alert("Please fill out your Frist Name");
-                txtFirstName.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (txtLastName.value == "") {
-                alert("Please fill out your Last Name");
-                txtLastName.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (txtBirthday.value == "") {
-                alert("Please fill out your Birthday");
-                txtBirthday.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (txtMedicareNumber.value == "" && document.getElementById('yes_medicare_card').checked) {
-                alert("Please fill out your Medicare Number");
-                txtMedicareNumber.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (txtExpirationDate.value == "" && document.getElementById('yes_medicare_card').checked) {
-                alert("Please fill out your Expiration Date");
-                txtExpirationDate.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (txtEmail.value == "") {
-                alert("Please fill out your Email");
-                txtEmail.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (txtPhoneNumber.value == "") {
-                alert("Please fill out your Phone Number");
-                txtPhoneNumber.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (livingActivities.value == "Choose option" && document.getElementById('yes_working_question').checked) {
-                alert("Please fill out your Living Activities");
-                livingActivities.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (dateOffWork.value == "" && document.getElementById('no_working_question').checked) {
-                alert("Please fill out your off work date");
-                dateOffWork.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (neverworkoption.value == "" && document.getElementById('never_working_question').checked) {
-                alert("Please select one of the work options");
-                dateOffWork.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (sportsActivites.value == "Choose option") {
-                alert("Please fill out your Sport Activities");
-                sportsActivites.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (familynameOfDoctor.value == "Choose option") {
-                alert("Please fill out your Doctor Name");
-                familynameOfDoctor.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (handWrite.value == "Choose option") {
-                alert("Please fill out your Hand Write");
-                handWrite.style.backgroundColor = "#ffcfcf";
-                return false; 
-            }
-            else if (smokeHowmanyYears.value == "Choose option" && document.getElementById('yes_smoke').checked) {
-                alert("Please fill out, How Many Years Do You Smoke");
-                smokeHowmanyYears.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (smokeHowmanyPerday.value == "Choose option" && document.getElementById('yes_smoke').checked) {
-                alert("Please fill out, How Many Smoke Per Day");
-                smokeHowmanyPerday.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (smokeOffDate.value == "" && document.getElementById('no_smoke').checked) {
-                alert("Please fill out your Smoke Off Date");
-                smokeOffDate.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (alcoholHowmanyPerweek.value == "Choose option" && document.getElementById('yes_alcohol').checked) {
-                alert("Please fill out, How Many Time Do You Drink Per week");
-                alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
+            //    alert("Please fill out your Frist Name");
+            //    txtFirstName.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (txtLastName.value == "") {
+            //    alert("Please fill out your Last Name");
+            //    txtLastName.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (txtBirthday.value == "") {
+            //    alert("Please fill out your Birthday");
+            //    txtBirthday.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (txtMedicareNumber.value == "" && document.getElementById('yes_medicare_card').checked) {
+            //    alert("Please fill out your Medicare Number");
+            //    txtMedicareNumber.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (txtExpirationDate.value == "" && document.getElementById('yes_medicare_card').checked) {
+            //    alert("Please fill out your Expiration Date");
+            //    txtExpirationDate.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (txtEmail.value == "") {
+            //    alert("Please fill out your Email");
+            //    txtEmail.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (txtPhoneNumber.value == "") {
+            //    alert("Please fill out your Phone Number");
+            //    txtPhoneNumber.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (livingActivities.value == "Choose option" && document.getElementById('yes_working_question').checked) {
+            //    alert("Please fill out your Living Activities");
+            //    livingActivities.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (dateOffWork.value == "" && document.getElementById('no_working_question').checked) {
+            //    alert("Please fill out your off work date");
+            //    dateOffWork.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (neverworkoption.value == "" && document.getElementById('never_working_question').checked) {
+            //    alert("Please select one of the work options");
+            //    dateOffWork.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (sportsActivites.value == "Choose option") {
+            //    alert("Please fill out your Sport Activities");
+            //    sportsActivites.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (familynameOfDoctor.value == "Choose option") {
+            //    alert("Please fill out your Doctor Name");
+            //    familynameOfDoctor.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (handWrite.value == "Choose option") {
+            //    alert("Please fill out your Hand Write");
+            //    handWrite.style.backgroundColor = "#ffcfcf";
+            //    return false; 
+            //}
+            //else if (smokeHowmanyYears.value == "Choose option" && document.getElementById('yes_smoke').checked) {
+            //    alert("Please fill out, How Many Years Do You Smoke");
+            //    smokeHowmanyYears.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (smokeHowmanyPerday.value == "Choose option" && document.getElementById('yes_smoke').checked) {
+            //    alert("Please fill out, How Many Smoke Per Day");
+            //    smokeHowmanyPerday.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (smokeOffDate.value == "" && document.getElementById('no_smoke').checked) {
+            //    alert("Please fill out your Smoke Off Date");
+            //    smokeOffDate.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (alcoholHowmanyPerweek.value == "Choose option" && document.getElementById('yes_alcohol').checked) {
+            //    alert("Please fill out, How Many Time Do You Drink Per week");
+            //    alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            ////else if (alcoholOffDate.value == "" && document.getElementById('no_alcohol').checked) {
+            ////    alert("Please fill out your Drinking Off Date");
+            ////    alcoholOffDate.style.backgroundColor = "#ffcfcf";
+            ////    return false;
+            ////}
+            //else if (alcoholHowmanyPerweek.value == "Choose option" && document.getElementById('yes_alcohol').checked) {
+            //    alert("Please fill out, How Many Time Do You Drink Per week");
+            //    alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
             //else if (alcoholOffDate.value == "" && document.getElementById('no_alcohol').checked) {
             //    alert("Please fill out your Drinking Off Date");
             //    alcoholOffDate.style.backgroundColor = "#ffcfcf";
             //    return false;
             //}
-            else if (alcoholHowmanyPerweek.value == "Choose option" && document.getElementById('yes_alcohol').checked) {
-                alert("Please fill out, How Many Time Do You Drink Per week");
-                alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (alcoholOffDate.value == "" && document.getElementById('no_alcohol').checked) {
-                alert("Please fill out your Drinking Off Date");
-                alcoholOffDate.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
 
-            else if (recreationalDrugHowmanyPerweeks.value == "Choose option" && document.getElementById('yes_drug').checked) {
-                alert("Please fill out, How Many Recreational Drug Per Week");
-                recreationalDrugHowmanyPerweeks.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (recreationalDrugWhatDrugs.value == "Choose option" && document.getElementById('yes_drug').checked) {
-                alert("Please fill out, What Recreational Drug Do you Use");
-                recreationalDrugWhatDrugs.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (recreationalDrugOffDate.value == "" && document.getElementById('no_drug').checked) {
-                alert("Please fill out your Recreational Drug Off Date");
-                recreationalDrugOffDate.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (bleedingProblemsTypes.value == "Choose option") {
-                alert("Please select your Bleeding Problem Type");
-                bleedingProblemsTypes.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (cancerProblemsTypes.value == "Choose option") {
-                alert("Please select your Cancer Problem Type");
-                cancerProblemsTypes.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (hepatitisProblemTypes.value == "Choose option") {
-                alert("Please select your Hepatit Problem Type");
-                hepatitisProblemTypes.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
+            //else if (recreationalDrugHowmanyPerweeks.value == "Choose option" && document.getElementById('yes_drug').checked) {
+            //    alert("Please fill out, How Many Recreational Drug Per Week");
+            //    recreationalDrugHowmanyPerweeks.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (recreationalDrugWhatDrugs.value == "Choose option" && document.getElementById('yes_drug').checked) {
+            //    alert("Please fill out, What Recreational Drug Do you Use");
+            //    recreationalDrugWhatDrugs.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (recreationalDrugOffDate.value == "" && document.getElementById('no_drug').checked) {
+            //    alert("Please fill out your Recreational Drug Off Date");
+            //    recreationalDrugOffDate.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (bleedingProblemsTypes.value == "Choose option") {
+            //    alert("Please select your Bleeding Problem Type");
+            //    bleedingProblemsTypes.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (cancerProblemsTypes.value == "Choose option") {
+            //    alert("Please select your Cancer Problem Type");
+            //    cancerProblemsTypes.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (hepatitisProblemTypes.value == "Choose option") {
+            //    alert("Please select your Hepatit Problem Type");
+            //    hepatitisProblemTypes.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
 
-            else if (surgeryNames.value == "Choose option" && document.getElementById('yes_surgery').checked) {
-                alert("Please select your Surgery Name");
-                surgeryNames.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (surgeryDate.value == "" && document.getElementById('yes_surgery').checked) {
-                alert("Please fill out your Surgery Date");
-                surgeryDate.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (surgonName.value == "Choose option" && document.getElementById('yes_surgery').checked) {
-                alert("Please write your Surgeon's Name");
-                surgonName.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
+            //else if (surgeryNames.value == "Choose option" && document.getElementById('yes_surgery').checked) {
+            //    alert("Please select your Surgery Name");
+            //    surgeryNames.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (surgeryDate.value == "" && document.getElementById('yes_surgery').checked) {
+            //    alert("Please fill out your Surgery Date");
+            //    surgeryDate.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (surgonName.value == "Choose option" && document.getElementById('yes_surgery').checked) {
+            //    alert("Please write your Surgeon's Name");
+            //    surgonName.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
 
-            else if (medicalFile.value == "" && document.getElementById('yes_question_file_medication').checked) {
-                alert("Please upload your Medical File");
-                medicalFile.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (referralFile.value == "" && document.getElementById('yes_Referral').checked) {
-                alert("Please upload your Referral File");
-                referralFile.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
+            //else if (medicalFile.value == "" && document.getElementById('yes_question_file_medication').checked) {
+            //    alert("Please upload your Medical File");
+            //    medicalFile.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (referralFile.value == "" && document.getElementById('yes_Referral').checked) {
+            //    alert("Please upload your Referral File");
+            //    referralFile.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
 
+
+
+//....................
 
             if (document.getElementById('gender_Male').checked)
             {
@@ -1471,7 +1473,7 @@
             {
                 genderselection = 'Other/Prefer not to answer'; 
             }
-            alert(genderselection);
+
 
             if (confirm("Are you sure all the information above is correct?"))
             {
@@ -1488,6 +1490,7 @@
                 userArray.Gender = genderselection;
                 userArray.PhoneNumber = txtPhoneNumber.value;
                 userArray.MedicareNumber = txtMedicareNumber.value;
+                //userArray.MedicareNumber ='hi';
                 userArray.ExpirationDate = txtExpirationDate.value;
                 userArray.Birthday = txtBirthday.value;
 
@@ -1571,23 +1574,47 @@
 
 
                 // this is ok for user
-                $.ajax({
-                    url: 'Default.aspx/addUser',
+                //$.ajax({
+                //    url: 'Default.aspx/addUser',
+                //    contentType: 'application/json;charset=utf-8',
+                //    method: 'post',
+                //    data: '{user:' + JSON.stringify(userArray) + '}',
+                //    success: function () {
+                //        //$("#MoneyType").val = "";
+                //        //$("#progress").hide();
+                //        alert("ok");
+                //        //$("#saveSuccess").show();
+                //        //fetchMoneyTypeData();
+                //    },
+                //    error: function (er) {
+                //        alert(er);
+                //        //$("#saveError").show();
+                //    }, 
+                //});
+
+
+                //checkUserExist
+
+
+                 $.ajax({
+                     url: 'Default.aspx/checkUserExist',
                     contentType: 'application/json;charset=utf-8',
                     method: 'post',
                     data: '{user:' + JSON.stringify(userArray) + '}',
-                    success: function () {
-                        //$("#MoneyType").val = "";
-                        //$("#progress").hide();
-                        alert("ok");
-                        //$("#saveSuccess").show();
-                        //fetchMoneyTypeData();
+                         success: function (data) {
+
+                    //alert(data.d); 
+                        //alert("ok");
+
+                      buildAnswers(data.d);
+ 
                     },
                     error: function (er) {
                         alert(er);
                         //$("#saveError").show();
                     }, 
                 });
+
 
 
                 // THIS IS OK FOR addUserQuestionnaire
@@ -1620,12 +1647,290 @@
                 //var data = new FormData;
                 // data.append("ImageFile", file[0]);
 
+
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        function buildAnswers(userId) {
+
+            //var sb = new StringBuilder();
+            //sb.AppendLine("Some text with line one");
+            //sb.AppendLine("Some mpre text with line two");
+
+
+
+            var answer = '';
+            answer = 'Are You Working Now ?<br />';
+            if (document.getElementById('yes_working_question').checked) {
+                answer += 'Yes<br />';
+                answer += 'What do you do for a living/what is your profession?<br />';
+                answer += livingActivities.value; answer += '<br />';
+            }
+            else if (document.getElementById('no_working_question').checked)
+            {
+                answer += 'No; Retired<br />';
+                answer += 'If No, Since When Have You Been Off Work?<br />';
+                answer += dateOffWork.value; answer += '<br />';
+            }
+            else if (document.getElementById('never_working_question').checked)
+            {
+                answer += 'Never<br />';
+                answer += 'If Never, Could You Select One Of These Options?<br />';
+                answer += neverworkoption.value; answer += '<br />';
+            }
+
+            answer += '<br /><br />';
+
+            answer += 'What Sports/Activities Do You Do?<br />';
+            answer += sportsActivites.value; answer += '<br />';
+            answer += 'How Often?(Per Week)?<br />';
+            answer += howoftensports.value; answer += '<br />';
+
+            answer += '<br /><br />';
+
+
+            answer += 'What Is The Name Of Your Family Doctor?<br />';
+            answer += familynameOfDoctor.value; answer += '<br />';
+
+            answer += '<br /><br />';
+
+            answer += 'What Hand Do You Write With?<br />';
+            answer += handWrite.value; answer += '<br />';
+
+            answer += '<br /><br />';
+
+            answer += 'Do You Smoke?<br />';
+            if (document.getElementById('yes_smoke').checked) {
+                answer += 'Yes<br />';
+                answer += 'If Yes, For How Many Years?<br />';
+                answer += smokeHowmanyYears.value; answer += '<br />';
+
+                answer += 'How Many Cigarettes Per Day?<br />';
+
+                answer += smokeHowmanyPerday.value; answer += '<br />';
+
+            }
+            else if (document.getElementById('no_smoke').checked) {
+                answer += 'No<br />';
+                answer += 'If No, Since When Have You Been Off?<br />';
+                answer += smokeOffDate.value; answer += '<br />';
+            }
+            else if (document.getElementById('never_smoke').checked) {
+                answer += 'Never<br />';
+            } 
+
+            answer += '<br /><br />';
+
+            answer += 'Do You Drink Alcohol?<br />';
+            if (document.getElementById('yes_alcohol').checked) {
+                answer += 'Yes<br />';
+                answer += 'If Yes, How Many Drinks Per Week?<br />';
+                answer += alcoholHowmanyPerweek.value; answer += '<br />'; 
+            }
+            else if (document.getElementById('no_alcohol').checked) {
+                answer += 'No<br />';
+                //answer += 'If No, Since When Have You Been Off Work?\n';
+                //answer += alcoholOffDate.value; answer += '\n';
+            }
+            
+            answer += '<br /><br />';
+
+            answer += 'Do You Take Any Recreational Drugs Or Herbal/Natural Remedies?<br />';
+            if (document.getElementById('yes_drug').checked) {
+                answer += 'Yes<br />';
+                answer += 'If Yes, How Often Do You Take The Drug Or Herbal/Natural Remedies?<br />';
+                answer += recreationalDrugHowmanyPerweeks.value; answer += '<br />';
+                answer += 'If Yes, What Drug Use Drug ?<br />';
+                answer += recreationalDrugWhatDrugs.value; answer += '<br />';
+            }
+            else if (document.getElementById('no_drug').checked) {
+                answer += 'No<br />';
+                answer += 'If No, Since When Have You Been Off Drug ?<br />';
+                answer += recreationalDrugOffDate.value; answer += '<br />';
+            }
+            else if (document.getElementById('never_drug').checked) {
+                answer += 'Never taken<br />';
+            }
+
+            answer += '<br /><br />';
+
+            answer += 'Do You Have Any Of The Following Medical Conditions?<br />';
+
+            if (document.getElementById('AIDS_or_HIV').checked) {
+                answer += 'AIDS or HIV<br />';
+            }
+            else if (document.getElementById('Alcohol_Dependency_or_Abuse').checked) {
+                answer += 'Alcohol Dependency or Abuse<br />';
+            }
+            else if (document.getElementById('Anemia').checked) {
+                answer += 'Anemia<br />';
+            }
+            else if (document.getElementById('Anxiety').checked) {
+                answer += 'Anxiety<br />'; 
+            }
+            else if (document.getElementById('Arthritis').checked) {
+                answer += 'Arthritis<br />'; 
+            }
+            else if (document.getElementById('BleedingProblems').checked) {
+                answer += 'Bleeding Problems<br />';
+                answer += 'Bleeding Problems. Type?<br />';
+                answer += bleedingProblemsTypes.value; answer += '<br />';
+            }
+             else if (document.getElementById('BloodClots').checked) {
+                answer += 'BloodClots<br />'; 
+            }
+            else if (document.getElementById('Cancer').checked) {
+                answer += 'Cancer<br />'; 
+                answer += 'Cancer. Type?<br />';
+                answer += cancerProblemsTypes.value; answer += '<br />';
+            }
+            else if (document.getElementById('Dementia').checked) {
+                answer += 'Dementia<br />';  
+            }
+            else if (document.getElementById('ChronicObstructive').checked) {
+                answer += 'Chronic Obstructive Pulmonary Disease or Emphysema<br />';
+            }
+            else if (document.getElementById('Depression').checked) {
+                answer += 'Depression<br />';
+            }
+            else if (document.getElementById('DrugDependency').checked) {
+                answer += 'Drug Dependency or Abuse<br />';
+            }
+            else if (document.getElementById('Diabetes').checked) {
+                answer += 'Diabetes<br />'; 
+            }
+            else if (document.getElementById('Gout').checked) {
+                answer += 'Gout<br />'; 
+            }
+            else if (document.getElementById('HeartDisease').checked) {
+                answer += 'Heart Disease<br />'; 
+            }
+            else if (document.getElementById('HighCholesterol').checked) {
+                answer += 'Heart Cholesterol<br />';  
+            } 
+            else if (document.getElementById('HighBloodPressure').checked) {
+                answer += 'High Blood Pressure<br />';  
+            }
+            else if (document.getElementById('HeartArrythmia').checked) {
+                answer += 'Heart Arrythmia<br />';   
+            }
+            else if (document.getElementById('Hypothyroidism').checked) {
+                answer += 'Hypothyroidism<br />';   
+            }
+            else if (document.getElementById('Hyperthyroidism').checked) {
+                answer += 'Hyperthyroidism<br />';    
+            }
+            else if (document.getElementById('KidneyDisease').checked) {
+                answer += 'KidneyDisease<br />';   
+            }
+            else if (document.getElementById('Leukemia').checked) {
+                answer += 'Leukemia<br />';    
+            } else if (document.getElementById('LiverDisease').checked) {
+                answer += 'LiverDisease<br />';    
+
+            } else if (document.getElementById('Hepatitis').checked) {
+                answer += 'Hepatitis<br />';
+                answer += 'Hepatitis. Type?<br />';
+                answer += hepatitisProblemTypes.value; answer += '/n';
+
+            } else if (document.getElementById('Osteoporosis').checked) {
+                answer += 'Osteoporosis<br />';    
+
+            } else if (document.getElementById('Pancreatitis').checked) {
+                answer += 'Pancreatitis<br />';     
+            }
+            else if (document.getElementById('PeripheralVascularDisease').checked) {
+                answer += 'Peripheral Vascular Disease<br />';    
+
+            } else if (document.getElementById('Pulmonary').checked) {
+                answer += 'Pulmonary<br />';    
+
+            } else if (document.getElementById('RefluxorGERD').checked) {
+                answer += 'Reflux or GERD<br />';    
+
+            } else if (document.getElementById('Seizures').checked) {
+                answer += 'Seizures<br />';    
+
+            } else if (document.getElementById('SleepApnea').checked) {
+                answer += 'SleepApnea<br />';   
+            }
+            else if (document.getElementById('Stroke').checked) {
+                answer += 'Stroke<br />';    
+            }
+            else if (document.getElementById('Other').checked) {
+                answer += 'Other<br />';    
+            }
+                 
+          
+            answer += '<br /><br />';
+
+
+            answer += 'Have You Had Surgery?<br />';
+            if (document.getElementById('yes_surgery').checked) {
+                answer += 'Yes (then enter details)<br />';
+                answer += 'What Type Of Surgery?<br />';
+                answer += surgeryNames.value; answer += '<br />';
+                answer += 'When Was Your Surgery?<br />';
+                answer += surgeryDate.value; answer += '<br />';
+                answer += 'What Was The Surgeon Name?<br />';
+                answer += surgonName.value; answer += '<br />';
+            }
+            else if (document.getElementById('no_surgery').checked) {
+                answer += 'No previous surgeries<br />';
+            }
+
+            answer += '<br /><br />';
+
+            if (document.getElementById('yes_question_file_medication').checked)
+            {
+                answer += 'Do You Take Any Medications Regularly?<br />';
+                answer += 'Yes<br />';
+            }
+            else if (document.getElementById('no_question_file_medication').checked) {
+                answer += 'Do You Take Any Medications Regularly?<br />';
+                answer += 'No<br />';
+            }
+            answer += '<br /><br />';
+            answer += 'Do You Take Any Medications Regularly?<br />';
+            if (document.getElementById('yes_question_file_medication').checked) {
+                answer += 'Yes<br />';
+            }
+            else if (document.getElementById('no_question_file_medication').checked) {
+                answer += 'No<br />';
+            }
+            answer += '<br /><br />';
+            answer += 'Do You Have Referral Information?<br />';
+            if (document.getElementById('yes_Referral').checked) {
+                answer += 'Yes<br />';
+            }
+            else if (document.getElementById('no_Referral').checked) {
+                answer += 'No<br />';
+            }
+
+
                 var questionnaireArray = {};
 
-                questionnaireArray.QuestionnaireAnswer = 'uhhu';
-                questionnaireArray.LanguageType = 'uhuh';
-                questionnaireArray.UserId = 5;
-                questionnaireArray.Date = txtBirthday.value;
+                questionnaireArray.QuestionnaireAnswer =answer;
+                questionnaireArray.LanguageType = 'English';
+                questionnaireArray.UserId = userId;
+
+var today = new Date();
+
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+var dateTime = date+' '+time;
+
+
+                questionnaireArray.Date = dateTime;
+
 
                 //var s = document.getElementById('imagePreview');
                 //s.src = URL.createObjectURL(file1[0]);
@@ -1638,6 +1943,8 @@
                
                 // in karrr mikoneeeeee $$$$$$$$$$$
 
+
+
                 $.ajax({
                     url: 'Default.aspx/addUserQuestionnaire',
                     contentType: 'application/json;charset=utf-8',
@@ -1647,291 +1954,60 @@
                     success: function () {
                         //$("#MoneyType").val = "";
                         //$("#progress").hide();
-                        alert("ok");
-                        $("[id$=Submit_Button]").click();
+                        //alert("ok");
+                        checkRegisteration(userId);
+                      //  $("[id$=Submit_Button]").click();
 
                         //$("#saveSuccess").show();
                         //fetchMoneyTypeData();
                     },
                     error: function (er) {
-                        alert('error');
+                        alert('error ' + er);
                         //$("#saveError").show();
                     },
 
                 });
-
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-
-        function buildAnswers() {
-
-
-            var answer = '';
-            answer = 'Are You Working Now ?\n';
-            if (document.getElementById('yes_working_question').checked) {
-                answer += 'Yes\n';
-                answer += 'What do you do for a living/what is your profession?\n';
-                answer += livingActivities.value; answer += '\n';
-            }
-            else if (document.getElementById('no_working_question').checked)
-            {
-                answer += 'No; Retired\n';
-                answer += 'If No, Since When Have You Been Off Work?\n';
-                answer += dateOffWork.value; answer += '\n';
-            }
-            else if (document.getElementById('never_working_question').checked)
-            {
-                answer += 'Never\n';
-                answer += 'If Never, Could You Select One Of These Options?\n';
-                answer += neverworkoption.value; answer += '\n';
-            }
-
-            answer += '\n\n';
-
-            answer += 'What Sports/Activities Do You Do?\n';
-            answer += sportsActivites.value; answer += '\n';
-            answer += 'How Often?(Per Week)?\n';
-            answer += howoftensports.value; answer += '\n';
-
-            answer += '\n\n';
-
-
-            answer += 'What Is The Name Of Your Family Doctor?\n';
-            answer += familynameOfDoctor.value; answer += '\n';
-
-            answer += '\n\n';
-
-            answer += 'What Hand Do You Write With?\n';
-            answer += handWrite.value; answer += '\n';
-
-            answer += '\n\n';
-
-            answer += 'Do You Smoke?\n';
-            if (document.getElementById('yes_smoke').checked) {
-                answer += 'Yes\n';
-                answer += 'If Yes, For How Many Years?\n';
-                answer += smokeHowmanyYears.value; answer += '\n';
-
-                answer += 'How Many Cigarettes Per Day?\n';
-
-                answer += smokeHowmanyPerday.value; answer += '\n';
-
-            }
-            else if (document.getElementById('no_smoke').checked) {
-                answer += 'No\n';
-                answer += 'If No, Since When Have You Been Off?\n';
-                answer += smokeOffDate.value; answer += '\n';
-            }
-            else if (document.getElementById('never_smoke').checked) {
-                answer += 'Never\n';
-            } 
-
-            answer += '\n\n';
-
-            answer += 'Do You Drink Alcohol?\n';
-            if (document.getElementById('yes_alcohol').checked) {
-                answer += 'Yes\n';
-                answer += 'If Yes, How Many Drinks Per Week?\n';
-                answer += alcoholHowmanyPerweek.value; answer += '\n'; 
-            }
-            else if (document.getElementById('no_alcohol').checked) {
-                answer += 'No\n';
-                //answer += 'If No, Since When Have You Been Off Work?\n';
-                //answer += alcoholOffDate.value; answer += '\n';
-            }
-            
-            answer += '\n\n';
-
-            answer += 'Do You Take Any Recreational Drugs Or Herbal/Natural Remedies?\n';
-            if (document.getElementById('yes_drug').checked) {
-                answer += 'Yes\n';
-                answer += 'If Yes, How Often Do You Take The Drug Or Herbal/Natural Remedies?\n';
-                answer += recreationalDrugHowmanyPerweeks.value; answer += '\n';
-                answer += 'If Yes, What Drug Use Drug ?\n';
-                answer += recreationalDrugWhatDrugs.value; answer += '\n';
-            }
-            else if (document.getElementById('no_drug').checked) {
-                answer += 'No\n';
-                answer += 'If No, Since When Have You Been Off Drug ?';
-                answer += recreationalDrugOffDate.value; answer += '\n';
-            }
-            else if (document.getElementById('never_drug').checked) {
-                answer += 'Never taken\n';
-            }
-
-            answer += '\n\n';
-
-            answer += 'Do You Have Any Of The Following Medical Conditions?\n';
-
-            if (document.getElementById('AIDS_or_HIV').checked) {
-                answer += 'AIDS or HIV\n';
-            }
-            else if (document.getElementById('Alcohol_Dependency_or_Abuse').checked) {
-                answer += 'Alcohol Dependency or Abuse\n';
-            }
-            else if (document.getElementById('Anemia').checked) {
-                answer += 'Anemia\n';
-            }
-            else if (document.getElementById('Anxiety').checked) {
-                answer += 'Anxiety\n'; 
-            }
-            else if (document.getElementById('Arthritis').checked) {
-                answer += 'Arthritis\n'; 
-            }
-            else if (document.getElementById('BleedingProblems').checked) {
-                answer += 'Bleeding Problems\n';
-                answer += 'Bleeding Problems. Type?\n';
-                answer += bleedingProblemsTypes.value; answer += '/n';
-            }
-             else if (document.getElementById('BloodClots').checked) {
-                answer += 'BloodClots\n'; 
-            }
-            else if (document.getElementById('Cancer').checked) {
-                answer += 'Cancer\n'; 
-                answer += 'Cancer. Type?\n';
-                answer += cancerProblemsTypes.value; answer += '/n';
-            }
-            else if (document.getElementById('Dementia').checked) {
-                answer += 'Dementia\n';  
-            }
-            else if (document.getElementById('ChronicObstructive').checked) {
-                answer += 'Chronic Obstructive Pulmonary Disease or Emphysema\n';
-            }
-            else if (document.getElementById('Depression').checked) {
-                answer += 'Depression\n';
-            }
-            else if (document.getElementById('DrugDependency').checked) {
-                answer += 'Drug Dependency or Abuse\n';
-            }
-            else if (document.getElementById('Diabetes').checked) {
-                answer += 'Diabetes\n'; 
-            }
-            else if (document.getElementById('Gout').checked) {
-                answer += 'Gout\n'; 
-            }
-            else if (document.getElementById('HeartDisease').checked) {
-                answer += 'Heart Disease\n'; 
-            }
-            else if (document.getElementById('HighCholesterol').checked) {
-                answer += 'Heart Cholesterol\n';  
-            } 
-            else if (document.getElementById('HighBloodPressure').checked) {
-                answer += 'High Blood Pressure\n';  
-            }
-            else if (document.getElementById('HeartArrythmia').checked) {
-                answer += 'Heart Arrythmia\n';   
-            }
-            else if (document.getElementById('Hypothyroidism').checked) {
-                answer += 'Hypothyroidism\n';   
-            }
-            else if (document.getElementById('Hyperthyroidism').checked) {
-                answer += 'Hyperthyroidism\n';    
-            }
-            else if (document.getElementById('KidneyDisease').checked) {
-                answer += 'KidneyDisease\n';   
-            }
-            else if (document.getElementById('Leukemia').checked) {
-                answer += 'Leukemia\n';    
-            } else if (document.getElementById('LiverDisease').checked) {
-                answer += 'LiverDisease\n';    
-
-            } else if (document.getElementById('Hepatitis').checked) {
-                answer += 'Hepatitis\n';
-                answer += 'Hepatitis. Type?\n';
-                answer += hepatitisProblemTypes.value; answer += '/n';
-
-            } else if (document.getElementById('Osteoporosis').checked) {
-                answer += 'Osteoporosis\n';    
-
-            } else if (document.getElementById('Pancreatitis').checked) {
-                answer += 'Pancreatitis\n';     
-            }
-            else if (document.getElementById('PeripheralVascularDisease').checked) {
-                answer += 'Peripheral Vascular Disease\n';    
-
-            } else if (document.getElementById('Pulmonary').checked) {
-                answer += 'Pulmonary\n';    
-
-            } else if (document.getElementById('RefluxorGERD').checked) {
-                answer += 'Reflux or GERD\n';    
-
-            } else if (document.getElementById('Seizures').checked) {
-                answer += 'Seizures\n';    
-
-            } else if (document.getElementById('SleepApnea').checked) {
-                answer += 'SleepApnea\n';   
-            }
-            else if (document.getElementById('Stroke').checked) {
-                answer += 'Stroke\n';    
-            }
-            else if (document.getElementById('Other').checked) {
-                answer += 'Other\n';    
-            }
-                 
-          
-            answer += '\n\n';
-
-
-            answer += 'Have You Had Surgery?\n';
-            if (document.getElementById('yes_surgery').checked) {
-                answer += 'Yes (then enter details)\n';
-                answer += 'What Type Of Surgery?\n';
-                answer += surgeryNames.value; answer+= '\n';
-                answer += 'When Was Your Surgery?\n';
-                answer += surgeryDate.value; answer += '\n';
-                answer += 'What Was The Surgeon Name?\n';
-                answer += surgonName.value; answer += '\n';
-            }
-            else if (document.getElementById('no_surgery').checked) {
-                answer += 'No previous surgeries\n';
-            }
-
-            answer += '\n\n';
-
-            if (document.getElementById('yes_question_file_medication').checked)
-            {
-                answer += 'Do You Take Any Medications Regularly?\n';
-                answer += 'Yes\n';
-            }
-            else if (document.getElementById('no_question_file_medication').checked) {
-                answer += 'Do You Take Any Medications Regularly?\n';
-                answer += 'No\n';
-            }
-            answer += '\n\n';
-            answer += 'Do You Take Any Medications Regularly?\n';
-            if (document.getElementById('yes_question_file_medication').checked) {
-                 answer += 'Yes\n';
-            }
-            else if (document.getElementById('no_question_file_medication').checked) {
-                 answer += 'No\n';
-            }
-            answer += '\n\n';
-            answer += 'Do You Have Referral Information?\n';
-            if (document.getElementById('yes_Referral').checked) {
-                answer += 'Yes\n';
-            }
-            else if (document.getElementById('no_Referral').checked) {
-                answer += 'No\n';
-            }
-
             console.log(answer);
         }
 
 
+        function checkRegisteration(userId) {
 
 
+            $.ajax({
+                url: 'Default.aspx/checkRegisteration',
+                contentType: 'application/json;charset=utf-8',
+                method: 'post',
+                //processData: false,
+                data: '{userId:' + JSON.stringify(userId) + '}',
+                success: function (data) {
+ 
 
+                    if (data.d) {
+                        window.open("Confirmation.aspx", "_blank");
+
+                    }
+                    else {
+                        window.open("Password.aspx?pid=" + userId, "_blank");
+                        //alert('Ji');
+                    }
+
+
+                    $("[id$=Submit_Button]").click();
+
+                },
+                error: function (er) {
+                    alert('error ' + er);
+                    //$("#saveError").show();
+                },
+
+            });
+        }
+         
 
         function clickUser(userId) {
 
             //alert(userId);
-            window.open("Password.aspx?pid=" + userId, "_blank");
-            window.open("Confirmation.aspx", "_blank");
 
         }
 

@@ -14,7 +14,7 @@
                                 <div class="input-group"> 
                                      <br />
                                      <label class="label">Email</label>
-                                    <input class="input--style-4" id="email" type="email" name="email">
+                                    <input class="input--style-4" id="email" type="email" name="email" value="<%=user.Email%>">
                                 </div>
                                </div>
                                </div>
@@ -33,7 +33,7 @@
                           <div class="p-t-15">
                                     <br />
                                     <br />
-                                    <button class="btn btn--radius-2 btn--blue" id="submit-_button" onclick="submit_button_click()" type="button">Submit</button>
+                                    <button class="btn btn--radius-2 btn--blue" id="submit-_button" onclick="submit_button_click(<%=user.ID%>)" type="button">Submit</button>
                                     <%--<asp:RadioButton ID="Submit_Button" runat="server" Text="Button" OnCheckedChanged="Submit_Button_CheckedChanged" />--%>
 <%--                                    <asp:Button ID="Submit_Button" runat="server" Style="display: none;" Text="Button" OnClick="btnSubmitButton_Click" />--%>
                                 </div>
@@ -55,135 +55,60 @@
     <script type='text/javascript' src="js/jquery.mycart.js"></script>
     <script type="text/javascript">
 
-        var txtusername;
-        var txtpassword;
+        var txtpassword1;
+        var txtpassword2;
 
 
 
         $(document).ready(function () {
 
-            txtusername = document.getElementById('username');
-            txtpassword = document.getElementById('password');
+            txtpassword1 = document.getElementById('password1');
+            txtpassword2 = document.getElementById('password2');
 
 
 
         });
 
 
-        function submit_button_click() {
+        function submit_button_click(userId) {
 
 
-            // this is ok for user
-            $.ajax({
-                url: 'Default.aspx/addUser',
-                contentType: 'application/json;charset=utf-8',
-                method: 'post',
-                data: '{user:' + JSON.stringify(userArray) + '}',
-                success: function () {
-                    //$("#MoneyType").val = "";
-                    //$("#progress").hide();
-                    alert("ok");
-                    //$("#saveSuccess").show();
-                    //fetchMoneyTypeData();
-                },
-                error: function (er) {
-                    alert(er);
-                    //$("#saveError").show();
-                },
-            });
-        }
+            if (txtpassword2.value != txtpassword1.value) {
 
-
-        function getDataUrl(img) {
-            // Create canvas
-            const canvas = document.createElement('canvas');
-            const ctx = canvas.getContext('2d');
-            // Set width and height
-            canvas.width = img.width;
-            canvas.height = img.height;
-            // Draw the image
-            ctx.drawImage(img, 0, 0);
-            return canvas.toDataURL();
-
-            //return canvas.toDataURL('image/jpeg');
-        }
-
-
-        function toDataURLs(src) {
-            var image = new Image();
-            image.crossOrigin = 'Anonymous';
-
-            image.onload = function () {
-                var canvas = document.createElement('canvas');
-                var context = canvas.getContext('2d');
-                canvas.height = this.naturalHeight;
-                canvas.width = this.naturalWidth;
-                context.drawImage(this, 0, 0);
-                var dataURL = canvas.toDataURL('image/jpeg');
-                console.log(dataURL);
-                return dataURL;
-            };
-
-            image.src = src;
-        }
-
-        function makeid(length) {
-            var result = '';
-            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            var charactersLength = characters.length;
-            for (var i = 0; i < length; i++) {
-                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                alert("The password you Entered is not the same!");
             }
-            return result;
+            else {
+
+                var login = {};
+
+
+                login.UserId = userId;
+                login.Username = '<%=user.Email%>';
+                login.Password = txtpassword1.value;
+                alert(login.Username);
+                alert(login.UserId);
+
+                // this is ok for user
+                $.ajax({
+                    url: 'Password.aspx/addRegisterationPassword',
+                    contentType: 'application/json;charset=utf-8',
+                    method: 'post',
+                    data: '{login:' + JSON.stringify(login) + '}',
+                    success: function () {
+
+                        alert("Your Account Registered Successfully");
+
+                    },
+                    error: function (er) {
+                        alert(er);
+
+                    },
+                });
+            }
+
+         
         }
-        function getBase64Images(img) {
-            // Create an empty canvas element
-            var canvas = document.createElement("canvas");
-            canvas.width = img.width;
-            canvas.height = img.height;
-
-            // Copy the image contents to the canvas
-            var ctx = canvas.getContext("2d");
-            ctx.drawImage(img, 0, 0);
-
-            // Get the data-URL formatted image
-            // Firefox supports PNG and JPEG. You could check img.src to
-            // guess the original format, but be aware the using "image/jpg"
-            // will re-encode the image.
-            var dataURL = canvas.toDataURL("image/png");
-            alert(dataURL);
-            return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-        }
-        function getBase64Image(imgElem) {
-            // imgElem must be on the same server otherwise a cross-origin error will be thrown "SECURITY_ERR: DOM Exception 18"
-            var canvas = document.createElement("canvas");
-            canvas.width = imgElem.clientWidth;
-            canvas.height = imgElem.clientHeight;
-            var ctx = canvas.getContext("2d");
-            ctx.drawImage(imgElem, 0, 0);
-            var dataURL = canvas.toDataURL("image/png");
-            return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-        }
-
-        function _getBase64Image(img) {
-            // Create an empty canvas element
-            var canvas = document.createElement("canvas");
-            canvas.width = img.width;
-            canvas.height = img.height;
-            console.log(canvas.width);
-            // Copy the image contents to the canvas
-            var ctx = canvas.getContext("2d");
-            ctx.drawImage(img, 0, 0);
-
-            // Get the data-URL formatted image
-            // Firefox supports PNG and JPEG. You could check img.src to
-            // guess the original format, but be aware the using "image/jpg"
-            // will re-encode the image.
-            var dataURL = canvas.toDataURL("image/png");
-
-            return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-        }
-
+         
             </script>
 
 </asp:Content>

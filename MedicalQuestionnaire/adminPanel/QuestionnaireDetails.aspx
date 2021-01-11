@@ -62,9 +62,23 @@
                      <label style="font-weight: bold;" >PhoneNumber :  </label>
                         <label style="font-weight: normal;"><%= user.PhoneNumber%></label>
                         </div>
- 
 
+                    <br />
+                    <br />
+                     <div>
+<%--                     <label style="font-weight: bold;" >PhoneNumber :  </label>--%>
+<%--                        <label style="font-weight: normal;" id="answercontent"></label>--%>
+<%--                         <span> style="font-weight: normal;"><%= questionnaire.QuestionnaireAnswer%></span>--%>
+<%--              <asp:Label ID="Label2" runat="server" Text="<%=questionnaire.QuestionnaireAnswer %>"></asp:Label>--%>
+<%--                    <asp:Label ID="Label1" runat="server" Text="<%=questionnaire.QuestionnaireAnswer%>"></asp:Label>--%>
+                         <asp:Label ID="Answercontent" runat="server" Width="800" Height="600"></asp:Label>
+                        </div>
+                    <div class="row" >
 
+                    <div class="col col-lg-12" id="scopeMoneyTypeData" style="margin-top:3%;"> 
+
+                      
+                    </div>
                     <%string urlMediacalFile = "../" + questionnaire.ReferralImage; 
                      string urlReferalFile = "../" + questionnaire.ReferralImage; %>
 
@@ -81,22 +95,26 @@
                       <div> 
                       <label style="font-weight: bold;" >ReferalFiles :  </label> 
                                               <br />
-                    <img src="<%=urlReferalFile%>" width="480" style="padding-left: 50px;" class="img-responsive" />
+              <img src="<%=urlReferalFile%>" width="480" style="padding-left: 50px;" class="img-responsive" />
                        </div>
                               </div>
                               </div>
                 </div>
               </div>
-    
-                   
+    </div>
+    </div>               
                 <script type="text/javascript"  >
 
                     $(document).ready(function () {
- 
-                     
-                        //$("#scopeMoneyTypeData").html(tableContent);
 
-                    });
+
+<%-- var a = '<%=questionnaire.QuestionnaireAnswer%>';--%>
+                        alert('<%=questionnaire.Date%>');
+                  //      document.getElementById('answercontent').val('<%=questionnaire.QuestionnaireAnswer%>');
+
+                        //document.getElementById('answercontent').innerHTML = a;
+                    //    document.getElementById('answercontent').innerHTML = 'dfuhuh0';
+                     });
 
 
 

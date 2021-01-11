@@ -412,6 +412,7 @@
     <Content Include="adminPanel\QuestionnaireDetails.aspx" />
     <Content Include="adminPanel\ui.html" />
     <Content Include="adminPanel\UserDetails.aspx" />
+    <Content Include="Confirmation.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -554,7 +555,6 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Password.aspx" />
-    <Content Include="ReceiveData.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -702,6 +702,13 @@
     <Compile Include="adminPanel\UserDetails.aspx.designer.cs">
       <DependentUpon>UserDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Confirmation.aspx.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Confirmation.aspx.designer.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HomeController.cs" />
     <Compile Include="Controller\QuestionnaireController.cs" />
     <Compile Include="Default.aspx.cs">
@@ -755,13 +762,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuestionnaireForm.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ReceiveData.aspx.cs">
-      <DependentUpon>ReceiveData.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ReceiveData.aspx.designer.cs">
-      <DependentUpon>ReceiveData.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
       <DependentUpon>Model1.tt</DependentUpon>

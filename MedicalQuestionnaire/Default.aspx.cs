@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Web.Services;
 using System.Web.UI;
 
@@ -41,6 +42,73 @@ namespace MedicalQuestionnaire
             entities.User.Add(_user);
             entities.SaveChanges();
         }
+        [WebMethod]
+        public static int checkUserExist(User user)
+        {
+            entities.Configuration.ProxyCreationEnabled = false;
+        
+            User selectedUser = new User();
+
+            //if(!string.IsNullOrEmpty( selectedUser.MedicareNumber))
+
+            if (entities.User.Any(e => e.MedicareNumber == user.MedicareNumber))
+            {
+
+                selectedUser = entities.User.Where(e => e.MedicareNumber == user.MedicareNumber).FirstOrDefault<User>();
+
+                selectedUser.Name = user.Name;
+                selectedUser.Family = user.Family;
+                selectedUser.Gender = user.Gender;
+                selectedUser.Birthday = user.Birthday;
+                selectedUser.Email = user.Email;
+                selectedUser.MedicareNumber = user.MedicareNumber;
+                selectedUser.ExpirationDate = user.ExpirationDate;
+                selectedUser.PhoneNumber = user.PhoneNumber;
+                selectedUser.MedicarePhoto = user.MedicarePhoto;
+                selectedUser.PersonalPhoto = user.PersonalPhoto;
+
+                entities.Entry(selectedUser).State = System.Data.Entity.EntityState.Modified;
+                entities.SaveChanges();
+
+                return selectedUser.ID;
+            }
+            else
+            {
+                //selectedUser = entities.User.Where(e => e.Name == user.Name && e.Family==user.Family).FirstOrDefault<User>();
+                User _user = new User();
+                _user.Name = user.Name;
+                _user.Family = user.Family;
+                _user.Gender = user.Gender;
+                _user.Birthday = user.Birthday;
+                _user.Email = user.Email;
+                _user.MedicareNumber = user.MedicareNumber;
+                _user.ExpirationDate = user.ExpirationDate;
+                _user.PhoneNumber = user.PhoneNumber;
+                _user.MedicarePhoto = user.MedicarePhoto;
+                _user.PersonalPhoto = user.PersonalPhoto;
+
+                entities.User.Add(_user);
+                entities.SaveChanges();
+                return _user.ID;
+            }
+        }
+
+        [WebMethod]
+        public static bool checkRegisteration(int userId)
+        {
+            entities.Configuration.ProxyCreationEnabled = false;
+
+            if (entities.Login.Any(e => e.UserId == userId))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
         //[WebMethod]
         //public static JsonResult ImageUpload(QuestionnaireFormModelVeiw ImageFile)
         //{
@@ -359,7 +427,7 @@ namespace MedicalQuestionnaire
             Console.WriteLine();
             string medicalPath = "Images/MedicalFiles/" + GenerateRandomString(10) + FileUploadMedical.FileName.ToString();
             string referalPath = "Images/ReferalFiles/" + GenerateRandomString(10) + FileUploadReferal_.FileName.ToString();
-            string d = Submit_Button.Text;
+
             //    FileUploadMedical.SaveAs(Request.PhysicalApplicationPath + "./" + "Images/MedicalFiles/hi");
 
             if (FileUploadMedical.HasFile)

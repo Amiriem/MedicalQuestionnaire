@@ -6,7 +6,7 @@
             <div id="page-inner">
                 <div class="row"> 
                     <div class="col-lg-12">
-                     <h2>User Details</h2>   
+                     <h2>Questionnaire Details</h2>   
                     </div>
                 </div>              
                      
@@ -51,8 +51,8 @@
                         <label for="MoneyType"><%= user.Birthday%></label>
                         </div>
          
-                     <input type="text" id="MoneyType" class ="form-control" placeholder="MoneyTitle" onkeypress="insertChar();"/>
-                    <span class="help-block" id="validateText" style="display:none;">Please fill the money type here</span>
+<%--                     <input type="text" id="MoneyType" class ="form-control" placeholder="MoneyTitle" onkeypress="insertChar();"/>--%>
+                  <%--  <span class="help-block" id="validateText" style="display:none;">Please fill the money type here</span>
 
                                     </div>
 
@@ -62,7 +62,7 @@
                                         </div>
                      <div class="col-lg-2">
                      <label for="BtnCancle"></label>
-                    <input type="button" id="BtnCancle" value="Cancel" class ="btn-warning form-control" onclick="this.CountryTitle.reset(); return false;"/>
+                  <input type="button" id="BtnCancle" value="Cancel" class ="btn-warning form-control" onclick="this.CountryTitle.reset(); return false;"/>--%>
                                        </div>
 
                            <div class="col-lg-2"  id="divBtnEdit" style="display:none;">
@@ -77,6 +77,8 @@
               </div>
 
                 <div class="row" >
+                    <br />
+                                        <br />
 
                         <table class="table table-boardered table-hover" style="text-align:center;direction:ltr;">
                         <tr style="font-weight:bold; background-color:darkseagreen">  <td> Row</td>  <td> Date</td> <td> Language</td> <td> Remove</td> </tr >
@@ -115,11 +117,8 @@
 
                         <div class="col col-lg-12" id="scopeMoneyTypeData" style="margin-top:3%;" > 
 
-                       <label for="MoneyType">tableContent</label>
-
-                   <label for= "MoneyTypee" ><%= questionnaires.Count%></label>
-
-
+ 
+ 
 
                 </div>
               </div>

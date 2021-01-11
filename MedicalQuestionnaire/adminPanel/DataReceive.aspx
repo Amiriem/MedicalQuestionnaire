@@ -6,7 +6,7 @@
             <div id="page-inner">
                 <div class="row"> 
                     <div class="col-lg-12">
-                     <h2>MoneyType Management</h2>   
+                     <h2>Patients Information</h2>   
                     </div>
                 </div>              
                      
@@ -27,8 +27,8 @@
               <div class="col-lg-12">
                    
                 <div class="col-lg-6" id="scopeTitle">
-                    <label for="MoneyType">MoneyType Name</label>
-                    <input type="text" id="MoneyType" class ="form-control" placeholder="MoneyTitle" onkeypress="insertChar();"/>
+                    <label for="MoneyType"></label>
+                    <input type="text" id="MoneyType" class ="form-control" placeholder="Search" onkeypress="insertChar();"/>
                     <span class="help-block" id="validateText" style="display:none;">Please fill the money type here</span>
 
                                     </div>

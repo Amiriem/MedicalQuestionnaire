@@ -32,6 +32,8 @@ namespace MedicalQuestionnaire.adminPanel
             int pid = int.Parse(Request.QueryString["pid"]);
             QuestionnaireForm questionnaire = new QuestionnaireForm();
             questionnaire = entities.QuestionnaireForm.Where(p => p.ID == pid).FirstOrDefault<QuestionnaireForm>();
+
+            Answercontent.Text = questionnaire.QuestionnaireAnswer;
             return questionnaire;
         }
 
