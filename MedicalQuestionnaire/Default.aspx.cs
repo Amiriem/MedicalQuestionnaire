@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web.Services;
 using System.Web.UI;
@@ -11,7 +12,7 @@ namespace MedicalQuestionnaire
         static QuestionnaireForm _questionnaireForm = new QuestionnaireForm();
         protected void Page_Load(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("fddfdf");
+      System.Diagnostics.Debug.WriteLine("fddfdf");
             //fileUploadMedical = FileUploadMedical;
             //fileUploadReferal = FileUploadReferal;
 
@@ -50,46 +51,62 @@ namespace MedicalQuestionnaire
             User selectedUser = new User();
 
             //if(!string.IsNullOrEmpty( selectedUser.MedicareNumber))
-
-            if (entities.User.Any(e => e.MedicareNumber == user.MedicareNumber))
+            try
             {
+                if (entities.User.Any(e => e.MedicareNumber == user.MedicareNumber))
+                {
+                    selectedUser = entities.User.Where(e => e.MedicareNumber == user.MedicareNumber).FirstOrDefault<User>();
+                    selectedUser.Name = user.Name;
+                    selectedUser.Family = user.Family;
+                    selectedUser.Gender = user.Gender;
+                    selectedUser.Birthday = user.Birthday;
+                    selectedUser.UserId = user.Email;
+                    selectedUser.Email = user.Email;
+                    selectedUser.MedicareNumber = user.MedicareNumber;
+                    selectedUser.ExpirationDate = user.ExpirationDate;
+                    selectedUser.PhoneNumber = user.PhoneNumber;
+                    selectedUser.MedicarePhoto = user.MedicarePhoto;
+                    selectedUser.PersonalPhoto = user.PersonalPhoto;
 
-                selectedUser = entities.User.Where(e => e.MedicareNumber == user.MedicareNumber).FirstOrDefault<User>();
+                    entities.Entry(selectedUser).State = System.Data.Entity.EntityState.Modified;
+                    entities.SaveChanges();
 
-                selectedUser.Name = user.Name;
-                selectedUser.Family = user.Family;
-                selectedUser.Gender = user.Gender;
-                selectedUser.Birthday = user.Birthday;
-                selectedUser.Email = user.Email;
-                selectedUser.MedicareNumber = user.MedicareNumber;
-                selectedUser.ExpirationDate = user.ExpirationDate;
-                selectedUser.PhoneNumber = user.PhoneNumber;
-                selectedUser.MedicarePhoto = user.MedicarePhoto;
-                selectedUser.PersonalPhoto = user.PersonalPhoto;
+                    return selectedUser.ID;
+                }
+                else
+                {
+                    //selectedUser = entities.User.Where(e => e.Name == user.Name && e.Family==user.Family).FirstOrDefault<User>();
+                    User _user = new User();
+                    _user.Name = user.Name;
+                    _user.Family = user.Family;
+                    _user.Gender = user.Gender;
+                    _user.Birthday = user.Birthday;
+                    _user.UserId = user.Email;
+                    _user.Email = user.Email;
+                    _user.MedicareNumber = user.MedicareNumber;
+                    _user.ExpirationDate = user.ExpirationDate;
+                    _user.PhoneNumber = user.PhoneNumber;
+                    _user.MedicarePhoto = user.MedicarePhoto;
+                    _user.PersonalPhoto = user.PersonalPhoto;
 
-                entities.Entry(selectedUser).State = System.Data.Entity.EntityState.Modified;
-                entities.SaveChanges();
-
-                return selectedUser.ID;
+                    entities.User.Add(_user);
+                    entities.SaveChanges();
+                    return _user.ID;
+                }
             }
-            else
+            catch (DbEntityValidationException e)
             {
-                //selectedUser = entities.User.Where(e => e.Name == user.Name && e.Family==user.Family).FirstOrDefault<User>();
-                User _user = new User();
-                _user.Name = user.Name;
-                _user.Family = user.Family;
-                _user.Gender = user.Gender;
-                _user.Birthday = user.Birthday;
-                _user.Email = user.Email;
-                _user.MedicareNumber = user.MedicareNumber;
-                _user.ExpirationDate = user.ExpirationDate;
-                _user.PhoneNumber = user.PhoneNumber;
-                _user.MedicarePhoto = user.MedicarePhoto;
-                _user.PersonalPhoto = user.PersonalPhoto;
-
-                entities.User.Add(_user);
-                entities.SaveChanges();
-                return _user.ID;
+                foreach (var eve in e.EntityValidationErrors)
+                {
+                    Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                        eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                            ve.PropertyName, ve.ErrorMessage);
+                    }
+                }
+                throw;
             }
         }
 
@@ -423,27 +440,47 @@ namespace MedicalQuestionnaire
             //fileUploadReferal = FileUploadReferal;
             //fileUploadMedical = FileUploadMedical;
 
-            Console.WriteLine(FileUploadMedical.FileName.ToString());
-            Console.WriteLine();
-            string medicalPath = "Images/MedicalFiles/" + GenerateRandomString(10) + FileUploadMedical.FileName.ToString();
-            string referalPath = "Images/ReferalFiles/" + GenerateRandomString(10) + FileUploadReferal_.FileName.ToString();
-
-            //    FileUploadMedical.SaveAs(Request.PhysicalApplicationPath + "./" + "Images/MedicalFiles/hi");
-
-            if (FileUploadMedical.HasFile)
+            //  Console.WriteLine(FileUploadMedical.FileName.ToString());
+            //    Console.WriteLine();
+            try
             {
-                _questionnaireForm.MedicationFile = medicalPath;
-                FileUploadMedical.SaveAs(Request.PhysicalApplicationPath + "./" + medicalPath);
-            }
+                string medicalPath = "Images/MedicalFiles/" + GenerateRandomString(10) + FileUploadMedical.FileName.ToString();
+                string referalPath = "Images/ReferalFiles/" + GenerateRandomString(10) + FileUploadReferal_.FileName.ToString();
 
-            if (FileUploadReferal_.HasFile)
+                //    FileUploadMedical.SaveAs(Request.PhysicalApplicationPath + "./" + "Images/MedicalFiles/hi");
+
+                if (FileUploadMedical.HasFile)
+                {
+                    _questionnaireForm.MedicationFile = medicalPath;
+                    FileUploadMedical.SaveAs(Request.PhysicalApplicationPath + "./" + medicalPath);
+                }
+
+                if (FileUploadReferal_.HasFile)
+                {
+                    _questionnaireForm.ReferralImage = referalPath;
+                    FileUploadReferal_.SaveAs(Request.PhysicalApplicationPath + "./" + referalPath);
+                }
+
+                entities.QuestionnaireForm.Add(_questionnaireForm);
+                entities.SaveChanges();
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
             {
-                _questionnaireForm.ReferralImage = referalPath;
-                FileUploadReferal_.SaveAs(Request.PhysicalApplicationPath + "./" + referalPath);
+                Exception raise = dbEx;
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        string message = string.Format("{0}:{1}",
+                            validationErrors.Entry.Entity.ToString(),
+                            validationError.ErrorMessage);
+                        // raise a new exception nesting
+                        // the current instance as InnerException
+                        raise = new InvalidOperationException(message, raise);
+                    }
+                }
+                throw raise;
             }
-
-            entities.QuestionnaireForm.Add(_questionnaireForm);
-            entities.SaveChanges();
         }
 
 
@@ -525,31 +562,51 @@ namespace MedicalQuestionnaire
         [WebMethod]
         public static void editUserQuestionnaire(User user, QuestionnaireForm questionnaireForm)
         {
-            User _user = new User();
-            _user.Name = user.Name;
-            _user.Family = user.Family;
-            _user.Gender = user.Gender;
-            _user.Birthday = user.Birthday;
-            _user.Email = user.Email;
-            _user.MedicareNumber = user.MedicareNumber;
-            _user.ExpirationDate = user.ExpirationDate;
-            _user.PhoneNumber = user.PhoneNumber;
-            _user.MedicarePhoto = user.MedicarePhoto;
-            _user.PersonalPhoto = user.PersonalPhoto;
+            try
+            {
+                User _user = new User();
+                _user.Name = user.Name;
+                _user.Family = user.Family;
+                _user.Gender = user.Gender;
+                _user.Birthday = user.Birthday;
+                _user.Email = user.Email;
+                _user.MedicareNumber = user.MedicareNumber;
+                _user.ExpirationDate = user.ExpirationDate;
+                _user.PhoneNumber = user.PhoneNumber;
+                _user.MedicarePhoto = user.MedicarePhoto;
+                _user.PersonalPhoto = user.PersonalPhoto;
 
 
-            QuestionnaireForm _questionnaireForm = new QuestionnaireForm();
-            _questionnaireForm.Date = _questionnaireForm.Date;
-            _questionnaireForm.LanguageType = _questionnaireForm.LanguageType;
-            _questionnaireForm.QuestionnaireAnswer = _questionnaireForm.QuestionnaireAnswer;
-            _questionnaireForm.UserId = _questionnaireForm.UserId;
-            _questionnaireForm.ReferralImage = _questionnaireForm.ReferralImage;
-            _questionnaireForm.MedicationFile = _questionnaireForm.MedicationFile;
+                QuestionnaireForm _questionnaireForm = new QuestionnaireForm();
+                _questionnaireForm.Date = _questionnaireForm.Date;
+                _questionnaireForm.LanguageType = _questionnaireForm.LanguageType;
+                _questionnaireForm.QuestionnaireAnswer = _questionnaireForm.QuestionnaireAnswer;
+                _questionnaireForm.UserId = _questionnaireForm.UserId;
+                _questionnaireForm.ReferralImage = _questionnaireForm.ReferralImage;
+                _questionnaireForm.MedicationFile = _questionnaireForm.MedicationFile;
 
 
-            entities.User.Add(_user);
-            entities.QuestionnaireForm.Add(_questionnaireForm);
-            entities.SaveChanges();
+                entities.User.Add(_user);
+                entities.QuestionnaireForm.Add(_questionnaireForm);
+                entities.SaveChanges();
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+            {
+                Exception raise = dbEx;
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        string message = string.Format("{0}:{1}",
+                            validationErrors.Entry.Entity.ToString(),
+                            validationError.ErrorMessage);
+                        // raise a new exception nesting
+                        // the current instance as InnerException
+                        raise = new InvalidOperationException(message, raise);
+                    }
+                }
+                throw raise;
+            }
         }
 
         protected void FileUploadReferal_Changed(object sender, EventArgs e)

@@ -109,7 +109,7 @@
 
 
 <%-- var a = '<%=questionnaire.QuestionnaireAnswer%>';--%>
-                        alert('<%=questionnaire.Date%>');
+
                   //      document.getElementById('answercontent').val('<%=questionnaire.QuestionnaireAnswer%>');
 
                         //document.getElementById('answercontent').innerHTML = a;

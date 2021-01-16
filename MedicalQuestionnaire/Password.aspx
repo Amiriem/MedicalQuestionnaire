@@ -85,8 +85,8 @@
                 login.UserId = userId;
                 login.Username = '<%=user.Email%>';
                 login.Password = txtpassword1.value;
-                alert(login.Username);
-                alert(login.UserId);
+             //   alert(login.Username);
+             //   alert(login.UserId);
 
                 // this is ok for user
                 $.ajax({

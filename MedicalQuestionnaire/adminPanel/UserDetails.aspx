@@ -6,7 +6,7 @@
             <div id="page-inner">
                 <div class="row"> 
                     <div class="col-lg-12">
-                     <h2>Questionnaire Details</h2>   
+                     <h2>Questionnaires</h2>   
                     </div>
                 </div>              
                      
@@ -31,24 +31,24 @@
                    
                 <div class="col-lg-6" id="scopeTitle">
  
-                        <label for="MoneyType">Name :   </label>
-                        <label for="MoneyType"><%= user.Name%></label>
+                        <label style="font-weight: bold;" for="MoneyType">Name :   </label>
+                        <label style="font-weight: normal;"for="MoneyType"><%= user.Name%></label>
 
                     <div >
-                        <label for="MoneyType">Family :  </label>
-                        <label for="MoneyType"><%= user.Family%></label>
+                        <label style="font-weight: bold;" for="MoneyType">Family :  </label>
+                        <label style="font-weight: normal;" for="MoneyType"><%= user.Family%></label>
                         </div>
                     <div >
-                        <label for="MoneyType">MedicareNumber :  </label>
-                        <label for="MoneyType"><%= user.MedicareNumber%></label>
+                        <label style="font-weight: bold;" for="MoneyType">MedicareNumber :  </label>
+                        <label style="font-weight: normal;" for="MoneyType"><%= user.MedicareNumber%></label>
                         </div>
                        <div >
-                        <label for="MoneyType">Gender :  </label>
-                        <label for="MoneyType"><%= user.Gender%></label>
+                        <label style="font-weight: bold;" for="MoneyType">Gender :  </label>
+                        <label style="font-weight: normal;" for="MoneyType"><%= user.Gender%></label>
                         </div>
                        <div >
-                        <label for="MoneyType">Birthday :  </label>
-                        <label for="MoneyType"><%= user.Birthday%></label>
+                        <label style="font-weight: bold;" for="MoneyType">Birthday :  </label>
+                        <label style="font-weight: normal;" for="MoneyType"><%= user.Birthday%></label>
                         </div>
          
 <%--                     <input type="text" id="MoneyType" class ="form-control" placeholder="MoneyTitle" onkeypress="insertChar();"/>--%>
@@ -128,7 +128,7 @@
                 <script type="text/javascript"  >
 
                     $(document).ready(function () {
-                         alert("ok");
+               //          alert("ok");
 
                         // fetchUserData();
 <%--                        showQuestionnaires(stringify.JSON( <%=questionnaires%>));--%>
@@ -141,7 +141,7 @@
 
 
                     function showQuestionnaires(data) {
-                        alert('ok');
+                //        alert('ok');
                         $("#scopeMoneyTypeData").html("");
                         var tableContent = "";
                         tableContent += '<table class="table table-boardered table-hover" style="text-align:center;direction:ltr;">';
@@ -168,7 +168,7 @@
                             method: 'post',
                             data: {},
                             success: function (data) {
-                                alert('ok');
+                        //        alert('ok');
 
                                 //alert(data.d[0].Name);
 
@@ -196,7 +196,7 @@
                     }
                     function clickQuestionnaire(userId) {
 
-                        alert(userId);
+               //         alert(userId);
                         window.open("QuestionnaireDetails.aspx?pid=" + userId, "_blank");
                     }
                     function addMoneyType() {
