@@ -14,7 +14,7 @@ namespace MedicalQuestionnaire
         {
 
         }
-        private static readonly MedicalQuestionnaire_Entities entities = new MedicalQuestionnaire_Entities();
+        private static readonly Entities_MedicalQuestionnaire entities = new Entities_MedicalQuestionnaire();
         [WebMethod]
         public User getUserDetails()
         {
@@ -22,7 +22,7 @@ namespace MedicalQuestionnaire
             int pid = int.Parse(Request.QueryString["pid"]);
             User user = new User();
 
-            user = entities.User.Where(e => e.ID == pid).FirstOrDefault<User>();
+            user = entities.Users.Where(e => e.ID == pid).FirstOrDefault<User>();
             return user;
         }
 
@@ -38,7 +38,7 @@ namespace MedicalQuestionnaire
             try
             {
 
-                entities.Login.Add(_reg);
+                entities.Logins.Add(_reg);
                 entities.SaveChanges();
             }
             catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)

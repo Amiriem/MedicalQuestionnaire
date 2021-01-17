@@ -253,6 +253,7 @@
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="how_often_sports">
                                     <option disabled="disabled" selected="selected">Choose option</option>
+                                    <option>I don't</option>
                                     <option>Daily</option>
                                     <option>3 times a Week</option>
                                     <option>2 times a Week</option>
@@ -872,6 +873,7 @@
  
                 </div>
             </div>
+        </div>
         </div>
     </div>
 

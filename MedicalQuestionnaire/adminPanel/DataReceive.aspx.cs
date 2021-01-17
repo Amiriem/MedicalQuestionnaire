@@ -10,7 +10,7 @@ namespace MedicalQuestionnaire.adminPanel
 {
     public partial class DataReceive : System.Web.UI.Page
     {
-        private static MedicalQuestionnaire_Entities entities = new MedicalQuestionnaire_Entities();
+        private static Entities_MedicalQuestionnaire entities = new Entities_MedicalQuestionnaire();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,7 +23,7 @@ namespace MedicalQuestionnaire.adminPanel
             //User ma = db.user.First(x => x.u_id == id);
             //return Json(ma, JsonRequestBehavior.AllowGet);
             List<User> allUsers = new List<User>();
-            allUsers = entities.User.ToList();
+            allUsers = entities.Users.ToList();
             return allUsers;
         }
         [WebMethod]
@@ -32,7 +32,7 @@ namespace MedicalQuestionnaire.adminPanel
             entities.Configuration.ProxyCreationEnabled = false;
             User user = new User();
 
-            user = entities.User.Where(e => e.ID == userId).FirstOrDefault<User>();
+            user = entities.Users.Where(e => e.ID == userId).FirstOrDefault<User>();
 
             entities.Entry(user).State = System.Data.Entity.EntityState.Deleted;
             entities.SaveChanges();
