@@ -535,9 +535,11 @@
     <Content Include="Images\9.png" />
     <Content Include="Images\arrow.png" />
     <Content Include="Images\card.png" />
+    <Content Include="Images\french-flag.png" />
     <Content Include="Images\img-sp.png" />
     <Content Include="Images\offer.png" />
     <Content Include="Images\progress.gif" />
+    <Content Include="Images\spanish-flag.png" />
     <Content Include="Images\star.png" />
     <Content Include="Images\star1.png" />
     <Content Include="Images\tag.png" />
