@@ -152,7 +152,7 @@
                                 <label class="label" id="never_work_text">If Never, Please Select One of the Following ​Options?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="never_work_option">
-                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option disabled="disabled" id="never_workoption0_text" selected="selected">Choose option</option>
                                         <option id="never_workoption1_text">Student</option>
                                         <option id="never_workoption2_text">Housewife/Househusband</option>
                                         <option id="never_workoption3_text">Other</option>
@@ -164,7 +164,7 @@
                                 <label class="label" id="living_profession_text">What do you do for a living/what is your profession?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="living_activities">
-                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option disabled="disabled" id="living_option_0" selected="selected">Choose option</option>
                                         <option id="living_option_1">Accountant</option>
                                         <option id="living_option_2">Actor/Actress</option>
                                         <option id="living_option_3">Architect</option>
@@ -224,7 +224,7 @@
                             <label class="label" id="sports_question_text">What sports/activities do you do?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="sports_activites">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
+                                    <option disabled="disabled" id="sports_option_0" selected="selected">Choose option</option>
                                     <option id="sports_option_1">none</option>
                                     <option id="sports_option_2">kayaking</option>
                                     <option id="sports_option_3">canoeing</option>
@@ -265,7 +265,7 @@
                             <label class="label" id="how_often_text">How often?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="how_often_sports">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
+                                    <option disabled="disabled" id="often_option_0" selected="selected">Choose option</option>
                                     <option id="often_option_1">None</option>
                                     <option id="often_option_2">Daily</option>
                                     <option id="often_option_3">3 times a Week</option>
@@ -297,7 +297,7 @@
                             <label class="label" id="handwrite_text">What hand do you write with?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="hand_write">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
+                                    <option disabled="disabled" id="handwrite_option_0" selected="selected">Choose option</option>
                                     <option id="handwrite_option_1">Right</option>
                                     <option id="handwrite_option_2">Left</option>
                                     <option id="handwrite_option_3">Ambidextrous</option>
@@ -341,7 +341,7 @@
                                 <label class="label" id="yes_years_smoke_text">If yes, for how many years?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="smoke_howmany_years">
-                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option disabled="disabled" id="yesrs_smoke_0" selected="selected">Choose option</option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -371,7 +371,7 @@
                                 <label class="label" id="cigarettes_text">How many cigarettes per day?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="smoke_howmany_perday">
-                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option disabled="disabled" id="years_smoke_0" selected="selected">Choose option</option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -434,7 +434,7 @@
                                 <label class="label" id="yes_drinks_alcohol">If yes, how many drinks per week?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="alcohol_howmany_perweek">
-                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option disabled="disabled" id="weeks_alcohol_0" selected="selected">Choose option</option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -494,7 +494,7 @@
                                 <label class="label" id="recreational_what_text">If yes, Which Drug or Herbal/Natural Remedy do you Use?​</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="recreationalDrug_whatDrugs">
-                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option disabled="disabled" id="recreational_what_option_0" selected="selected">Choose option</option>
                                         <option id="recreational_what_option_1">chondroitin</option>
                                         <option id="recreational_what_option_2">glucosamine</option>
                                         <option id="recreational_what_option_3">ginger</option>
@@ -519,7 +519,7 @@
                                 <label class="label" id="yes_often_recreational_text">If yes, How often do you take the drug or herbal/natural remedies?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="recreationalDrug_howmany_perweeks">
-                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option disabled="disabled" id="recreational_often_option_0" selected="selected">Choose option</option>
                                         <option id="recreational_often_option_1">Rarely</option>
                                         <option id="recreational_often_option_2">Monthly</option>
                                         <option id="recreational_often_option_3">Weekly</option>
@@ -742,7 +742,7 @@
                             <label class="label" id="bleeding_problems_text">Bleeding Problems. Type?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="bleeding_problemstypes">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
+                                    <option disabled="disabled" id="bleeding_option_0" selected="selected">Choose option</option>
                                     <option id="bleeding_option_1">Von Willebrand Hemophilia A (Factor 8 deficiency)</option>
                                     <option id="bleeding_option_2">Hemophilia B (Christmas disease)</option>
                                     <option id="bleeding_option_3">Factor 5 Leiden</option>
@@ -760,7 +760,7 @@
                             <label class="label" id="Cancer_type_text">Cancer. Type?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="cancer_problemstypes">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
+                                    <option disabled="disabled" id="breast_option_0" selected="selected">Choose option</option>
                                     <option id="breast_option_1">Breast</option>
                                     <option id="breast_option_2">Prostate</option>
                                     <option id="breast_option_3">Lung</option>
@@ -785,7 +785,7 @@
                             <label class="label" id="Hepatitis_problem_text">Hepatitis. Type? </label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="hepatitis_problemtypes">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
+                                    <option disabled="disabled" id="Hepatitis_option_0" selected="selected">Choose option</option>
                                     <option id="Hepatitis_option_1">Auto-immune</option>
                                     <option id="Hepatitis_option_2">Alcohol-induced</option>
                                     <option id="Hepatitis_option_3">Hepatitis A</option>
@@ -831,7 +831,7 @@
                                 <label class="label" style="width: 200px;" id="surgery_date_text">When was your surgery?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="surgery_date">
-                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option disabled="disabled" id="Surgery_years_0" selected="selected">Choose option</option>
                                         <option>2021</option>
                                         <option>2020</option>
                                         <option>2019</option>
@@ -1027,7 +1027,7 @@
         let referralFile;
 
         let questionnaireformat;
-
+        let languageType;
 
         var frenchLanguage = {
 
@@ -2164,8 +2164,9 @@
             surgeryDate = document.getElementById('surgery_date');
             surgonName = document.getElementById('surgonname');
 
+          
 
-
+            languageType = 'English';
 
             genderselection = '';
 
@@ -2183,12 +2184,14 @@
             var language = null;
             if (type == 'Spanish') {
                 language = spanishLanguage;
+                languageType = 'Spanish';
             }
 
             if (type == 'French') {
                 language = frenchLanguage;
+                languageType = 'French';
             }
-
+            //document.getElementsByName('living_activities').options[0].innerHTML = 'hiii';
 
 
             document.getElementById('first_name_text').innerHTML = language["First Name"];
@@ -2215,10 +2218,12 @@
             document.getElementById('never_working_text').innerHTML = language["Never Worked"];
             document.getElementById('no_offwork_text').innerHTML = language["If No, Since When Have You Been Off Work?"];
             document.getElementById('never_work_text').innerHTML = language["If Never, Please Select One of the Following Options?"];
+            document.getElementById('never_workoption0_text').innerHTML = language["Choose Option"];
             document.getElementById('never_workoption1_text').innerHTML = language["Student"];
             document.getElementById('never_workoption2_text').innerHTML = language["Housewife/Househusband"];
             document.getElementById('never_workoption3_text').innerHTML = language["Other"];
             document.getElementById('living_profession_text').innerHTML = language["Yes; What Do You Do For A Living/What is Your Profession ?"];
+            document.getElementById('living_option_0').innerHTML = language["Choose Option"];
             document.getElementById('living_option_1').innerHTML = language["Accountant"];
             document.getElementById('living_option_2').innerHTML = language["Actor / Actress"];
             document.getElementById('living_option_3').innerHTML = language["Architect"];
@@ -2270,6 +2275,7 @@
             document.getElementById('living_option_49').innerHTML = language["Other"];
 
             document.getElementById('sports_question_text').innerHTML = language["What Sports/Activities Do You Do?"];
+            document.getElementById('sports_option_0').innerHTML = language["Choose Option"];
             document.getElementById('sports_option_1').innerHTML = language["None"];
             document.getElementById('sports_option_2').innerHTML = language["Kayaking"];
             document.getElementById('sports_option_3').innerHTML = language["Canoeing"];
@@ -2304,6 +2310,7 @@
             document.getElementById('sports_option_32').innerHTML = language["Other"];
             document.getElementById('how_often_text').innerHTML = language["How Often?"];
 
+            document.getElementById('often_option_0').innerHTML = language["Choose Option"];
             document.getElementById('often_option_1').innerHTML = language["None"];
             document.getElementById('often_option_2').innerHTML = language["Daily"];
             document.getElementById('often_option_3').innerHTML = language["3 times a week"];
@@ -2314,6 +2321,7 @@
             document.getElementById('often_option_8').innerHTML = language["Rarely"];
 
             document.getElementById('handwrite_text').innerHTML = language["What Hand Do You Write With?"];
+            document.getElementById('handwrite_option_0').innerHTML = language["Choose Option"];
             document.getElementById('handwrite_option_1').innerHTML = language["Right"];
             document.getElementById('handwrite_option_2').innerHTML = language["Left"];
             document.getElementById('handwrite_option_3').innerHTML = language["Ambidextrous"];
@@ -2341,6 +2349,7 @@
             document.getElementById('never_recreational_text').innerHTML = language["Never Taken"];
             document.getElementById('no_since_recreational_text').innerHTML = language["If No, Since When Have You Been Off The Drug?"];
             document.getElementById('yes_often_recreational_text').innerHTML = language["If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?"];
+            document.getElementById('recreational_often_option_0').innerHTML = language["Choose Option"];
             document.getElementById('recreational_often_option_1').innerHTML = language["Rarely"];
             document.getElementById('recreational_often_option_2').innerHTML = language["Monthly"];
             document.getElementById('recreational_often_option_3').innerHTML = language["Weekly"];
@@ -2348,6 +2357,7 @@
             document.getElementById('recreational_often_option_5').innerHTML = language["2 or more times per day"];
 
             document.getElementById('recreational_what_text').innerHTML = language["If Yes, Which Drug or Herbal / Natural Remedy do you Use?"];
+            document.getElementById('recreational_what_option_0').innerHTML = language["Choose Option"];
             document.getElementById('recreational_what_option_1').innerHTML = language["chondroitin"];
             document.getElementById('recreational_what_option_2').innerHTML = language["glucosamine"];
             document.getElementById('recreational_what_option_3').innerHTML = language["ginger"];
@@ -2400,6 +2410,7 @@
             document.getElementById('medical_Other').innerHTML = language["Other"];
 
             document.getElementById('bleeding_problems_text').innerHTML = language["Bleeding Problems.Type ?"];
+            document.getElementById('bleeding_option_0').innerHTML = language["Choose Option"];
             document.getElementById('bleeding_option_1').innerHTML = language["Von Willebrand Hemophilia A (Factor 8 deficiency)"];
             document.getElementById('bleeding_option_2').innerHTML = language["Hemophilia B (Christmas disease)"];
             document.getElementById('bleeding_option_3').innerHTML = language["Factor 5 Leiden"];
@@ -2411,6 +2422,7 @@
 
             document.getElementById('Cancer_type_text').innerHTML = language["Cancer.Type ?"];
 
+            document.getElementById('breast_option_0').innerHTML = language["Choose Option"];
             document.getElementById('breast_option_1').innerHTML = language["Breast"];
             document.getElementById('breast_option_2').innerHTML = language["Prostate"];
             document.getElementById('breast_option_3').innerHTML = language["Lung"];
@@ -2428,6 +2440,7 @@
 
             document.getElementById('Hepatitis_problem_text').innerHTML = language["Hepatitis.Type ?"];
 
+            document.getElementById('Hepatitis_option_0').innerHTML = language["Choose Option"];
             document.getElementById('Hepatitis_option_1').innerHTML = language["Auto - immune"];
             document.getElementById('Hepatitis_option_2').innerHTML = language["Alcohol - induced"];
             document.getElementById('Hepatitis_option_3').innerHTML = language["Hepatitis A"];
@@ -2444,7 +2457,7 @@
             document.getElementById('surgery_question_text').innerHTML = language["Have you Ever Had Surgery?"];
             document.getElementById('yes_surgery_text').innerHTML = language["Yes"];
             document.getElementById('no_surgery_text').innerHTML = language["No Previous Surgeries"];
-            document.getElementById('surgery_names').innerHTML = language["What Type of Surgery?"];
+            document.getElementById('surgery_type_text').innerHTML = language["What Type of Surgery?"];
             document.getElementById('surgery_date_text').innerHTML = language["When Was Your Surgery?"];  
             document.getElementById('Before_1970_text').innerHTML = language["Before 1970"]; 
             document.getElementById('surgeon_name_text').innerHTML = language["What Was the Surgeon’s Name?"];
@@ -2743,6 +2756,8 @@
 
 
         function submit_button_click() {
+
+
             //window.open("exit.html", "Thanks for Visiting!");
 
             //var txtFirstName = document.getElementById('first_name');
@@ -3145,6 +3160,12 @@
 
 
             var answer = '';
+
+            answer += 'What Is The Name Of Your Family Doctor?<br />';
+            answer += familynameOfDoctor.value; answer += '<br />';
+
+            answer += '<br /><br />';
+
             answer = 'Are You Working Now ?<br />';
             if (document.getElementById('yes_working_question').checked) {
                 answer += 'Yes<br />';
@@ -3158,7 +3179,7 @@
             }
             else if (document.getElementById('never_working_question').checked) {
                 answer += 'Never<br />';
-                answer += 'If Never, Could You Select One Of These Options?<br />';
+                answer += 'If Never, Please Select One Of The Following ​Options?<br />';
                 answer += neverworkoption.value; answer += '<br />';
             }
 
@@ -3166,17 +3187,11 @@
 
             answer += 'What Sports/Activities Do You Do?<br />';
             answer += sportsActivites.value; answer += '<br />';
-            answer += 'How Often?(Per Week)?<br />';
+            answer += 'How Often?<br />';
             answer += howoftensports.value; answer += '<br />';
 
             answer += '<br /><br />';
-
-
-            answer += 'What Is The Name Of Your Family Doctor?<br />';
-            answer += familynameOfDoctor.value; answer += '<br />';
-
-            answer += '<br /><br />';
-
+             
             answer += 'What Hand Do You Write With?<br />';
             answer += handWrite.value; answer += '<br />';
 
@@ -3195,7 +3210,7 @@
             }
             else if (document.getElementById('no_smoke').checked) {
                 answer += 'No<br />';
-                answer += 'If No, Since When Have You Been Off?<br />';
+                answer += 'If No, When Did You Quite Smoking?<br />';
                 answer += smokeOffDate.value; answer += '<br />';
             }
             else if (document.getElementById('never_smoke').checked) {
@@ -3221,10 +3236,12 @@
             answer += 'Do You Take Any Recreational Drugs Or Herbal/Natural Remedies?<br />';
             if (document.getElementById('yes_drug').checked) {
                 answer += 'Yes<br />';
+              
+                answer += 'If Yes, Which Drug Or Herbal/Natural Remedy Do You Use?​<br />';
+                answer += recreationalDrugWhatDrugs.value; answer += '<br />';
+
                 answer += 'If Yes, How Often Do You Take The Drug Or Herbal/Natural Remedies?<br />';
                 answer += recreationalDrugHowmanyPerweeks.value; answer += '<br />';
-                answer += 'If Yes, What Drug Use Drug ?<br />';
-                answer += recreationalDrugWhatDrugs.value; answer += '<br />';
             }
             else if (document.getElementById('no_drug').checked) {
                 answer += 'No<br />';
@@ -3350,7 +3367,7 @@
 
             answer += 'Have You Had Surgery?<br />';
             if (document.getElementById('yes_surgery').checked) {
-                answer += 'Yes (then enter details)<br />';
+                answer += 'Yes<br />';
                 answer += 'What Type Of Surgery?<br />';
                 answer += surgeryNames.value; answer += '<br />';
                 answer += 'When Was Your Surgery?<br />';
@@ -3364,15 +3381,7 @@
 
             answer += '<br /><br />';
 
-            if (document.getElementById('yes_question_file_medication').checked) {
-                answer += 'Do You Take Any Medications Regularly?<br />';
-                answer += 'Yes<br />';
-            }
-            else if (document.getElementById('no_question_file_medication').checked) {
-                answer += 'Do You Take Any Medications Regularly?<br />';
-                answer += 'No<br />';
-            }
-            answer += '<br /><br />';
+
             answer += 'Do You Take Any Medications Regularly?<br />';
             if (document.getElementById('yes_question_file_medication').checked) {
                 answer += 'Yes<br />';
@@ -3381,7 +3390,7 @@
                 answer += 'No<br />';
             }
             answer += '<br /><br />';
-            answer += 'Do You Have Referral Information?<br />';
+            answer += 'Do You Have A Referral?<br />';
             if (document.getElementById('yes_Referral').checked) {
                 answer += 'Yes<br />';
             }
@@ -3393,7 +3402,7 @@
             var questionnaireArray = {};
 
             questionnaireArray.QuestionnaireAnswer = answer;
-            questionnaireArray.LanguageType = 'English';
+            questionnaireArray.LanguageType = languageType;
             questionnaireArray.UserId = userId;
 
             var today = new Date();
@@ -3799,7 +3808,8 @@
 
 
         function clickSpanishTranslation() {
-            alert('spanish language');
+          //  alert('spanish language');
+            alert(sportsActivites.selectedIndex);
             makeTranslaton('Spanish');
         }
         function clickFrenchTranslation() {

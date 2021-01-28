@@ -18,7 +18,7 @@ namespace MedicalQuestionnaire
         public int UserId { get; set; }
         public string QuestionnaireAnswer { get; set; }
         public string LanguageType { get; set; }
-        public System.DateTime Date { get; set; }
+        public string Date { get; set; }
         public string ReferralImage { get; set; }
         public string MedicationFile { get; set; }
     

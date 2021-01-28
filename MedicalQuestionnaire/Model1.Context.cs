@@ -13,10 +13,10 @@ namespace MedicalQuestionnaire
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities_MedicalQuestionnaire : DbContext
+    public partial class MedicalQuestionnaireEntities : DbContext
     {
-        public Entities_MedicalQuestionnaire()
-            : base("name=Entities_MedicalQuestionnaire")
+        public MedicalQuestionnaireEntities()
+            : base("name=MedicalQuestionnaireEntities")
         {
         }
     
@@ -25,8 +25,8 @@ namespace MedicalQuestionnaire
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Login> Logins { get; set; }
-        public virtual DbSet<QuestionnaireForm> QuestionnaireForms { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Login> Login { get; set; }
+        public virtual DbSet<QuestionnaireForm> QuestionnaireForm { get; set; }
+        public virtual DbSet<User> User { get; set; }
     }
 }

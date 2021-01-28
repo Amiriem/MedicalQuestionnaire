@@ -9,7 +9,7 @@ namespace MedicalQuestionnaire.adminPanel
 {
     public partial class QuestionnaireDetails : System.Web.UI.Page
     {
-        private static Entities_MedicalQuestionnaire entities = new Entities_MedicalQuestionnaire();
+        private static MedicalQuestionnaireEntities entities = new MedicalQuestionnaireEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -21,8 +21,8 @@ namespace MedicalQuestionnaire.adminPanel
             User user = new User();
             QuestionnaireForm questionnaire = new QuestionnaireForm();
 
-            questionnaire = entities.QuestionnaireForms.Where(e => e.ID == pid).FirstOrDefault<QuestionnaireForm>();
-            user = entities.Users.Where(e => e.ID == questionnaire.UserId).FirstOrDefault<User>();
+            questionnaire = entities.QuestionnaireForm.Where(e => e.ID == pid).FirstOrDefault<QuestionnaireForm>();
+            user = entities.User.Where(e => e.ID == questionnaire.UserId).FirstOrDefault<User>();
             return user;
 
         }
@@ -31,7 +31,7 @@ namespace MedicalQuestionnaire.adminPanel
         {
             int pid = int.Parse(Request.QueryString["pid"]);
             QuestionnaireForm questionnaire = new QuestionnaireForm();
-            questionnaire = entities.QuestionnaireForms.Where(p => p.ID == pid).FirstOrDefault<QuestionnaireForm>();
+            questionnaire = entities.QuestionnaireForm.Where(p => p.ID == pid).FirstOrDefault<QuestionnaireForm>();
 
             Answercontent.Text = questionnaire.QuestionnaireAnswer;
             return questionnaire;

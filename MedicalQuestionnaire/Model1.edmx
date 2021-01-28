@@ -22,7 +22,7 @@
           <Property Name="UserId" Type="int" Nullable="false" />
           <Property Name="QuestionnaireAnswer" Type="nvarchar(max)" Nullable="false" />
           <Property Name="LanguageType" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Date" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ReferralImage" Type="nvarchar(max)" />
           <Property Name="MedicationFile" Type="nvarchar(max)" />
         </EntityType>
@@ -105,7 +105,7 @@
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="QuestionnaireAnswer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LanguageType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ReferralImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MedicationFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="User" Relationship="Self.FK_QuestionnaireForm_User" FromRole="QuestionnaireForm" ToRole="User" />
@@ -126,8 +126,8 @@
           <Property Name="Birthday" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PersonalPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MedicarePhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Logins" Relationship="Self.FK_Login_Login" FromRole="User" ToRole="Login" />
-          <NavigationProperty Name="QuestionnaireForms" Relationship="Self.FK_QuestionnaireForm_User" FromRole="User" ToRole="QuestionnaireForm" />
+          <NavigationProperty Name="Login" Relationship="Self.FK_Login_Login" FromRole="User" ToRole="Login" />
+          <NavigationProperty Name="QuestionnaireForm" Relationship="Self.FK_QuestionnaireForm_User" FromRole="User" ToRole="QuestionnaireForm" />
         </EntityType>
         <Association Name="FK_Login_Login">
           <End Role="User" Type="Self.User" Multiplicity="1" />
@@ -155,17 +155,17 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities_MedicalQuestionnaire" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Logins" EntityType="Self.Login" />
-          <EntitySet Name="QuestionnaireForms" EntityType="Self.QuestionnaireForm" />
-          <EntitySet Name="Users" EntityType="Self.User" />
+        <EntityContainer Name="MedicalQuestionnaireEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Login" EntityType="Self.Login" />
+          <EntitySet Name="QuestionnaireForm" EntityType="Self.QuestionnaireForm" />
+          <EntitySet Name="User" EntityType="Self.User" />
           <AssociationSet Name="FK_Login_Login" Association="Self.FK_Login_Login">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Login" EntitySet="Logins" />
+            <End Role="User" EntitySet="User" />
+            <End Role="Login" EntitySet="Login" />
           </AssociationSet>
           <AssociationSet Name="FK_QuestionnaireForm_User" Association="Self.FK_QuestionnaireForm_User">
-            <End Role="User" EntitySet="Users" />
-            <End Role="QuestionnaireForm" EntitySet="QuestionnaireForms" />
+            <End Role="User" EntitySet="User" />
+            <End Role="QuestionnaireForm" EntitySet="QuestionnaireForm" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -173,8 +173,8 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MedicalQuestionnaireModelStoreContainer" CdmEntityContainer="Entities_MedicalQuestionnaire">
-          <EntitySetMapping Name="Logins">
+        <EntityContainerMapping StorageEntityContainer="MedicalQuestionnaireModelStoreContainer" CdmEntityContainer="MedicalQuestionnaireEntities">
+          <EntitySetMapping Name="Login">
             <EntityTypeMapping TypeName="MedicalQuestionnaireModel.Login">
               <MappingFragment StoreEntitySet="Login">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -184,7 +184,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="QuestionnaireForms">
+          <EntitySetMapping Name="QuestionnaireForm">
             <EntityTypeMapping TypeName="MedicalQuestionnaireModel.QuestionnaireForm">
               <MappingFragment StoreEntitySet="QuestionnaireForm">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -197,7 +197,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Users">
+          <EntitySetMapping Name="User">
             <EntityTypeMapping TypeName="MedicalQuestionnaireModel.User">
               <MappingFragment StoreEntitySet="User">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -229,7 +229,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

@@ -17,8 +17,8 @@ namespace MedicalQuestionnaire
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            this.Logins = new HashSet<Login>();
-            this.QuestionnaireForms = new HashSet<QuestionnaireForm>();
+            this.Login = new HashSet<Login>();
+            this.QuestionnaireForm = new HashSet<QuestionnaireForm>();
         }
     
         public int ID { get; set; }
@@ -35,8 +35,8 @@ namespace MedicalQuestionnaire
         public string MedicarePhoto { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Login> Logins { get; set; }
+        public virtual ICollection<Login> Login { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<QuestionnaireForm> QuestionnaireForms { get; set; }
+        public virtual ICollection<QuestionnaireForm> QuestionnaireForm { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace MedicalQuestionnaire.adminPanel
 {
     public partial class UserDetails : System.Web.UI.Page
     {
-        private static Entities_MedicalQuestionnaire entities = new Entities_MedicalQuestionnaire();
+        private static MedicalQuestionnaireEntities entities = new MedicalQuestionnaireEntities();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,7 +22,7 @@ namespace MedicalQuestionnaire.adminPanel
             int pid = int.Parse(Request.QueryString["pid"]);
             User user = new User();
 
-            user = entities.Users.Where(e => e.ID == pid).FirstOrDefault<User>();
+            user = entities.User.Where(e => e.ID == pid).FirstOrDefault<User>();
             return user;
         }
 
@@ -30,7 +30,7 @@ namespace MedicalQuestionnaire.adminPanel
         {
             int pid = int.Parse(Request.QueryString["pid"]);
             List<QuestionnaireForm> questionnaires = new List<QuestionnaireForm>();
-            questionnaires = entities.QuestionnaireForms.Where(p => p.UserId == pid).ToList();
+            questionnaires = entities.QuestionnaireForm.Where(p => p.UserId == pid).ToList();
             return questionnaires;
         }
     }

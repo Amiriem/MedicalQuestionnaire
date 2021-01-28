@@ -63,6 +63,15 @@
                         <label style="font-weight: normal;"><%= user.PhoneNumber%></label>
                         </div>
 
+                     <div>
+                         <br />
+                     <label style="font-weight: bold;" >Questionnaire Date :  </label>
+                        <label style="font-weight: normal;"><%= questionnaire.Date%></label>
+                        </div>
+                          <div>
+                      <label style="font-weight: bold;" >Questionnaire Language :  </label>
+                        <label style="font-weight: normal;"><%= questionnaire.LanguageType%></label>
+                        </div>
                     <br />
                     <br />
                      <div>

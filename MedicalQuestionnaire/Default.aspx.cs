@@ -8,7 +8,7 @@ namespace MedicalQuestionnaire
 {
     public partial class Default : Page
     {
-        private static Entities_MedicalQuestionnaire entities = new Entities_MedicalQuestionnaire();
+        private static MedicalQuestionnaireEntities entities = new MedicalQuestionnaireEntities();
         static QuestionnaireForm _questionnaireForm = new QuestionnaireForm();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -40,7 +40,7 @@ namespace MedicalQuestionnaire
             _user.MedicarePhoto = user.MedicarePhoto;
             _user.PersonalPhoto = user.PersonalPhoto;
 
-            entities.Users.Add(_user);
+            entities.User.Add(_user);
             entities.SaveChanges();
         }
         [WebMethod]
@@ -53,9 +53,9 @@ namespace MedicalQuestionnaire
             //if(!string.IsNullOrEmpty( selectedUser.MedicareNumber))
             try
             {
-                if (entities.Users.Any(e => e.MedicareNumber == user.MedicareNumber))
+                if (entities.User.Any(e => e.MedicareNumber == user.MedicareNumber))
                 {
-                    selectedUser = entities.Users.Where(e => e.MedicareNumber == user.MedicareNumber).FirstOrDefault<User>();
+                    selectedUser = entities.User.Where(e => e.MedicareNumber == user.MedicareNumber).FirstOrDefault<User>();
                     selectedUser.Name = user.Name;
                     selectedUser.Family = user.Family;
                     selectedUser.Gender = user.Gender;
@@ -89,7 +89,7 @@ namespace MedicalQuestionnaire
                     _user.MedicarePhoto = user.MedicarePhoto;
                     _user.PersonalPhoto = user.PersonalPhoto;
 
-                    entities.Users.Add(_user);
+                    entities.User.Add(_user);
                     entities.SaveChanges();
                     return _user.ID;
                 }
@@ -115,7 +115,7 @@ namespace MedicalQuestionnaire
         {
             entities.Configuration.ProxyCreationEnabled = false;
 
-            if (entities.Logins.Any(e => e.UserId == userId))
+            if (entities.Login.Any(e => e.UserId == userId))
             {
                 return true;
             }
@@ -461,7 +461,7 @@ namespace MedicalQuestionnaire
                     FileUploadReferal_.SaveAs(Request.PhysicalApplicationPath + "./" + referalPath);
                 }
 
-                entities.QuestionnaireForms.Add(_questionnaireForm);
+                entities.QuestionnaireForm.Add(_questionnaireForm);
                 entities.SaveChanges();
             }
             catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
@@ -586,8 +586,8 @@ namespace MedicalQuestionnaire
                 _questionnaireForm.MedicationFile = _questionnaireForm.MedicationFile;
 
 
-                entities.Users.Add(_user);
-                entities.QuestionnaireForms.Add(_questionnaireForm);
+                entities.User.Add(_user);
+                entities.QuestionnaireForm.Add(_questionnaireForm);
                 entities.SaveChanges();
             }
             catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)

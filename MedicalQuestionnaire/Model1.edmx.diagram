@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3eb55c69b33647c8b6aae6f895a120c9" Name="Diagram1" ZoomLevel="42">
+      <Diagram DiagramId="6060c36a4bfe46cc9b162bf5c8846d6f" Name="Diagram1" ZoomLevel="98">
         <EntityTypeShape EntityType="MedicalQuestionnaireModel.Login" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MedicalQuestionnaireModel.QuestionnaireForm" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MedicalQuestionnaireModel.User" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
