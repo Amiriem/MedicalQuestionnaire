@@ -12,7 +12,7 @@ namespace MedicalQuestionnaire
         static QuestionnaireForm _questionnaireForm = new QuestionnaireForm();
         protected void Page_Load(object sender, EventArgs e)
         {
-      System.Diagnostics.Debug.WriteLine("fddfdf");
+      //System.Diagnostics.Debug.WriteLine("fddfdf");
             //fileUploadMedical = FileUploadMedical;
             //fileUploadReferal = FileUploadReferal;
 
@@ -53,8 +53,9 @@ namespace MedicalQuestionnaire
             //if(!string.IsNullOrEmpty( selectedUser.MedicareNumber))
             try
             {
-                if (entities.User.Any(e => e.MedicareNumber == user.MedicareNumber))
+                if (!string.IsNullOrEmpty(user.MedicareNumber) && user.MedicareNumber!="Null" && entities.User.Any(e => e.MedicareNumber == user.MedicareNumber))
                 {
+                    //System.Diagnostics.Debug.WriteLine("Hi");
                     selectedUser = entities.User.Where(e => e.MedicareNumber == user.MedicareNumber).FirstOrDefault<User>();
                     selectedUser.Name = user.Name;
                     selectedUser.Family = user.Family;
@@ -70,6 +71,8 @@ namespace MedicalQuestionnaire
 
                     entities.Entry(selectedUser).State = System.Data.Entity.EntityState.Modified;
                     entities.SaveChanges();
+
+                    //System.Diagnostics.Debug.WriteLine("Hi1  " + selectedUser.ID);
 
                     return selectedUser.ID;
                 }
@@ -88,9 +91,11 @@ namespace MedicalQuestionnaire
                     _user.PhoneNumber = user.PhoneNumber;
                     _user.MedicarePhoto = user.MedicarePhoto;
                     _user.PersonalPhoto = user.PersonalPhoto;
-
+                    //System.Diagnostics.Debug.WriteLine("Hi2");
                     entities.User.Add(_user);
                     entities.SaveChanges();
+                    //System.Diagnostics.Debug.WriteLine("Hi2  " + _user.ID);
+
                     return _user.ID;
                 }
             }

@@ -33,6 +33,17 @@ namespace MedicalQuestionnaire.adminPanel
             questionnaires = entities.QuestionnaireForm.Where(p => p.UserId == pid).ToList();
             return questionnaires;
         }
+        [WebMethod]
+        public static void removeQuestionnaire(int questionnaireId)
+        {
+            entities.Configuration.ProxyCreationEnabled = false;
+            QuestionnaireForm questionnaire = new QuestionnaireForm();
+
+            questionnaire = entities.QuestionnaireForm.Where(e => e.ID == questionnaireId).FirstOrDefault<QuestionnaireForm>();
+
+            entities.Entry(questionnaire).State = System.Data.Entity.EntityState.Deleted;
+            entities.SaveChanges();
+        }
     }
 }
 

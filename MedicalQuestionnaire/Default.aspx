@@ -5,11 +5,11 @@
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
 
          <button class="btn btn--radius-2" type ="button" style="width: 65px; margin-left: 80px" onclick="clickSpanishTranslation()">
-       <img src="Images/spanish-flag.png" style="width: 65px; margin-left: 80px"/>
+       <img src="Images/spanish-flag.png" style="width: 65px;"/>
        </button>
 
         <button class="btn btn--radius-2" type ="button" style="width: 65px; margin-left: 40px" onclick="clickFrenchTranslation()">
-       <img src="Images/french-flag.png" style="width: 65px; margin-left: 40px"/>
+       <img src="Images/french-flag.png" style="width: 65px;"/>
        </button>
 
  
@@ -223,7 +223,7 @@
                         <div class="input-group">
                             <label class="label" id="sports_question_text">What sports/activities do you do?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject" id="sports_activites">
+                                <select name="subject" id="sports_activites" onchange="sports_activites_changed()">
                                     <option disabled="disabled" id="sports_option_0" selected="selected">Choose option</option>
                                     <option id="sports_option_1">none</option>
                                     <option id="sports_option_2">kayaking</option>
@@ -261,7 +261,7 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group" id="parent_how_often" style="display: block;">
                             <label class="label" id="how_often_text">How often?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="how_often_sports">
@@ -2970,7 +2970,10 @@
                 genderselection = 'Other/Prefer not to answer';
             }
 
-
+            if (document.getElementById('no_medicare_card').checked) {
+                txtMedicareNumber.value='Null';
+            }
+ 
             if (confirm("Are you sure all the information above is correct?")) {
 
 
@@ -3098,7 +3101,7 @@
                     data: '{user:' + JSON.stringify(userArray) + '}',
                     success: function (data) {
 
-                        //alert(data.d); 
+                      //  alert(data.d); 
                         //alert("ok");
 
                         buildAnswers(data.d);
@@ -3489,7 +3492,18 @@
             });
         }
 
+        function sports_activites_changed() {
 
+            if (sportsActivites.selectedIndex == 1) {
+
+                $("#parent_how_often").hide();
+
+            }
+            else {
+                $("#parent_how_often").show();
+
+            }
+        }
         function clickUser(userId) {
 
             //alert(userId);
@@ -3809,11 +3823,11 @@
 
         function clickSpanishTranslation() {
           //  alert('spanish language');
-            alert(sportsActivites.selectedIndex);
+            alert('Spanish Language');
             makeTranslaton('Spanish');
         }
         function clickFrenchTranslation() {
-            alert('french language');
+            alert('French Language');
             makeTranslaton('French');
         }
         function getDataUrl(img) {
