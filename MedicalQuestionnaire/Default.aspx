@@ -4,15 +4,22 @@
 
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
 
-         <button class="btn btn--radius-2" type ="button" style="width: 65px; margin-left: 80px" onclick="clickSpanishTranslation()">
-       <img src="Images/spanish-flag.png" style="width: 65px;"/>
-       </button>
+        <button class="btn btn--radius-2" type="button" style="width: 65px; margin-left: 80px" onclick="clickSpanishTranslation()">
+            <img src="Images/spanish-flag.png" style="width: 65px;" />
+        </button>
 
-        <button class="btn btn--radius-2" type ="button" style="width: 65px; margin-left: 40px" onclick="clickFrenchTranslation()">
-       <img src="Images/french-flag.png" style="width: 65px;"/>
-       </button>
+        <button class="btn btn--radius-2" type="button" style="width: 65px; margin-left: 40px" onclick="clickFrenchTranslation()">
+            <img src="Images/french-flag.png" style="width: 65px;" />
+        </button>
 
- 
+           <button class="btn btn--radius-2" type="button" style="width: 65px; margin-left: 40px" onclick="clickChineseTranslation()">
+            <img src="Images/chinese-flag.png" style="width: 65px;" />
+        </button>
+
+           <button class="btn btn--radius-2" type="button" style="width: 65px; margin-left: 40px" onclick="clickEnglishTranslation()">
+            <img src="Images/english-flag.png" style="width: 65px;" />
+        </button>
+
         <div class="wrapper wrapper--w780">
             <div class="card card-4">
                 <div class="card-body" id="questionnaire_format">
@@ -297,7 +304,7 @@
                             <label class="label" id="handwrite_text">What hand do you write with?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="hand_write">
-                                    <option disabled="disabled" id="handwrite_option_0" selected="selected">Choose option</option>
+                                    <option id="handwrite_option_0" disabled="disabled" selected="selected">Choose option</option>
                                     <option id="handwrite_option_1">Right</option>
                                     <option id="handwrite_option_2">Left</option>
                                     <option id="handwrite_option_3">Ambidextrous</option>
@@ -330,7 +337,7 @@
                                 </div>
                             </div>
                             <div class="input-group" style="display: none;" id="smoke_off_Box">
-                                <label class="label" id="no_since_smoke_text">If no, when did you quite smoking?</label>
+                                <label class="label" id="no_since_smoke_text">If no, when did you quit smoking?</label>
                                 <div class="input-group-icon">
                                     <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="smoke_off" name="smoke_off">
                                     <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
@@ -705,7 +712,7 @@
                                         <span class="checkmark"></span>
                                     </label>
                                     <label id="" class="radio-container" style="width: 400px;">
-                                        <label id="medical_RefluxorGERD">Reflux or GERD</label>
+                                        <label id="medical_RefluxorGERD">Reflux o ERG</label>
 
                                         <input type="checkbox" id="RefluxorGERD" name="RefluxorGERD">
                                         <span class="checkmark"></span>
@@ -797,7 +804,8 @@
                                     <option id="Hepatitis_option_9">Hepatitis C – Cured</option>
                                     <option id="Hepatitis_option_10">Hepatitis D</option>
                                     <option id="Hepatitis_option_11">Hepatitis E</option>
-                                    <option id="Hepatitis_option_12">Other​</option>
+                                    <option id="Hepatitis_option_12">Fatty Liver</option>
+                                    <option id="Hepatitis_option_13">Other​</option>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
@@ -883,12 +891,12 @@
                                         <option>1973</option>
                                         <option>1972</option>
                                         <option>1971</option>
-                                        <option>1970</option> 
+                                        <option>1970</option>
                                         <option id="Before_1970_text">Before 1970</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
-                               <%-- <div class="input-group-icon">
+                                <%-- <div class="input-group-icon">
                                     <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="surgery_date" name="alcohol_off">
                                     <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>--%>
@@ -1269,7 +1277,7 @@
 
             'Do You Smoke?': 'Est-ce que vous fumez?',
 
-            'If Yes, For How Many Years?': 'Si Oui, Pendent Combien d’années?',
+            'If Yes, For How Many Years?': 'Si Oui, Pendant Combien d’années?',
 
             'More than 20 years': 'plus que 20 ans',
 
@@ -1393,7 +1401,7 @@
 
             'Pulmonary Embolism': 'Embolie Pulmonaire',
 
-            'Reflux or GERD': 'Reflus ou RGO',
+            'Reflux or GERD': 'Reflus o RGO',
 
             'Seizures': 'Crise dépilepsie',
 
@@ -1507,7 +1515,7 @@
 
             'Submit': 'Soumettre',
 
-            'If no, when did you quite smoking?': 'Si non, quand avez-vous arrêté de fumer?',
+            'If no, when did you quite smoking': 'Si non, quand avez-vous arrêté de fumer?',
 
             'Bleeding Problems.Type ?': ' Problèmes de saignement.Type?',
 
@@ -1838,7 +1846,7 @@
 
             'More than 20 Drinks': 'Mas de 20 Copas',
 
-            'If no, when did you quite smoking?': ' Si no, ¿cuándo dejó de fumar?',
+            'If no, when did you quite smoking': ' Si no, ¿cuándo dejó de fumar?',
 
             'Do You Take Any Recreational Drugs Or Herbal / Natural Remedies?': '¿Usted Consume Drogas O Remedios Naturales/de Hierbas?',
 
@@ -1950,7 +1958,7 @@
 
             'Pulmonary Embolism': 'Embolia Pulmonar',
 
-            'Reflux or GERD': 'Reflujo or ERG',
+            'Reflux or GERD': 'Reflujo o ERG',
 
             'Seizures': 'Convulsiones',
 
@@ -2020,7 +2028,7 @@
 
             'Alcohol - induced': 'Inducido por Alcohol',
 
-            'Fatty - Liver': 'Hígado Graso',
+            'Fatty-Liver': 'Hígado Graso',
 
             'Hepatitis A': 'Hepatitis A',
 
@@ -2068,7 +2076,7 @@
 
             'Submit': 'Entregar',
 
-            'Choose':'Choisir',
+            'Choose': 'Choisir',
 
             'Please fill out your Frist Name': '',
 
@@ -2126,7 +2134,249 @@
 
             ' Are you sure all the information above is correct? ': '',
         };
-
+        var chineseLanguage =
+        {
+            'Choose Option': '选项 (xuanxiang)',
+            'First Name': '名 (ming)',
+            'Last Name': '姓 (xing)',
+            'Birthday': '生日 (sheng ri)',
+            'Gender': '性别 (xingbie)',
+            'Male': '男 (nan)',
+            'Female': '女(nv)',
+            'Other/Prefer not to answer': '其他 (qita) / 选择不回答 (xuanze buhuida)',
+            'Medicare Number': '医疗卡号码 (yiliaoka haoma)',
+            'Yes': '是 (shi)',
+            'No Medicare Card': '没有医疗卡 (meiyou yiliaoka)',
+            'Expiration Date': '有效日期 (youxiao riqi )',
+            'Email': '电子邮件 (dianzi youjian)',
+            'Phone Number': '电话号码 (dianhua haoma )',
+            'What is the Name of Your Family Doctor': '您的家庭医生的名字 (ninde jiating yishengde mingzi )',
+            'Are You Working Now ?': '您现在有工作吗 (nin xianzai you gongzuo ma？)',
+            'Yes; What Do You Do For A Living/What is Your Profession ?': '是的 (shide)， 您从事什么行业  (nin congshi shenme hangye)? ',
+            'Accountant': '会计师(kuaijishi)',
+            'Actor / Actress': '演员 女演员(yanyuan, nvyanyuan)',
+            'Architect': '建筑师 (jianzhushi)',
+            'Author': '作家 (zuojia)',
+            'Baker': '烘培师 (hongpeishi)',
+            'Bricklayer': '瓦工 (wagong)',
+            'Bus Driver': '公车司机 (gongche siji)',
+            'Butcher': ' 卖肉的 (mairoude  )',
+            'Carpenter': '木匠 (mujiang)',
+            'Cleaner': '清洁工 (qingjiegong)',
+            'Chef / Cook': '厨师 (chushi)',
+            'Dentist': '牙医 (yayi)',
+            'Doctor': '医生 (yisheng)',
+            'Electrician': '电工 (diangong)',
+            'Engineer': '工程师 (gongchengshi) ',
+            'Factory Worker': '工厂员工 (gongchang yuangong)',
+            'Farmer': '农夫 (nongfu)',
+            'Fireman/Fire Fighter': '消防员 (xianfangyuan )',
+            'Fisherman': '渔夫 (yufu )',
+            'Florist': '花艺师 (huayishi)',
+            'Gardener': '园艺师 (yuanyishi)',
+            'Hairdresser': '理发师 (lifashi)',
+            'Journalist': '记者 (jizhe)',
+            'Lawyer': ' 律师 (lushi)',
+            'Librarian': '图书管理员 (tushu guanliyuan )',
+            'Mechanic': '机械技工 (jixie jizong )',
+            'Model': '模特儿 (mote er)',
+            'Nurse': '护士 (hushi)',
+            'Optician': '验光师 (yanguangshi)',
+            'Orderly': '看护者 (kanhuzhe )',
+            'Painter': '画家 (huajia)',
+            'Pharmacist': '药剂师 (jiaojishi)',
+            'Photographer': '摄影师 (sheyingshi)',
+            'Pilot': '飞行员 (feixingyuan)',
+            'Plumber': '水管匠 (shuiguanjiang)',
+            'Politician': '政治家 ( xhezhijia)',
+            'Policeman / Policewoman': '警察 (jingcha) / 女警 (nujing)',
+            'Postman': '邮递员 (youdiyuan)',
+            'Real Estate Agent': '房产经纪 (fanchan jingji)',
+            'Scientist': '科学家 (kexuejia)',
+            'Secretary': '秘书 (mishu)',
+            'Soldier': '军人 (junren)',
+            'Tailor/Seamstress': '裁缝师 (caifenshi) / 女裁缝师 (nucaifengshi)',
+            'Taxi Driver': '出租司機 (chuzusiji)',
+            'Teacher': '教師 (jiaoshi)',
+            'Veterinary Doctor': '獸醫 (shouyi)',
+            'Waiter/Waitress': '服務員 (fuwuyuan) / 女服務員 (nvfuwuyuan)',
+            'Other': '其它 (qita)',
+            'No; Retired': '不是 (bushi); ’退休 (tuixiu)',
+            'If No, Since When Have You Been Off Work?': '若不是,什麼時候開始不工作 (ruobushi, shenme shihou kaishi bugongzuo)?',
+            'Never Worked': '從來沒有工作過 (conglai meiyou gongzuoguo)',
+            'If Never, Please Select One of the Following Options?': '若是從來沒有,請選以下的選項 (ruoshi conlaimeiyou, qing xuanyixiade xuanxiang)',
+            'Student': '學生 (xuesheng)',
+            'Housewife/Househusband': '家庭主婦 jiatingzhufu) / 家庭主夫 (jiatingzhufu)',
+            'Other': '其它 (qita)',
+            'What Sports/Activities Do You Do?': '什么运动(shenme yundong) / 您做什么样的运动(nin zuo shenmeyang de yundong) ? ',
+            'None': '都没有 (dou meiyou)',
+            'Kayaking': '皮筏艇 (pifating)',
+            'Canoeing': '独木舟 (dumuzhou)',
+            'Cross – Country Skiing': '越野滑雪 (yueye huaxue)',
+            'Swimming': '游泳 (youyong)',
+            'Freediving': '自由式潜水 (ziyoushi qianshui)',
+            'Paddleboarding': '划水板 (huashui ban)',
+            'Scuba Diving': '潜水 (qianshui)',
+            'Aerobics': '有氧运动 (youyang yundong)',
+            'Archery': '射箭 (shejian)',
+            'Boxing': '拳击 (quanji)',
+            'Running': '跑步 (paobu)',
+            'Cycling': '自行车 (zixingche)',
+            'Figure Skating': '溜冰 (liubing)',
+            'Horseback Riding': '骑马 (qima)',
+            'Kickboxing': '踢脚拳击 (tijiao quanji)',
+            'Ultimate Frisbee': '终极飞盘 (zhongji feipan)',
+            'Walking': '步行 (buxing)',
+            'Weightlifting': '举重  (juzhong)',
+            'Wrestling': '摔跤 (shuaijiao)',
+            'Baseball': '棒球 (bangqiu)',
+            'Softball': '垒球 (leiqiu)',
+            'Basketball': '篮球 (lanqiu)',
+            'Tennis': '网球 (wangqiu)',
+            'Badminton': '羽毛球 (yumaoqiu)',
+            'Bowling': '保龄球 (baolingqiu)',
+            'Curling': '冰壶 (binghu)',
+            'Soccer': '足球 (zuqiu)',
+            'Football': '美式足球 (meishi zuqiu)',
+            'Ski': '滑雪 (huaxue)',
+            'Hockey': '曲棍球 (qugunqiu)',
+            'Other': '其他 (qita)',
+            'How Often?': '多久1次 (duojiu yici) ?',
+            'Daily': '每日 (meiri)',
+            '3 times a week': '每周3次 (Meizhou 3 ci)',
+            '2 times a week': '每周2次 (Meizhou 2 ci)',
+            '1 time per week': '每周1次 (Meizhou 1ci)',
+            '2 - 3 times per Month': '每月2-3次 (Meizhou 2-3 ci)',
+            'Monthly': '每月 (meiyue)',
+            'Rarely': '很少 (henshao )',
+            'What Hand Do You Write With?': '您用哪一只手写字(nin yong nayizhi shou xiezi )?',
+            'Right': '右 (you)',
+            'Left': '左 (zuo)',
+            'Ambidextrous': '左右手都可以写 (zuoyou shou dou keyi xie )',
+            'Do You Smoke?': '您抽烟吗 (nin chouyan ma)?',
+            'If Yes, For How Many Years?': '如果是,有多少年了(ruguo shi, you duo shao nian le)?',
+            'More than 20 years': '超过二十多年了 (chaoguo 20 duo nian le)',
+            'How Many Cigarettes Per Day': '每天抽多少支香烟 (meitian chou duoshao zhi xiangyan)?',
+            'More than 1 Pack': '超过一包 (chaoguo 1 bao )',
+            'Do You Drink Alcohol': '您喝酒吗 (nin hejiu ma)?',
+            'If yes, how many drinks per week?': '如果是,每周喝几杯酒 (Ruguoshi, Meizhou he jibei jiu)?',
+            'More than 20 Drinks': '超过二十 (chaoguo 20)',
+            'Do You Take Any Recreational Drugs Or Herbal/Natural Remedies?': '您是否服用娱乐性药物或是草药/天然疗法 (nin shifou fuyongle yule xing yaowu huo caoyao /tianran liaofa)?',
+            'If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?': '如果是, 您多久服用一次药物或草药/自然疗法 (ruguoshi , nin duojiu fuyong yici yaowu huo caoyao /ziran liaofa)?',
+            'Rarely': '很少 (hen shao)',
+            'Monthly': '每月 (mei yue)',
+            'Weekly': '每周 (mei zhou)',
+            'Daily': '每日 (mei ri )',
+            '2 or more times per day': '每天两次或更多次 (meitian liang ci huo geng duo ci)',
+            'If Yes, Which Drug or Herbal / Natural Remedy do you Use?': '如果是,您使用哪种药物或是草药/ 自然疗法 (ruguo shi, nin shiyong nazhong yaowu huo caoyao /ziran liaofa)?',
+            'chondroitin': '软骨素 (ruangu su)',
+            'glucosamine': '葡萄糖胺 (putaotang an)',
+            'ginger': '生姜 (sheng jiang)',
+            'ginkgo biloba': '银杏叶 (yinxing ye)',
+            'ginseng': '人篸 (renshen)',
+            'st - John’s Wort': '圣约翰草 (sheng yue han cao )',
+            'turmeric': '姜黄 (jianghuang)',
+            'Canabis / Marijuana': '大麻 (dama)',
+            'Stimulants (e.g.cocaine, amphetamines,methamphetamine, ecstacy[MDMA]) ': '兴奋剂 (例如, 可卡因, 安非他命, 甲基苯比胺, 摇头丸 [MDMA]) (xingfen ji (liru kekayin , anfei taming, jia ji benbing an, yaotouwan, [MDMA])',
+            'Opium - related painkillers (e.g.heroin, morphine, fentanyl, oxycodone, dilaudid)': '阿片类止痛药, (例如, 海洛因, 吗啡, 芬太尼, 羟考酮, 双月桂酸酯) (yu yapian youguan de zhitong yao (liru, hailuoyin, mafei, fen tai ni, qiang kao tong, shuan yuegui suan zhi)',
+            'Hallucinogens (e.g.LSD)': '致幻剂 (zhi huanji), (例如 (liru LSD))',
+            'Benzodiazepines (e.g.ativan, valium)': '苯二氮平(例如麻醉忧虑的药物, 麻醉肌肉的药物) (benerdanping(liru, mazui youlvde  yaowu, mazui jiroude yaowu))',
+            'Ketamine': '氯胺酮 (lu antong)',
+            'Ritalin': '利他林 (lita lin)',
+            'Other': '其他 (qita)',
+            'Do You Take Any Recreational Drugs Or Herbal / Natural Remedies?': '您有服用娱乐性药物或草药/自然疗法吗 (nin you fuyong yulexing yaowu huo caoyao / ziran liaofama)?',
+            'If No, Since When Have You Been Off The Drug?': '如果没有, 您从什么时候开始没有服用了 (ruguo meiyou, nin cong shnme shihou kaishi meiyou fuyongle)?',
+            'Never Taken': '从来没有服用过 (conglai meiyou fuyong guo)',
+            'Do You Have Any Of the Following Medical Conditions?': '您是否患有以下这些疾病 (nin shifou huanyou yixia zhexie jibing)?',
+            'AIDS or HIV': '艾滋病 (aizibing) 或 (huo) 艾滋病病毒 (aizibing bingdu)',
+            'Alcohol Dependency or Abuse': '酗酒 (xujiu), 酒精中毒 (jiujin zhongdu)',
+            'Anemia': '贫血 (pinxue)',
+            'Anxiety': '焦虑 (jiaolu)',
+            'Arthritis': '关节炎 (guanjie yan)',
+            'Bleeding Problems': '出血的问题 (chuxue wenti)',
+            'Blood Clots': '血管阻塞 (xueguan zusai)',
+            'Cancer': '癌症 (aizheng)',
+            'Dementia': '痴呆 (chidai)',
+            'Chronic Obstructive Pulmonary Disease or Emphysema': '慢性阻塞肺疾病, 或肺气肿 (manxing zuse xing fei jibing, huo feiqi zhongliu)',
+            'Depression': '忧郁症 (youyuzheng)',
+            'Drug Dependency or Abuse': '药物依赖性或滥用 (yaowu yilai huo lanyong)',
+            'Diabetes': '糖尿病 (tangniaobing)',
+            'Gout': '痛风 (tongfeng)',
+            'Heart Disease': '心脏病 (xinzang bing)',
+            'Heart Arrythmia': '心率失常 (xinlu shichang)',
+            'High Cholesterol': '高胆固醇 (gao danguchun)',
+            'High Blood Pressure': '高血压 (gao xueya)',
+            'Hypothyroidism': '甲减 (jiajian)',
+            'Hyperthyroidism': '甲亢 (jiakang)',
+            'Kidney Disease': '肾脏疾病 (shenzang jibing)',
+            'Leukemia': '白血病 (baixiebing)',
+            'Liver Disease': '肝病 (ganbing )',
+            'Hepatitis': '肝炎 (ganyan)',
+            'Osteoporosis': '骨质疏松症 (guzhi shusong zheng)',
+            'Pancreatitis': '胰腺炎 (Yixian yan)',
+            'Peripheral Vascular Disease': '周围血管疾病 (zhouwei xieguan jibing)',
+            'Pulmonary Embolism': '肺栓塞 (fei suansai)',
+            'Reflux or GERD': '胃食管反流 (weishiguan fanliu)',
+            'Seizures': '癫痫 (dianxian)',
+            'Sleep Apnea': '睡眠呼吸暂停 (zhuimian huxi zhanting)',
+            'Stroke': '中风 (zhongfeng)',
+            'Other': '其他 (qita)',
+            'Do You Have Any Of the Following Medical Conditions?': '您有没有以下任何病状 (nin youmeiyou yixia renhe bingzhuang)?',
+            'Bleeding Problems': '出血问题 (chuxue wenti)',
+            'Von Willebrand': '温韦伯氏疾病(wenweiboshi jibing)',
+            'Hemophilia A (Factor 8 deficiency)': 'A型血友病 （8号因子缺乏）(A xing xueyoubing (8 hao yinzi quefa))',
+            'Hemophilia B (Christmas disease)': 'B型血友病 （圣诞节病）(B xing xueyou bing ( shengdan jie bing))',
+            'Factor 5 Leiden': '莱顿因子5  (laidun yinzi 5)',
+            'Factor 2 deficiency': '因子2缺陷  (yinzi 2 quexian)',
+            'Factor 7 deficiency': '因子7 缺陷 (yinzi 7 quexian)',
+            'Factor 10 deficiency': '因子10 缺陷 (yinzi 10 quexian)',
+            'Factor 12 deficiency': '因子12 缺陷 (yinzi 12 quexian)',
+            'Other': '其他 (qita)',
+            'Cancer': '癌症 (aizheng)',
+            'Breast': '乳房 (rufang)',
+            'Prostate': '前列腺 (qianliexian)',
+            'Lung': '肺 (fei)',
+            'Colon / Colorectal': '结肠 /结直肠 (dachang /jiezhichang)',
+            'Kidney': '肾 (shen)',
+            'Bladder': '膀胱 (pangguang)',
+            'Thyroid': '甲状腺 (jiazhuang xian)',
+            'Lymphoma': '淋巴瘤 (linba liu)',
+            'Melanoma': '黑色素瘤 (heise suliu)',
+            'Endometrial': '子宫内膜 (zigong neimo)',
+            'Leukemia': '白血病 (baixue bing)',
+            'Pancreatic': '胰 (yi)',
+            'Liver': '肝 (gan)',
+            'Other': '其他 (qita)',
+            'Hepatitis': '肝炎 (ganyan)',
+            'Auto-immune': '自身免疫 aishen mianyi)',
+            'Alcohol-induced': '酒精诱导 (jiujing youdao )',
+            'Fatty-Liver': '脂肪肝 (zhifang gan)',
+            'Hepatitis A': '甲型肝炎 (jiaxiang ganyan)',
+            'Hepatitis B – Active': '乙型肝炎- 活跃 (yixiang ganyan - huoyao)',
+            'Hepatitis B – Chronic': '乙型肝炎- 慢性 (yixing ganyan - manxing)',
+            'Hepatitis B – Cured': '乙型肝炎- 治愈 (yixing ganyan - zhiyu)',
+            'Hepatitis C – Active': '丙行肝炎- 活跃 (bing xing ganyan - huoyao)',
+            'Hepatitis C – Chronic': '丙型肝炎-慢性 (bingxing ganyan - manxing)',
+            'Hepatitis C – Cured': '丙型肝炎- 治愈 (bingxing ganyan - zhiyu)',
+            'Hepatitis D': 'D型肝炎 (D xing ganyan)',
+            'Hepatis E': 'E型肝炎 (E xing ganyan)',
+            'Other': '其他 (qita)',
+            'Have you Ever Had Surgery?': '您有没有动过手术 (nin youmeiyou dongguo shoushu)?',
+            'What Type of Surgery?': '什么类型的手术 (shenme leixing de shoushu)?',
+            'When Was Your Surgery?': '什么时候动的手术 (shenme shihou dong de shoushu)?',
+            'Before 1970': '1970年前 (1970 nian qian)',
+            'What Was the Surgeon’s Name?': '手术医生是叫什么名字 (shoushu yisheng jiao shenme mingzi)?',
+            'No Previous Surgeries': '没有动过手术 (meiyou dongguo shoushu)',
+            'Do You Take Any Medications Regularly?': '您平时有吃什么药吗(nin pingshi you chi shenme yao ma)?',
+            'Please Upload Your Medication File (or Take Photograph)': '请上传您的药剂档案（或是拍照）(qing nin shangchuan ninde yaoji danan (huoshi paizhao))',
+            'Do You Have a Referral?': '您有医生推荐吗 (nin you yisheng tuijian ma)?',
+            'Please Upload Your Referral File (or Take Photograph)': '请上传您的医生推荐信（或是拍照）(qing nin shangchuan ninde yisheng tuijian xin (huoshi paizhao))',
+            'Enter Information Manually': '请填写您的资料 (qing tianxie ninde ziliao)',
+            'Submit': '提交( tijiao)', 
+            'No': '没有', 
+            'Never': '决不',
+            'If no, when did you quite smoking':'如果没有，您什么时候戒烟的？'
+        };
 
 
         $(document).ready(function () {
@@ -2164,7 +2414,8 @@
             surgeryDate = document.getElementById('surgery_date');
             surgonName = document.getElementById('surgonname');
 
-          
+
+            document.getElementById('handwrite_option_0').innerHTML= 'Hiiiiiiiii';
 
             languageType = 'English';
 
@@ -2178,10 +2429,11 @@
             //  language=  engLanguage
             //  alert(language.home);
         });
-
+     
         function makeTranslaton(type) {
 
             var language = null;
+
             if (type == 'Spanish') {
                 language = spanishLanguage;
                 languageType = 'Spanish';
@@ -2190,6 +2442,16 @@
             if (type == 'French') {
                 language = frenchLanguage;
                 languageType = 'French';
+            }
+
+            if (type == 'Chinese') {
+                language = chineseLanguage;
+                languageType = 'Chinese';
+            }
+
+            if (type == 'English') {
+                location.reload();
+                return false;
             }
             //document.getElementsByName('living_activities').options[0].innerHTML = 'hiii';
 
@@ -2322,6 +2584,7 @@
 
             document.getElementById('handwrite_text').innerHTML = language["What Hand Do You Write With?"];
             document.getElementById('handwrite_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('handwrite_option_0').innerHTML = 'Hiiiiiiiii';
             document.getElementById('handwrite_option_1').innerHTML = language["Right"];
             document.getElementById('handwrite_option_2').innerHTML = language["Left"];
             document.getElementById('handwrite_option_3').innerHTML = language["Ambidextrous"];
@@ -2379,6 +2642,7 @@
             document.getElementById('medical_AIDS_or_HIV').innerHTML = language["AIDS or HIV"];
             document.getElementById('medical_Alcohol_Dependency_or_Abuse').innerHTML = language["Alcohol Dependency or Abuse"];
             document.getElementById('medical_Anemia').innerHTML = language["Anemia"];
+            document.getElementById('medical_Anxiety').innerHTML = language["Anxiety"]; 
             document.getElementById('medical_Arthritis').innerHTML = language["Arthritis"];
             document.getElementById('medical_BleedingProblems').innerHTML = language["Bleeding Problems"];
             document.getElementById('medical_BloodClots').innerHTML = language["Blood Clots"];
@@ -2452,14 +2716,15 @@
             document.getElementById('Hepatitis_option_9').innerHTML = language["Hepatitis C – Cured"];
             document.getElementById('Hepatitis_option_10').innerHTML = language["Hepatitis D"];
             document.getElementById('Hepatitis_option_11').innerHTML = language["Hepatis E"];
-            document.getElementById('Hepatitis_option_12').innerHTML = language["Other"];
+            document.getElementById('Hepatitis_option_12').innerHTML = language["Fatty-Liver"];
+            document.getElementById('Hepatitis_option_13').innerHTML = language["Other"];
 
             document.getElementById('surgery_question_text').innerHTML = language["Have you Ever Had Surgery?"];
             document.getElementById('yes_surgery_text').innerHTML = language["Yes"];
             document.getElementById('no_surgery_text').innerHTML = language["No Previous Surgeries"];
             document.getElementById('surgery_type_text').innerHTML = language["What Type of Surgery?"];
-            document.getElementById('surgery_date_text').innerHTML = language["When Was Your Surgery?"];  
-            document.getElementById('Before_1970_text').innerHTML = language["Before 1970"]; 
+            document.getElementById('surgery_date_text').innerHTML = language["When Was Your Surgery?"];
+            document.getElementById('Before_1970_text').innerHTML = language["Before 1970"];
             document.getElementById('surgeon_name_text').innerHTML = language["What Was the Surgeon’s Name?"];
             document.getElementById('medications_regularly_text').innerHTML = language["Do You Take Any Medications Regularly?"];
             document.getElementById('yes_medications_regularly_text').innerHTML = language["Yes"];
@@ -2472,16 +2737,17 @@
 
 
             document.getElementById('medical_file_button').innerHTML = language["Choose"];
-            document.getElementById('referral_button').innerHTML = language["Choose"]; 
+            document.getElementById('referral_button').innerHTML = language["Choose"];
 
             document.getElementById('submit_button_text').innerHTML = language["Submit"];
 
 
-            
+
 
         }
 
         function no_medicare_card_changed(termsCheckBox) {
+
 
             if (termsCheckBox.checked) {
                 $("#medicare_number").prop("disabled", true);
@@ -2758,6 +3024,9 @@
         function submit_button_click() {
 
 
+            //alert(hand_write.selectedIndex);
+
+
             //window.open("exit.html", "Thanks for Visiting!");
 
             //var txtFirstName = document.getElementById('first_name');
@@ -2971,9 +3240,9 @@
             }
 
             if (document.getElementById('no_medicare_card').checked) {
-                txtMedicareNumber.value='Null';
+                txtMedicareNumber.value = 'Null';
             }
- 
+
             if (confirm("Are you sure all the information above is correct?")) {
 
 
@@ -3101,7 +3370,7 @@
                     data: '{user:' + JSON.stringify(userArray) + '}',
                     success: function (data) {
 
-                      //  alert(data.d); 
+                        //  alert(data.d); 
                         //alert("ok");
 
                         buildAnswers(data.d);
@@ -3194,7 +3463,7 @@
             answer += howoftensports.value; answer += '<br />';
 
             answer += '<br /><br />';
-             
+
             answer += 'What Hand Do You Write With?<br />';
             answer += handWrite.value; answer += '<br />';
 
@@ -3213,7 +3482,7 @@
             }
             else if (document.getElementById('no_smoke').checked) {
                 answer += 'No<br />';
-                answer += 'If No, When Did You Quite Smoking?<br />';
+                answer += 'If No, When Did You Quit Smoking?<br />';
                 answer += smokeOffDate.value; answer += '<br />';
             }
             else if (document.getElementById('never_smoke').checked) {
@@ -3239,7 +3508,7 @@
             answer += 'Do You Take Any Recreational Drugs Or Herbal/Natural Remedies?<br />';
             if (document.getElementById('yes_drug').checked) {
                 answer += 'Yes<br />';
-              
+
                 answer += 'If Yes, Which Drug Or Herbal/Natural Remedy Do You Use?​<br />';
                 answer += recreationalDrugWhatDrugs.value; answer += '<br />';
 
@@ -3349,7 +3618,7 @@
                 answer += 'Pulmonary<br />';
 
             } else if (document.getElementById('RefluxorGERD').checked) {
-                answer += 'Reflux or GERD<br />';
+                answer += 'Reflux o GERD<br />';
 
             } else if (document.getElementById('Seizures').checked) {
                 answer += 'Seizures<br />';
@@ -3822,13 +4091,21 @@
 
 
         function clickSpanishTranslation() {
-          //  alert('spanish language');
+            //  alert('spanish language');
             alert('Spanish Language');
             makeTranslaton('Spanish');
         }
         function clickFrenchTranslation() {
             alert('French Language');
             makeTranslaton('French');
+        }
+        function clickChineseTranslation() {
+            alert('Chineae Language');
+            makeTranslaton('Chinese');
+        }
+        function clickEnglishTranslation() {
+            alert('English Language');
+            makeTranslaton('English');
         }
         function getDataUrl(img) {
             // Create canvas

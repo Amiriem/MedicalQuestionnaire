@@ -535,6 +535,8 @@
     <Content Include="Images\9.png" />
     <Content Include="Images\arrow.png" />
     <Content Include="Images\card.png" />
+    <Content Include="Images\chinese-flag.png" />
+    <Content Include="Images\english-flag.png" />
     <Content Include="Images\french-flag.png" />
     <Content Include="Images\img-sp.png" />
     <Content Include="Images\offer.png" />
