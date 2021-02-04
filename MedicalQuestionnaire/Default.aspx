@@ -12,11 +12,11 @@
             <img src="Images/french-flag.png" style="width: 65px;" />
         </button>
 
-           <button class="btn btn--radius-2" type="button" style="width: 65px; margin-left: 40px" onclick="clickChineseTranslation()">
+        <button class="btn btn--radius-2" type="button" style="width: 65px; margin-left: 40px" onclick="clickChineseTranslation()">
             <img src="Images/chinese-flag.png" style="width: 65px;" />
         </button>
 
-           <button class="btn btn--radius-2" type="button" style="width: 65px; margin-left: 40px" onclick="clickEnglishTranslation()">
+        <button class="btn btn--radius-2" type="button" style="width: 65px; margin-left: 40px" onclick="clickEnglishTranslation()">
             <img src="Images/english-flag.png" style="width: 65px;" />
         </button>
 
@@ -160,9 +160,9 @@
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="never_work_option">
                                         <option disabled="disabled" id="never_workoption0_text" selected="selected">Choose option</option>
-                                        <option id="never_workoption1_text">Student</option>
-                                        <option id="never_workoption2_text">Housewife/Househusband</option>
-                                        <option id="never_workoption3_text">Other</option>
+                                        <option id="never_workoption1_text" value="">Student</option>
+                                        <option id="never_workoption2_text" value="">Housewife/Househusband</option>
+                                        <option id="never_workoption3_text" value="">Other</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
@@ -172,120 +172,254 @@
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="living_activities">
                                         <option disabled="disabled" id="living_option_0" selected="selected">Choose option</option>
-                                        <option id="living_option_1">Accountant</option>
-                                        <option id="living_option_2">Actor/Actress</option>
-                                        <option id="living_option_3">Architect</option>
-                                        <option id="living_option_4">Author</option>
-                                        <option id="living_option_5">Baker</option>
-                                        <option id="living_option_6">Bricklayer</option>
-                                        <option id="living_option_7">Bus driver</option>
-                                        <option id="living_option_8">Butcher</option>
-                                        <option id="living_option_9">Carpenter</option>
-                                        <option id="living_option_10">Cleaner</option>
-                                        <option id="living_option_11">Chef/Cook</option>
-                                        <option id="living_option_12">Dentist</option>
-                                        <option id="living_option_13">Doctor</option>
-                                        <option id="living_option_14">Refuse collector</option>
-                                        <option id="living_option_15">Electrician</option>
-                                        <option id="living_option_16">Engineer</option>
-                                        <option id="living_option_17">Factory worker</option>
-                                        <option id="living_option_18">Farmer</option>
-                                        <option id="living_option_19">Fireman/Fire fighter</option>
-                                        <option id="living_option_20">Fisherman</option>
-                                        <option id="living_option_21">Florist</option>
-                                        <option id="living_option_22">Gardener</option>
-                                        <option id="living_option_23">Hairdresser</option>
-                                        <option id="living_option_24">Journalist</option>
-                                        <option id="living_option_25">Lawyer</option>
-                                        <option id="living_option_26">Librarian</option>
-                                        <option id="living_option_27">Mechanic</option>
-                                        <option id="living_option_28">Model</option>
-                                        <option id="living_option_29">Nurse</option>
-                                        <option id="living_option_30">Optician</option>
-                                        <option id="living_option_31">Orderly</option>
-                                        <option id="living_option_32">Painter</option>
-                                        <option id="living_option_33">Pharmacist</option>
-                                        <option id="living_option_34">Photographer</option>
-                                        <option id="living_option_35">Pilot</option>
-                                        <option id="living_option_36">Plumber</option>
-                                        <option id="living_option_37">Politician</option>
-                                        <option id="living_option_38">Policeman/Policewoman</option>
-                                        <option id="living_option_39">Postman</option>
-                                        <option id="living_option_40">Real estate agent</option>
-                                        <option id="living_option_41">Scientist</option>
-                                        <option id="living_option_42">Secretary</option>
-                                        <option id="living_option_43">Soldier</option>
-                                        <option id="living_option_44">Tailor/Seamstress</option>
-                                        <option id="living_option_45">Taxi driver</option>
-                                        <option id="living_option_46">Teacher</option>
-                                        <option id="living_option_47">Veterinary doctor (Vet)</option>
-                                        <option id="living_option_48">Waiter/Waitress</option>
-                                        <option id="living_option_49">Other</option>
+                                        <option id="living_option_1" value="Accountant">Accountant</option>
+                                        <option id="living_option_2" value="Actor/Actress">Actor/Actress</option>
+                                        <option id="living_option_3" value="Architect">Architect</option>
+                                        <option id="living_option_4" value="Author">Author</option>
+                                        <option id="living_option_5" value="Baker">Baker</option>
+                                        <option id="living_option_6" value="Bricklayer">Bricklayer</option>
+                                        <option id="living_option_7" value="Bus driver">Bus driver</option>
+                                        <option id="living_option_8" value="Butcher">Butcher</option>
+                                        <option id="living_option_9" value="Carpenter">Carpenter</option>
+                                        <option id="living_option_10" value="Cleaner">Cleaner</option>
+                                        <option id="living_option_11" value="Chef/Cook">Chef/Cook</option>
+                                        <option id="living_option_12" value="Dentist">Dentist</option>
+                                        <option id="living_option_13" value="Doctor">Doctor</option>
+                                        <option id="living_option_14" value="Refuse collector">Refuse collector</option>
+                                        <option id="living_option_15" value="Electrician">Electrician</option>
+                                        <option id="living_option_16" value="Engineer">Engineer</option>
+                                        <option id="living_option_17" value="Factory worker">Factory worker</option>
+                                        <option id="living_option_18" value="Farmer">Farmer</option>
+                                        <option id="living_option_19" value="Fireman/Fire fighter">Fireman/Fire fighter</option>
+                                        <option id="living_option_20" value="Fisherman">Fisherman</option>
+                                        <option id="living_option_21" value="Florist">Florist</option>
+                                        <option id="living_option_22" value="Gardener">Gardener</option>
+                                        <option id="living_option_23" value="Hairdresser">Hairdresser</option>
+                                        <option id="living_option_24" value="Journalist">Journalist</option>
+                                        <option id="living_option_25" value="Lawyer">Lawyer</option>
+                                        <option id="living_option_26" value="Librarian">Librarian</option>
+                                        <option id="living_option_27" value="Mechanic">Mechanic</option>
+                                        <option id="living_option_28" value="Model">Model</option>
+                                        <option id="living_option_29" value="Nurse">Nurse</option>
+                                        <option id="living_option_30" value="Optician">Optician</option>
+                                        <option id="living_option_31" value="Orderly">Orderly</option>
+                                        <option id="living_option_32" value="Painter">Painter</option>
+                                        <option id="living_option_33" value="Pharmacist">Pharmacist</option>
+                                        <option id="living_option_34" value="Photographer">Photographer</option>
+                                        <option id="living_option_35" value="Pilot">Pilot</option>
+                                        <option id="living_option_36" value="Plumber">Plumber</option>
+                                        <option id="living_option_37" value="Politician">Politician</option>
+                                        <option id="living_option_38" value="Policeman/Policewoman">Policeman/Policewoman</option>
+                                        <option id="living_option_39" value="Postman">Postman</option>
+                                        <option id="living_option_40" value="Real estate agent">Real estate agent</option>
+                                        <option id="living_option_41" value="Scientist">Scientist</option>
+                                        <option id="living_option_42" value="Secretary">Secretary</option>
+                                        <option id="living_option_43" value="Soldier">Soldier</option>
+                                        <option id="living_option_44" value="Tailor/Seamstress">Tailor/Seamstress</option>
+                                        <option id="living_option_45" value="Taxi driver">Taxi driver</option>
+                                        <option id="living_option_46" value="Teacher">Teacher</option>
+                                        <option id="living_option_47" value="Veterinary doctor (Vet)">Veterinary doctor (Vet)</option>
+                                        <option id="living_option_48" value="Waiter/Waitress">Waiter/Waitress</option>
+                                        <option id="living_option_49" value="Other">Other</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="input-group">
-                            <label class="label" id="sports_question_text">What sports/activities do you do?</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject" id="sports_activites" onchange="sports_activites_changed()">
-                                    <option disabled="disabled" id="sports_option_0" selected="selected">Choose option</option>
-                                    <option id="sports_option_1">none</option>
-                                    <option id="sports_option_2">kayaking</option>
-                                    <option id="sports_option_3">canoeing</option>
-                                    <option id="sports_option_4">cross-country skiing</option>
-                                    <option id="sports_option_5">swimming</option>
-                                    <option id="sports_option_6">freediving</option>
-                                    <option id="sports_option_7">paddle boarding</option>
-                                    <option id="sports_option_8">scuba diving</option>
-                                    <option id="sports_option_9">aerobics</option>
-                                    <option id="sports_option_10">archery</option>
-                                    <option id="sports_option_11">boxing</option>
-                                    <option id="sports_option_12">running</option>
-                                    <option id="sports_option_13">cycling</option>
-                                    <option id="sports_option_14">skating</option>
-                                    <option id="sports_option_15">horseback riding</option>
-                                    <option id="sports_option_16">kickboxing</option>
-                                    <option id="sports_option_17">ultimate frisbee</option>
-                                    <option id="sports_option_18">walking</option>
-                                    <option id="sports_option_19">weightlifting</option>
-                                    <option id="sports_option_20">wrestling</option>
-                                    <option id="sports_option_21">Softball</option>
-                                    <option id="sports_option_22">baseball</option>
-                                    <option id="sports_option_23">basketball</option>
-                                    <option id="sports_option_24">tennis</option>
-                                    <option id="sports_option_25">badminton</option>
-                                    <option id="sports_option_26">bowling</option>
-                                    <option id="sports_option_27">curling</option>
-                                    <option id="sports_option_28">soccer</option>
-                                    <option id="sports_option_29">football</option>
-                                    <option id="sports_option_30">Ski</option>
-                                    <option id="sports_option_31">Hockey</option>
-                                    <option id="sports_option_32">Other</option>
-                                </select>
-                                <div class="select-dropdown"></div>
+                        <div class="input-group" id="sport_activites_parent1">
+                            <div class="input-group">
+                                <label class="label" id="sports_question_text">What sports/activities do you do?</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="subject" id="sports_activites" onchange="sports_activites_changed()">
+                                        <option disabled="disabled" id="sports_option_0" selected="selected">Choose option</option>
+                                        <option id="sports_option_1" value="none">none</option>
+                                        <option id="sports_option_2" value="kayaking">kayaking</option>
+                                        <option id="sports_option_3" value="canoeing">canoeing</option>
+                                        <option id="sports_option_4" value="cross-country skiing">cross-country skiing</option>
+                                        <option id="sports_option_5" value="swimming">swimming</option>
+                                        <option id="sports_option_6" value="freediving">freediving</option>
+                                        <option id="sports_option_7" value="paddle boarding">paddle boarding</option>
+                                        <option id="sports_option_8" value="scuba diving">scuba diving</option>
+                                        <option id="sports_option_9" value="aerobics">aerobics</option>
+                                        <option id="sports_option_10" value="archery">archery</option>
+                                        <option id="sports_option_11" value="boxing">boxing</option>
+                                        <option id="sports_option_12" value="running">running</option>
+                                        <option id="sports_option_13" value="cycling">cycling</option>
+                                        <option id="sports_option_14" value="skating">skating</option>
+                                        <option id="sports_option_15" value="horseback riding">horseback riding</option>
+                                        <option id="sports_option_16" value="kickboxing">kickboxing</option>
+                                        <option id="sports_option_17" value="ultimate frisbee">ultimate frisbee</option>
+                                        <option id="sports_option_18" value="walking">walking</option>
+                                        <option id="sports_option_19" value="weightlifting">weightlifting</option>
+                                        <option id="sports_option_20" value="wrestling">wrestling</option>
+                                        <option id="sports_option_21" value="Softball">Softball</option>
+                                        <option id="sports_option_22" value="baseball">baseball</option>
+                                        <option id="sports_option_23" value="basketball">basketball</option>
+                                        <option id="sports_option_24" value="tennis">tennis</option>
+                                        <option id="sports_option_25" value="badminton">badminton</option>
+                                        <option id="sports_option_26" value="bowling">bowling</option>
+                                        <option id="sports_option_27" value="curling">curling</option>
+                                        <option id="sports_option_28" value="soccer">soccer</option>
+                                        <option id="sports_option_29" value="football">football</option>
+                                        <option id="sports_option_30" value="Ski">Ski</option>
+                                        <option id="sports_option_31" value="Hockey">Hockey</option>
+                                        <option id="sports_option_32" value="Other">Other</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                            <div class="input-group" id="parent_how_often" style="display: block;">
+                                <label class="label" id="how_often_text">How often?</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="subject" id="how_often_sports">
+                                        <option disabled="disabled" id="often_option_0" selected="selected">Choose option</option>
+                                        <option id="often_option_1" value="None">None</option>
+                                        <option id="often_option_2" value="Daily">Daily</option>
+                                        <option id="often_option_3" value="3 times a Week">3 times a Week</option>
+                                        <option id="often_option_4" value="2 times a Week">2 times a Week</option>
+                                        <option id="often_option_5" value="1 time per week">1 time per week</option>
+                                        <option id="often_option_6" value="2-3 times per Month">2-3 times per Month</option>
+                                        <option id="often_option_7" value="Monthly">Monthly</option>
+                                        <option id="often_option_8" value="Rarely">Rarely</option>
+                                        <option></option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                                <br />
+                                <button class="btn btn--radius-2 btn--blue" style="background: #90EE90;" onclick="add_sport_activites_parent1_click()" type="button">Add More</button>
                             </div>
                         </div>
-                        <div class="input-group" id="parent_how_often" style="display: block;">
-                            <label class="label" id="how_often_text">How often?</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject" id="how_often_sports">
-                                    <option disabled="disabled" id="often_option_0" selected="selected">Choose option</option>
-                                    <option id="often_option_1">None</option>
-                                    <option id="often_option_2">Daily</option>
-                                    <option id="often_option_3">3 times a Week</option>
-                                    <option id="often_option_4">2 times a Week</option>
-                                    <option id="often_option_5">1 time per week</option>
-                                    <option id="often_option_6">2-3 times per Month</option>
-                                    <option id="often_option_7">Monthly</option>
-                                    <option id="often_option_8">Rarely</option>
-                                    <option></option>
-                                </select>
-                                <div class="select-dropdown"></div>
+
+
+                        <div class="input-group" id="sport_activites_parent2" style="display: none;">
+                            <div class="input-group">
+                                <label class="label" id="1sports_question_text">What sports/activities do you do?</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="subject" id="1sports_activites" onchange="sports_activites_changed()">
+                                        <option disabled="disabled" id="1sports_option_0" selected="selected">Choose option</option>
+                                        <option id="1sports_option_1" value="none">none</option>
+                                        <option id="1sports_option_2" value="kayaking">kayaking</option>
+                                        <option id="1sports_option_3" value="canoeing">canoeing</option>
+                                        <option id="1sports_option_4" value="cross-country skiing">cross-country skiing</option>
+                                        <option id="1sports_option_5" value="swimming">swimming</option>
+                                        <option id="1sports_option_6" value="freediving">freediving</option>
+                                        <option id="1sports_option_7" value="paddle boarding">paddle boarding</option>
+                                        <option id="1sports_option_8" value="scuba diving">scuba diving</option>
+                                        <option id="1sports_option_9" value="aerobics">aerobics</option>
+                                        <option id="1sports_option_10" value="archery">archery</option>
+                                        <option id="1sports_option_11" value="boxing">boxing</option>
+                                        <option id="1sports_option_12" value="running">running</option>
+                                        <option id="1sports_option_13" value="cycling">cycling</option>
+                                        <option id="1sports_option_14" value="skating">skating</option>
+                                        <option id="1sports_option_15" value="horseback riding">horseback riding</option>
+                                        <option id="1sports_option_16" value="kickboxing">kickboxing</option>
+                                        <option id="1sports_option_17" value="ultimate frisbee">ultimate frisbee</option>
+                                        <option id="1sports_option_18" value="walking">walking</option>
+                                        <option id="1sports_option_19" value="weightlifting">weightlifting</option>
+                                        <option id="1sports_option_20" value="wrestling">wrestling</option>
+                                        <option id="1sports_option_21" value="Softball">Softball</option>
+                                        <option id="1sports_option_22" value="baseball">baseball</option>
+                                        <option id="1sports_option_23" value="basketball">basketball</option>
+                                        <option id="1sports_option_24" value="tennis">tennis</option>
+                                        <option id="1sports_option_25" value="badminton">badminton</option>
+                                        <option id="1sports_option_26" value="bowling">bowling</option>
+                                        <option id="1sports_option_27" value="curling">curling</option>
+                                        <option id="1sports_option_28" value="soccer">soccer</option>
+                                        <option id="1sports_option_29" value="football">football</option>
+                                        <option id="1sports_option_30" value="Ski">Ski</option>
+                                        <option id="1sports_option_31" value="Hockey">Hockey</option>
+                                        <option id="1sports_option_32" value="Other">Other</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
                             </div>
+                            <div class="input-group" id="1parent_how_often" style="display: block;">
+                                <label class="label" id="1how_often_text">How often?</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="subject" id="1how_often_sports">
+                                        <option disabled="disabled" id="1often_option_0" selected="selected">Choose option</option>
+                                        <option id="1often_option_1" value="None">None</option>
+                                        <option id="1often_option_2" value="Daily">Daily</option>
+                                        <option id="1often_option_3" value="3 times a Week">3 times a Week</option>
+                                        <option id="1often_option_4" value="2 times a Week">2 times a Week</option>
+                                        <option id="1often_option_5" value="1 time per week">1 time per week</option>
+                                        <option id="1often_option_6" value="2-3 times per Month">2-3 times per Month</option>
+                                        <option id="1often_option_7" value="Monthly">Monthly</option>
+                                        <option id="1often_option_8" value="Rarely">Rarely</option>
+                                        <option></option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                            <button class="btn btn--radius-2 btn--blue" style="background: #90EE90;" onclick="add_sport_activites_parent2_click()" type="button">Add More</button>
+                            <button class="btn btn--radius-2 btn--blue" style="background: #F08080;" onclick="remove_sport_activites_parent2_click()" type="button">Remove</button>
                         </div>
+
+                        <div class="input-group" id="sport_activites_parent3" style="display: none;">
+                            <div class="input-group">
+                                <label class="label" id="2sports_question_text">What sports/activities do you do?</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="subject" id="2sports_activites" onchange="sports_activites_changed()">
+                                        <option disabled="disabled" id="2sports_option_0" selected="selected">Choose option</option>
+                                        <option id="2sports_option_1" value="none">none</option>
+                                        <option id="2sports_option_2" value="kayaking">kayaking</option>
+                                        <option id="2sports_option_3" value="canoeing">canoeing</option>
+                                        <option id="2sports_option_4" value="cross-country skiing">cross-country skiing</option>
+                                        <option id="2sports_option_5" value="swimming">swimming</option>
+                                        <option id="2sports_option_6" value="freediving">freediving</option>
+                                        <option id="2sports_option_7" value="paddle boarding">paddle boarding</option>
+                                        <option id="2sports_option_8" value="scuba diving">scuba diving</option>
+                                        <option id="2sports_option_9" value="aerobics">aerobics</option>
+                                        <option id="2sports_option_10" value="archery">archery</option>
+                                        <option id="2sports_option_11" value="boxing">boxing</option>
+                                        <option id="2sports_option_12" value="running">running</option>
+                                        <option id="2sports_option_13" value="cycling">cycling</option>
+                                        <option id="2sports_option_14" value="skating">skating</option>
+                                        <option id="2sports_option_15" value="horseback riding">horseback riding</option>
+                                        <option id="2sports_option_16" value="kickboxing">kickboxing</option>
+                                        <option id="2sports_option_17" value="ultimate frisbee">ultimate frisbee</option>
+                                        <option id="2sports_option_18" value="walking">walking</option>
+                                        <option id="2sports_option_19" value="weightlifting">weightlifting</option>
+                                        <option id="2sports_option_20" value="wrestling">wrestling</option>
+                                        <option id="2sports_option_21" value="Softball">Softball</option>
+                                        <option id="2sports_option_22" value="baseball">baseball</option>
+                                        <option id="2sports_option_23" value="basketball">basketball</option>
+                                        <option id="2sports_option_24" value="tennis">tennis</option>
+                                        <option id="2sports_option_25" value="badminton">badminton</option>
+                                        <option id="2sports_option_26" value="bowling">bowling</option>
+                                        <option id="2sports_option_27" value="curling">curling</option>
+                                        <option id="2sports_option_28" value="soccer">soccer</option>
+                                        <option id="2sports_option_29" value="football">football</option>
+                                        <option id="2sports_option_30" value="Ski">Ski</option>
+                                        <option id="2sports_option_31" value="Hockey">Hockey</option>
+                                        <option id="2sports_option_32" value="Other">Other</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                            <div class="input-group" id="2parent_how_often" style="display: block;">
+                                <label class="label" id="2how_often_text">How often?</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="subject" id="2how_often_sports">
+                                        <option disabled="disabled" id="2often_option_0" selected="selected">Choose option</option>
+                                        <option id="2often_option_1" value="None">None</option>
+                                        <option id="2often_option_2" value="Daily">Daily</option>
+                                        <option id="2often_option_3" value="3 times a Week">3 times a Week</option>
+                                        <option id="2often_option_4" value="2 times a Week">2 times a Week</option>
+                                        <option id="2often_option_5" value="1 time per week">1 time per week</option>
+                                        <option id="2often_option_6" value="2-3 times per Month">2-3 times per Month</option>
+                                        <option id="2often_option_7" value="Monthly">Monthly</option>
+                                        <option id="2often_option_8" value="Rarely">Rarely</option>
+                                        <option></option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                            <%--                         <button class="btn btn--radius-2 btn--blue" style="background: #90EE90;" onclick="button_referral_click()" type="button">Add More</button>--%>
+                            <button class="btn btn--radius-2 btn--blue" style="background: #F08080;" onclick="remove_sport_activites_parent3_click()" type="button">Remove</button>
+                        </div>
+
                         <%--<div class="input-group">
                             <label class="label">What is the name of your family Doctor?</label>
                             <div class="rs-select2 js-select-simple select--no-search">
@@ -305,9 +439,9 @@
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="hand_write">
                                     <option id="handwrite_option_0" disabled="disabled" selected="selected">Choose option</option>
-                                    <option id="handwrite_option_1">Right</option>
-                                    <option id="handwrite_option_2">Left</option>
-                                    <option id="handwrite_option_3">Ambidextrous</option>
+                                    <option id="handwrite_option_1" value="Right">Right</option>
+                                    <option id="handwrite_option_2" value="Left">Left</option>
+                                    <option id="handwrite_option_3" value="Ambidextrous">Ambidextrous</option>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
@@ -369,7 +503,7 @@
                                         <option>18</option>
                                         <option>19</option>
                                         <option>20</option>
-                                        <option id="more_than_20_years">More than 20 years</option>
+                                        <option id="more_than_20_years" value="More than 20 years">More than 20 years</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
@@ -399,7 +533,7 @@
                                         <option>18</option>
                                         <option>19</option>
                                         <option>20</option>
-                                        <option id="more_than_1_pack">More than 1 Pack</option>
+                                        <option id="more_than_1_pack" value="More than 1 Pack">More than 1 Pack</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
@@ -462,14 +596,14 @@
                                         <option>18</option>
                                         <option>19</option>
                                         <option>20</option>
-                                        <option id="drinks_more_than_20">More than 20</option>
+                                        <option id="drinks_more_than_20" value="More than 20">More than 20</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-2">
+                        <div class="input-group">
                             <div class="input-group">
                                 <label class="label" id="recreational_text">Do you take any recreational drugs or herbal/natural remedies?</label>
                                 <div class="p-t-10">
@@ -483,9 +617,10 @@
                                         <input type="radio" id="no_drug" name="drug" onclick="no_drug_changed(this)">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="radio-container" style="bottom: 25px; left: 222px;">
+                                    <label class="radio-container">
                                         <label id="never_recreational_text">Never taken</label>
                                         <input type="radio" id="never_drug" name="drug" onclick="never_drug_changed(this)">
+                                        <%--style="bottom: 25px; left: 222px;"--%>
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
@@ -497,44 +632,136 @@
                                     <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>
                             </div>
-                            <div class="input-group" id="what_drug" style="display: block;">
-                                <label class="label" id="recreational_what_text">If yes, Which Drug or Herbal/Natural Remedy do you Use?​</label>
-                                <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject" id="recreationalDrug_whatDrugs">
-                                        <option disabled="disabled" id="recreational_what_option_0" selected="selected">Choose option</option>
-                                        <option id="recreational_what_option_1">chondroitin</option>
-                                        <option id="recreational_what_option_2">glucosamine</option>
-                                        <option id="recreational_what_option_3">ginger</option>
-                                        <option id="recreational_what_option_4">ginkgo biloba</option>
-                                        <option id="recreational_what_option_5">ginseng</option>
-                                        <option id="recreational_what_option_6">st-John's wort</option>
-                                        <option id="recreational_what_option_7">turmeric</option>
-                                        <option id="recreational_what_option_8">Canabis/Marijuana</option>
-                                        <option id="recreational_what_option_9">Stimulants (e.g. cocaine, amphetamines,methamphetamine, ecstacy [MDMA]))</option>
-                                        <option id="recreational_what_option_10">Opium-related painkillers (e.g. heroin,  morphine, fentanyl, oxycodone, ​dilaudid);)</option>
-                                        <option id="recreational_what_option_11">Hallucinogens (e.g. LSD)</option>
-                                        <option id="recreational_what_option_12">Benzodiazepines(e.g. ativan, valium)</option>
-                                        <option id="recreational_what_option_13">Ketamine</option>
-                                        <option id="recreational_what_option_14">Ritalin</option>
-                                        <option id="recreational_what_option_15">Other</option>
-                                    </select>
-                                    <div class="select-dropdown"></div>
+                            <div class="input-group" id="what_drug_parent1">
+                                <div class="input-group" id="what_drug" style="display: block;">
+                                    <label class="label" id="recreational_what_text">If yes, Which Drug or Herbal/Natural Remedy do you Use?​</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject" id="recreationalDrug_whatDrugs">
+                                            <option disabled="disabled" id="recreational_what_option_0" selected="selected">Choose option</option>
+                                            <option id="recreational_what_option_1" value="chondroitin">chondroitin</option>
+                                            <option id="recreational_what_option_2" value="glucosamine">glucosamine</option>
+                                            <option id="recreational_what_option_3" value="ginger">ginger</option>
+                                            <option id="recreational_what_option_4" value="ginkgo biloba">ginkgo biloba</option>
+                                            <option id="recreational_what_option_5" value="ginseng">ginseng</option>
+                                            <option id="recreational_what_option_6" value="st-John's wort">st-John's wort</option>
+                                            <option id="recreational_what_option_7" value="turmeric">turmeric</option>
+                                            <option id="recreational_what_option_8" value="Canabis/Marijuana">Canabis/Marijuana</option>
+                                            <option id="recreational_what_option_9" value="Stimulants (e.g. cocaine, amphetamines,methamphetamine, ecstacy [MDMA]))">Stimulants (e.g. cocaine, amphetamines,methamphetamine, ecstacy [MDMA]))</option>
+                                            <option id="recreational_what_option_10" value="Opium-related painkillers (e.g. heroin,  morphine, fentanyl, oxycodone, ​dilaudid);)">Opium-related painkillers (e.g. heroin,  morphine, fentanyl, oxycodone, ​dilaudid);)</option>
+                                            <option id="recreational_what_option_11" value="Hallucinogens (e.g. LSD)">Hallucinogens (e.g. LSD)</option>
+                                            <option id="recreational_what_option_12" value="Benzodiazepines(e.g. ativan, valium)">Benzodiazepines(e.g. ativan, valium)</option>
+                                            <option id="recreational_what_option_13" value="Ketamine">Ketamine</option>
+                                            <option id="recreational_what_option_14" value="Ritalin">Ritalin</option>
+                                            <option id="recreational_what_option_15" value="Other">Other</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group" id="How_many_weeks_drug" style="display: block;">
+                                    <label class="label" id="yes_often_recreational_text">If yes, How often do you take the drug or herbal/natural remedies?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject" id="recreationalDrug_howmany_perweeks">
+                                            <option disabled="disabled" id="recreational_often_option_0" selected="selected">Choose option</option>
+                                            <option id="recreational_often_option_1" value="Rarely">Rarely</option>
+                                            <option id="recreational_often_option_2" value="Monthly">Monthly</option>
+                                            <option id="recreational_often_option_3" value="Weekly">Weekly</option>
+                                            <option id="recreational_often_option_4" value="Daily">Daily</option>
+                                            <option id="recreational_often_option_5" value="2 or more times per day">2 or more times per day</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                    <br />
+                                    <button class="btn btn--radius-2 btn--blue" style="background: #90EE90;" onclick="add_what_drug_parent1_click()" type="button">Add More</button>
                                 </div>
                             </div>
 
-                            <div class="input-group" id="How_many_weeks_drug" style="display: block;">
-                                <label class="label" id="yes_often_recreational_text">If yes, How often do you take the drug or herbal/natural remedies?</label>
-                                <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject" id="recreationalDrug_howmany_perweeks">
-                                        <option disabled="disabled" id="recreational_often_option_0" selected="selected">Choose option</option>
-                                        <option id="recreational_often_option_1">Rarely</option>
-                                        <option id="recreational_often_option_2">Monthly</option>
-                                        <option id="recreational_often_option_3">Weekly</option>
-                                        <option id="recreational_often_option_4">Daily</option>
-                                        <option id="recreational_often_option_5">2 or more times per day</option>
-                                    </select>
-                                    <div class="select-dropdown"></div>
+
+                            <div class="input-group" id="what_drug_parent2" style="display: none;">
+                                <div class="input-group" id="2what_drug" style="display: block;">
+                                    <label class="label" id="2recreational_what_text">If yes, Which Drug or Herbal/Natural Remedy do you Use?​</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject" id="2recreationalDrug_whatDrugs">
+                                            <option disabled="disabled" id="2recreational_what_option_0" selected="selected">Choose option</option>
+                                            <option id="2recreational_what_option_1" value="chondroitin">chondroitin</option>
+                                            <option id="2recreational_what_option_2" value="glucosamine">glucosamine</option>
+                                            <option id="2recreational_what_option_3" value="ginger">ginger</option>
+                                            <option id="2recreational_what_option_4" value="ginkgo biloba">ginkgo biloba</option>
+                                            <option id="2recreational_what_option_5" value="ginseng">ginseng</option>
+                                            <option id="2recreational_what_option_6" value="st-John's wort">st-John's wort</option>
+                                            <option id="2recreational_what_option_7" value="turmeric">turmeric</option>
+                                            <option id="2recreational_what_option_8" value="Canabis/Marijuana">Canabis/Marijuana</option>
+                                            <option id="2recreational_what_option_9" value="Stimulants (e.g. cocaine, amphetamines,methamphetamine, ecstacy [MDMA]))">Stimulants (e.g. cocaine, amphetamines,methamphetamine, ecstacy [MDMA]))</option>
+                                            <option id="2recreational_what_option_10" value="Opium-related painkillers (e.g. heroin,  morphine, fentanyl, oxycodone, ​dilaudid);)">Opium-related painkillers (e.g. heroin,  morphine, fentanyl, oxycodone, ​dilaudid);)</option>
+                                            <option id="2recreational_what_option_11" value="Hallucinogens (e.g. LSD)">Hallucinogens (e.g. LSD)</option>
+                                            <option id="2recreational_what_option_12" value="Benzodiazepines(e.g. ativan, valium)">Benzodiazepines(e.g. ativan, valium)</option>
+                                            <option id="2recreational_what_option_13" value="Ketamine">Ketamine</option>
+                                            <option id="2recreational_what_option_14" value="Ritalin">Ritalin</option>
+                                            <option id="2recreational_what_option_15" value="Other">Other</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
                                 </div>
+
+                                <div class="input-group" id="2How_many_weeks_drug" style="display: block;">
+                                    <label class="label" id="2yes_often_recreational_text">If yes, How often do you take the drug or herbal/natural remedies?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject" id="2recreationalDrug_howmany_perweeks">
+                                            <option disabled="disabled" id="2recreational_often_option_0" selected="selected">Choose option</option>
+                                            <option id="2recreational_often_option_1" value="Rarely">Rarely</option>
+                                            <option id="2recreational_often_option_2" value="Monthly">Monthly</option>
+                                            <option id="2recreational_often_option_3" value="Weekly">Weekly</option>
+                                            <option id="2recreational_often_option_4" value="Daily">Daily</option>
+                                            <option id="2recreational_often_option_5" value="2 or more times per day">2 or more times per day</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                                <button class="btn btn--radius-2 btn--blue" style="background: #90EE90;" onclick="add_what_drug_parent2_click()" type="button">Add More</button>
+                                <button class="btn btn--radius-2 btn--blue" style="background: #F08080;" onclick="remove_what_drug_parent2_click()" type="button">Remove</button>
+                            </div>
+
+                            <div class="input-group" id="what_drug_parent3" style="display: none;">
+                                <div class="input-group" id="3what_drug" style="display: block;">
+                                    <label class="label" id="3recreational_what_text">If yes, Which Drug or Herbal/Natural Remedy do you Use?​</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject" id="3recreationalDrug_whatDrugs">
+                                            <option disabled="disabled" id="3recreational_what_option_0" selected="selected">Choose option</option>
+                                            <option id="3recreational_what_option_1" value="chondroitin">chondroitin</option>
+                                            <option id="3recreational_what_option_2" value="glucosamine">glucosamine</option>
+                                            <option id="3recreational_what_option_3" value="ginger">ginger</option>
+                                            <option id="3recreational_what_option_4" value="ginkgo biloba">ginkgo biloba</option>
+                                            <option id="3recreational_what_option_5" value="ginseng">ginseng</option>
+                                            <option id="3recreational_what_option_6" value="st-John's wort">st-John's wort</option>
+                                            <option id="3recreational_what_option_7" value="turmeric">turmeric</option>
+                                            <option id="3recreational_what_option_8" value="Canabis/Marijuana">Canabis/Marijuana</option>
+                                            <option id="3recreational_what_option_9" value="Stimulants (e.g. cocaine, amphetamines,methamphetamine, ecstacy [MDMA]))">Stimulants (e.g. cocaine, amphetamines,methamphetamine, ecstacy [MDMA]))</option>
+                                            <option id="3recreational_what_option_10" value="Opium-related painkillers (e.g. heroin,  morphine, fentanyl, oxycodone, ​dilaudid);)">Opium-related painkillers (e.g. heroin,  morphine, fentanyl, oxycodone, ​dilaudid);)</option>
+                                            <option id="3recreational_what_option_11" value="Hallucinogens (e.g. LSD)">Hallucinogens (e.g. LSD)</option>
+                                            <option id="3recreational_what_option_12" value="Benzodiazepines(e.g. ativan, valium)">Benzodiazepines(e.g. ativan, valium)</option>
+                                            <option id="3recreational_what_option_13" value="Ketamine">Ketamine</option>
+                                            <option id="3recreational_what_option_14" value="Ritalin">Ritalin</option>
+                                            <option id="3recreational_what_option_15" value="Other">Other</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group" id="3How_many_weeks_drug" style="display: block;">
+                                    <label class="label" id="3yes_often_recreational_text">If yes, How often do you take the drug or herbal/natural remedies?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject" id="3recreationalDrug_howmany_perweeks">
+                                            <option disabled="disabled" id="3recreational_often_option_0" selected="selected">Choose option</option>
+                                            <option id="3recreational_often_option_1" value="Rarely">Rarely</option>
+                                            <option id="3recreational_often_option_2" value="Monthly">Monthly</option>
+                                            <option id="3recreational_often_option_3" value="Weekly">Weekly</option>
+                                            <option id="3recreational_often_option_4" value="Daily">Daily</option>
+                                            <option id="3recreational_often_option_5" value="2 or more times per day">2 or more times per day</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                                <button class="btn btn--radius-2 btn--blue" style="background: #F08080;" onclick="remove_what_drug_parent3_click()" type="button">Remove</button>
                             </div>
                         </div>
 
@@ -750,14 +977,14 @@
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="bleeding_problemstypes">
                                     <option disabled="disabled" id="bleeding_option_0" selected="selected">Choose option</option>
-                                    <option id="bleeding_option_1">Von Willebrand Hemophilia A (Factor 8 deficiency)</option>
-                                    <option id="bleeding_option_2">Hemophilia B (Christmas disease)</option>
-                                    <option id="bleeding_option_3">Factor 5 Leiden</option>
-                                    <option id="bleeding_option_4">Factor 2 deficiency</option>
-                                    <option id="bleeding_option_5">Factor 7 deficiency</option>
-                                    <option id="bleeding_option_6">Factor 10 deficiency</option>
-                                    <option id="bleeding_option_7">Factor 12 deficiency</option>
-                                    <option id="bleeding_option_8">Other</option>
+                                    <option id="bleeding_option_1" value="Von Willebrand Hemophilia A (Factor 8 deficiency)">Von Willebrand Hemophilia A (Factor 8 deficiency)</option>
+                                    <option id="bleeding_option_2" value="Hemophilia B (Christmas disease">Hemophilia B (Christmas disease)</option>
+                                    <option id="bleeding_option_3" value="Factor 5 Leiden">Factor 5 Leiden</option>
+                                    <option id="bleeding_option_4" value="Factor 2 deficiency">Factor 2 deficiency</option>
+                                    <option id="bleeding_option_5" value="Factor 7 deficiency">Factor 7 deficiency</option>
+                                    <option id="bleeding_option_6" value="Factor 10 deficiency">Factor 10 deficiency</option>
+                                    <option id="bleeding_option_7" value="Factor 12 deficiency">Factor 12 deficiency</option>
+                                    <option id="bleeding_option_8" value="Other">Other</option>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
@@ -768,21 +995,20 @@
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="cancer_problemstypes">
                                     <option disabled="disabled" id="breast_option_0" selected="selected">Choose option</option>
-                                    <option id="breast_option_1">Breast</option>
-                                    <option id="breast_option_2">Prostate</option>
-                                    <option id="breast_option_3">Lung</option>
-                                    <option id="breast_option_4">Colon/Colorectal</option>
-                                    <option id="breast_option_5">Kidney</option>
-                                    <option id="breast_option_6">Bladder</option>
-                                    <option id="breast_option_7">Thyroid</option>
-                                    <option id="breast_option_8">Lymphoma</option>
-                                    <option id="breast_option_9">Melanoma</option>
-                                    <option id="breast_option_10">Endometrial</option>
-                                    <option id="breast_option_11">Leukemia</option>
-                                    <option id="breast_option_12">Pancreatic</option>
-                                    <option id="breast_option_13">Liver</option>
-                                    <option id="breast_option_14">Other​</option>
-
+                                    <option id="breast_option_1" value="Breast">Breast</option>
+                                    <option id="breast_option_2" value="Prostate">Prostate</option>
+                                    <option id="breast_option_3" value="Lung">Lung</option>
+                                    <option id="breast_option_4" value="Colon/Colorectal">Colon/Colorectal</option>
+                                    <option id="breast_option_5" value="Kidney">Kidney</option>
+                                    <option id="breast_option_6" value="Bladder">Bladder</option>
+                                    <option id="breast_option_7" value="Thyroid">Thyroid</option>
+                                    <option id="breast_option_8" value="Lymphoma">Lymphoma</option>
+                                    <option id="breast_option_9" value="Melanoma">Melanoma</option>
+                                    <option id="breast_option_10" value="Endometrial">Endometrial</option>
+                                    <option id="breast_option_11" value="Leukemia">Leukemia</option>
+                                    <option id="breast_option_12" value="Pancreatic">Pancreatic</option>
+                                    <option id="breast_option_13" value="Liver">Liver</option>
+                                    <option id="breast_option_14" value="Other">Other​</option>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
@@ -793,25 +1019,25 @@
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject" id="hepatitis_problemtypes">
                                     <option disabled="disabled" id="Hepatitis_option_0" selected="selected">Choose option</option>
-                                    <option id="Hepatitis_option_1">Auto-immune</option>
-                                    <option id="Hepatitis_option_2">Alcohol-induced</option>
-                                    <option id="Hepatitis_option_3">Hepatitis A</option>
-                                    <option id="Hepatitis_option_4">Hepatitis B – Active</option>
-                                    <option id="Hepatitis_option_5">Hepatis B - Chronic</option>
-                                    <option id="Hepatitis_option_6">Hepatitis B – Cured</option>
-                                    <option id="Hepatitis_option_7">Hepatitis C – Active</option>
-                                    <option id="Hepatitis_option_8">Hepatitis C – Chronic</option>
-                                    <option id="Hepatitis_option_9">Hepatitis C – Cured</option>
-                                    <option id="Hepatitis_option_10">Hepatitis D</option>
-                                    <option id="Hepatitis_option_11">Hepatitis E</option>
-                                    <option id="Hepatitis_option_12">Fatty Liver</option>
-                                    <option id="Hepatitis_option_13">Other​</option>
+                                    <option id="Hepatitis_option_1" value="Auto-immune">Auto-immune</option>
+                                    <option id="Hepatitis_option_2" value="Alcohol-induced">Alcohol-induced</option>
+                                    <option id="Hepatitis_option_3" value="Hepatitis A">Hepatitis A</option>
+                                    <option id="Hepatitis_option_4" value="Hepatitis B – Active">Hepatitis B – Active</option>
+                                    <option id="Hepatitis_option_5" value="Hepatis B - Chronic">Hepatis B - Chronic</option>
+                                    <option id="Hepatitis_option_6" value="Hepatitis B – Cured">Hepatitis B – Cured</option>
+                                    <option id="Hepatitis_option_7" value="Hepatitis C – Active">Hepatitis C – Active</option>
+                                    <option id="Hepatitis_option_8" value="Hepatitis C – Chronic">Hepatitis C – Chronic</option>
+                                    <option id="Hepatitis_option_9" value="Hepatitis C – Cured">Hepatitis C – Cured</option>
+                                    <option id="Hepatitis_option_10" value="Hepatitis D">Hepatitis D</option>
+                                    <option id="Hepatitis_option_11" value="Hepatitis E">Hepatitis E</option>
+                                    <option id="Hepatitis_option_12" value="Fatty Liver">Fatty Liver</option>
+                                    <option id="Hepatitis_option_13" value="Other">Other​</option>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
 
-                        <div class="col-2">
+                        <div class="input-group">
                             <div class="input-group">
                                 <label class="label" id="surgery_question_text" style="width: 200px;">Have you ever had surgery?</label>
                                 <div class="p-t-10">
@@ -828,89 +1054,258 @@
                                 </div>
                             </div>
 
-                            <div class="input-group" id="surgery_names" style="display: block;">
-                                <label class="label" style="width: 500px;" id="surgery_type_text">What type of surgery?</label>
-                                <div class="rs-select2 js-select-simple select--no-search">
-                                    <input class="input--style-4" type="text" id="surgerynames" name="surgerynames">
+                            <div class="input-group" id="surgery_main_parent1">
+                                <div class="input-group" id="surgery_names" style="display: block;">
+                                    <label class="label" style="width: 500px;" id="surgery_type_text">What type of surgery?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input class="input--style-4" type="text" id="surgerynames" name="surgerynames">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="input-group" style="display: block;" id="surgery_date_Box">
-                                <label class="label" style="width: 200px;" id="surgery_date_text">When was your surgery?</label>
-                                <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject" id="surgery_date">
-                                        <option disabled="disabled" id="Surgery_years_0" selected="selected">Choose option</option>
-                                        <option>2021</option>
-                                        <option>2020</option>
-                                        <option>2019</option>
-                                        <option>2018</option>
-                                        <option>2017</option>
-                                        <option>2016</option>
-                                        <option>2015</option>
-                                        <option>2014</option>
-                                        <option>2013</option>
-                                        <option>2012</option>
-                                        <option>2011</option>
-                                        <option>2010</option>
-                                        <option>2009</option>
-                                        <option>2008</option>
-                                        <option>2007</option>
-                                        <option>2006</option>
-                                        <option>2005</option>
-                                        <option>2004</option>
-                                        <option>2003</option>
-                                        <option>2002</option>
-                                        <option>2001</option>
-                                        <option>2000</option>
-                                        <option>1999</option>
-                                        <option>1998</option>
-                                        <option>1997</option>
-                                        <option>1996</option>
-                                        <option>1995</option>
-                                        <option>1994</option>
-                                        <option>1993</option>
-                                        <option>1992</option>
-                                        <option>1991</option>
-                                        <option>1990</option>
-                                        <option>1989</option>
-                                        <option>1988</option>
-                                        <option>1987</option>
-                                        <option>1986</option>
-                                        <option>1985</option>
-                                        <option>1984</option>
-                                        <option>1983</option>
-                                        <option>1982</option>
-                                        <option>1981</option>
-                                        <option>1980</option>
-                                        <option>1979</option>
-                                        <option>1978</option>
-                                        <option>1977</option>
-                                        <option>1976</option>
-                                        <option>1975</option>
-                                        <option>1974</option>
-                                        <option>1973</option>
-                                        <option>1972</option>
-                                        <option>1971</option>
-                                        <option>1970</option>
-                                        <option id="Before_1970_text">Before 1970</option>
-                                    </select>
-                                    <div class="select-dropdown"></div>
-                                </div>
-                                <%-- <div class="input-group-icon">
+                                <div class="input-group" style="display: block;" id="surgery_date_Box">
+                                    <label class="label" style="width: 200px;" id="surgery_date_text">When was your surgery?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject" id="surgery_date">
+                                            <option disabled="disabled" id="Surgery_years_0" selected="selected">Choose option</option>
+                                            <option>2021</option>
+                                            <option>2020</option>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                            <option>2016</option>
+                                            <option>2015</option>
+                                            <option>2014</option>
+                                            <option>2013</option>
+                                            <option>2012</option>
+                                            <option>2011</option>
+                                            <option>2010</option>
+                                            <option>2009</option>
+                                            <option>2008</option>
+                                            <option>2007</option>
+                                            <option>2006</option>
+                                            <option>2005</option>
+                                            <option>2004</option>
+                                            <option>2003</option>
+                                            <option>2002</option>
+                                            <option>2001</option>
+                                            <option>2000</option>
+                                            <option>1999</option>
+                                            <option>1998</option>
+                                            <option>1997</option>
+                                            <option>1996</option>
+                                            <option>1995</option>
+                                            <option>1994</option>
+                                            <option>1993</option>
+                                            <option>1992</option>
+                                            <option>1991</option>
+                                            <option>1990</option>
+                                            <option>1989</option>
+                                            <option>1988</option>
+                                            <option>1987</option>
+                                            <option>1986</option>
+                                            <option>1985</option>
+                                            <option>1984</option>
+                                            <option>1983</option>
+                                            <option>1982</option>
+                                            <option>1981</option>
+                                            <option>1980</option>
+                                            <option>1979</option>
+                                            <option>1978</option>
+                                            <option>1977</option>
+                                            <option>1976</option>
+                                            <option>1975</option>
+                                            <option>1974</option>
+                                            <option>1973</option>
+                                            <option>1972</option>
+                                            <option>1971</option>
+                                            <option>1970</option>
+                                            <option id="Before_1970_text" value="Before 1970">Before 1970</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                    <%-- <div class="input-group-icon">
                                     <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="surgery_date" name="alcohol_off">
                                     <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>--%>
-                            </div>
+                                </div>
 
-                            <div class="input-group" id="surgon_name" style="display: block;">
-                                <label class="label" style="width: 500px;" id="surgeon_name_text">What was the Surgeon's name?</label>
-                                <div class="rs-select2 js-select-simple select--no-search">
-                                    <input class="input--style-4" type="text" id="surgonname" name="surgonname">
+                                <div class="input-group" id="surgon_name" style="display: block;">
+                                    <label class="label" style="width: 500px;" id="surgeon_name_text">What was the Surgeon's name?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input class="input--style-4" type="text" id="surgonname" name="surgonname">
+                                    </div>
+                                    <br />
+                                    <button class="btn btn--radius-2 btn--blue" style="background: #90EE90;" onclick="add_surgery_main_parent1_click()" type="button">Add More</button>
                                 </div>
                             </div>
 
+
+                            <div class="input-group" id="surgery_main_parent2" style="display: none;">
+                                <div class="input-group" id="2surgery_names" style="display: block;">
+                                    <label class="label" style="width: 500px;" id="2surgery_type_text">What type of surgery?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input class="input--style-4" type="text" id="2surgerynames" name="surgerynames">
+                                    </div>
+                                </div>
+
+                                <div class="input-group" style="display: block;" id="2surgery_date_Box">
+                                    <label class="label" style="width: 200px;" id="2surgery_date_text">When was your surgery?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject" id="2surgery_date">
+                                            <option disabled="disabled" id="2Surgery_years_0" selected="selected">Choose option</option>
+                                            <option>2021</option>
+                                            <option>2020</option>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                            <option>2016</option>
+                                            <option>2015</option>
+                                            <option>2014</option>
+                                            <option>2013</option>
+                                            <option>2012</option>
+                                            <option>2011</option>
+                                            <option>2010</option>
+                                            <option>2009</option>
+                                            <option>2008</option>
+                                            <option>2007</option>
+                                            <option>2006</option>
+                                            <option>2005</option>
+                                            <option>2004</option>
+                                            <option>2003</option>
+                                            <option>2002</option>
+                                            <option>2001</option>
+                                            <option>2000</option>
+                                            <option>1999</option>
+                                            <option>1998</option>
+                                            <option>1997</option>
+                                            <option>1996</option>
+                                            <option>1995</option>
+                                            <option>1994</option>
+                                            <option>1993</option>
+                                            <option>1992</option>
+                                            <option>1991</option>
+                                            <option>1990</option>
+                                            <option>1989</option>
+                                            <option>1988</option>
+                                            <option>1987</option>
+                                            <option>1986</option>
+                                            <option>1985</option>
+                                            <option>1984</option>
+                                            <option>1983</option>
+                                            <option>1982</option>
+                                            <option>1981</option>
+                                            <option>1980</option>
+                                            <option>1979</option>
+                                            <option>1978</option>
+                                            <option>1977</option>
+                                            <option>1976</option>
+                                            <option>1975</option>
+                                            <option>1974</option>
+                                            <option>1973</option>
+                                            <option>1972</option>
+                                            <option>1971</option>
+                                            <option>1970</option>
+                                            <option id="2Before_1970_text" value="Before 1970">Before 1970</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group" id="2surgon_name" style="display: block;">
+                                    <label class="label" style="width: 500px;" id="2surgeon_name_text">What was the Surgeon's name?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input class="input--style-4" type="text" id="2surgonname" name="surgonname">
+                                    </div>
+                                </div>
+                                <button class="btn btn--radius-2 btn--blue" style="background: #90EE90;" onclick="add_surgery_main_parent2_click()" type="button">Add More</button>
+                                <button class="btn btn--radius-2 btn--blue" style="background: #F08080;" onclick="remove_surgery_main_parent2_click()" type="button">Remove</button>
+                            </div>
+
+
+                            <div class="input-group" id="surgery_main_parent3" style="display: none;">
+                                <div class="input-group" id="3surgery_names" style="display: block;">
+                                    <label class="label" style="width: 500px;" id="3surgery_type_text">What type of surgery?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input class="input--style-4" type="text" id="3surgerynames" name="surgerynames">
+                                    </div>
+                                </div>
+
+                                <div class="input-group" style="display: block;" id="3surgery_date_Box">
+                                    <label class="label" style="width: 200px;" id="3surgery_date_text">When was your surgery?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject" id="3surgery_date">
+                                            <option disabled="disabled" id="3Surgery_years_0" selected="selected">Choose option</option>
+                                            <option>2021</option>
+                                            <option>2020</option>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                            <option>2016</option>
+                                            <option>2015</option>
+                                            <option>2014</option>
+                                            <option>2013</option>
+                                            <option>2012</option>
+                                            <option>2011</option>
+                                            <option>2010</option>
+                                            <option>2009</option>
+                                            <option>2008</option>
+                                            <option>2007</option>
+                                            <option>2006</option>
+                                            <option>2005</option>
+                                            <option>2004</option>
+                                            <option>2003</option>
+                                            <option>2002</option>
+                                            <option>2001</option>
+                                            <option>2000</option>
+                                            <option>1999</option>
+                                            <option>1998</option>
+                                            <option>1997</option>
+                                            <option>1996</option>
+                                            <option>1995</option>
+                                            <option>1994</option>
+                                            <option>1993</option>
+                                            <option>1992</option>
+                                            <option>1991</option>
+                                            <option>1990</option>
+                                            <option>1989</option>
+                                            <option>1988</option>
+                                            <option>1987</option>
+                                            <option>1986</option>
+                                            <option>1985</option>
+                                            <option>1984</option>
+                                            <option>1983</option>
+                                            <option>1982</option>
+                                            <option>1981</option>
+                                            <option>1980</option>
+                                            <option>1979</option>
+                                            <option>1978</option>
+                                            <option>1977</option>
+                                            <option>1976</option>
+                                            <option>1975</option>
+                                            <option>1974</option>
+                                            <option>1973</option>
+                                            <option>1972</option>
+                                            <option>1971</option>
+                                            <option>1970</option>
+                                            <option id="3Before_1970_text" value="Before 1970">Before 1970</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+
+                                </div>
+
+                                <div class="input-group" id="3surgon_name" style="display: block;">
+                                    <label class="label" style="width: 500px;" id="3surgeon_name_text">What was the Surgeon's name?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input class="input--style-4" type="text" id="3surgonname" name="surgonname">
+                                    </div>
+                                </div>
+                                <button class="btn btn--radius-2 btn--blue" style="background: #F08080;" onclick="remove_surgery_main_parent3_click()" type="button">Remove</button>
+                            </div>
                         </div>
                         <br />
+
+
                         <div class="col-6">
                             <div class="input-group">
                                 <label class="label" style="width: 500px;" id="medications_regularly_text">Do you take any medications regularly?</label>
@@ -983,3222 +1378,3307 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Jquery JS-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <!-- Vendor JS-->
-    <script src="vendor/select2/select2.min.js"></script>
-    <script src="vendor/datepicker/moment.min.js"></script>
-    <script src="vendor/datepicker/daterangepicker.js"></script>
+        <!-- Jquery JS-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <!-- Vendor JS-->
+        <script src="vendor/select2/select2.min.js"></script>
+        <script src="vendor/datepicker/moment.min.js"></script>
+        <script src="vendor/datepicker/daterangepicker.js"></script>
 
-    <!-- Main JS-->
-    <script src="js/global.js"></script>
-    <%--<script type='text/javascript' src="js/jquery.mycart.js"></script>--%>
-    <script type="text/javascript">
+        <!-- Main JS-->
+        <script src="js/global.js"></script>
+        <%--<script type='text/javascript' src="js/jquery.mycart.js"></script>--%>
+        <script type="text/javascript">
 
-        var txtFirstName;
-        var txtLastName;
-        var txtBirthday;
-        var txtMedicareNumber;
-        var genderselection;
-        var txtExpirationDate;
-        var txtEmail;
-        var txtPhoneNumber;
-        var livingActivities;
-        var dateOffWork;
-        var neverworkoption;
-        var sportsActivites;
-        var howoftensports;
-        var familynameOfDoctor;
-        var handWrite;
-        var smokeHowmanyYears;
-        var smokeHowmanyPerday;
-        var smokeOffDate;
+            var txtFirstName;
+            var txtLastName;
+            var txtBirthday;
+            var txtMedicareNumber;
+            var genderselection;
+            var txtExpirationDate;
+            var txtEmail;
+            var txtPhoneNumber;
+            var livingActivities;
+            var dateOffWork;
+            var neverworkoption;
+            var sportsActivites;
+            var sportsActivites2;
+            var sportsActivites3;
+            var howoftensports;
+            var howoftensports2;
+            var howoftensports3;
 
-        var alcoholHowmanyPerweek;
-        var alcoholOffDate;
+            var familynameOfDoctor;
+            var handWrite;
+            var smokeHowmanyYears;
+            var smokeHowmanyPerday;
+            var smokeOffDate;
 
-        var recreationalDrugHowmanyPerweeks;
-        var recreationalDrugWhatDrugs;
-        var recreationalDrugOffDate;
+            var alcoholHowmanyPerweek;
+            var alcoholOffDate;
 
-        var bleedingProblemsTypes;
-        var cancerProblemsTypes;
-        var hepatitisProblemTypes;
+            var recreationalDrugHowmanyPerweeks;
+            var recreationalDrugWhatDrugs;
 
-        var surgeryNames;
-        var surgeryDate;
-        var surgonName;
-        let medicalFile;
+            var recreationalDrugHowmanyPerweeks2;
+            var recreationalDrugWhatDrugs2;
 
-        let referralFile;
+            var recreationalDrugHowmanyPerweeks3;
+            var recreationalDrugWhatDrugs3;
 
-        let questionnaireformat;
-        let languageType;
+            var recreationalDrugOffDate;
 
-        var frenchLanguage = {
+            var bleedingProblemsTypes;
+            var cancerProblemsTypes;
+            var hepatitisProblemTypes;
 
-            'Choose Option': 'Choisissez l’Option',
+            var surgeryNames;
+            var surgeryDate;
+            var surgonName;
 
-            'First Name': 'Prénom',
+            var surgeryNames2;
+            var surgeryDate2;
+            var surgonName2;
 
-            'Last Name': 'Nom de Famille',
+            var surgeryNames3;
+            var surgeryDate3;
+            var surgonName3;
 
-            'Birthday': 'Date de Naissance',
+            let medicalFile;
 
-            'Gender': 'Sexe',
+            let referralFile;
 
-            'Male': 'Homme',
+            let questionnaireformat;
+            let languageType;
 
-            'Female': 'Femme',
+            var frenchLanguage = {
 
-            'Other/Prefer not to answer': 'Autre/Ne veux pas Répondre',
+                'Choose Option': 'Choisissez l’Option',
 
-            'Medicare Number': 'Numéro de Carte Assurance Maladie',
+                'First Name': 'Prénom',
 
-            'Yes': 'Oui',
+                'Last Name': 'Nom de Famille',
 
-            'No Medicare Card': 'Pas de Carte Assurance Maladie',
+                'Birthday': 'Date de Naissance',
 
-            'Expiration Date': 'Date D’Expiration',
+                'Gender': 'Sexe',
 
-            'Email': 'Addresse Courriel',
+                'Male': 'Homme',
 
-            'Phone Number': 'Numéro de Téléphone',
+                'Female': 'Femme',
 
-            'What is the Name of Your Family Doctor': 'Qu’est ce que c’est le Nom de Votre Médecin de Famille',
+                'Other/Prefer not to answer': 'Autre/Ne veux pas Répondre',
 
-            'Are You Working Now ?': 'Est-ce Que Vous Travaillez en ce moment?',
+                'Medicare Number': 'Numéro de Carte Assurance Maladie',
 
-            'Yes; What Do You Do For A Living/What is Your Profession ?': 'Oui:	Qu’est ce que vous faites comme Travail/ C’est quoi Votre Profession?',
+                'Yes': 'Oui',
 
-            'Accountant': 'Comptable',
+                'No Medicare Card': 'Pas de Carte Assurance Maladie',
 
-            'Actor / Actress': 'Comedien',
+                'Expiration Date': 'Date D’Expiration',
 
-            'Architect': 'Architecte',
+                'Email': 'Addresse Courriel',
 
-            'Author': 'Auteur',
+                'Phone Number': 'Numéro de Téléphone',
 
-            'Baker': 'Boulanger',
+                'What is the Name of Your Family Doctor': 'Qu’est ce que c’est le Nom de Votre Médecin de Famille',
 
-            'Bricklayer': 'Maçon',
+                'Are You Working Now ?': 'Est-ce Que Vous Travaillez en ce moment?',
 
-            'Bus Driver': 'Chauffeur d’Autobus',
+                'Yes; What Do You Do For A Living/What is Your Profession ?': 'Oui:	Qu’est ce que vous faites comme Travail/ C’est quoi Votre Profession?',
 
-            'Butcher': 'Boucher',
+                'Accountant': 'Comptable',
 
-            'Carpenter': 'Ébéniste',
+                'Actor / Actress': 'Comedien',
 
-            'Cleaner': 'Entretien Menager',
+                'Architect': 'Architecte',
 
-            'Chef / Cook': 'Chef/Cuisinier',
+                'Author': 'Auteur',
 
-            'Dentist': 'Dentiste',
+                'Baker': 'Boulanger',
 
-            'Doctor': 'Docteur',
+                'Bricklayer': 'Maçon',
 
-            'Refuse Collector': 'Éboueur',
+                'Bus Driver': 'Chauffeur d’Autobus',
 
-            'Electrician': 'Electricien',
+                'Butcher': 'Boucher',
 
-            'Engineer': 'Ingénieur',
+                'Carpenter': 'Ébéniste',
 
-            'Factory Worker': 'Ouvrier',
+                'Cleaner': 'Entretien Menager',
 
-            'Farmer': 'Fermier',
+                'Chef / Cook': 'Chef/Cuisinier',
 
-            'Fireman/Fire Fighter': 'Pompier',
+                'Dentist': 'Dentiste',
 
-            'Fisherman': 'Pêcheur',
+                'Doctor': 'Docteur',
 
-            'Florist': 'Fleuriste',
+                'Refuse Collector': 'Éboueur',
 
-            'Gardener': 'Jardinier',
+                'Electrician': 'Electricien',
 
-            'Hairdresser': 'Coiffeur',
+                'Engineer': 'Ingénieur',
 
-            'Journalist': 'Journaliste',
+                'Factory Worker': 'Ouvrier',
 
-            'Lawyer': 'Avocat',
+                'Farmer': 'Fermier',
 
-            'Librarian': 'Bibliothécaire',
+                'Fireman/Fire Fighter': 'Pompier',
 
-            'Mechanic': 'Mécanicien',
+                'Fisherman': 'Pêcheur',
 
-            'Model': 'Mannequin',
+                'Florist': 'Fleuriste',
 
-            'Nurse': 'Infirmier',
+                'Gardener': 'Jardinier',
 
-            'Optician': 'Opticien',
+                'Hairdresser': 'Coiffeur',
 
-            'Orderly': 'Préposé aux Bénéficiaires',
+                'Journalist': 'Journaliste',
 
-            'Painter': 'Peintre',
+                'Lawyer': 'Avocat',
 
-            'Pharmacist': 'Pharmacien',
+                'Librarian': 'Bibliothécaire',
 
-            'Photographer': 'Photographe',
+                'Mechanic': 'Mécanicien',
 
-            'Pilot': 'Pilote',
+                'Model': 'Mannequin',
 
-            'Plumber': 'Plombier',
+                'Nurse': 'Infirmier',
 
-            'Politician': 'Politicien',
+                'Optician': 'Opticien',
 
-            'Policeman / Policewoman': 'Policier',
+                'Orderly': 'Préposé aux Bénéficiaires',
 
-            'Postman': 'Facteur',
+                'Painter': 'Peintre',
 
-            'Real Estate Agent': 'Agent d’Immeubles',
+                'Pharmacist': 'Pharmacien',
 
-            'Scientist': 'Scientifique',
+                'Photographer': 'Photographe',
 
-            'Secretary': 'Secrétaire',
+                'Pilot': 'Pilote',
 
-            'Soldier': 'Soldat',
+                'Plumber': 'Plombier',
 
-            'Tailor/Seamstress': 'Tailleur/Couturière',
+                'Politician': 'Politicien',
 
-            'Taxi Driver': 'Chauffeur de Taxi',
+                'Policeman / Policewoman': 'Policier',
 
-            'Teacher': 'Enseignant',
+                'Postman': 'Facteur',
 
-            'Veterinary Doctor': 'Vétérinaire',
+                'Real Estate Agent': 'Agent d’Immeubles',
 
-            'Waiter/Waitress': 'Serveur',
+                'Scientist': 'Scientifique',
 
-            'Other': 'Autre',
+                'Secretary': 'Secrétaire',
 
-            'No; Retired': 'Non; Retraité',
+                'Soldier': 'Soldat',
 
-            'If No, Since When Have You Been Off Work?': 'Si Non, Depuis quand est-ce que vous êtes en arrêt de travail?',
+                'Tailor/Seamstress': 'Tailleur/Couturière',
 
-            'Never Worked': 'N’a Jamais Travaillé',
+                'Taxi Driver': 'Chauffeur de Taxi',
 
-            'If Never, Please Select One of the Following Options?': 'Si Jamais, SVP Choisissez une des options',
+                'Teacher': 'Enseignant',
 
-            'Student': 'Étudiant',
+                'Veterinary Doctor': 'Vétérinaire',
 
-            'Housewife/Househusband': 'Femme/Homme de Foyer',
+                'Waiter/Waitress': 'Serveur',
 
-            'Other': 'Autre',
+                'Other': 'Autre',
 
-            'What Sports/Activities Do You Do?': 'Qu’est-ce que vous faites comme activité sportive/physique?',
+                'No; Retired': 'Non; Retraité',
 
-            'None': 'Aucunes',
+                'If No, Since When Have You Been Off Work?': 'Si Non, Depuis quand est-ce que vous êtes en arrêt de travail?',
 
-            'Kayaking': 'Kayak',
+                'Never Worked': 'N’a Jamais Travaillé',
 
-            'Canoeing': 'Canoe',
+                'If Never, Please Select One of the Following Options?': 'Si Jamais, SVP Choisissez une des options',
 
-            'Cross – Country Skiing': 'Ski de Fond',
+                'Student': 'Étudiant',
 
-            'Swimming': 'Natation',
+                'Housewife/Househusband': 'Femme/Homme de Foyer',
 
-            'Freediving': 'Plongée Libre',
+                'Other': 'Autre',
 
-            'Paddleboarding': 'Planche à Pagaie',
+                'What Sports/Activities Do You Do?': 'Qu’est-ce que vous faites comme activité sportive/physique?',
 
-            'Scuba Diving': 'Plongée Sous-Marine',
+                'None': 'Aucunes',
 
-            'Aerobics': 'Aérobie',
+                'Kayaking': 'Kayak',
 
-            'Archery': 'Tir à l’Arc',
+                'Canoeing': 'Canoe',
 
-            'Boxing': 'Boxe',
+                'Cross – Country Skiing': 'Ski de Fond',
 
-            'Running': 'Course à Pied',
+                'Swimming': 'Natation',
 
-            'Cycling': 'Vélo/Cyclism',
+                'Freediving': 'Plongée Libre',
 
-            'Figure Skating': 'Patin à Glace',
+                'Paddleboarding': 'Planche à Pagaie',
 
-            'Horseback Riding': 'l’Equitation',
+                'Scuba Diving': 'Plongée Sous-Marine',
 
-            'Kickboxing': 'Kickboxing',
+                'Aerobics': 'Aérobie',
 
-            'Ultimate Frisbee': 'Frisbee Ultime',
+                'Archery': 'Tir à l’Arc',
 
-            'Walking': 'Marche/Randonnée',
+                'Boxing': 'Boxe',
 
-            'Weightlifting': 'Musculation',
+                'Running': 'Course à Pied',
 
-            'Wrestling': 'Lutte',
+                'Cycling': 'Vélo/Cyclism',
 
-            'Baseball': 'Baseball',
+                'Figure Skating': 'Patin à Glace',
 
-            'Softball': 'Balle Molle',
+                'Horseback Riding': 'l’Equitation',
 
-            'Basketball': 'Basketball',
+                'Kickboxing': 'Kickboxing',
 
-            'Tennis': 'Tennis',
+                'Ultimate Frisbee': 'Frisbee Ultime',
 
-            'Badminton': 'Badminton',
+                'Walking': 'Marche/Randonnée',
 
-            'Bowling': 'Bowling',
+                'Weightlifting': 'Musculation',
 
-            'Curling': 'Curling',
+                'Wrestling': 'Lutte',
 
-            'Soccer': 'Soccer',
+                'Baseball': 'Baseball',
 
-            'Football': 'Football',
+                'Softball': 'Balle Molle',
 
-            'Ski': 'Ski Alpin',
+                'Basketball': 'Basketball',
 
-            'Hockey': 'Hockey',
+                'Tennis': 'Tennis',
 
-            'Other': 'Autre',
+                'Badminton': 'Badminton',
 
-            'How Often?': 'A Quelle Fréquence?',
+                'Bowling': 'Bowling',
 
-            'Daily': 'Du Quotidien',
+                'Curling': 'Curling',
 
-            '3 times a week': '3 fois par semaine',
+                'Soccer': 'Soccer',
 
-            '2 times a week': '2 fois par semaine',
+                'Football': 'Football',
 
-            '1 time per week': '1 fois par semaine',
+                'Ski': 'Ski Alpin',
 
-            '2 - 3 times per Month': '2-3 fois pas mois',
+                'Hockey': 'Hockey',
 
-            'Monthly': ' Mensuel',
+                'Other': 'Autre',
 
-            'Rarely': 'Rarement',
+                'How Often?': 'A Quelle Fréquence?',
 
-            'What Hand Do You Write With?': 'Avec quelle main ecrivez vous?',
+                'Daily': 'Du Quotidien',
 
-            'Right': 'Droite',
+                '3 times a week': '3 fois par semaine',
 
-            'Left': 'Gauche',
+                '2 times a week': '2 fois par semaine',
 
-            'Ambidextrous': 'Ambidextre',
+                '1 time per week': '1 fois par semaine',
 
-            'Do You Smoke?': 'Est-ce que vous fumez?',
+                '2 - 3 times per Month': '2-3 fois pas mois',
 
-            'If Yes, For How Many Years?': 'Si Oui, Pendant Combien d’années?',
+                'Monthly': ' Mensuel',
 
-            'More than 20 years': 'plus que 20 ans',
+                'Rarely': 'Rarement',
 
-            'How Many Cigarettes Per Day': 'Combien de Cigarettes par Jour?',
+                'What Hand Do You Write With?': 'Avec quelle main ecrivez vous?',
 
-            'More than 1 Pack': 'plus q’un paquet',
+                'Right': 'Droite',
 
-            'Do You Drink Alcohol': 'Est-ce que vouz buvez de l’alcohol?',
+                'Left': 'Gauche',
 
-            'If Yes, How Many Drinks Per Week?': 'Si Oui, Combien de Consommations par Semaine?',
+                'Ambidextrous': 'Ambidextre',
 
-            'More than 20 Drinks': 'Plus que 20',
+                'Do You Smoke?': 'Est-ce que vous fumez?',
 
-            'Do You Take Any Recreational Drugs Or Herbal/Natural Remedies?': 'Est-ce que vous prenez des Drogues récréatives ou des Remèdes naturels?',
+                'If Yes, For How Many Years?': 'Si Oui, Pendant Combien d’années?',
 
-            'If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?': 'Si Oui, A quelle fréquence est-ce que vous prenez la drogue ou remède naturel?',
+                'More than 20 years': 'plus que 20 ans',
 
-            'Rarely': 'Rarement',
+                'How Many Cigarettes Per Day': 'Combien de Cigarettes par Jour?',
 
-            'Monthly': 'Mensuel',
+                'More than 1 Pack': 'plus q’un paquet',
 
-            'Weekly': 'Hebdomadaire',
+                'Do You Drink Alcohol': 'Est-ce que vouz buvez de l’alcohol?',
 
-            'Daily': 'du Quotidien',
+                'If Yes, How Many Drinks Per Week': 'Si Oui, Combien de Consommations par Semaine?',
 
-            '2 or more times per day': '2 fois ou plus par jour',
+                'More than 20 Drinks': 'Plus que 20',
 
-            'If Yes, Which Drug or Herbal / Natural Remedy do you Use?': 'Si Oui, Quel Drogue ou Remède Naturel Utilisez vous?',
+                'Do You Take Any Recreational Drugs Or Herbal/Natural Remedies?': 'Est-ce que vous prenez des Drogues récréatives ou des Remèdes naturels?',
 
-            'chondroitin': 'chondroitin',
+                'If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?': 'Si Oui, A quelle fréquence est-ce que vous prenez la drogue ou remède naturel?',
 
-            'glucosamine': 'glucosamine',
+                'Rarely': 'Rarement',
 
-            'ginger': 'gingembre',
+                'Monthly': 'Mensuel',
 
-            'ginkgo biloba': 'ginkgo biloba',
+                'Weekly': 'Hebdomadaire',
 
-            'ginseng': 'ginseng',
+                'Daily': 'du Quotidien',
 
-            'st - John’s Wort': 'st-John’s Wort',
+                '2 or more times per day': '2 fois ou plus par jour',
 
-            'turmeric': 'turmeric',
+                'If Yes, Which Drug or Herbal / Natural Remedy do you Use?': 'Si Oui, Quel Drogue ou Remède Naturel Utilisez vous?',
 
-            'Canabis / Marijuana': 'Canabis/Marijuana',
+                'chondroitin': 'chondroitin',
 
-            'Stimulants (e.g.cocaine, amphetamines,methamphetamine, ecstacy[MDMA]) ': 'Stimulants (e.g. cocaine, amphetamines, methamphetamine, ecstacy [MDMA]) ',
+                'glucosamine': 'glucosamine',
 
-            'Opium - related painkillers (e.g.heroin, morphine, fentanyl, oxycodone, dilaudid)': 'Anti-douleur de base d’Opiacé (e.g. heroin, morphine, fentanyl, oxycodone, dilaudid)',
+                'ginger': 'gingembre',
 
-            'Hallucinogens (e.g.LSD)': 'Hallucinogènes (e.g. LSD)',
+                'ginkgo biloba': 'ginkgo biloba',
 
-            'Benzodiazepines (e.g.ativan, valium)': 'Benzodiazépines (e.g. ativan, valium)',
+                'ginseng': 'ginseng',
 
-            'Ketamine': 'Ketamine',
+                'st - John’s Wort': 'st-John’s Wort',
 
-            'Ritalin': 'Ritalin',
+                'turmeric': 'turmeric',
 
-            'Other': 'Autre',
+                'Canabis / Marijuana': 'Canabis/Marijuana',
 
-            'Do You Take Any Recreational Drugs Or Herbal / Natural Remedies?': 'Est-ce que vous prenez des Drogues récréatives ou des Remèdes naturels?',
+                'Stimulants (e.g.cocaine, amphetamines,methamphetamine, ecstacy[MDMA]) ': 'Stimulants (e.g. cocaine, amphetamines, methamphetamine, ecstacy [MDMA]) ',
 
-            'If No, Since When Have You Been Off The Drug?': 'Si Non, Depuis quand ne preniez vous plus la drogue ou remède naturel?',
+                'Opium - related painkillers (e.g.heroin, morphine, fentanyl, oxycodone, dilaudid)': 'Anti-douleur de base d’Opiacé (e.g. heroin, morphine, fentanyl, oxycodone, dilaudid)',
 
-            'Never Taken': 'Jamais utilisé',
+                'Hallucinogens (e.g.LSD)': 'Hallucinogènes (e.g. LSD)',
 
-            'Do You Have Any Of the Following Medical Conditions?': 'Est-ce que vous avez des problèmes de santé? Le(s)quel(s)?',
+                'Benzodiazepines (e.g.ativan, valium)': 'Benzodiazépines (e.g. ativan, valium)',
 
-            'AIDS or HIV': 'SIAD ou VIH',
+                'Ketamine': 'Ketamine',
 
-            'Alcohol Dependency or Abuse': 'Dépendance ou Abus à l’Alcool',
+                'Ritalin': 'Ritalin',
 
-            'Anemia': 'Anémie',
+                'Other': 'Autre',
 
-            'Anxiety': 'Anxiété',
+                'Do You Take Any Recreational Drugs Or Herbal / Natural Remedies?': 'Est-ce que vous prenez des Drogues récréatives ou des Remèdes naturels?',
 
-            'Arthritis': 'Arthrite',
+                'If No, Since When Have You Been Off The Drug?': 'Si Non, Depuis quand ne preniez vous plus la drogue ou remède naturel?',
 
-            'Bleeding Problems': 'Problèmes de Saignement',
+                'Never Taken': 'Jamais utilisé',
 
-            'Blood Clots': 'Caillots Sanguins',
+                'Do You Have Any Of the Following Medical Conditions?': 'Est-ce que vous avez des problèmes de santé? Le(s)quel(s)?',
 
-            'Cancer': 'Cancer',
+                'AIDS or HIV': 'SIAD ou VIH',
 
-            'Dementia': 'Démence',
+                'Alcohol Dependency or Abuse': 'Dépendance ou Abus à l’Alcool',
 
-            'Chronic Obstructive Pulmonary Disease or Emphysema': 'Emphysème ou Maladie Pulmonaire Obstructive Chronique',
+                'Anemia': 'Anémie',
 
-            'Depression': 'Dépression',
+                'Anxiety': 'Anxiété',
 
-            'Drug Dependency or Abuse': 'Dépendance ou Abus de Drogues',
+                'Arthritis': 'Arthrite',
 
-            'Diabetes': 'Diabète',
+                'Bleeding Problems': 'Problèmes de Saignement',
 
-            'Gout': 'Goutte',
+                'Blood Clots': 'Caillots Sanguins',
 
-            'Heart Disease': 'Maladie Cardiaque',
+                'Cancer': 'Cancer',
 
-            'Heart Arrythmia': 'Arrythmie Cardiaque',
+                'Dementia': 'Démence',
 
-            'High Cholesterol': 'Cholesterol élevé',
+                'Chronic Obstructive Pulmonary Disease or Emphysema': 'Emphysème ou Maladie Pulmonaire Obstructive Chronique',
 
-            'High Blood Pressure': 'Tension Arterielle élevée',
+                'Depression': 'Dépression',
 
-            'Hypothyroidism': 'Hypothyroidie',
+                'Drug Dependency or Abuse': 'Dépendance ou Abus de Drogues',
 
-            'Hyperthyroidism': 'Hyperthyroidie',
+                'Diabetes': 'Diabète',
 
-            'Kidney Disease': 'Maladie Rénale',
+                'Gout': 'Goutte',
 
-            'Leukemia': 'Leucémie',
+                'Heart Disease': 'Maladie Cardiaque',
 
-            'Liver Disease': 'Maladie de Foie',
+                'Heart Arrythmia': 'Arrythmie Cardiaque',
 
-            'Hepatitis': 'Hépatite',
+                'High Cholesterol': 'Cholesterol élevé',
 
-            'Osteoporosis': 'Ostéoporose',
+                'High Blood Pressure': 'Tension Arterielle élevée',
 
-            'Pancreatitis': 'Pancreatite',
+                'Hypothyroidism': 'Hypothyroidie',
 
-            'Peripheral Vascular Disease': 'Maladie Vasculaire Péripherique',
+                'Hyperthyroidism': 'Hyperthyroidie',
 
-            'Pulmonary Embolism': 'Embolie Pulmonaire',
+                'Kidney Disease': 'Maladie Rénale',
 
-            'Reflux or GERD': 'Reflus o RGO',
+                'Leukemia': 'Leucémie',
 
-            'Seizures': 'Crise dépilepsie',
+                'Liver Disease': 'Maladie de Foie',
 
-            'Sleep Apnea': 'Apnée de Sommeil',
+                'Hepatitis': 'Hépatite',
 
-            'Stroke': 'Accident Vasculaire Cérébral',
+                'Osteoporosis': 'Ostéoporose',
 
-            'Other': 'Autre',
+                'Pancreatitis': 'Pancreatite',
 
-            'Do You Have Any Of the Following Medical Conditions?': 'Est-ce que vous avez des problèmes de santé? Le(s)quel(s)?',
+                'Peripheral Vascular Disease': 'Maladie Vasculaire Péripherique',
 
-            'Bleeding Problems': 'Problèmes de Saignement',
+                'Pulmonary Embolism': 'Embolie Pulmonaire',
 
-            'Von Willebrand': 'Von Willebrand',
+                'Reflux or GERD': 'Reflus o RGO',
 
-            'Hemophilia A (Factor 8 deficiency)': 'Hémophilie type A (Déficience Facteur 8)',
+                'Seizures': 'Crise dépilepsie',
 
-            'Hemophilia B (Christmas disease)': 'Hémophilie type B (Maladie de Christmas)',
+                'Sleep Apnea': 'Apnée de Sommeil',
 
-            'Factor 5 Leiden': 'Facteur 5 Leiden',
+                'Stroke': 'Accident Vasculaire Cérébral',
 
-            'Factor 2 deficiency': 'Déficience Facteur 2',
+                'Other': 'Autre',
 
-            'Factor 7 deficiency': 'Déficience Facteur 7',
+                'Do You Have Any Of the Following Medical Conditions?': 'Est-ce que vous avez des problèmes de santé? Le(s)quel(s)?',
 
-            'Factor 10 deficiency': 'Déficience Facteur 10',
+                'Bleeding Problems': 'Problèmes de Saignement',
 
-            'Factor 12 deficiency': 'Déficience Facteur 12',
+                'Von Willebrand Hemophilia A (Factor 8 deficiency)': 'Von Willebrand Hemophilia A (Factor 8 deficiency)',
 
-            'Other': 'Autre',
+                'Hemophilia A (Factor 8 deficiency)': 'Hémophilie type A (Déficience Facteur 8)',
 
-            'Cancer': 'Cancer',
+                'Hemophilia B (Christmas disease)': 'Hémophilie type B (Maladie de Christmas)',
 
-            'Breast': 'Sein',
+                'Factor 5 Leiden': 'Facteur 5 Leiden',
 
-            'Prostate': 'Prostate',
+                'Factor 2 deficiency': 'Déficience Facteur 2',
 
-            'Lung': 'Poumon',
+                'Factor 7 deficiency': 'Déficience Facteur 7',
 
-            'Colon / Colorectal': 'Colon/Colorectal',
+                'Factor 10 deficiency': 'Déficience Facteur 10',
 
-            'Kidney': 'Rein',
+                'Factor 12 deficiency': 'Déficience Facteur 12',
 
-            'Bladder': 'Vessie',
+                'Other': 'Autre',
 
-            'Thyroid': 'Thyroïde',
+                'Cancer': 'Cancer',
 
-            'Lymphoma': 'Lymphome',
+                'Breast': 'Sein',
 
-            'Melanoma': 'Mélanome',
+                'Prostate': 'Prostate',
 
-            'Endometrial': 'Endomètre',
+                'Lung': 'Poumon',
 
-            'Leukemia': 'Leucémie',
+                'Colon / Colorectal': 'Colon/Colorectal',
 
-            'Pancreatic': 'Pancréas',
+                'Kidney': 'Rein',
 
-            'Liver': 'Foie',
+                'Bladder': 'Vessie',
 
-            'Other': 'Autre',
+                'Thyroid': 'Thyroïde',
 
-            'Hepatitis': 'Hépatite',
+                'Lymphoma': 'Lymphome',
 
-            'Auto-immune': 'Auto-immune',
+                'Melanoma': 'Mélanome',
 
-            'Alcohol-induced': 'Induite par l’Alcool',
+                'Endometrial': 'Endomètre',
 
-            'Fatty-Liver': 'Foie-Gras',
+                'Leukemia': 'Leucémie',
 
-            'Hepatitis A': 'Hépatite type A',
+                'Pancreatic': 'Pancréas',
 
-            'Hepatitis B – Active': 'Hépatite type B – Active',
+                'Liver': 'Foie',
 
-            'Hepatitis B – Chronic': 'Hépatite type B – Chronique',
+                'Other': 'Autre',
 
-            'Hepatitis B – Cured': 'Hépatite type B – Guérie',
+                'Hepatitis': 'Hépatite',
 
-            'Hepatitis C – Active': 'Hépatite type C – Active',
+                'Auto - immune': 'Auto-immune',
 
-            'Hepatitis C – Chronic': 'Hépatite type C – Chronique',
+                'Alcohol - induced': 'Induite par l’Alcool',
 
-            'Hepatitis C – Cured': 'Hépatite type C – Guérie',
+                'Fatty-Liver': 'Foie-Gras',
 
-            'Hepatitis D': 'Hépatite type D',
+                'Hepatitis A': 'Hépatite type A',
 
-            'Hepatis E': 'Hépatite type E',
+                'Hepatitis B – Active': 'Hépatite type B – Active',
 
-            'Other': 'Autre',
+                'Hepatitis B – Chronic': 'Hépatite type B – Chronique',
 
-            'Have you Ever Had Surgery?': 'Est-ce que vous avez déjà subi une intervention chirurgicale?',
+                'Hepatitis B – Cured': 'Hépatite type B – Guérie',
 
-            'What Type of Surgery?': 'Quel Type de Chirurgie?',
+                'Hepatitis C – Active': 'Hépatite type C – Active',
 
-            'When Was Your Surgery?': 'Quand est-ce que vous avec eu l’intervention chirurgicale?',
+                'Hepatitis C – Chronic': 'Hépatite type C – Chronique',
 
-            'Before 1970': 'Avant 1970',
+                'Hepatitis C – Cured': 'Hépatite type C – Guérie',
 
-            'What Was the Surgeon’s Name?': 'Qu’est-ce qui c’est le nom du Chirurgien?',
+                'Hepatitis D': 'Hépatite type D',
 
-            'No Previous Surgeries': 'Non, pas de Chirurgies Antérieures',
+                'Hepatis E': 'Hépatite type E',
 
-            'Do You Take Any Medications Regularly?': 'Est-ce que vous prenez des médicaments régulièrement?',
+                'Other': 'Autre',
 
-            'Please Upload Your Medication File (or Take Photograph)': 'SVP télécharger votre fichier de Médicaments (ou Prenez une photographie)',
+                'Have you Ever Had Surgery?': 'Est-ce que vous avez déjà subi une intervention chirurgicale?',
 
-            'Do You Have a Referral?': 'Est-ce que vous avez un demande de consultation de votre médecin?',
+                'What Type of Surgery?': 'Quel Type de Chirurgie?',
 
-            'Please Upload Your Referral File (or Take Photograph)': 'SVP télécharger votre fichier de Demande de Consultation (ou Prenez une photographie)',
+                'When Was Your Surgery?': 'Quand est-ce que vous avec eu l’intervention chirurgicale?',
 
-            'Enter Information Manually': 'Saisir les Informations Manuellement',
+                'Before 1970': 'Avant 1970',
 
-            'Submit': 'Soumettre',
+                'What Was the Surgeon’s Name?': 'Qu’est-ce qui c’est le nom du Chirurgien?',
 
-            'If no, when did you quite smoking': 'Si non, quand avez-vous arrêté de fumer?',
+                'No Previous Surgeries': 'Non, pas de Chirurgies Antérieures',
 
-            'Bleeding Problems.Type ?': ' Problèmes de saignement.Type?',
+                'Do You Take Any Medications Regularly?': 'Est-ce que vous prenez des médicaments régulièrement?',
 
-            'Cancer.Type ?': ' Cancer.Type?',
+                'Please Upload Your Medication File (or Take Photograph)': 'SVP télécharger votre fichier de Médicaments (ou Prenez une photographie)',
 
-            'Hepatitis.Type ?': 'Hépatite.Type?',
+                'Do You Have a Referral?': 'Est-ce que vous avez un demande de consultation de votre médecin?',
 
-            'No': 'Non',
+                'Please Upload Your Referral File (or Take Photograph)': 'SVP télécharger votre fichier de Demande de Consultation (ou Prenez une photographie)',
 
-            'Never': 'Jamais',
+                'Enter Information Manually': 'Saisir les Informations Manuellement',
 
-            'Choose': 'Choisir',
+                'Submit': 'Soumettre',
 
-            'Please fill out your Frist Name': '',
+                'If no, when did you quite smoking': 'Si non, quand avez-vous arrêté de fumer?',
 
-            'Please fill out your Last Name': '',
+                'Bleeding Problems.Type ?': ' Problèmes de saignement.Type?',
 
-            'Please fill out your Birthday': '',
+                'Cancer.Type ?': ' Cancer.Type?',
 
-            ' Please fill out your Medicare Number ': '',
+                'Hepatitis.Type ?': 'Hépatite.Type?',
 
-            'Please fill out your Expiration Date': '',
+                'No': 'Non',
 
-            'Please fill out your Email': '',
+                'Never': 'Jamais',
 
-            'Please fill out your Phone Number': '',
+                'Choose': 'Choisir',
 
-            'Please write your Family Doctor': '',
+                'Please fill out your Frist Name': '',
 
-            'Please fill out your Living Activities': '',
+                'Please fill out your Last Name': '',
 
-            'Please fill out your off work date': '',
+                'Please fill out your Birthday': '',
 
-            'Please select one of the work options': '',
+                ' Please fill out your Medicare Number ': '',
 
-            'Please fill out your Sport Activities': '',
+                'Please fill out your Expiration Date': '',
 
-            'Please fill out your Hand Write': '',
+                'Please fill out your Email': '',
 
-            ' Please fill out, How Many Years Do You Smoke ': '',
+                'Please fill out your Phone Number': '',
 
-            ' Please fill out, How Many Smoke Per Day ': '',
+                'Please write your Family Doctor': '',
 
-            'Please fill out your Smoke Off Date ': '',
+                'Please fill out your Living Activities': '',
 
-            'Please fill out, How Many Time Do You Drink Per week ': '',
+                'Please fill out your off work date': '',
 
-            'Please fill out, How Many Recreational Drug Per Week ': '',
+                'Please select one of the work options': '',
 
-            'Please fill out, What Recreational Drug Do you Use': '',
+                'Please fill out your Sport Activities': '',
 
-            ' Please fill out your Recreational Drug Off Date ': '',
+                'Please fill out your Hand Write': '',
 
-            ' Please select your Bleeding Problem Type ': '',
+                ' Please fill out, How Many Years Do You Smoke ': '',
 
-            ' Please select your Cancer Problem Type ': '',
+                ' Please fill out, How Many Smoke Per Day ': '',
 
-            ' Please select your Hepatitis Problem Type': '',
+                'Please fill out your Smoke Off Date ': '',
 
-            ' Please write your Surgery Name ': '',
+                'Please fill out, How Many Time Do You Drink Per week ': '',
 
-            ' Please fill out your Surgery Date ': '',
+                'Please fill out, How Many Recreational Drug Per Week ': '',
 
-            ' Please upload your Medical File': '',
+                'Please fill out, What Recreational Drug Do you Use': '',
 
-            ' Please upload your Referral File ': '',
+                ' Please fill out your Recreational Drug Off Date ': '',
 
-            ' Are you sure all the information above is correct? ': '',
-        }
+                ' Please select your Bleeding Problem Type ': '',
 
-        var spanishLanguage = {
+                ' Please select your Cancer Problem Type ': '',
 
-            'Background Information': '',
+                ' Please select your Hepatitis Problem Type': '',
 
-            'Choose Option': 'Elegir opción',
+                ' Please write your Surgery Name ': '',
 
-            'First Name': 'Nombre',
+                ' Please fill out your Surgery Date ': '',
 
-            'Last Name': 'Apellido',
+                ' Please upload your Medical File': '',
 
-            'Birthday': 'Fecha de Nacimineto',
+                ' Please upload your Referral File ': '',
 
-            'Gender': 'Sexo',
-
-            'Male': 'Masculino',
-
-            'Female': 'Femenino',
-
-            'Other/Prefer not to answer': 'Otro/Prefiero no Responder',
-
-            'Medicare Number': 'Número de la Carta de Salud',
-
-            'Yes': 'Si',
-
-            'No': 'No',
-
-            'Never': 'Nunca',
-
-            'No Medicare Card': 'No Tengo Carta de Salud',
-
-            'Expiration Date': 'Fecha de Expiración',
-
-            'Email': 'Corréo Electrónico',
-
-            'Phone Number': 'Número de Teléfono',
-
-            'What is the Name of Your Family Doctor': '¿Cual es el Nombre de su Doctor de Familia?',
-
-            'Are You Working Now ?': '¿Está trabajando ahora? ',
-
-            'Yes; What Do You Do For A Living/What is Your Profession ?': 'Si; ¿A Qué se Dedica/Que es su Profesión?',
-
-            'Accountant': 'Contador',
-
-            'Actor / Actress': 'Actor',
-
-            'Architect': 'Arquitecto',
-
-            'Author': 'Autor',
-
-            'Baker': 'Panadero',
-
-            'Bricklayer': 'Albañil',
-
-            'Bus Driver': 'Conductor de Autobús',
-
-            'Butcher': 'Carnicero',
-
-            'Carpenter': 'Carpintero',
-
-            'Cleaner': 'Limpiador',
-
-            'Chef / Cook': 'Cocinero',
-
-            'Dentist': 'Dentista',
-
-            'Doctor': 'Doctor',
-
-            'Refuse Collector': 'Recolector de Basura',
-
-            'Electrician': 'Electricista',
-
-            'Engineer': 'Ingeniero',
-
-            'Factory Worker': 'Trabajador de Fábrica',
-
-            'Farmer': 'Granjero',
-
-            'Fireman/Fire Fighter': 'Bombero',
-
-            'Fisherman': 'Pescador',
-
-            'Florist': 'Florista',
-
-            'Gardener': 'Jardinero',
-
-            'Hairdresser': 'Peluquero',
-
-            'Journalist': 'Periodista',
-
-            'Lawyer': 'Abogado',
-
-            'Librarian': 'Bibliotecario',
-
-            'Mechanic': 'Mecánico',
-
-            'Model': 'Modelo',
-
-            'Nurse': 'Enfermero',
-
-            'Optician': 'Optómetra',
-
-            'Orderly': 'Camillero de Hospital',
-
-            'Painter': 'Pintor',
-
-            'Pharmacist': 'Farmacéutico',
-
-            'Photographer': 'Fotógrafo',
-
-            'Pilot': 'Piloto',
-
-            'Plumber': 'Fontanero',
-
-            'Politician': 'Político',
-
-            'Policeman / Policewoman': 'Policía',
-
-            'Postman': 'Cartero',
-
-            'Real Estate Agent': 'Agente Inmobiliario',
-
-            'Scientist': 'Científico',
-
-            'Secretary': 'Secretario',
-
-            'Soldier': 'Soldaro',
-
-            'Tailor/Seamstress': 'Sastre/Costurera',
-
-            'Taxi Driver': 'Conductor de Taxi',
-
-            'Teacher': 'Profesor',
-
-            'Veterinary Doctor': 'Veterinario',
-
-            'Waiter/Waitress': 'Camarero',
-
-            'Other': 'Otro',
-
-            'No; Retired': 'No; Jubilado',
-
-            'If No, Since When Have You Been Off Work?': '¿Si No, Cuando se Jubiló?',
-
-            'Never Worked': 'Nunca trabajé ',
-
-            'If Never, Please Select One of the Following Options?': 'Si Nunca Trabajó, Por Favor, Elija una Opción',
-
-            'Student': 'Estudiante',
-
-            'Housewife/Househusband': 'Ama/Amo de Case',
-
-            'Other': 'Otro',
-
-            'What Sports/Activities Do You Do?': '¿Que Deportes Practica? ',
-
-            'None': 'Ninguno',
-
-            'Kayaking': 'Kayak',
-
-            'Canoeing': 'Canoa',
-
-            'Cross – Country Skiing': 'Esquí de Fondo',
-
-            'Swimming': 'Natación',
-
-            'Freediving': 'Apnéa',
-
-            'Paddleboarding': 'SUP (Remo de Pie de Embarque)',
-
-            'Scuba Diving': 'Submarinismo',
-
-            'Aerobics': 'Aeróbicos',
-
-            'Archery': 'Tiro al Arco',
-
-            'Boxing': 'Boxeo',
-
-            'Running': 'Corriendo',
-
-            'Cycling': 'Ciclismo',
-
-            'Figure Skating': 'Patinaje',
-
-            'Horseback Riding': 'Montar a Caballo',
-
-            'Kickboxing': 'Kickboxing',
-
-            'Ultimate Frisbee': 'Ultimate Frisbee',
-
-            'Walking': 'Caminando',
-
-            'Weightlifting': 'Levantamiento de Pesas',
-
-            'Wrestling': 'Lucha Libre',
-
-            'Baseball': 'Béisbol',
-
-            'Softball': 'Sofbol',
-
-            'Basketball': 'Baloncesto',
-
-            'Tennis': 'Tenis',
-
-            'Badminton': 'Bádminton',
-
-            'Bowling': 'Bolos',
-
-            'Curling': 'Curling',
-
-            'Soccer': 'Fútbol',
-
-            'Football': 'Fútbol Americano',
-
-            'Ski': 'Esquí',
-
-            'Hockey': 'Hockey',
-
-            'Other': 'Otro',
-
-            'How Often?': '¿Con Qué Frecuencia?',
-
-            'Daily': 'Cotidiano',
-
-            '3 times a week': '3 veces por semana',
-
-            '2 times a week': '2 veces por semana',
-
-            '1 time per week': '1 vez por semana',
-
-            '2 - 3 times per Month': '2-3 veces al Mes',
-
-            'Monthly': 'Mensual',
-
-            'Rarely': 'Raramente',
-
-            'What Hand Do You Write With?': '¿Con qué Mano Escribe?',
-
-            'Right': 'Derecha',
-
-            'Left': 'Izquierda',
-
-            'Ambidextrous': 'Ambidextra',
-
-            'Do You Smoke?': '¿Usted Fuma?',
-
-            'If Yes, For How Many Years?': 'Si, ¿Por Cuantos Años?',
-
-            'More than 20 years': 'Mas de 20 Años',
-
-            'How Many Cigarettes Per Day': '¿Cuantos Cigarrillos al Dia?',
-
-            'More than 1 Pack': 'Mas de 1 Paquete',
-
-            'Do You Drink Alcohol': '¿Usted Bebe Alcohol?',
-
-            'If Yes, How Many Drinks Per Week?': 'Si, ¿Cuantos Copas Por Semana?',
-
-            'More than 20 Drinks': 'Mas de 20 Copas',
-
-            'If no, when did you quite smoking': ' Si no, ¿cuándo dejó de fumar?',
-
-            'Do You Take Any Recreational Drugs Or Herbal / Natural Remedies?': '¿Usted Consume Drogas O Remedios Naturales/de Hierbas?',
-
-            'If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?': 'Si, ¿Con qué Frecuencia Usted Consume la Droga O Remedios Naturale/de hierba?',
-
-            'Rarely': 'Raramente',
-
-            'Monthly': 'Mensual',
-
-            'Weekly': 'Semanal',
-
-            'Daily': 'Diario',
-
-            '2 or more times per day': '2 o mas veces al dia',
-
-            'If Yes, Which Drug or Herbal / Natural Remedy do you Use?': 'Si, ¿Que Droga o Remedio Naturale/de Hierba?',
-
-            'chondroitin': 'condroitina',
-
-            'glucosamine': 'glucosamina',
-
-            'ginger': 'jengibre',
-
-            'ginkgo biloba': 'ginkgo biloba',
-
-            'ginseng': 'ginseng',
-
-            'st - John’s Wort': 'hierba de San Juan',
-
-            'turmeric': 'Cúrcuma',
-
-            'Canabis / Marijuana': 'Canabis/Marijuana',
-
-            'Stimulants (e.g.cocaine, amphetamines,methamphetamine, ecstacy[MDMA]) ': 'Estimulantes (e.g.cocaína, anfetaminas, metanfetaminas, éxtasis[MDMA])',
-
-            'Opium - related painkillers (e.g.heroin, morphine, fentanyl, oxycodone, dilaudid)': 'Analgésico a base de opiodes (e.g. heroína, morfina, fentanilo, oxycodona',
-
-            'Hallucinogens (e.g.LSD)': 'Alucinógenos (e.g. LSD)',
-
-            'Benzodiazepines (e.g.ativan, valium)': 'Benzodiazepinas (e.g. ativan, valium)',
-
-            'Ketamine': 'Ketamina',
-
-            'Ritalin': 'Ritalin',
-
-            'Other': 'Otro',
-
-            'Do You Take Any Recreational Drugs Or Herbal / Natural Remedies?': '¿Usted Consume Drogas O Remedios Naturales/de Hierbas?',
-
-            'If No, Since When Have You Been Off The Drug?': '¿Si No, Desde Quando no Consume la Droga o Remedio?',
-
-            'Never Taken': 'Nunca ha Consume Drogas o Remedios Naturales/de Hierbas',
-
-            'Do You Have Any Of the Following Medical Conditions?': '¿Tiene Alguna de las Siguientes Condiciones Médicas?',
-
-            'AIDS or HIV': 'SIDA or VIH',
-
-            'Alcohol Dependency or Abuse': 'Dependencia o Abuso de Alcohol',
-
-            'Anemia': 'Anemia',
-
-            'Anxiety': 'Ansiedad',
-
-            'Arthritis': 'Artritis',
-
-            'Bleeding Problems': 'Problemas de Sangrado',
-
-            'Blood Clots': 'Coágulos de Sangre',
-
-            'Cancer': 'Cáncer',
-
-            'Dementia': 'Demencia',
-
-            'Chronic Obstructive Pulmonary Disease or Emphysema': 'Enfermedad Pulmonar Obstructiva Crónica o Enfisema',
-
-            'Depression': 'Depresión',
-
-            'Drug Dependency or Abuse': 'Dependencia o Abuso de Drogas',
-
-            'Diabetes': 'Diabetes',
-
-            'Gout': 'Gota',
-
-            'Heart Disease': 'Cardiopatía',
-
-            'Heart Arrythmia': 'Arritmia Cardiaca',
-
-            'High Cholesterol': 'Colesterol Alto',
-
-            'High Blood Pressure': 'Hipertensión',
-
-            'Hypothyroidism': 'Hipotiroidismo',
-
-            'Hyperthyroidism': 'Hipertiroidismo',
-
-            'Kidney Disease': 'Nefropatía',
-
-            'Leukemia': 'Leucemia',
-
-            'Liver Disease': 'Enfermedad del Higado',
-
-            'Hepatitis': 'Hepatitis',
-
-            'Osteoporosis': 'Osteoporosis',
-
-            'Pancreatitis': 'Pancreatitis',
-
-            'Peripheral Vascular Disease': 'Enfermedad Vascular Periférica',
-
-            'Pulmonary Embolism': 'Embolia Pulmonar',
-
-            'Reflux or GERD': 'Reflujo o ERG',
-
-            'Seizures': 'Convulsiones',
-
-            'Sleep Apnea': 'Apnea del Sueño',
-
-            'Stroke': 'Accidente Cerebrovascular',
-
-            'Other': 'Otro',
-
-            'Do You Have Any Of the Following Medical Conditions?': '¿Tiene Alguna de las Siguientes Condiciones Médicas?',
-
-            'Bleeding Problems': 'Problemas de Sangrado',
-
-            'Von Willebrand Hemophilia A (Factor 8 deficiency)': 'Von Willebrand; Hemofilia A (Deficiencia Factor 8)',
-
-            'Hemophilia B (Christmas disease)': 'Hemofilia B (Enfernedad de Christmas)',
-
-            'Factor 5 Leiden': 'La Mutación 5 Leiden',
-
-            'Factor 2 deficiency': 'Deficiencia Factor 2',
-
-            'Factor 7 deficiency': 'Deficiencia Factor 7',
-
-            'Factor 10 deficiency': 'Deficiencia Factor 10',
-
-            'Factor 12 deficiency': 'Deficiencia Factor 12',
-
-            'Other': 'Otro',
-
-            'Cancer': 'Cancer',
-
-            'Breast': 'de Mama',
-
-            'Prostate': 'Próstata',
-
-            'Lung': 'Pulmón',
-
-            'Colon / Colorectal': 'Colon/Colorrectal',
-
-            'Kidney': 'Riñón',
-
-            'Bladder': 'Vejiga',
-
-            'Thyroid': 'Tiroides',
-
-            'Lymphoma': 'Linfoma',
-
-            'Melanoma': 'Melanoma',
-
-            'Endometrial': 'Endometrio',
-
-            'Leukemia': 'Leucemia',
-
-            'Pancreatic': 'Pancreático',
-
-            'Liver': 'Hígado',
-
-            'Other': 'Otro',
-
-            'Bleeding Problems.Type ?': 'Problemas de sangrado. ¿Tipo?',
-
-            'Hepatitis': 'Hepatitis',
-
-            'Hepatitis.Type ?': '¿Tipo de hepatitis?',
-
-            'Auto - immune': 'Autoinmune',
-
-            'Alcohol - induced': 'Inducido por Alcohol',
-
-            'Fatty-Liver': 'Hígado Graso',
-
-            'Hepatitis A': 'Hepatitis A',
-
-            'Hepatitis B – Active': 'Hepatitis B – Activo',
-
-            'Hepatitis B – Chronic': 'Hepatitis B – Crónico',
-
-            'Hepatitis B – Cured': 'Hepatitis B – Curado',
-
-            'Hepatitis C – Active': 'Hepatitis C – Activo',
-
-            'Hepatitis C – Chronic': 'Hepatitis C – Crónico',
-
-            'Hepatitis C – Cured': 'Hepatitis C – Curado',
-
-            'Hepatitis D': 'Hepatitis D',
-
-            'Hepatis E': 'Hepatis E',
-
-            'Other': 'Otro',
-
-            'Cancer.Type ?': 'Cancer.Type?',
-
-            'Have you Ever Had Surgery?': '¿Alguna vez ha Tenido una Cirugía?',
-
-            'What Type of Surgery?': '¿Qué Tipo de Cirugía?',
-
-            'When Was Your Surgery?': '¿Cuándo Fue la Cirugía?',
-
-            'Before 1970': 'Antes de 1970',
-
-            'What Was the Surgeon’s Name?': '¿Cuál era el Nombre del Cirujano?',
-
-            'No Previous Surgeries': 'Sin Cirugías Previas',
-
-            'Do You Take Any Medications Regularly?': '¿Toma algún Medicamento Regularmente? ',
-
-            'Please Upload Your Medication File (or Take Photograph)': 'Descarge su Archivo de Medicamentos (o Tome Fotografías)',
-
-            'Do You Have a Referral?': '¿Tiene una Referencia?',
-
-            'Please Upload Your Referral File (or Take Photograph)': 'Descarge su Archivo de Referencia (o Tome Fotografías)',
-
-            'Enter Information Manually': 'Ingresar Información Manualmente',
-
-            'Submit': 'Entregar',
-
-            'Choose': 'Choisir',
-
-            'Please fill out your Frist Name': '',
-
-            'Please fill out your Last Name': '',
-
-            'Please fill out your Birthday': '',
-
-            'Please fill out your Medicare Number ': '',
-
-            'Please fill out your Expiration Date': '',
-
-            'Please fill out your Email': '',
-
-            'Please fill out your Phone Number': '',
-
-            'Please write your Family Doctor': '',
-
-            'Please fill out your Living Activities': '',
-
-            'Please fill out your off work date': '',
-
-            'Please select one of the work options': '',
-
-            'Please fill out your Sport Activities': '',
-
-            'Please fill out your Hand Write': '',
-
-            ' Please fill out, How Many Years Do You Smoke ': '',
-
-            ' Please fill out, How Many Smoke Per Day ': '',
-
-            'Please fill out your Smoke Off Date ': '',
-
-            'Please fill out, How Many Time Do You Drink Per week ': '',
-
-            'Please fill out, How Many Recreational Drug Per Week ': '',
-
-            'Please fill out, What Recreational Drug Do you Use': '',
-
-            ' Please fill out your Recreational Drug Off Date ': '',
-
-            ' Please select your Bleeding Problem Type ': '',
-
-            ' Please select your Cancer Problem Type ': '',
-
-            ' Please select your Hepatitis Problem Type': '',
-
-            ' Please write your Surgery Name ': '',
-
-            ' Please fill out your Surgery Date ': '',
-
-            ' Please upload your Medical File': '',
-
-            ' Please upload your Referral File ': '',
-
-            ' Are you sure all the information above is correct? ': '',
-        };
-        var chineseLanguage =
-        {
-            'Choose Option': '选项 (xuanxiang)',
-            'First Name': '名 (ming)',
-            'Last Name': '姓 (xing)',
-            'Birthday': '生日 (sheng ri)',
-            'Gender': '性别 (xingbie)',
-            'Male': '男 (nan)',
-            'Female': '女(nv)',
-            'Other/Prefer not to answer': '其他 (qita) / 选择不回答 (xuanze buhuida)',
-            'Medicare Number': '医疗卡号码 (yiliaoka haoma)',
-            'Yes': '是 (shi)',
-            'No Medicare Card': '没有医疗卡 (meiyou yiliaoka)',
-            'Expiration Date': '有效日期 (youxiao riqi )',
-            'Email': '电子邮件 (dianzi youjian)',
-            'Phone Number': '电话号码 (dianhua haoma )',
-            'What is the Name of Your Family Doctor': '您的家庭医生的名字 (ninde jiating yishengde mingzi )',
-            'Are You Working Now ?': '您现在有工作吗 (nin xianzai you gongzuo ma？)',
-            'Yes; What Do You Do For A Living/What is Your Profession ?': '是的 (shide)， 您从事什么行业  (nin congshi shenme hangye)? ',
-            'Accountant': '会计师(kuaijishi)',
-            'Actor / Actress': '演员 女演员(yanyuan, nvyanyuan)',
-            'Architect': '建筑师 (jianzhushi)',
-            'Author': '作家 (zuojia)',
-            'Baker': '烘培师 (hongpeishi)',
-            'Bricklayer': '瓦工 (wagong)',
-            'Bus Driver': '公车司机 (gongche siji)',
-            'Butcher': ' 卖肉的 (mairoude  )',
-            'Carpenter': '木匠 (mujiang)',
-            'Cleaner': '清洁工 (qingjiegong)',
-            'Chef / Cook': '厨师 (chushi)',
-            'Dentist': '牙医 (yayi)',
-            'Doctor': '医生 (yisheng)',
-            'Electrician': '电工 (diangong)',
-            'Engineer': '工程师 (gongchengshi) ',
-            'Factory Worker': '工厂员工 (gongchang yuangong)',
-            'Farmer': '农夫 (nongfu)',
-            'Fireman/Fire Fighter': '消防员 (xianfangyuan )',
-            'Fisherman': '渔夫 (yufu )',
-            'Florist': '花艺师 (huayishi)',
-            'Gardener': '园艺师 (yuanyishi)',
-            'Hairdresser': '理发师 (lifashi)',
-            'Journalist': '记者 (jizhe)',
-            'Lawyer': ' 律师 (lushi)',
-            'Librarian': '图书管理员 (tushu guanliyuan )',
-            'Mechanic': '机械技工 (jixie jizong )',
-            'Model': '模特儿 (mote er)',
-            'Nurse': '护士 (hushi)',
-            'Optician': '验光师 (yanguangshi)',
-            'Orderly': '看护者 (kanhuzhe )',
-            'Painter': '画家 (huajia)',
-            'Pharmacist': '药剂师 (jiaojishi)',
-            'Photographer': '摄影师 (sheyingshi)',
-            'Pilot': '飞行员 (feixingyuan)',
-            'Plumber': '水管匠 (shuiguanjiang)',
-            'Politician': '政治家 ( xhezhijia)',
-            'Policeman / Policewoman': '警察 (jingcha) / 女警 (nujing)',
-            'Postman': '邮递员 (youdiyuan)',
-            'Real Estate Agent': '房产经纪 (fanchan jingji)',
-            'Scientist': '科学家 (kexuejia)',
-            'Secretary': '秘书 (mishu)',
-            'Soldier': '军人 (junren)',
-            'Tailor/Seamstress': '裁缝师 (caifenshi) / 女裁缝师 (nucaifengshi)',
-            'Taxi Driver': '出租司機 (chuzusiji)',
-            'Teacher': '教師 (jiaoshi)',
-            'Veterinary Doctor': '獸醫 (shouyi)',
-            'Waiter/Waitress': '服務員 (fuwuyuan) / 女服務員 (nvfuwuyuan)',
-            'Other': '其它 (qita)',
-            'No; Retired': '不是 (bushi); ’退休 (tuixiu)',
-            'If No, Since When Have You Been Off Work?': '若不是,什麼時候開始不工作 (ruobushi, shenme shihou kaishi bugongzuo)?',
-            'Never Worked': '從來沒有工作過 (conglai meiyou gongzuoguo)',
-            'If Never, Please Select One of the Following Options?': '若是從來沒有,請選以下的選項 (ruoshi conlaimeiyou, qing xuanyixiade xuanxiang)',
-            'Student': '學生 (xuesheng)',
-            'Housewife/Househusband': '家庭主婦 jiatingzhufu) / 家庭主夫 (jiatingzhufu)',
-            'Other': '其它 (qita)',
-            'What Sports/Activities Do You Do?': '什么运动(shenme yundong) / 您做什么样的运动(nin zuo shenmeyang de yundong) ? ',
-            'None': '都没有 (dou meiyou)',
-            'Kayaking': '皮筏艇 (pifating)',
-            'Canoeing': '独木舟 (dumuzhou)',
-            'Cross – Country Skiing': '越野滑雪 (yueye huaxue)',
-            'Swimming': '游泳 (youyong)',
-            'Freediving': '自由式潜水 (ziyoushi qianshui)',
-            'Paddleboarding': '划水板 (huashui ban)',
-            'Scuba Diving': '潜水 (qianshui)',
-            'Aerobics': '有氧运动 (youyang yundong)',
-            'Archery': '射箭 (shejian)',
-            'Boxing': '拳击 (quanji)',
-            'Running': '跑步 (paobu)',
-            'Cycling': '自行车 (zixingche)',
-            'Figure Skating': '溜冰 (liubing)',
-            'Horseback Riding': '骑马 (qima)',
-            'Kickboxing': '踢脚拳击 (tijiao quanji)',
-            'Ultimate Frisbee': '终极飞盘 (zhongji feipan)',
-            'Walking': '步行 (buxing)',
-            'Weightlifting': '举重  (juzhong)',
-            'Wrestling': '摔跤 (shuaijiao)',
-            'Baseball': '棒球 (bangqiu)',
-            'Softball': '垒球 (leiqiu)',
-            'Basketball': '篮球 (lanqiu)',
-            'Tennis': '网球 (wangqiu)',
-            'Badminton': '羽毛球 (yumaoqiu)',
-            'Bowling': '保龄球 (baolingqiu)',
-            'Curling': '冰壶 (binghu)',
-            'Soccer': '足球 (zuqiu)',
-            'Football': '美式足球 (meishi zuqiu)',
-            'Ski': '滑雪 (huaxue)',
-            'Hockey': '曲棍球 (qugunqiu)',
-            'Other': '其他 (qita)',
-            'How Often?': '多久1次 (duojiu yici) ?',
-            'Daily': '每日 (meiri)',
-            '3 times a week': '每周3次 (Meizhou 3 ci)',
-            '2 times a week': '每周2次 (Meizhou 2 ci)',
-            '1 time per week': '每周1次 (Meizhou 1ci)',
-            '2 - 3 times per Month': '每月2-3次 (Meizhou 2-3 ci)',
-            'Monthly': '每月 (meiyue)',
-            'Rarely': '很少 (henshao )',
-            'What Hand Do You Write With?': '您用哪一只手写字(nin yong nayizhi shou xiezi )?',
-            'Right': '右 (you)',
-            'Left': '左 (zuo)',
-            'Ambidextrous': '左右手都可以写 (zuoyou shou dou keyi xie )',
-            'Do You Smoke?': '您抽烟吗 (nin chouyan ma)?',
-            'If Yes, For How Many Years?': '如果是,有多少年了(ruguo shi, you duo shao nian le)?',
-            'More than 20 years': '超过二十多年了 (chaoguo 20 duo nian le)',
-            'How Many Cigarettes Per Day': '每天抽多少支香烟 (meitian chou duoshao zhi xiangyan)?',
-            'More than 1 Pack': '超过一包 (chaoguo 1 bao )',
-            'Do You Drink Alcohol': '您喝酒吗 (nin hejiu ma)?',
-            'If yes, how many drinks per week?': '如果是,每周喝几杯酒 (Ruguoshi, Meizhou he jibei jiu)?',
-            'More than 20 Drinks': '超过二十 (chaoguo 20)',
-            'Do You Take Any Recreational Drugs Or Herbal/Natural Remedies?': '您是否服用娱乐性药物或是草药/天然疗法 (nin shifou fuyongle yule xing yaowu huo caoyao /tianran liaofa)?',
-            'If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?': '如果是, 您多久服用一次药物或草药/自然疗法 (ruguoshi , nin duojiu fuyong yici yaowu huo caoyao /ziran liaofa)?',
-            'Rarely': '很少 (hen shao)',
-            'Monthly': '每月 (mei yue)',
-            'Weekly': '每周 (mei zhou)',
-            'Daily': '每日 (mei ri )',
-            '2 or more times per day': '每天两次或更多次 (meitian liang ci huo geng duo ci)',
-            'If Yes, Which Drug or Herbal / Natural Remedy do you Use?': '如果是,您使用哪种药物或是草药/ 自然疗法 (ruguo shi, nin shiyong nazhong yaowu huo caoyao /ziran liaofa)?',
-            'chondroitin': '软骨素 (ruangu su)',
-            'glucosamine': '葡萄糖胺 (putaotang an)',
-            'ginger': '生姜 (sheng jiang)',
-            'ginkgo biloba': '银杏叶 (yinxing ye)',
-            'ginseng': '人篸 (renshen)',
-            'st - John’s Wort': '圣约翰草 (sheng yue han cao )',
-            'turmeric': '姜黄 (jianghuang)',
-            'Canabis / Marijuana': '大麻 (dama)',
-            'Stimulants (e.g.cocaine, amphetamines,methamphetamine, ecstacy[MDMA]) ': '兴奋剂 (例如, 可卡因, 安非他命, 甲基苯比胺, 摇头丸 [MDMA]) (xingfen ji (liru kekayin , anfei taming, jia ji benbing an, yaotouwan, [MDMA])',
-            'Opium - related painkillers (e.g.heroin, morphine, fentanyl, oxycodone, dilaudid)': '阿片类止痛药, (例如, 海洛因, 吗啡, 芬太尼, 羟考酮, 双月桂酸酯) (yu yapian youguan de zhitong yao (liru, hailuoyin, mafei, fen tai ni, qiang kao tong, shuan yuegui suan zhi)',
-            'Hallucinogens (e.g.LSD)': '致幻剂 (zhi huanji), (例如 (liru LSD))',
-            'Benzodiazepines (e.g.ativan, valium)': '苯二氮平(例如麻醉忧虑的药物, 麻醉肌肉的药物) (benerdanping(liru, mazui youlvde  yaowu, mazui jiroude yaowu))',
-            'Ketamine': '氯胺酮 (lu antong)',
-            'Ritalin': '利他林 (lita lin)',
-            'Other': '其他 (qita)',
-            'Do You Take Any Recreational Drugs Or Herbal / Natural Remedies?': '您有服用娱乐性药物或草药/自然疗法吗 (nin you fuyong yulexing yaowu huo caoyao / ziran liaofama)?',
-            'If No, Since When Have You Been Off The Drug?': '如果没有, 您从什么时候开始没有服用了 (ruguo meiyou, nin cong shnme shihou kaishi meiyou fuyongle)?',
-            'Never Taken': '从来没有服用过 (conglai meiyou fuyong guo)',
-            'Do You Have Any Of the Following Medical Conditions?': '您是否患有以下这些疾病 (nin shifou huanyou yixia zhexie jibing)?',
-            'AIDS or HIV': '艾滋病 (aizibing) 或 (huo) 艾滋病病毒 (aizibing bingdu)',
-            'Alcohol Dependency or Abuse': '酗酒 (xujiu), 酒精中毒 (jiujin zhongdu)',
-            'Anemia': '贫血 (pinxue)',
-            'Anxiety': '焦虑 (jiaolu)',
-            'Arthritis': '关节炎 (guanjie yan)',
-            'Bleeding Problems': '出血的问题 (chuxue wenti)',
-            'Blood Clots': '血管阻塞 (xueguan zusai)',
-            'Cancer': '癌症 (aizheng)',
-            'Dementia': '痴呆 (chidai)',
-            'Chronic Obstructive Pulmonary Disease or Emphysema': '慢性阻塞肺疾病, 或肺气肿 (manxing zuse xing fei jibing, huo feiqi zhongliu)',
-            'Depression': '忧郁症 (youyuzheng)',
-            'Drug Dependency or Abuse': '药物依赖性或滥用 (yaowu yilai huo lanyong)',
-            'Diabetes': '糖尿病 (tangniaobing)',
-            'Gout': '痛风 (tongfeng)',
-            'Heart Disease': '心脏病 (xinzang bing)',
-            'Heart Arrythmia': '心率失常 (xinlu shichang)',
-            'High Cholesterol': '高胆固醇 (gao danguchun)',
-            'High Blood Pressure': '高血压 (gao xueya)',
-            'Hypothyroidism': '甲减 (jiajian)',
-            'Hyperthyroidism': '甲亢 (jiakang)',
-            'Kidney Disease': '肾脏疾病 (shenzang jibing)',
-            'Leukemia': '白血病 (baixiebing)',
-            'Liver Disease': '肝病 (ganbing )',
-            'Hepatitis': '肝炎 (ganyan)',
-            'Osteoporosis': '骨质疏松症 (guzhi shusong zheng)',
-            'Pancreatitis': '胰腺炎 (Yixian yan)',
-            'Peripheral Vascular Disease': '周围血管疾病 (zhouwei xieguan jibing)',
-            'Pulmonary Embolism': '肺栓塞 (fei suansai)',
-            'Reflux or GERD': '胃食管反流 (weishiguan fanliu)',
-            'Seizures': '癫痫 (dianxian)',
-            'Sleep Apnea': '睡眠呼吸暂停 (zhuimian huxi zhanting)',
-            'Stroke': '中风 (zhongfeng)',
-            'Other': '其他 (qita)',
-            'Do You Have Any Of the Following Medical Conditions?': '您有没有以下任何病状 (nin youmeiyou yixia renhe bingzhuang)?',
-            'Bleeding Problems': '出血问题 (chuxue wenti)',
-            'Von Willebrand': '温韦伯氏疾病(wenweiboshi jibing)',
-            'Hemophilia A (Factor 8 deficiency)': 'A型血友病 （8号因子缺乏）(A xing xueyoubing (8 hao yinzi quefa))',
-            'Hemophilia B (Christmas disease)': 'B型血友病 （圣诞节病）(B xing xueyou bing ( shengdan jie bing))',
-            'Factor 5 Leiden': '莱顿因子5  (laidun yinzi 5)',
-            'Factor 2 deficiency': '因子2缺陷  (yinzi 2 quexian)',
-            'Factor 7 deficiency': '因子7 缺陷 (yinzi 7 quexian)',
-            'Factor 10 deficiency': '因子10 缺陷 (yinzi 10 quexian)',
-            'Factor 12 deficiency': '因子12 缺陷 (yinzi 12 quexian)',
-            'Other': '其他 (qita)',
-            'Cancer': '癌症 (aizheng)',
-            'Breast': '乳房 (rufang)',
-            'Prostate': '前列腺 (qianliexian)',
-            'Lung': '肺 (fei)',
-            'Colon / Colorectal': '结肠 /结直肠 (dachang /jiezhichang)',
-            'Kidney': '肾 (shen)',
-            'Bladder': '膀胱 (pangguang)',
-            'Thyroid': '甲状腺 (jiazhuang xian)',
-            'Lymphoma': '淋巴瘤 (linba liu)',
-            'Melanoma': '黑色素瘤 (heise suliu)',
-            'Endometrial': '子宫内膜 (zigong neimo)',
-            'Leukemia': '白血病 (baixue bing)',
-            'Pancreatic': '胰 (yi)',
-            'Liver': '肝 (gan)',
-            'Other': '其他 (qita)',
-            'Hepatitis': '肝炎 (ganyan)',
-            'Auto-immune': '自身免疫 aishen mianyi)',
-            'Alcohol-induced': '酒精诱导 (jiujing youdao )',
-            'Fatty-Liver': '脂肪肝 (zhifang gan)',
-            'Hepatitis A': '甲型肝炎 (jiaxiang ganyan)',
-            'Hepatitis B – Active': '乙型肝炎- 活跃 (yixiang ganyan - huoyao)',
-            'Hepatitis B – Chronic': '乙型肝炎- 慢性 (yixing ganyan - manxing)',
-            'Hepatitis B – Cured': '乙型肝炎- 治愈 (yixing ganyan - zhiyu)',
-            'Hepatitis C – Active': '丙行肝炎- 活跃 (bing xing ganyan - huoyao)',
-            'Hepatitis C – Chronic': '丙型肝炎-慢性 (bingxing ganyan - manxing)',
-            'Hepatitis C – Cured': '丙型肝炎- 治愈 (bingxing ganyan - zhiyu)',
-            'Hepatitis D': 'D型肝炎 (D xing ganyan)',
-            'Hepatis E': 'E型肝炎 (E xing ganyan)',
-            'Other': '其他 (qita)',
-            'Have you Ever Had Surgery?': '您有没有动过手术 (nin youmeiyou dongguo shoushu)?',
-            'What Type of Surgery?': '什么类型的手术 (shenme leixing de shoushu)?',
-            'When Was Your Surgery?': '什么时候动的手术 (shenme shihou dong de shoushu)?',
-            'Before 1970': '1970年前 (1970 nian qian)',
-            'What Was the Surgeon’s Name?': '手术医生是叫什么名字 (shoushu yisheng jiao shenme mingzi)?',
-            'No Previous Surgeries': '没有动过手术 (meiyou dongguo shoushu)',
-            'Do You Take Any Medications Regularly?': '您平时有吃什么药吗(nin pingshi you chi shenme yao ma)?',
-            'Please Upload Your Medication File (or Take Photograph)': '请上传您的药剂档案（或是拍照）(qing nin shangchuan ninde yaoji danan (huoshi paizhao))',
-            'Do You Have a Referral?': '您有医生推荐吗 (nin you yisheng tuijian ma)?',
-            'Please Upload Your Referral File (or Take Photograph)': '请上传您的医生推荐信（或是拍照）(qing nin shangchuan ninde yisheng tuijian xin (huoshi paizhao))',
-            'Enter Information Manually': '请填写您的资料 (qing tianxie ninde ziliao)',
-            'Submit': '提交( tijiao)', 
-            'No': '没有', 
-            'Never': '决不',
-            'If no, when did you quite smoking':'如果没有，您什么时候戒烟的？'
-        };
-
-
-        $(document).ready(function () {
-
-            txtFirstName = document.getElementById('first_name');
-            txtLastName = document.getElementById('last_name');
-            txtBirthday = document.getElementById('birthday');
-            txtMedicareNumber = document.getElementById('medicare_number');
-            txtExpirationDate = document.getElementById('expiration_date');
-            txtEmail = document.getElementById('email');
-            txtPhoneNumber = document.getElementById('phone_number');
-            livingActivities = document.getElementById('living_activities');
-            dateOffWork = document.getElementById('date_offwork');
-            neverworkoption = document.getElementById('never_work_option');
-            sportsActivites = document.getElementById('sports_activites');
-            howoftensports = document.getElementById('how_often_sports');
-            familynameOfDoctor = document.getElementById('family_Doctor');
-            handWrite = document.getElementById('hand_write');
-            smokeHowmanyYears = document.getElementById('smoke_howmany_years');
-            smokeHowmanyPerday = document.getElementById('smoke_howmany_perday');
-            smokeOffDate = document.getElementById('smoke_off');
-
-            alcoholHowmanyPerweek = document.getElementById('alcohol_howmany_perweek');
-            alcoholOffDate = document.getElementById('alcohol_off');
-
-            recreationalDrugHowmanyPerweeks = document.getElementById('recreationalDrug_howmany_perweeks');
-            recreationalDrugWhatDrugs = document.getElementById('recreationalDrug_whatDrugs');
-            recreationalDrugOffDate = document.getElementById('drug_off');
-
-            bleedingProblemsTypes = document.getElementById('bleeding_problemstypes');
-            cancerProblemsTypes = document.getElementById('cancer_problemstypes');
-            hepatitisProblemTypes = document.getElementById('hepatitis_problemtypes');
-
-            surgeryNames = document.getElementById('surgerynames');
-            surgeryDate = document.getElementById('surgery_date');
-            surgonName = document.getElementById('surgonname');
-
-
-            document.getElementById('handwrite_option_0').innerHTML= 'Hiiiiiiiii';
-
-            languageType = 'English';
-
-            genderselection = '';
-
-            medicalFile = $("[id$=FileUploadMedical]");
-            referralFile = $("[id$=FileUploadReferal_]");
-
-            questionnaireformat = document.getElementById('questionnaire_format');
-
-            //  language=  engLanguage
-            //  alert(language.home);
-        });
-     
-        function makeTranslaton(type) {
-
-            var language = null;
-
-            if (type == 'Spanish') {
-                language = spanishLanguage;
-                languageType = 'Spanish';
+                ' Are you sure all the information above is correct? ': '',
             }
 
-            if (type == 'French') {
-                language = frenchLanguage;
-                languageType = 'French';
+            var spanishLanguage = {
+
+                'Background Information': '',
+
+                'Choose Option': 'Elegir opción',
+
+                'First Name': 'Nombre',
+
+                'Last Name': 'Apellido',
+
+                'Birthday': 'Fecha de Nacimineto',
+
+                'Gender': 'Sexo',
+
+                'Male': 'Masculino',
+
+                'Female': 'Femenino',
+
+                'Other/Prefer not to answer': 'Otro/Prefiero no Responder',
+
+                'Medicare Number': 'Número de la Carta de Salud',
+
+                'Yes': 'Si',
+
+                'No': 'No',
+
+                'Never': 'Nunca',
+
+                'No Medicare Card': 'No Tengo Carta de Salud',
+
+                'Expiration Date': 'Fecha de Expiración',
+
+                'Email': 'Corréo Electrónico',
+
+                'Phone Number': 'Número de Teléfono',
+
+                'What is the Name of Your Family Doctor': '¿Cual es el Nombre de su Doctor de Familia?',
+
+                'Are You Working Now ?': '¿Está trabajando ahora? ',
+
+                'Yes; What Do You Do For A Living/What is Your Profession ?': 'Si; ¿A Qué se Dedica/Que es su Profesión?',
+
+                'Accountant': 'Contador',
+
+                'Actor / Actress': 'Actor',
+
+                'Architect': 'Arquitecto',
+
+                'Author': 'Autor',
+
+                'Baker': 'Panadero',
+
+                'Bricklayer': 'Albañil',
+
+                'Bus Driver': 'Conductor de Autobús',
+
+                'Butcher': 'Carnicero',
+
+                'Carpenter': 'Carpintero',
+
+                'Cleaner': 'Limpiador',
+
+                'Chef / Cook': 'Cocinero',
+
+                'Dentist': 'Dentista',
+
+                'Doctor': 'Doctor',
+
+                'Refuse Collector': 'Recolector de Basura',
+
+                'Electrician': 'Electricista',
+
+                'Engineer': 'Ingeniero',
+
+                'Factory Worker': 'Trabajador de Fábrica',
+
+                'Farmer': 'Granjero',
+
+                'Fireman/Fire Fighter': 'Bombero',
+
+                'Fisherman': 'Pescador',
+
+                'Florist': 'Florista',
+
+                'Gardener': 'Jardinero',
+
+                'Hairdresser': 'Peluquero',
+
+                'Journalist': 'Periodista',
+
+                'Lawyer': 'Abogado',
+
+                'Librarian': 'Bibliotecario',
+
+                'Mechanic': 'Mecánico',
+
+                'Model': 'Modelo',
+
+                'Nurse': 'Enfermero',
+
+                'Optician': 'Optómetra',
+
+                'Orderly': 'Camillero de Hospital',
+
+                'Painter': 'Pintor',
+
+                'Pharmacist': 'Farmacéutico',
+
+                'Photographer': 'Fotógrafo',
+
+                'Pilot': 'Piloto',
+
+                'Plumber': 'Fontanero',
+
+                'Politician': 'Político',
+
+                'Policeman / Policewoman': 'Policía',
+
+                'Postman': 'Cartero',
+
+                'Real Estate Agent': 'Agente Inmobiliario',
+
+                'Scientist': 'Científico',
+
+                'Secretary': 'Secretario',
+
+                'Soldier': 'Soldaro',
+
+                'Tailor/Seamstress': 'Sastre/Costurera',
+
+                'Taxi Driver': 'Conductor de Taxi',
+
+                'Teacher': 'Profesor',
+
+                'Veterinary Doctor': 'Veterinario',
+
+                'Waiter/Waitress': 'Camarero',
+
+                'Other': 'Otro',
+
+                'No; Retired': 'No; Jubilado',
+
+                'If No, Since When Have You Been Off Work?': '¿Si No, Cuando se Jubiló?',
+
+                'Never Worked': 'Nunca trabajé ',
+
+                'If Never, Please Select One of the Following Options?': 'Si Nunca Trabajó, Por Favor, Elija una Opción',
+
+                'Student': 'Estudiante',
+
+                'Housewife/Househusband': 'Ama/Amo de Case',
+
+                'Other': 'Otro',
+
+                'What Sports/Activities Do You Do?': '¿Que Deportes Practica? ',
+
+                'None': 'Ninguno',
+
+                'Kayaking': 'Kayak',
+
+                'Canoeing': 'Canoa',
+
+                'Cross – Country Skiing': 'Esquí de Fondo',
+
+                'Swimming': 'Natación',
+
+                'Freediving': 'Apnéa',
+
+                'Paddleboarding': 'SUP (Remo de Pie de Embarque)',
+
+                'Scuba Diving': 'Submarinismo',
+
+                'Aerobics': 'Aeróbicos',
+
+                'Archery': 'Tiro al Arco',
+
+                'Boxing': 'Boxeo',
+
+                'Running': 'Corriendo',
+
+                'Cycling': 'Ciclismo',
+
+                'Figure Skating': 'Patinaje',
+
+                'Horseback Riding': 'Montar a Caballo',
+
+                'Kickboxing': 'Kickboxing',
+
+                'Ultimate Frisbee': 'Ultimate Frisbee',
+
+                'Walking': 'Caminando',
+
+                'Weightlifting': 'Levantamiento de Pesas',
+
+                'Wrestling': 'Lucha Libre',
+
+                'Baseball': 'Béisbol',
+
+                'Softball': 'Sofbol',
+
+                'Basketball': 'Baloncesto',
+
+                'Tennis': 'Tenis',
+
+                'Badminton': 'Bádminton',
+
+                'Bowling': 'Bolos',
+
+                'Curling': 'Curling',
+
+                'Soccer': 'Fútbol',
+
+                'Football': 'Fútbol Americano',
+
+                'Ski': 'Esquí',
+
+                'Hockey': 'Hockey',
+
+                'Other': 'Otro',
+
+                'How Often?': '¿Con Qué Frecuencia?',
+
+                'Daily': 'Cotidiano',
+
+                '3 times a week': '3 veces por semana',
+
+                '2 times a week': '2 veces por semana',
+
+                '1 time per week': '1 vez por semana',
+
+                '2 - 3 times per Month': '2-3 veces al Mes',
+
+                'Monthly': 'Mensual',
+
+                'Rarely': 'Raramente',
+
+                'What Hand Do You Write With?': '¿Con qué Mano Escribe?',
+
+                'Right': 'Derecha',
+
+                'Left': 'Izquierda',
+
+                'Ambidextrous': 'Ambidextra',
+
+                'Do You Smoke?': '¿Usted Fuma?',
+
+                'If Yes, For How Many Years?': 'Si, ¿Por Cuantos Años?',
+
+                'More than 20 years': 'Mas de 20 Años',
+
+                'How Many Cigarettes Per Day': '¿Cuantos Cigarrillos al Dia?',
+
+                'More than 1 Pack': 'Mas de 1 Paquete',
+
+                'Do You Drink Alcohol': '¿Usted Bebe Alcohol?',
+
+                'If Yes, How Many Drinks Per Week': 'Si, ¿Cuantos Copas Por Semana?',
+
+                'More than 20 Drinks': 'Mas de 20 Copas',
+
+                'If no, when did you quite smoking': ' Si no, ¿cuándo dejó de fumar?',
+
+                'Do You Take Any Recreational Drugs Or Herbal / Natural Remedies?': '¿Usted Consume Drogas O Remedios Naturales/de Hierbas?',
+
+                'If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?': 'Si, ¿Con qué Frecuencia Usted Consume la Droga O Remedios Naturale/de hierba?',
+
+                'Rarely': 'Raramente',
+
+                'Monthly': 'Mensual',
+
+                'Weekly': 'Semanal',
+
+                'Daily': 'Diario',
+
+                '2 or more times per day': '2 o mas veces al dia',
+
+                'If Yes, Which Drug or Herbal / Natural Remedy do you Use?': 'Si, ¿Que Droga o Remedio Naturale/de Hierba?',
+
+                'chondroitin': 'condroitina',
+
+                'glucosamine': 'glucosamina',
+
+                'ginger': 'jengibre',
+
+                'ginkgo biloba': 'ginkgo biloba',
+
+                'ginseng': 'ginseng',
+
+                'st - John’s Wort': 'hierba de San Juan',
+
+                'turmeric': 'Cúrcuma',
+
+                'Canabis / Marijuana': 'Canabis/Marijuana',
+
+                'Stimulants (e.g.cocaine, amphetamines,methamphetamine, ecstacy[MDMA]) ': 'Estimulantes (e.g.cocaína, anfetaminas, metanfetaminas, éxtasis[MDMA])',
+
+                'Opium - related painkillers (e.g.heroin, morphine, fentanyl, oxycodone, dilaudid)': 'Analgésico a base de opiodes (e.g. heroína, morfina, fentanilo, oxycodona',
+
+                'Hallucinogens (e.g.LSD)': 'Alucinógenos (e.g. LSD)',
+
+                'Benzodiazepines (e.g.ativan, valium)': 'Benzodiazepinas (e.g. ativan, valium)',
+
+                'Ketamine': 'Ketamina',
+
+                'Ritalin': 'Ritalin',
+
+                'Other': 'Otro',
+
+                'Do You Take Any Recreational Drugs Or Herbal / Natural Remedies?': '¿Usted Consume Drogas O Remedios Naturales/de Hierbas?',
+
+                'If No, Since When Have You Been Off The Drug?': '¿Si No, Desde Quando no Consume la Droga o Remedio?',
+
+                'Never Taken': 'Nunca ha Consume Drogas o Remedios Naturales/de Hierbas',
+
+                'Do You Have Any Of the Following Medical Conditions?': '¿Tiene Alguna de las Siguientes Condiciones Médicas?',
+
+                'AIDS or HIV': 'SIDA or VIH',
+
+                'Alcohol Dependency or Abuse': 'Dependencia o Abuso de Alcohol',
+
+                'Anemia': 'Anemia',
+
+                'Anxiety': 'Ansiedad',
+
+                'Arthritis': 'Artritis',
+
+                'Bleeding Problems': 'Problemas de Sangrado',
+
+                'Blood Clots': 'Coágulos de Sangre',
+
+                'Cancer': 'Cáncer',
+
+                'Dementia': 'Demencia',
+
+                'Chronic Obstructive Pulmonary Disease or Emphysema': 'Enfermedad Pulmonar Obstructiva Crónica o Enfisema',
+
+                'Depression': 'Depresión',
+
+                'Drug Dependency or Abuse': 'Dependencia o Abuso de Drogas',
+
+                'Diabetes': 'Diabetes',
+
+                'Gout': 'Gota',
+
+                'Heart Disease': 'Cardiopatía',
+
+                'Heart Arrythmia': 'Arritmia Cardiaca',
+
+                'High Cholesterol': 'Colesterol Alto',
+
+                'High Blood Pressure': 'Hipertensión',
+
+                'Hypothyroidism': 'Hipotiroidismo',
+
+                'Hyperthyroidism': 'Hipertiroidismo',
+
+                'Kidney Disease': 'Nefropatía',
+
+                'Leukemia': 'Leucemia',
+
+                'Liver Disease': 'Enfermedad del Higado',
+
+                'Hepatitis': 'Hepatitis',
+
+                'Osteoporosis': 'Osteoporosis',
+
+                'Pancreatitis': 'Pancreatitis',
+
+                'Peripheral Vascular Disease': 'Enfermedad Vascular Periférica',
+
+                'Pulmonary Embolism': 'Embolia Pulmonar',
+
+                'Reflux or GERD': 'Reflujo o ERG',
+
+                'Seizures': 'Convulsiones',
+
+                'Sleep Apnea': 'Apnea del Sueño',
+
+                'Stroke': 'Accidente Cerebrovascular',
+
+                'Other': 'Otro',
+
+                'Do You Have Any Of the Following Medical Conditions?': '¿Tiene Alguna de las Siguientes Condiciones Médicas?',
+
+                'Bleeding Problems': 'Problemas de Sangrado',
+
+                'Von Willebrand Hemophilia A (Factor 8 deficiency)': 'Von Willebrand; Hemofilia A (Deficiencia Factor 8)',
+
+                'Hemophilia B (Christmas disease)': 'Hemofilia B (Enfernedad de Christmas)',
+
+                'Factor 5 Leiden': 'La Mutación 5 Leiden',
+
+                'Factor 2 deficiency': 'Deficiencia Factor 2',
+
+                'Factor 7 deficiency': 'Deficiencia Factor 7',
+
+                'Factor 10 deficiency': 'Deficiencia Factor 10',
+
+                'Factor 12 deficiency': 'Deficiencia Factor 12',
+
+                'Other': 'Otro',
+
+                'Cancer': 'Cancer',
+
+                'Breast': 'de Mama',
+
+                'Prostate': 'Próstata',
+
+                'Lung': 'Pulmón',
+
+                'Colon / Colorectal': 'Colon/Colorrectal',
+
+                'Kidney': 'Riñón',
+
+                'Bladder': 'Vejiga',
+
+                'Thyroid': 'Tiroides',
+
+                'Lymphoma': 'Linfoma',
+
+                'Melanoma': 'Melanoma',
+
+                'Endometrial': 'Endometrio',
+
+                'Leukemia': 'Leucemia',
+
+                'Pancreatic': 'Pancreático',
+
+                'Liver': 'Hígado',
+
+                'Other': 'Otro',
+
+                'Bleeding Problems.Type ?': 'Problemas de sangrado. ¿Tipo?',
+
+                'Hepatitis': 'Hepatitis',
+
+                'Hepatitis.Type ?': '¿Tipo de hepatitis?',
+
+                'Auto - immune': 'Autoinmune',
+
+                'Alcohol - induced': 'Inducido por Alcohol',
+
+                'Fatty-Liver': 'Hígado Graso',
+
+                'Hepatitis A': 'Hepatitis A',
+
+                'Hepatitis B – Active': 'Hepatitis B – Activo',
+
+                'Hepatitis B – Chronic': 'Hepatitis B – Crónico',
+
+                'Hepatitis B – Cured': 'Hepatitis B – Curado',
+
+                'Hepatitis C – Active': 'Hepatitis C – Activo',
+
+                'Hepatitis C – Chronic': 'Hepatitis C – Crónico',
+
+                'Hepatitis C – Cured': 'Hepatitis C – Curado',
+
+                'Hepatitis D': 'Hepatitis D',
+
+                'Hepatis E': 'Hepatis E',
+
+                'Other': 'Otro',
+
+                'Cancer.Type ?': 'Cancer.Type?',
+
+                'Have you Ever Had Surgery?': '¿Alguna vez ha Tenido una Cirugía?',
+
+                'What Type of Surgery?': '¿Qué Tipo de Cirugía?',
+
+                'When Was Your Surgery?': '¿Cuándo Fue la Cirugía?',
+
+                'Before 1970': 'Antes de 1970',
+
+                'What Was the Surgeon’s Name?': '¿Cuál era el Nombre del Cirujano?',
+
+                'No Previous Surgeries': 'Sin Cirugías Previas',
+
+                'Do You Take Any Medications Regularly?': '¿Toma algún Medicamento Regularmente? ',
+
+                'Please Upload Your Medication File (or Take Photograph)': 'Descarge su Archivo de Medicamentos (o Tome Fotografías)',
+
+                'Do You Have a Referral?': '¿Tiene una Referencia?',
+
+                'Please Upload Your Referral File (or Take Photograph)': 'Descarge su Archivo de Referencia (o Tome Fotografías)',
+
+                'Enter Information Manually': 'Ingresar Información Manualmente',
+
+                'Submit': 'Entregar',
+
+                'Choose': 'Choisir',
+
+                'Please fill out your Frist Name': '',
+
+                'Please fill out your Last Name': '',
+
+                'Please fill out your Birthday': '',
+
+                'Please fill out your Medicare Number ': '',
+
+                'Please fill out your Expiration Date': '',
+
+                'Please fill out your Email': '',
+
+                'Please fill out your Phone Number': '',
+
+                'Please write your Family Doctor': '',
+
+                'Please fill out your Living Activities': '',
+
+                'Please fill out your off work date': '',
+
+                'Please select one of the work options': '',
+
+                'Please fill out your Sport Activities': '',
+
+                'Please fill out your Hand Write': '',
+
+                ' Please fill out, How Many Years Do You Smoke ': '',
+
+                ' Please fill out, How Many Smoke Per Day ': '',
+
+                'Please fill out your Smoke Off Date ': '',
+
+                'Please fill out, How Many Time Do You Drink Per week ': '',
+
+                'Please fill out, How Many Recreational Drug Per Week ': '',
+
+                'Please fill out, What Recreational Drug Do you Use': '',
+
+                ' Please fill out your Recreational Drug Off Date ': '',
+
+                ' Please select your Bleeding Problem Type ': '',
+
+                ' Please select your Cancer Problem Type ': '',
+
+                ' Please select your Hepatitis Problem Type': '',
+
+                ' Please write your Surgery Name ': '',
+
+                ' Please fill out your Surgery Date ': '',
+
+                ' Please upload your Medical File': '',
+
+                ' Please upload your Referral File ': '',
+
+                ' Are you sure all the information above is correct? ': '',
+            };
+            var chineseLanguage =
+            {
+                'Choose Option': '选项 (xuanxiang)',
+                'First Name': '名 (ming)',
+                'Last Name': '姓 (xing)',
+                'Birthday': '生日 (sheng ri)',
+                'Gender': '性别 (xingbie)',
+                'Male': '男 (nan)',
+                'Female': '女(nv)',
+                'Other/Prefer not to answer': '其他 (qita) / 选择不回答 (xuanze buhuida)',
+                'Medicare Number': '医疗卡号码 (yiliaoka haoma)',
+                'Yes': '是 (shi)',
+                'No Medicare Card': '没有医疗卡 (meiyou yiliaoka)',
+                'Expiration Date': '有效日期 (youxiao riqi )',
+                'Email': '电子邮件 (dianzi youjian)',
+                'Phone Number': '电话号码 (dianhua haoma )',
+                'What is the Name of Your Family Doctor': '您的家庭医生的名字 (ninde jiating yishengde mingzi )',
+                'Are You Working Now ?': '您现在有工作吗 (nin xianzai you gongzuo ma？)',
+                'Yes; What Do You Do For A Living/What is Your Profession ?': '是的 (shide)， 您从事什么行业  (nin congshi shenme hangye)? ',
+                'Accountant': '会计师(kuaijishi)',
+                'Actor / Actress': '演员 女演员(yanyuan, nvyanyuan)',
+                'Architect': '建筑师 (jianzhushi)',
+                'Author': '作家 (zuojia)',
+                'Baker': '烘培师 (hongpeishi)',
+                'Bricklayer': '瓦工 (wagong)',
+                'Bus Driver': '公车司机 (gongche siji)',
+                'Butcher': ' 卖肉的 (mairoude  )',
+                'Carpenter': '木匠 (mujiang)',
+                'Cleaner': '清洁工 (qingjiegong)',
+                'Chef / Cook': '厨师 (chushi)',
+                'Dentist': '牙医 (yayi)',
+                'Doctor': '医生 (yisheng)',
+                'Electrician': '电工 (diangong)',
+                'Engineer': '工程师 (gongchengshi) ',
+                'Factory Worker': '工厂员工 (gongchang yuangong)',
+                'Farmer': '农夫 (nongfu)',
+                'Fireman/Fire Fighter': '消防员 (xianfangyuan )',
+                'Fisherman': '渔夫 (yufu )',
+                'Florist': '花艺师 (huayishi)',
+                'Gardener': '园艺师 (yuanyishi)',
+                'Hairdresser': '理发师 (lifashi)',
+                'Journalist': '记者 (jizhe)',
+                'Lawyer': ' 律师 (lushi)',
+                'Librarian': '图书管理员 (tushu guanliyuan )',
+                'Mechanic': '机械技工 (jixie jizong )',
+                'Model': '模特儿 (mote er)',
+                'Nurse': '护士 (hushi)',
+                'Optician': '验光师 (yanguangshi)',
+                'Orderly': '看护者 (kanhuzhe )',
+                'Painter': '画家 (huajia)',
+                'Pharmacist': '药剂师 (jiaojishi)',
+                'Photographer': '摄影师 (sheyingshi)',
+                'Pilot': '飞行员 (feixingyuan)',
+                'Plumber': '水管匠 (shuiguanjiang)',
+                'Politician': '政治家 ( xhezhijia)',
+                'Policeman / Policewoman': '警察 (jingcha) / 女警 (nujing)',
+                'Postman': '邮递员 (youdiyuan)',
+                'Real Estate Agent': '房产经纪 (fanchan jingji)',
+                'Scientist': '科学家 (kexuejia)',
+                'Secretary': '秘书 (mishu)',
+                'Soldier': '军人 (junren)',
+                'Tailor/Seamstress': '裁缝师 (caifenshi) / 女裁缝师 (nucaifengshi)',
+                'Taxi Driver': '出租司機 (chuzusiji)',
+                'Teacher': '教師 (jiaoshi)',
+                'Veterinary Doctor': '獸醫 (shouyi)',
+                'Waiter/Waitress': '服務員 (fuwuyuan) / 女服務員 (nvfuwuyuan)',
+                'Other': '其它 (qita)',
+                'No; Retired': '不是 (bushi); ’退休 (tuixiu)',
+                'If No, Since When Have You Been Off Work?': '若不是,什麼時候開始不工作 (ruobushi, shenme shihou kaishi bugongzuo)?',
+                'Never Worked': '從來沒有工作過 (conglai meiyou gongzuoguo)',
+                'If Never, Please Select One of the Following Options?': '若是從來沒有,請選以下的選項 (ruoshi conlaimeiyou, qing xuanyixiade xuanxiang)',
+                'Student': '學生 (xuesheng)',
+                'Housewife/Househusband': '家庭主婦 jiatingzhufu) / 家庭主夫 (jiatingzhufu)',
+                'Other': '其它 (qita)',
+                'What Sports/Activities Do You Do?': '什么运动(shenme yundong) / 您做什么样的运动(nin zuo shenmeyang de yundong) ? ',
+                'None': '都没有 (dou meiyou)',
+                'Kayaking': '皮筏艇 (pifating)',
+                'Canoeing': '独木舟 (dumuzhou)',
+                'Cross – Country Skiing': '越野滑雪 (yueye huaxue)',
+                'Swimming': '游泳 (youyong)',
+                'Freediving': '自由式潜水 (ziyoushi qianshui)',
+                'Paddleboarding': '划水板 (huashui ban)',
+                'Scuba Diving': '潜水 (qianshui)',
+                'Aerobics': '有氧运动 (youyang yundong)',
+                'Archery': '射箭 (shejian)',
+                'Boxing': '拳击 (quanji)',
+                'Running': '跑步 (paobu)',
+                'Cycling': '自行车 (zixingche)',
+                'Figure Skating': '溜冰 (liubing)',
+                'Horseback Riding': '骑马 (qima)',
+                'Kickboxing': '踢脚拳击 (tijiao quanji)',
+                'Ultimate Frisbee': '终极飞盘 (zhongji feipan)',
+                'Walking': '步行 (buxing)',
+                'Weightlifting': '举重  (juzhong)',
+                'Wrestling': '摔跤 (shuaijiao)',
+                'Baseball': '棒球 (bangqiu)',
+                'Softball': '垒球 (leiqiu)',
+                'Basketball': '篮球 (lanqiu)',
+                'Tennis': '网球 (wangqiu)',
+                'Badminton': '羽毛球 (yumaoqiu)',
+                'Bowling': '保龄球 (baolingqiu)',
+                'Curling': '冰壶 (binghu)',
+                'Soccer': '足球 (zuqiu)',
+                'Football': '美式足球 (meishi zuqiu)',
+                'Ski': '滑雪 (huaxue)',
+                'Hockey': '曲棍球 (qugunqiu)',
+                'Other': '其他 (qita)',
+                'How Often?': '多久1次 (duojiu yici) ?',
+                'Daily': '每日 (meiri)',
+                '3 times a week': '每周3次 (Meizhou 3 ci)',
+                '2 times a week': '每周2次 (Meizhou 2 ci)',
+                '1 time per week': '每周1次 (Meizhou 1ci)',
+                '2 - 3 times per Month': '每月2-3次 (Meizhou 2-3 ci)',
+                'Monthly': '每月 (meiyue)',
+                'Rarely': '很少 (henshao )',
+                'What Hand Do You Write With?': '您用哪一只手写字(nin yong nayizhi shou xiezi )?',
+                'Right': '右 (you)',
+                'Left': '左 (zuo)',
+                'Ambidextrous': '左右手都可以写 (zuoyou shou dou keyi xie )',
+                'Do You Smoke?': '您抽烟吗 (nin chouyan ma)?',
+                'If Yes, For How Many Years?': '如果是,有多少年了(ruguo shi, you duo shao nian le)?',
+                'More than 20 years': '超过二十多年了 (chaoguo 20 duo nian le)',
+                'How Many Cigarettes Per Day': '每天抽多少支香烟 (meitian chou duoshao zhi xiangyan)?',
+                'More than 1 Pack': '超过一包 (chaoguo 1 bao )',
+                'Do You Drink Alcohol': '您喝酒吗 (nin hejiu ma)?',
+                'If Yes, How Many Drinks Per Week': '如果是,每周喝几杯酒 (Ruguoshi, Meizhou he jibei jiu)?',
+                'More than 20 Drinks': '超过二十 (chaoguo 20)',
+                'Do You Take Any Recreational Drugs Or Herbal/Natural Remedies?': '您是否服用娱乐性药物或是草药/天然疗法 (nin shifou fuyongle yule xing yaowu huo caoyao /tianran liaofa)?',
+                'If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?': '如果是, 您多久服用一次药物或草药/自然疗法 (ruguoshi , nin duojiu fuyong yici yaowu huo caoyao /ziran liaofa)?',
+                'Rarely': '很少 (hen shao)',
+                'Monthly': '每月 (mei yue)',
+                'Weekly': '每周 (mei zhou)',
+                'Daily': '每日 (mei ri )',
+                '2 or more times per day': '每天两次或更多次 (meitian liang ci huo geng duo ci)',
+                'If Yes, Which Drug or Herbal / Natural Remedy do you Use?': '如果是,您使用哪种药物或是草药/ 自然疗法 (ruguo shi, nin shiyong nazhong yaowu huo caoyao /ziran liaofa)?',
+                'chondroitin': '软骨素 (ruangu su)',
+                'glucosamine': '葡萄糖胺 (putaotang an)',
+                'ginger': '生姜 (sheng jiang)',
+                'ginkgo biloba': '银杏叶 (yinxing ye)',
+                'ginseng': '人篸 (renshen)',
+                'st - John’s Wort': '圣约翰草 (sheng yue han cao )',
+                'turmeric': '姜黄 (jianghuang)',
+                'Canabis / Marijuana': '大麻 (dama)',
+                'Stimulants (e.g.cocaine, amphetamines,methamphetamine, ecstacy[MDMA]) ': '兴奋剂 (例如, 可卡因, 安非他命, 甲基苯比胺, 摇头丸 [MDMA]) (xingfen ji (liru kekayin , anfei taming, jia ji benbing an, yaotouwan, [MDMA])',
+                'Opium - related painkillers (e.g.heroin, morphine, fentanyl, oxycodone, dilaudid)': '阿片类止痛药, (例如, 海洛因, 吗啡, 芬太尼, 羟考酮, 双月桂酸酯) (yu yapian youguan de zhitong yao (liru, hailuoyin, mafei, fen tai ni, qiang kao tong, shuan yuegui suan zhi)',
+                'Hallucinogens (e.g.LSD)': '致幻剂 (zhi huanji), (例如 (liru LSD))',
+                'Benzodiazepines (e.g.ativan, valium)': '苯二氮平(例如麻醉忧虑的药物, 麻醉肌肉的药物) (benerdanping(liru, mazui youlvde  yaowu, mazui jiroude yaowu))',
+                'Ketamine': '氯胺酮 (lu antong)',
+                'Ritalin': '利他林 (lita lin)',
+                'Other': '其他 (qita)',
+                'Do You Take Any Recreational Drugs Or Herbal / Natural Remedies?': '您有服用娱乐性药物或草药/自然疗法吗 (nin you fuyong yulexing yaowu huo caoyao / ziran liaofama)?',
+                'If No, Since When Have You Been Off The Drug?': '如果没有, 您从什么时候开始没有服用了 (ruguo meiyou, nin cong shnme shihou kaishi meiyou fuyongle)?',
+                'Never Taken': '从来没有服用过 (conglai meiyou fuyong guo)',
+                'Do You Have Any Of the Following Medical Conditions?': '您是否患有以下这些疾病 (nin shifou huanyou yixia zhexie jibing)?',
+                'AIDS or HIV': '艾滋病 (aizibing) 或 (huo) 艾滋病病毒 (aizibing bingdu)',
+                'Alcohol Dependency or Abuse': '酗酒 (xujiu), 酒精中毒 (jiujin zhongdu)',
+                'Anemia': '贫血 (pinxue)',
+                'Anxiety': '焦虑 (jiaolu)',
+                'Arthritis': '关节炎 (guanjie yan)',
+                'Bleeding Problems': '出血的问题 (chuxue wenti)',
+                'Blood Clots': '血管阻塞 (xueguan zusai)',
+                'Cancer': '癌症 (aizheng)',
+                'Dementia': '痴呆 (chidai)',
+                'Chronic Obstructive Pulmonary Disease or Emphysema': '慢性阻塞肺疾病, 或肺气肿 (manxing zuse xing fei jibing, huo feiqi zhongliu)',
+                'Depression': '忧郁症 (youyuzheng)',
+                'Drug Dependency or Abuse': '药物依赖性或滥用 (yaowu yilai huo lanyong)',
+                'Diabetes': '糖尿病 (tangniaobing)',
+                'Gout': '痛风 (tongfeng)',
+                'Heart Disease': '心脏病 (xinzang bing)',
+                'Heart Arrythmia': '心率失常 (xinlu shichang)',
+                'High Cholesterol': '高胆固醇 (gao danguchun)',
+                'High Blood Pressure': '高血压 (gao xueya)',
+                'Hypothyroidism': '甲减 (jiajian)',
+                'Hyperthyroidism': '甲亢 (jiakang)',
+                'Kidney Disease': '肾脏疾病 (shenzang jibing)',
+                'Leukemia': '白血病 (baixiebing)',
+                'Liver Disease': '肝病 (ganbing )',
+                'Hepatitis': '肝炎 (ganyan)',
+                'Osteoporosis': '骨质疏松症 (guzhi shusong zheng)',
+                'Pancreatitis': '胰腺炎 (Yixian yan)',
+                'Peripheral Vascular Disease': '周围血管疾病 (zhouwei xieguan jibing)',
+                'Pulmonary Embolism': '肺栓塞 (fei suansai)',
+                'Reflux or GERD': '胃食管反流 (weishiguan fanliu)',
+                'Seizures': '癫痫 (dianxian)',
+                'Sleep Apnea': '睡眠呼吸暂停 (zhuimian huxi zhanting)',
+                'Stroke': '中风 (zhongfeng)',
+                'Other': '其他 (qita)',
+                'Do You Have Any Of the Following Medical Conditions?': '您有没有以下任何病状 (nin youmeiyou yixia renhe bingzhuang)?',
+                'Bleeding Problems': '出血问题 (chuxue wenti)',
+                'Von Willebrand Hemophilia A (Factor 8 deficiency)': '温韦伯氏疾病(wenweiboshi jibing)',
+                'Hemophilia A (Factor 8 deficiency)': 'A型血友病 （8号因子缺乏）(A xing xueyoubing (8 hao yinzi quefa))',
+                'Hemophilia B (Christmas disease)': 'B型血友病 （圣诞节病）(B xing xueyou bing ( shengdan jie bing))',
+                'Factor 5 Leiden': '莱顿因子5  (laidun yinzi 5)',
+                'Factor 2 deficiency': '因子2缺陷  (yinzi 2 quexian)',
+                'Factor 7 deficiency': '因子7 缺陷 (yinzi 7 quexian)',
+                'Factor 10 deficiency': '因子10 缺陷 (yinzi 10 quexian)',
+                'Factor 12 deficiency': '因子12 缺陷 (yinzi 12 quexian)',
+                'Other': '其他 (qita)',
+                'Cancer': '癌症 (aizheng)',
+                'Breast': '乳房 (rufang)',
+                'Prostate': '前列腺 (qianliexian)',
+                'Lung': '肺 (fei)',
+                'Colon / Colorectal': '结肠 /结直肠 (dachang /jiezhichang)',
+                'Kidney': '肾 (shen)',
+                'Bladder': '膀胱 (pangguang)',
+                'Thyroid': '甲状腺 (jiazhuang xian)',
+                'Lymphoma': '淋巴瘤 (linba liu)',
+                'Melanoma': '黑色素瘤 (heise suliu)',
+                'Endometrial': '子宫内膜 (zigong neimo)',
+                'Leukemia': '白血病 (baixue bing)',
+                'Pancreatic': '胰 (yi)',
+                'Liver': '肝 (gan)',
+                'Other': '其他 (qita)',
+                'Hepatitis': '肝炎 (ganyan)',
+                'Auto - immune': '自身免疫 aishen mianyi)',
+                'Alcohol - induced': '酒精诱导 (jiujing youdao )',
+                'Fatty-Liver': '脂肪肝 (zhifang gan)',
+                'Hepatitis A': '甲型肝炎 (jiaxiang ganyan)',
+                'Hepatitis B – Active': '乙型肝炎- 活跃 (yixiang ganyan - huoyao)',
+                'Hepatitis B – Chronic': '乙型肝炎- 慢性 (yixing ganyan - manxing)',
+                'Hepatitis B – Cured': '乙型肝炎- 治愈 (yixing ganyan - zhiyu)',
+                'Hepatitis C – Active': '丙行肝炎- 活跃 (bing xing ganyan - huoyao)',
+                'Hepatitis C – Chronic': '丙型肝炎-慢性 (bingxing ganyan - manxing)',
+                'Hepatitis C – Cured': '丙型肝炎- 治愈 (bingxing ganyan - zhiyu)',
+                'Hepatitis D': 'D型肝炎 (D xing ganyan)',
+                'Hepatis E': 'E型肝炎 (E xing ganyan)',
+                'Other': '其他 (qita)',
+                'Have you Ever Had Surgery?': '您有没有动过手术 (nin youmeiyou dongguo shoushu)?',
+                'What Type of Surgery?': '什么类型的手术 (shenme leixing de shoushu)?',
+                'When Was Your Surgery?': '什么时候动的手术 (shenme shihou dong de shoushu)?',
+                'Before 1970': '1970年前 (1970 nian qian)',
+                'What Was the Surgeon’s Name?': '手术医生是叫什么名字 (shoushu yisheng jiao shenme mingzi)?',
+                'No Previous Surgeries': '没有动过手术 (meiyou dongguo shoushu)',
+                'Do You Take Any Medications Regularly?': '您平时有吃什么药吗(nin pingshi you chi shenme yao ma)?',
+                'Please Upload Your Medication File (or Take Photograph)': '请上传您的药剂档案（或是拍照）(qing nin shangchuan ninde yaoji danan (huoshi paizhao))',
+                'Do You Have a Referral?': '您有医生推荐吗 (nin you yisheng tuijian ma)?',
+                'Please Upload Your Referral File (or Take Photograph)': '请上传您的医生推荐信（或是拍照）(qing nin shangchuan ninde yisheng tuijian xin (huoshi paizhao))',
+                'Enter Information Manually': '请填写您的资料 (qing tianxie ninde ziliao)',
+                'Submit': '提交( tijiao)',
+                'No': '没有',
+                'Never': '决不',
+                'If no, when did you quite smoking': '如果没有，您什么时候戒烟的？',
+                'Cancer.Type ?': '癌症类型',
+                'Hepatitis.Type ?': '肝炎类型？',
+                'Bleeding Problems.Type ?': '出血问题。类型？',
+            };
+
+
+            $(document).ready(function () {
+
+                txtFirstName = document.getElementById('first_name');
+                txtLastName = document.getElementById('last_name');
+                txtBirthday = document.getElementById('birthday');
+                txtMedicareNumber = document.getElementById('medicare_number');
+                txtExpirationDate = document.getElementById('expiration_date');
+                txtEmail = document.getElementById('email');
+                txtPhoneNumber = document.getElementById('phone_number');
+                livingActivities = document.getElementById('living_activities');
+                dateOffWork = document.getElementById('date_offwork');
+                neverworkoption = document.getElementById('never_work_option');
+                sportsActivites = document.getElementById('sports_activites');
+                sportsActivites2 = document.getElementById('1sports_activites');
+                sportsActivites3 = document.getElementById('2sports_activites');
+
+                howoftensports = document.getElementById('how_often_sports');
+                howoftensports2 = document.getElementById('1how_often_sports');
+                howoftensports3 = document.getElementById('2how_often_sports');
+
+                familynameOfDoctor = document.getElementById('family_Doctor');
+                handWrite = document.getElementById('hand_write');
+                smokeHowmanyYears = document.getElementById('smoke_howmany_years');
+                smokeHowmanyPerday = document.getElementById('smoke_howmany_perday');
+                smokeOffDate = document.getElementById('smoke_off');
+
+                alcoholHowmanyPerweek = document.getElementById('alcohol_howmany_perweek');
+                alcoholOffDate = document.getElementById('alcohol_off');
+
+                recreationalDrugHowmanyPerweeks = document.getElementById('recreationalDrug_howmany_perweeks');
+                recreationalDrugWhatDrugs = document.getElementById('recreationalDrug_whatDrugs');
+
+                recreationalDrugHowmanyPerweeks2 = document.getElementById('2recreationalDrug_howmany_perweeks');
+                recreationalDrugWhatDrugs2 = document.getElementById('2recreationalDrug_whatDrugs');
+
+                recreationalDrugHowmanyPerweeks3 = document.getElementById('3recreationalDrug_howmany_perweeks');
+                recreationalDrugWhatDrugs3 = document.getElementById('3recreationalDrug_whatDrugs');
+
+                recreationalDrugOffDate = document.getElementById('drug_off');
+
+                bleedingProblemsTypes = document.getElementById('bleeding_problemstypes');
+                cancerProblemsTypes = document.getElementById('cancer_problemstypes');
+                hepatitisProblemTypes = document.getElementById('hepatitis_problemtypes');
+
+                surgeryNames = document.getElementById('surgerynames');
+                surgeryDate = document.getElementById('surgery_date');
+                surgonName = document.getElementById('surgonname');
+
+                surgeryNames2 = document.getElementById('2surgerynames');
+                surgeryDate2 = document.getElementById('2surgery_date');
+                surgonName2 = document.getElementById('2surgonname');
+
+
+                surgeryNames3 = document.getElementById('3surgerynames');
+                surgeryDate3 = document.getElementById('3surgery_date');
+                surgonName3 = document.getElementById('3surgonname');
+
+                //document.getElementById('handwrite_option_0').innerHTML = 'Hiiiiiiiii';
+
+                languageType = 'English';
+
+                genderselection = '';
+
+                medicalFile = $("[id$=FileUploadMedical]");
+                referralFile = $("[id$=FileUploadReferal_]");
+
+                questionnaireformat = document.getElementById('questionnaire_format');
+
+                //  language=  engLanguage
+                //  alert(language.home);
+            });
+
+            function makeTranslaton(type) {
+
+                var language = null;
+
+                if (type == 'Spanish') {
+                    language = spanishLanguage;
+                    languageType = 'Spanish';
+                }
+
+                if (type == 'French') {
+                    language = frenchLanguage;
+                    languageType = 'French';
+                }
+
+                if (type == 'Chinese') {
+                    language = chineseLanguage;
+                    languageType = 'Chinese';
+                }
+
+                if (type == 'English') {
+                    location.reload();
+                    return false;
+                }
+                //document.getElementsByName('living_activities').options[0].innerHTML = 'hiii';
+
+
+                document.getElementById('first_name_text').innerHTML = language["First Name"];
+                document.getElementById('last_name_text').innerHTML = language["Last Name"];
+                document.getElementById('Birthday_text').innerHTML = language["Birthday"];
+                document.getElementById('Gender_text').innerHTML = language["Gender"];
+                document.getElementById('Male_text').innerHTML = language["Male"];
+                document.getElementById('Female_text').innerHTML = language["Female"];
+                document.getElementById('Other_gender_text').innerHTML = language["Other/Prefer not to answer"];
+                document.getElementById('MedicareNumber_text').innerHTML = language["Medicare Number"];
+                //document.getElementById('yes_medicalnumber_text').innerHTML = language["Yes"];
+                document.getElementById('yes_medicalnumber_text').innerHTML = language["Yes"];
+
+                document.getElementById('No_medicalnumber_text').innerHTML = language["No Medicare Card"];
+                document.getElementById('Expiration_Date_text').innerHTML = language["Expiration Date"];
+                document.getElementById('email_text').innerHTML = language["Email"];
+                document.getElementById('family_Doctor_text').innerHTML = language["What is the Name of Your Family Doctor"];
+
+                document.getElementById('PhoneNumber_text').innerHTML = language["Phone Number"];
+
+                document.getElementById('working_text').innerHTML = language["Are You Working Now ?"];
+                document.getElementById('yes_working_text').innerHTML = language["Yes"];
+                document.getElementById('no_working_text').innerHTML = language["No; Retired"];
+                document.getElementById('never_working_text').innerHTML = language["Never Worked"];
+                document.getElementById('no_offwork_text').innerHTML = language["If No, Since When Have You Been Off Work?"];
+                document.getElementById('never_work_text').innerHTML = language["If Never, Please Select One of the Following Options?"];
+                document.getElementById('never_workoption0_text').innerHTML = language["Choose Option"];
+                document.getElementById('never_workoption1_text').innerHTML = language["Student"];
+                document.getElementById('never_workoption2_text').innerHTML = language["Housewife/Househusband"];
+                document.getElementById('never_workoption3_text').innerHTML = language["Other"];
+                document.getElementById('living_profession_text').innerHTML = language["Yes; What Do You Do For A Living/What is Your Profession ?"];
+                document.getElementById('living_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('living_option_1').innerHTML = language["Accountant"];
+                document.getElementById('living_option_2').innerHTML = language["Actor / Actress"];
+                document.getElementById('living_option_3').innerHTML = language["Architect"];
+                document.getElementById('living_option_4').innerHTML = language["Author"];
+                document.getElementById('living_option_5').innerHTML = language["Baker"];
+                document.getElementById('living_option_6').innerHTML = language["Bricklayer"];
+                document.getElementById('living_option_7').innerHTML = language["Bus Driver"];
+                document.getElementById('living_option_8').innerHTML = language["Butcher"];
+                document.getElementById('living_option_9').innerHTML = language["Carpenter"];
+                document.getElementById('living_option_10').innerHTML = language["Cleaner"];
+                document.getElementById('living_option_11').innerHTML = language["Chef / Cook"];
+                document.getElementById('living_option_12').innerHTML = language["Dentist"];
+                document.getElementById('living_option_13').innerHTML = language["Doctor"];
+                document.getElementById('living_option_14').innerHTML = language["Refuse Collector"];
+                document.getElementById('living_option_15').innerHTML = language["Electrician"];
+                document.getElementById('living_option_16').innerHTML = language["Engineer"];
+                document.getElementById('living_option_17').innerHTML = language["Factory Worker"];
+                document.getElementById('living_option_18').innerHTML = language["Farmer"];
+                document.getElementById('living_option_19').innerHTML = language["Fireman/Fire Fighter"];
+                document.getElementById('living_option_20').innerHTML = language["Fisherman"];
+                document.getElementById('living_option_21').innerHTML = language["Florist"];
+                document.getElementById('living_option_22').innerHTML = language["Gardener"];
+                document.getElementById('living_option_23').innerHTML = language["Hairdresser"];
+                document.getElementById('living_option_24').innerHTML = language["Journalist"];
+                document.getElementById('living_option_25').innerHTML = language["Lawyer"];
+                document.getElementById('living_option_26').innerHTML = language["Librarian"];
+                document.getElementById('living_option_27').innerHTML = language["Mechanic"];
+                document.getElementById('living_option_28').innerHTML = language["Model"];
+                document.getElementById('living_option_29').innerHTML = language["Nurse"];
+                document.getElementById('living_option_30').innerHTML = language["Optician"];
+                document.getElementById('living_option_31').innerHTML = language["Orderly"];
+                document.getElementById('living_option_32').innerHTML = language["Painter"];
+                document.getElementById('living_option_33').innerHTML = language["Pharmacist"];
+                document.getElementById('living_option_34').innerHTML = language["Photographer"];
+                document.getElementById('living_option_35').innerHTML = language["Pilot"];
+                document.getElementById('living_option_36').innerHTML = language["Plumber"];
+                document.getElementById('living_option_37').innerHTML = language["Politician"];
+                document.getElementById('living_option_38').innerHTML = language["Policeman / Policewoman"];
+                document.getElementById('living_option_39').innerHTML = language["Postman"];
+                document.getElementById('living_option_40').innerHTML = language["Real Estate Agent"];
+                document.getElementById('living_option_41').innerHTML = language["Scientist"];
+                document.getElementById('living_option_42').innerHTML = language["Secretary"];
+                document.getElementById('living_option_43').innerHTML = language["Soldier"];
+                document.getElementById('living_option_44').innerHTML = language["Tailor/Seamstress"];
+                document.getElementById('living_option_45').innerHTML = language["Taxi Driver"];
+                document.getElementById('living_option_46').innerHTML = language["Teacher"];
+                document.getElementById('living_option_47').innerHTML = language["Veterinary Doctor"];
+                document.getElementById('living_option_48').innerHTML = language["Waiter/Waitress"];
+                document.getElementById('living_option_49').innerHTML = language["Other"];
+
+                // sports 1
+                document.getElementById('sports_question_text').innerHTML = language["What Sports/Activities Do You Do?"];
+                document.getElementById('sports_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('sports_option_1').innerHTML = language["None"];
+                document.getElementById('sports_option_2').innerHTML = language["Kayaking"];
+                document.getElementById('sports_option_3').innerHTML = language["Canoeing"];
+                document.getElementById('sports_option_4').innerHTML = language["Cross – Country Skiing"];
+                document.getElementById('sports_option_5').innerHTML = language["Swimming"];
+                document.getElementById('sports_option_6').innerHTML = language["Freediving"];
+                document.getElementById('sports_option_7').innerHTML = language["Paddleboarding"];
+                document.getElementById('sports_option_8').innerHTML = language["Scuba Diving"];
+                document.getElementById('sports_option_9').innerHTML = language["Aerobics"];
+                document.getElementById('sports_option_10').innerHTML = language["Archery"];
+                document.getElementById('sports_option_11').innerHTML = language["Boxing"];
+                document.getElementById('sports_option_12').innerHTML = language["Running"];
+                document.getElementById('sports_option_13').innerHTML = language["Cycling"];
+                document.getElementById('sports_option_14').innerHTML = language["Figure Skating"];
+                document.getElementById('sports_option_15').innerHTML = language["Horseback Riding"];
+                document.getElementById('sports_option_16').innerHTML = language["Kickboxing"];
+                document.getElementById('sports_option_17').innerHTML = language["Ultimate Frisbee"];
+                document.getElementById('sports_option_18').innerHTML = language["Walking"];
+                document.getElementById('sports_option_19').innerHTML = language["Weightlifting"];
+                document.getElementById('sports_option_20').innerHTML = language["Wrestling"];
+                document.getElementById('sports_option_21').innerHTML = language["Baseball"];
+                document.getElementById('sports_option_22').innerHTML = language["Softball"];
+                document.getElementById('sports_option_23').innerHTML = language["Basketball"];
+                document.getElementById('sports_option_24').innerHTML = language["Tennis"];
+                document.getElementById('sports_option_25').innerHTML = language["Badminton"];
+                document.getElementById('sports_option_26').innerHTML = language["Bowling"];
+                document.getElementById('sports_option_27').innerHTML = language["Curling"];
+                document.getElementById('sports_option_28').innerHTML = language["Soccer"];
+                document.getElementById('sports_option_29').innerHTML = language["Football"];
+                document.getElementById('sports_option_30').innerHTML = language["Ski"];
+                document.getElementById('sports_option_31').innerHTML = language["Hockey"];
+                document.getElementById('sports_option_32').innerHTML = language["Other"];
+                document.getElementById('how_often_text').innerHTML = language["How Often?"];
+
+                document.getElementById('often_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('often_option_1').innerHTML = language["None"];
+                document.getElementById('often_option_2').innerHTML = language["Daily"];
+                document.getElementById('often_option_3').innerHTML = language["3 times a week"];
+                document.getElementById('often_option_4').innerHTML = language["2 times a week"];
+                document.getElementById('often_option_5').innerHTML = language["1 time per week"];
+                document.getElementById('often_option_6').innerHTML = language["2 - 3 times per Month"];
+                document.getElementById('often_option_7').innerHTML = language["Monthly"];
+                document.getElementById('often_option_8').innerHTML = language["Rarely"];
+
+                // sports 2
+
+                document.getElementById('1sports_question_text').innerHTML = language["What Sports/Activities Do You Do?"];
+                document.getElementById('1sports_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('1sports_option_1').innerHTML = language["None"];
+                document.getElementById('1sports_option_2').innerHTML = language["Kayaking"];
+                document.getElementById('1sports_option_3').innerHTML = language["Canoeing"];
+                document.getElementById('1sports_option_4').innerHTML = language["Cross – Country Skiing"];
+                document.getElementById('1sports_option_5').innerHTML = language["Swimming"];
+                document.getElementById('1sports_option_6').innerHTML = language["Freediving"];
+                document.getElementById('1sports_option_7').innerHTML = language["Paddleboarding"];
+                document.getElementById('1sports_option_8').innerHTML = language["Scuba Diving"];
+                document.getElementById('1sports_option_9').innerHTML = language["Aerobics"];
+                document.getElementById('1sports_option_10').innerHTML = language["Archery"];
+                document.getElementById('1sports_option_11').innerHTML = language["Boxing"];
+                document.getElementById('1sports_option_12').innerHTML = language["Running"];
+                document.getElementById('1sports_option_13').innerHTML = language["Cycling"];
+                document.getElementById('1sports_option_14').innerHTML = language["Figure Skating"];
+                document.getElementById('1sports_option_15').innerHTML = language["Horseback Riding"];
+                document.getElementById('1sports_option_16').innerHTML = language["Kickboxing"];
+                document.getElementById('1sports_option_17').innerHTML = language["Ultimate Frisbee"];
+                document.getElementById('1sports_option_18').innerHTML = language["Walking"];
+                document.getElementById('1sports_option_19').innerHTML = language["Weightlifting"];
+                document.getElementById('1sports_option_20').innerHTML = language["Wrestling"];
+                document.getElementById('1sports_option_21').innerHTML = language["Baseball"];
+                document.getElementById('1sports_option_22').innerHTML = language["Softball"];
+                document.getElementById('1sports_option_23').innerHTML = language["Basketball"];
+                document.getElementById('1sports_option_24').innerHTML = language["Tennis"];
+                document.getElementById('1sports_option_25').innerHTML = language["Badminton"];
+                document.getElementById('1sports_option_26').innerHTML = language["Bowling"];
+                document.getElementById('1sports_option_27').innerHTML = language["Curling"];
+                document.getElementById('1sports_option_28').innerHTML = language["Soccer"];
+                document.getElementById('1sports_option_29').innerHTML = language["Football"];
+                document.getElementById('1sports_option_30').innerHTML = language["Ski"];
+                document.getElementById('1sports_option_31').innerHTML = language["Hockey"];
+                document.getElementById('1sports_option_32').innerHTML = language["Other"];
+                document.getElementById('1how_often_text').innerHTML = language["How Often?"];
+
+                document.getElementById('1often_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('1often_option_1').innerHTML = language["None"];
+                document.getElementById('1often_option_2').innerHTML = language["Daily"];
+                document.getElementById('1often_option_3').innerHTML = language["3 times a week"];
+                document.getElementById('1often_option_4').innerHTML = language["2 times a week"];
+                document.getElementById('1often_option_5').innerHTML = language["1 time per week"];
+                document.getElementById('1often_option_6').innerHTML = language["2 - 3 times per Month"];
+                document.getElementById('1often_option_7').innerHTML = language["Monthly"];
+                document.getElementById('1often_option_8').innerHTML = language["Rarely"];
+
+                // sports 3
+
+                document.getElementById('2sports_question_text').innerHTML = language["What Sports/Activities Do You Do?"];
+                document.getElementById('2sports_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('2sports_option_1').innerHTML = language["None"];
+                document.getElementById('2sports_option_2').innerHTML = language["Kayaking"];
+                document.getElementById('2sports_option_3').innerHTML = language["Canoeing"];
+                document.getElementById('2sports_option_4').innerHTML = language["Cross – Country Skiing"];
+                document.getElementById('2sports_option_5').innerHTML = language["Swimming"];
+                document.getElementById('2sports_option_6').innerHTML = language["Freediving"];
+                document.getElementById('2sports_option_7').innerHTML = language["Paddleboarding"];
+                document.getElementById('2sports_option_8').innerHTML = language["Scuba Diving"];
+                document.getElementById('2sports_option_9').innerHTML = language["Aerobics"];
+                document.getElementById('2sports_option_10').innerHTML = language["Archery"];
+                document.getElementById('2sports_option_11').innerHTML = language["Boxing"];
+                document.getElementById('2sports_option_12').innerHTML = language["Running"];
+                document.getElementById('2sports_option_13').innerHTML = language["Cycling"];
+                document.getElementById('2sports_option_14').innerHTML = language["Figure Skating"];
+                document.getElementById('2sports_option_15').innerHTML = language["Horseback Riding"];
+                document.getElementById('2sports_option_16').innerHTML = language["Kickboxing"];
+                document.getElementById('2sports_option_17').innerHTML = language["Ultimate Frisbee"];
+                document.getElementById('2sports_option_18').innerHTML = language["Walking"];
+                document.getElementById('2sports_option_19').innerHTML = language["Weightlifting"];
+                document.getElementById('2sports_option_20').innerHTML = language["Wrestling"];
+                document.getElementById('2sports_option_21').innerHTML = language["Baseball"];
+                document.getElementById('2sports_option_22').innerHTML = language["Softball"];
+                document.getElementById('2sports_option_23').innerHTML = language["Basketball"];
+                document.getElementById('2sports_option_24').innerHTML = language["Tennis"];
+                document.getElementById('2sports_option_25').innerHTML = language["Badminton"];
+                document.getElementById('2sports_option_26').innerHTML = language["Bowling"];
+                document.getElementById('2sports_option_27').innerHTML = language["Curling"];
+                document.getElementById('2sports_option_28').innerHTML = language["Soccer"];
+                document.getElementById('2sports_option_29').innerHTML = language["Football"];
+                document.getElementById('2sports_option_30').innerHTML = language["Ski"];
+                document.getElementById('2sports_option_31').innerHTML = language["Hockey"];
+                document.getElementById('2sports_option_32').innerHTML = language["Other"];
+                document.getElementById('2how_often_text').innerHTML = language["How Often?"];
+
+                document.getElementById('2often_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('2often_option_1').innerHTML = language["None"];
+                document.getElementById('2often_option_2').innerHTML = language["Daily"];
+                document.getElementById('2often_option_3').innerHTML = language["3 times a week"];
+                document.getElementById('2often_option_4').innerHTML = language["2 times a week"];
+                document.getElementById('2often_option_5').innerHTML = language["1 time per week"];
+                document.getElementById('2often_option_6').innerHTML = language["2 - 3 times per Month"];
+                document.getElementById('2often_option_7').innerHTML = language["Monthly"];
+                document.getElementById('2often_option_8').innerHTML = language["Rarely"];
+
+                // hand
+
+                document.getElementById('handwrite_text').innerHTML = language["What Hand Do You Write With?"];
+                document.getElementById('handwrite_option_0').innerHTML = language["Choose Option"];
+                //document.getElementById('handwrite_option_0').innerHTML = 'Hiiiiiiiii';
+                document.getElementById('handwrite_option_1').innerHTML = language["Right"];
+                document.getElementById('handwrite_option_2').innerHTML = language["Left"];
+                document.getElementById('handwrite_option_3').innerHTML = language["Ambidextrous"];
+
+                document.getElementById('smoke_question_text').innerHTML = language["Do You Smoke?"];
+                document.getElementById('yes_smoke_text').innerHTML = language["Yes"];
+                document.getElementById('no_smoke_text').innerHTML = language["No"];
+                document.getElementById('never_smoke_text').innerHTML = language["Never"];
+                document.getElementById('no_since_smoke_text').innerHTML = language["If no, when did you quite smoking"];
+                document.getElementById('yes_years_smoke_text').innerHTML = language["If Yes, For How Many Years?"];
+                document.getElementById('more_than_20_years').innerHTML = language["More than 20 years"];
+                document.getElementById('cigarettes_text').innerHTML = language["How Many Cigarettes Per Day"];
+                document.getElementById('more_than_1_pack').innerHTML = language["More than 1 Pack"];
+
+                document.getElementById('Drink_alcohol_text').innerHTML = language["Do You Drink Alcohol"];
+                document.getElementById('yes_alcohol_text').innerHTML = language["Yes"];
+                document.getElementById('no_alcohol_text').innerHTML = language["No"];
+                //document.getElementById('no_since_alcohol').innerHTML = language["If No, Since When Have You Been Off Work?"];
+                document.getElementById('yes_drinks_alcohol').innerHTML = language["If Yes, How Many Drinks Per Week"];
+                document.getElementById('drinks_more_than_20').innerHTML = language["More than 20 Drinks"];
+
+                // recreational drugs
+                document.getElementById('recreational_text').innerHTML = language["Do You Take Any Recreational Drugs Or Herbal / Natural Remedies?"];
+                document.getElementById('yes_recreational_text').innerHTML = language["Yes"];
+                document.getElementById('no_recreational_text').innerHTML = language["No"];
+                document.getElementById('never_recreational_text').innerHTML = language["Never Taken"];
+                document.getElementById('no_since_recreational_text').innerHTML = language["If No, Since When Have You Been Off The Drug?"];
+
+                // recreational drugs1
+                document.getElementById('yes_often_recreational_text').innerHTML = language["If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?"];
+                document.getElementById('recreational_often_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('recreational_often_option_1').innerHTML = language["Rarely"];
+                document.getElementById('recreational_often_option_2').innerHTML = language["Monthly"];
+                document.getElementById('recreational_often_option_3').innerHTML = language["Weekly"];
+                document.getElementById('recreational_often_option_4').innerHTML = language["Daily"];
+                document.getElementById('recreational_often_option_5').innerHTML = language["2 or more times per day"];
+
+                document.getElementById('recreational_what_text').innerHTML = language["If Yes, Which Drug or Herbal / Natural Remedy do you Use?"];
+                document.getElementById('recreational_what_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('recreational_what_option_1').innerHTML = language["chondroitin"];
+                document.getElementById('recreational_what_option_2').innerHTML = language["glucosamine"];
+                document.getElementById('recreational_what_option_3').innerHTML = language["ginger"];
+                document.getElementById('recreational_what_option_4').innerHTML = language["ginkgo biloba"];
+                document.getElementById('recreational_what_option_5').innerHTML = language["ginseng"];
+                document.getElementById('recreational_what_option_6').innerHTML = language["st - John’s Wort"];
+                document.getElementById('recreational_what_option_7').innerHTML = language["turmeric"];
+                document.getElementById('recreational_what_option_8').innerHTML = language["Canabis / Marijuana"];
+                document.getElementById('recreational_what_option_9').innerHTML = language["Stimulants (e.g.cocaine, amphetamines,methamphetamine, ecstacy[MDMA]) "];
+                document.getElementById('recreational_what_option_10').innerHTML = language["Opium - related painkillers (e.g.heroin, morphine, fentanyl, oxycodone, dilaudid)"];
+                document.getElementById('recreational_what_option_11').innerHTML = language["Hallucinogens (e.g.LSD)"];
+                document.getElementById('recreational_what_option_12').innerHTML = language["Benzodiazepines (e.g.ativan, valium)"];
+                document.getElementById('recreational_what_option_13').innerHTML = language["Ketamine"];
+                document.getElementById('recreational_what_option_14').innerHTML = language["Ritalin"];
+                document.getElementById('recreational_what_option_15').innerHTML = language["Other"];
+
+                // recreational drugs2
+                document.getElementById('2yes_often_recreational_text').innerHTML = language["If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?"];
+                document.getElementById('2recreational_often_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('2recreational_often_option_1').innerHTML = language["Rarely"];
+                document.getElementById('2recreational_often_option_2').innerHTML = language["Monthly"];
+                document.getElementById('2recreational_often_option_3').innerHTML = language["Weekly"];
+                document.getElementById('2recreational_often_option_4').innerHTML = language["Daily"];
+                document.getElementById('2recreational_often_option_5').innerHTML = language["2 or more times per day"];
+
+                document.getElementById('2recreational_what_text').innerHTML = language["If Yes, Which Drug or Herbal / Natural Remedy do you Use?"];
+                document.getElementById('2recreational_what_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('2recreational_what_option_1').innerHTML = language["chondroitin"];
+                document.getElementById('2recreational_what_option_2').innerHTML = language["glucosamine"];
+                document.getElementById('2recreational_what_option_3').innerHTML = language["ginger"];
+                document.getElementById('2recreational_what_option_4').innerHTML = language["ginkgo biloba"];
+                document.getElementById('2recreational_what_option_5').innerHTML = language["ginseng"];
+                document.getElementById('2recreational_what_option_6').innerHTML = language["st - John’s Wort"];
+                document.getElementById('2recreational_what_option_7').innerHTML = language["turmeric"];
+                document.getElementById('2recreational_what_option_8').innerHTML = language["Canabis / Marijuana"];
+                document.getElementById('2recreational_what_option_9').innerHTML = language["Stimulants (e.g.cocaine, amphetamines,methamphetamine, ecstacy[MDMA]) "];
+                document.getElementById('2recreational_what_option_10').innerHTML = language["Opium - related painkillers (e.g.heroin, morphine, fentanyl, oxycodone, dilaudid)"];
+                document.getElementById('2recreational_what_option_11').innerHTML = language["Hallucinogens (e.g.LSD)"];
+                document.getElementById('2recreational_what_option_12').innerHTML = language["Benzodiazepines (e.g.ativan, valium)"];
+                document.getElementById('2recreational_what_option_13').innerHTML = language["Ketamine"];
+                document.getElementById('2recreational_what_option_14').innerHTML = language["Ritalin"];
+                document.getElementById('2recreational_what_option_15').innerHTML = language["Other"];
+                // recreational drugs3
+                document.getElementById('3yes_often_recreational_text').innerHTML = language["If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?"];
+                document.getElementById('3recreational_often_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('3recreational_often_option_1').innerHTML = language["Rarely"];
+                document.getElementById('3recreational_often_option_2').innerHTML = language["Monthly"];
+                document.getElementById('3recreational_often_option_3').innerHTML = language["Weekly"];
+                document.getElementById('3recreational_often_option_4').innerHTML = language["Daily"];
+                document.getElementById('3recreational_often_option_5').innerHTML = language["2 or more times per day"];
+
+                document.getElementById('3recreational_what_text').innerHTML = language["If Yes, Which Drug or Herbal / Natural Remedy do you Use?"];
+                document.getElementById('3recreational_what_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('3recreational_what_option_1').innerHTML = language["chondroitin"];
+                document.getElementById('3recreational_what_option_2').innerHTML = language["glucosamine"];
+                document.getElementById('3recreational_what_option_3').innerHTML = language["ginger"];
+                document.getElementById('3recreational_what_option_4').innerHTML = language["ginkgo biloba"];
+                document.getElementById('3recreational_what_option_5').innerHTML = language["ginseng"];
+                document.getElementById('3recreational_what_option_6').innerHTML = language["st - John’s Wort"];
+                document.getElementById('3recreational_what_option_7').innerHTML = language["turmeric"];
+                document.getElementById('3recreational_what_option_8').innerHTML = language["Canabis / Marijuana"];
+                document.getElementById('3recreational_what_option_9').innerHTML = language["Stimulants (e.g.cocaine, amphetamines,methamphetamine, ecstacy[MDMA]) "];
+                document.getElementById('3recreational_what_option_10').innerHTML = language["Opium - related painkillers (e.g.heroin, morphine, fentanyl, oxycodone, dilaudid)"];
+                document.getElementById('3recreational_what_option_11').innerHTML = language["Hallucinogens (e.g.LSD)"];
+                document.getElementById('3recreational_what_option_12').innerHTML = language["Benzodiazepines (e.g.ativan, valium)"];
+                document.getElementById('3recreational_what_option_13').innerHTML = language["Ketamine"];
+                document.getElementById('3recreational_what_option_14').innerHTML = language["Ritalin"];
+                document.getElementById('3recreational_what_option_15').innerHTML = language["Other"];
+
+                // medical
+
+                document.getElementById('medical_conditions_text').innerHTML = language["Do You Have Any Of the Following Medical Conditions?"];
+                document.getElementById('medical_AIDS_or_HIV').innerHTML = language["AIDS or HIV"];
+                document.getElementById('medical_Alcohol_Dependency_or_Abuse').innerHTML = language["Alcohol Dependency or Abuse"];
+                document.getElementById('medical_Anemia').innerHTML = language["Anemia"];
+                document.getElementById('medical_Anxiety').innerHTML = language["Anxiety"];
+                document.getElementById('medical_Arthritis').innerHTML = language["Arthritis"];
+                document.getElementById('medical_BleedingProblems').innerHTML = language["Bleeding Problems"];
+                document.getElementById('medical_BloodClots').innerHTML = language["Blood Clots"];
+                document.getElementById('medical_Cancer').innerHTML = language["Cancer"];
+                document.getElementById('medical_Dementia').innerHTML = language["Dementia"];
+                document.getElementById('medical_ChronicObstructive').innerHTML = language["Chronic Obstructive Pulmonary Disease or Emphysema"];
+                document.getElementById('medical_Depression').innerHTML = language["Depression"];
+                document.getElementById('medical_DrugDependency').innerHTML = language["Drug Dependency or Abuse"];
+                document.getElementById('medical_Diabetes').innerHTML = language["Diabetes"];
+                document.getElementById('medical_Gout').innerHTML = language["Gout"];
+                document.getElementById('medical_HeartDisease').innerHTML = language["Heart Disease"];
+                document.getElementById('medical_HeartArrythmia').innerHTML = language["Heart Arrythmia"];
+                document.getElementById('medical_HighCholesterol').innerHTML = language["High Cholesterol"];
+                document.getElementById('medical_HighBloodPressure').innerHTML = language["High Blood Pressure"];
+                document.getElementById('medical_Hypothyroidism').innerHTML = language["Hypothyroidism"];
+                document.getElementById('medical_Hyperthyroidism').innerHTML = language["Hyperthyroidism"];
+                document.getElementById('medical_KidneyDisease').innerHTML = language["Kidney Disease"];
+                document.getElementById('medical_Leukemia').innerHTML = language["Leukemia"];
+                document.getElementById('medical_LiverDisease').innerHTML = language["Liver Disease"];
+                document.getElementById('medical_Hepatitis').innerHTML = language["Hepatitis"];
+                document.getElementById('medical_Osteoporosis').innerHTML = language["Osteoporosis"];
+                document.getElementById('medical_Pancreatitis').innerHTML = language["Pancreatitis"];
+                document.getElementById('medical_PeripheralVascularDisease').innerHTML = language["Peripheral Vascular Disease"];
+                document.getElementById('medical_Pulmonary').innerHTML = language["Pulmonary Embolism"];
+                document.getElementById('medical_RefluxorGERD').innerHTML = language["Reflux or GERD"];
+                document.getElementById('medical_Seizures').innerHTML = language["Seizures"];
+                document.getElementById('medical_SleepApnea').innerHTML = language["Sleep Apnea"];
+                document.getElementById('medical_Stroke').innerHTML = language["Stroke"];
+                document.getElementById('medical_Other').innerHTML = language["Other"];
+
+                document.getElementById('bleeding_problems_text').innerHTML = language["Bleeding Problems.Type ?"];
+                document.getElementById('bleeding_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('bleeding_option_1').innerHTML = language["Von Willebrand Hemophilia A (Factor 8 deficiency)"];
+                document.getElementById('bleeding_option_2').innerHTML = language["Hemophilia B (Christmas disease)"];
+                document.getElementById('bleeding_option_3').innerHTML = language["Factor 5 Leiden"];
+                document.getElementById('bleeding_option_4').innerHTML = language["Factor 2 deficiency"];
+                document.getElementById('bleeding_option_5').innerHTML = language["Factor 7 deficiency"];
+                document.getElementById('bleeding_option_6').innerHTML = language["Factor 10 deficiency"];
+                document.getElementById('bleeding_option_7').innerHTML = language["Factor 12 deficiency"];
+                document.getElementById('bleeding_option_8').innerHTML = language["Other"];
+
+                document.getElementById('Cancer_type_text').innerHTML = language["Cancer.Type ?"];
+
+                document.getElementById('breast_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('breast_option_1').innerHTML = language["Breast"];
+                document.getElementById('breast_option_2').innerHTML = language["Prostate"];
+                document.getElementById('breast_option_3').innerHTML = language["Lung"];
+                document.getElementById('breast_option_4').innerHTML = language["Colon / Colorectal"];
+                document.getElementById('breast_option_5').innerHTML = language["Kidney"];
+                document.getElementById('breast_option_6').innerHTML = language["Bladder"];
+                document.getElementById('breast_option_7').innerHTML = language["Thyroid"];
+                document.getElementById('breast_option_8').innerHTML = language["Lymphoma"];
+                document.getElementById('breast_option_9').innerHTML = language["Melanoma"];
+                document.getElementById('breast_option_10').innerHTML = language["Endometrial"];
+                document.getElementById('breast_option_11').innerHTML = language["Leukemia"];
+                document.getElementById('breast_option_12').innerHTML = language["Pancreatitis"];
+                document.getElementById('breast_option_13').innerHTML = language["Liver"];
+                document.getElementById('breast_option_14').innerHTML = language["Other"];
+
+                document.getElementById('Hepatitis_problem_text').innerHTML = language["Hepatitis.Type ?"];
+
+                document.getElementById('Hepatitis_option_0').innerHTML = language["Choose Option"];
+                document.getElementById('Hepatitis_option_1').innerHTML = language["Auto - immune"];
+                document.getElementById('Hepatitis_option_2').innerHTML = language["Alcohol - induced"];
+                document.getElementById('Hepatitis_option_3').innerHTML = language["Hepatitis A"];
+                document.getElementById('Hepatitis_option_4').innerHTML = language["Hepatitis B – Active"];
+                document.getElementById('Hepatitis_option_5').innerHTML = language["Hepatitis B – Chronic"];
+                document.getElementById('Hepatitis_option_6').innerHTML = language["Hepatitis B – Cured"];
+                document.getElementById('Hepatitis_option_7').innerHTML = language["Hepatitis C – Active"];
+                document.getElementById('Hepatitis_option_8').innerHTML = language["Hepatitis C – Chronic"];
+                document.getElementById('Hepatitis_option_9').innerHTML = language["Hepatitis C – Cured"];
+                document.getElementById('Hepatitis_option_10').innerHTML = language["Hepatitis D"];
+                document.getElementById('Hepatitis_option_11').innerHTML = language["Hepatis E"];
+                document.getElementById('Hepatitis_option_12').innerHTML = language["Fatty-Liver"];
+                document.getElementById('Hepatitis_option_13').innerHTML = language["Other"];
+
+                document.getElementById('surgery_question_text').innerHTML = language["Have you Ever Had Surgery?"];
+                document.getElementById('yes_surgery_text').innerHTML = language["Yes"];
+                document.getElementById('no_surgery_text').innerHTML = language["No Previous Surgeries"];
+
+                //surgery medical
+                document.getElementById('surgery_type_text').innerHTML = language["What Type of Surgery?"];
+                document.getElementById('surgery_date_text').innerHTML = language["When Was Your Surgery?"];
+                document.getElementById('Before_1970_text').innerHTML = language["Before 1970"];
+                document.getElementById('surgeon_name_text').innerHTML = language["What Was the Surgeon’s Name?"];
+                //surgery medical 2
+
+                document.getElementById('2surgery_type_text').innerHTML = language["What Type of Surgery?"];
+                document.getElementById('2surgery_date_text').innerHTML = language["When Was Your Surgery?"];
+                document.getElementById('2Before_1970_text').innerHTML = language["Before 1970"];
+                document.getElementById('2surgeon_name_text').innerHTML = language["What Was the Surgeon’s Name?"];
+                //surgery medical 3
+                document.getElementById('3surgery_type_text').innerHTML = language["What Type of Surgery?"];
+                document.getElementById('3surgery_date_text').innerHTML = language["When Was Your Surgery?"];
+                document.getElementById('3Before_1970_text').innerHTML = language["Before 1970"];
+                document.getElementById('3surgeon_name_text').innerHTML = language["What Was the Surgeon’s Name?"];
+
+
+                document.getElementById('medications_regularly_text').innerHTML = language["Do You Take Any Medications Regularly?"];
+                document.getElementById('yes_medications_regularly_text').innerHTML = language["Yes"];
+                document.getElementById('no_medications_regularly_text').innerHTML = language["No"];
+                document.getElementById('upload_file_medication_text').innerHTML = language["Please Upload Your Medication File (or Take Photograph)"];
+                document.getElementById('referral_text').innerHTML = language["Do You Have a Referral?"];
+                document.getElementById('yes_referral_text').innerHTML = language["Yes"];
+                document.getElementById('no_referral_text').innerHTML = language["No"];
+                document.getElementById('referral_file_text').innerHTML = language["Please Upload Your Referral File (or Take Photograph)"];
+
+
+                document.getElementById('medical_file_button').innerHTML = language["Choose"];
+                document.getElementById('referral_button').innerHTML = language["Choose"];
+
+                document.getElementById('submit_button_text').innerHTML = language["Submit"];
+
+
+
+
             }
 
-            if (type == 'Chinese') {
-                language = chineseLanguage;
-                languageType = 'Chinese';
+            function no_medicare_card_changed(termsCheckBox) {
+
+
+                if (termsCheckBox.checked) {
+                    $("#medicare_number").prop("disabled", true);
+                    $("#medicare_number").prop("style", "background-color: #D3D3D3;");
+                    $("#medicare_number").val("");
+                    $("#expiration_date_Box").hide();
+
+
+                } else {
+                    $("#medicare_number").prop("disabled", false);
+                    $("#medicare_number").prop("style", "background-color: #fafafa;");
+
+                    $("#expiration_date_Box").show();
+                }
+            }
+            function yes_medicare_card_changed(termsCheckBox) {
+
+                if (termsCheckBox.checked) {
+                    $("#medicare_number").prop("disabled", false);
+                    $("#medicare_number").prop("style", "background-color: #fafafa;");
+                    $("#expiration_date_Box").show();
+                } else {
+                    $("#medicare_number").prop("disabled", true);
+                    $("#medicare_number").prop("style", "background-color: #D3D3D3;");
+                    $("#medicare_number").val("");
+                    $("#expiration_date_Box").hide();
+                }
+            }
+            function never_offworking_changed(termsCheckBox) {
+
+                if (termsCheckBox.checked) {
+                    $("#date_offwork_Box").hide();
+                    $("#never_offwork_Box").show();
+                    $("#living_activities_Box").hide();
+
+                } else {
+                    $("#never_offwork_Box").hide();
+                }
+            }
+            function no_offworking_changed(termsCheckBox) {
+
+                if (termsCheckBox.checked) {
+                    $("#date_offwork_Box").show();
+                    $("#never_offwork_Box").hide();
+                    $("#living_activities_Box").hide();
+                } else {
+                    $("#date_offwork_Box").hide();
+                }
+            }
+            function yes_offworking_changed(termsCheckBox) {
+
+                if (termsCheckBox.checked) {
+                    $("#date_offwork_Box").hide();
+                    $("#never_offwork_Box").hide();
+                    $("#living_activities_Box").show();
+                }
+                else {
+                    $("#living_activities_Box").hide();
+                }
+            }
+            function no_smoke_changed(termsCheckBox) {
+
+                if (termsCheckBox.checked) {
+                    $("#smoke_off_Box").show();
+                    $("#how_many_cigarettes_perday").hide();
+                    $("#How_many_years_smoke").hide();
+                } else {
+                    $("#smoke_off_Box").hide();
+                    $("#how_many_cigarettes_perday").show();
+                    $("#How_many_years_smoke").show();
+                }
+            }
+            function yes_smoke_changed(termsCheckBox) {
+
+                if (termsCheckBox.checked) {
+                    $("#smoke_off_Box").hide();
+                    $("#how_many_cigarettes_perday").show();
+                    $("#How_many_years_smoke").show();
+
+                } else {
+                    $("#smoke_off_Box").show();
+                    $("#how_many_cigarettes_perday").hide();
+                    $("#How_many_years_smoke").hide();
+                }
+            }
+            function never_smoke_changed(termsCheckBox) {
+                if (termsCheckBox.checked) {
+                    $("#smoke_off_Box").hide();
+                    $("#how_many_cigarettes_perday").hide();
+                    $("#How_many_years_smoke").hide();
+                }
+            }
+            function no_alcohol_changed(termsCheckBox) {
+
+                if (termsCheckBox.checked) {
+                    //$("#alcohol_off_Box").show();
+                    $("#How_many_weeks_alcohol").hide();
+                } else {
+                    //$("#alcohol_off_Box").hide();
+                    $("#How_many_weeks_alcohol").show();
+                }
+            }
+            function yes_alcohol_changed(termsCheckBox) {
+
+                if (termsCheckBox.checked) {
+                    //$("#alcohol_off_Box").hide();
+                    $("#How_many_weeks_alcohol").show();
+
+                } else {
+                    //$("#alcohol_off_Box").show();
+                    $("#How_many_weeks_alcohol").hide();
+                }
+            }
+            function never_alcohol_changed(termsCheckBox) {
+                //if (termsCheckBox.checked) {
+                //    $("#alcohol_off_Box").hide();
+                //    $("#How_many_weeks_alcohol").hide();
+                //}
             }
 
-            if (type == 'English') {
-                location.reload();
-                return false;
+            function no_drug_changed(termsCheckBox) {
+
+                if (termsCheckBox.checked) {
+                    $("#drug_off_Box").show();
+                    $("#How_many_weeks_drug").hide();
+                    $("#what_drug").hide();
+
+                    $("#what_drug_parent3").hide();
+                    $("#what_drug_parent2").hide();
+
+                } else {
+                    $("#drug_off_Box").hide();
+                    $("#How_many_weeks_drug").show();
+                    $("#what_drug").show();
+                }
             }
-            //document.getElementsByName('living_activities').options[0].innerHTML = 'hiii';
+            function yes_drug_changed(termsCheckBox) {
 
+                if (termsCheckBox.checked) {
+                    $("#drug_off_Box").hide();
+                    $("#How_many_weeks_drug").show();
+                    $("#what_drug").show();
+                } else {
+                    $("#drug_off_Box").show();
+                    $("#How_many_weeks_drug").hide();
+                    $("#what_drug").hide();
 
-            document.getElementById('first_name_text').innerHTML = language["First Name"];
-            document.getElementById('last_name_text').innerHTML = language["Last Name"];
-            document.getElementById('Birthday_text').innerHTML = language["Birthday"];
-            document.getElementById('Gender_text').innerHTML = language["Gender"];
-            document.getElementById('Male_text').innerHTML = language["Male"];
-            document.getElementById('Female_text').innerHTML = language["Female"];
-            document.getElementById('Other_gender_text').innerHTML = language["Other/Prefer not to answer"];
-            document.getElementById('MedicareNumber_text').innerHTML = language["Medicare Number"];
-            //document.getElementById('yes_medicalnumber_text').innerHTML = language["Yes"];
-            document.getElementById('yes_medicalnumber_text').innerHTML = language["Yes"];
-
-            document.getElementById('No_medicalnumber_text').innerHTML = language["No Medicare Card"];
-            document.getElementById('Expiration_Date_text').innerHTML = language["Expiration Date"];
-            document.getElementById('email_text').innerHTML = language["Email"];
-            document.getElementById('family_Doctor_text').innerHTML = language["What is the Name of Your Family Doctor"];
-
-            document.getElementById('PhoneNumber_text').innerHTML = language["Phone Number"];
-
-            document.getElementById('working_text').innerHTML = language["Are You Working Now ?"];
-            document.getElementById('yes_working_text').innerHTML = language["Yes"];
-            document.getElementById('no_working_text').innerHTML = language["No; Retired"];
-            document.getElementById('never_working_text').innerHTML = language["Never Worked"];
-            document.getElementById('no_offwork_text').innerHTML = language["If No, Since When Have You Been Off Work?"];
-            document.getElementById('never_work_text').innerHTML = language["If Never, Please Select One of the Following Options?"];
-            document.getElementById('never_workoption0_text').innerHTML = language["Choose Option"];
-            document.getElementById('never_workoption1_text').innerHTML = language["Student"];
-            document.getElementById('never_workoption2_text').innerHTML = language["Housewife/Househusband"];
-            document.getElementById('never_workoption3_text').innerHTML = language["Other"];
-            document.getElementById('living_profession_text').innerHTML = language["Yes; What Do You Do For A Living/What is Your Profession ?"];
-            document.getElementById('living_option_0').innerHTML = language["Choose Option"];
-            document.getElementById('living_option_1').innerHTML = language["Accountant"];
-            document.getElementById('living_option_2').innerHTML = language["Actor / Actress"];
-            document.getElementById('living_option_3').innerHTML = language["Architect"];
-            document.getElementById('living_option_4').innerHTML = language["Author"];
-            document.getElementById('living_option_5').innerHTML = language["Baker"];
-            document.getElementById('living_option_6').innerHTML = language["Bricklayer"];
-            document.getElementById('living_option_7').innerHTML = language["Bus Driver"];
-            document.getElementById('living_option_8').innerHTML = language["Butcher"];
-            document.getElementById('living_option_9').innerHTML = language["Carpenter"];
-            document.getElementById('living_option_10').innerHTML = language["Cleaner"];
-            document.getElementById('living_option_11').innerHTML = language["Chef / Cook"];
-            document.getElementById('living_option_12').innerHTML = language["Dentist"];
-            document.getElementById('living_option_13').innerHTML = language["Doctor"];
-            document.getElementById('living_option_14').innerHTML = language["Refuse Collector"];
-            document.getElementById('living_option_15').innerHTML = language["Electrician"];
-            document.getElementById('living_option_16').innerHTML = language["Engineer"];
-            document.getElementById('living_option_17').innerHTML = language["Factory Worker"];
-            document.getElementById('living_option_18').innerHTML = language["Farmer"];
-            document.getElementById('living_option_19').innerHTML = language["Fireman/Fire Fighter"];
-            document.getElementById('living_option_20').innerHTML = language["Fisherman"];
-            document.getElementById('living_option_21').innerHTML = language["Florist"];
-            document.getElementById('living_option_22').innerHTML = language["Gardener"];
-            document.getElementById('living_option_23').innerHTML = language["Hairdresser"];
-            document.getElementById('living_option_24').innerHTML = language["Journalist"];
-            document.getElementById('living_option_25').innerHTML = language["Lawyer"];
-            document.getElementById('living_option_26').innerHTML = language["Librarian"];
-            document.getElementById('living_option_27').innerHTML = language["Mechanic"];
-            document.getElementById('living_option_28').innerHTML = language["Model"];
-            document.getElementById('living_option_29').innerHTML = language["Nurse"];
-            document.getElementById('living_option_30').innerHTML = language["Optician"];
-            document.getElementById('living_option_31').innerHTML = language["Orderly"];
-            document.getElementById('living_option_32').innerHTML = language["Painter"];
-            document.getElementById('living_option_33').innerHTML = language["Pharmacist"];
-            document.getElementById('living_option_34').innerHTML = language["Photographer"];
-            document.getElementById('living_option_35').innerHTML = language["Pilot"];
-            document.getElementById('living_option_36').innerHTML = language["Plumber"];
-            document.getElementById('living_option_37').innerHTML = language["Politician"];
-            document.getElementById('living_option_38').innerHTML = language["Policeman / Policewoman"];
-            document.getElementById('living_option_39').innerHTML = language["Postman"];
-            document.getElementById('living_option_40').innerHTML = language["Real Estate Agent"];
-            document.getElementById('living_option_41').innerHTML = language["Scientist"];
-            document.getElementById('living_option_42').innerHTML = language["Secretary"];
-            document.getElementById('living_option_43').innerHTML = language["Soldier"];
-            document.getElementById('living_option_44').innerHTML = language["Tailor/Seamstress"];
-            document.getElementById('living_option_45').innerHTML = language["Taxi Driver"];
-            document.getElementById('living_option_46').innerHTML = language["Teacher"];
-            document.getElementById('living_option_47').innerHTML = language["Veterinary Doctor"];
-            document.getElementById('living_option_48').innerHTML = language["Waiter/Waitress"];
-            document.getElementById('living_option_49').innerHTML = language["Other"];
-
-            document.getElementById('sports_question_text').innerHTML = language["What Sports/Activities Do You Do?"];
-            document.getElementById('sports_option_0').innerHTML = language["Choose Option"];
-            document.getElementById('sports_option_1').innerHTML = language["None"];
-            document.getElementById('sports_option_2').innerHTML = language["Kayaking"];
-            document.getElementById('sports_option_3').innerHTML = language["Canoeing"];
-            document.getElementById('sports_option_4').innerHTML = language["Cross – Country Skiing"];
-            document.getElementById('sports_option_5').innerHTML = language["Swimming"];
-            document.getElementById('sports_option_6').innerHTML = language["Freediving"];
-            document.getElementById('sports_option_7').innerHTML = language["Paddleboarding"];
-            document.getElementById('sports_option_8').innerHTML = language["Scuba Diving"];
-            document.getElementById('sports_option_9').innerHTML = language["Aerobics"];
-            document.getElementById('sports_option_10').innerHTML = language["Archery"];
-            document.getElementById('sports_option_11').innerHTML = language["Boxing"];
-            document.getElementById('sports_option_12').innerHTML = language["Running"];
-            document.getElementById('sports_option_13').innerHTML = language["Cycling"];
-            document.getElementById('sports_option_14').innerHTML = language["Figure Skating"];
-            document.getElementById('sports_option_15').innerHTML = language["Horseback Riding"];
-            document.getElementById('sports_option_16').innerHTML = language["Kickboxing"];
-            document.getElementById('sports_option_17').innerHTML = language["Ultimate Frisbee"];
-            document.getElementById('sports_option_18').innerHTML = language["Walking"];
-            document.getElementById('sports_option_19').innerHTML = language["Weightlifting"];
-            document.getElementById('sports_option_20').innerHTML = language["Wrestling"];
-            document.getElementById('sports_option_21').innerHTML = language["Baseball"];
-            document.getElementById('sports_option_22').innerHTML = language["Softball"];
-            document.getElementById('sports_option_23').innerHTML = language["Basketball"];
-            document.getElementById('sports_option_24').innerHTML = language["Tennis"];
-            document.getElementById('sports_option_25').innerHTML = language["Badminton"];
-            document.getElementById('sports_option_26').innerHTML = language["Bowling"];
-            document.getElementById('sports_option_27').innerHTML = language["Curling"];
-            document.getElementById('sports_option_28').innerHTML = language["Soccer"];
-            document.getElementById('sports_option_29').innerHTML = language["Football"];
-            document.getElementById('sports_option_30').innerHTML = language["Ski"];
-            document.getElementById('sports_option_31').innerHTML = language["Hockey"];
-            document.getElementById('sports_option_32').innerHTML = language["Other"];
-            document.getElementById('how_often_text').innerHTML = language["How Often?"];
-
-            document.getElementById('often_option_0').innerHTML = language["Choose Option"];
-            document.getElementById('often_option_1').innerHTML = language["None"];
-            document.getElementById('often_option_2').innerHTML = language["Daily"];
-            document.getElementById('often_option_3').innerHTML = language["3 times a week"];
-            document.getElementById('often_option_4').innerHTML = language["2 times a week"];
-            document.getElementById('often_option_5').innerHTML = language["1 time per week"];
-            document.getElementById('often_option_6').innerHTML = language["2 - 3 times per Month"];
-            document.getElementById('often_option_7').innerHTML = language["Monthly"];
-            document.getElementById('often_option_8').innerHTML = language["Rarely"];
-
-            document.getElementById('handwrite_text').innerHTML = language["What Hand Do You Write With?"];
-            document.getElementById('handwrite_option_0').innerHTML = language["Choose Option"];
-            //document.getElementById('handwrite_option_0').innerHTML = 'Hiiiiiiiii';
-            document.getElementById('handwrite_option_1').innerHTML = language["Right"];
-            document.getElementById('handwrite_option_2').innerHTML = language["Left"];
-            document.getElementById('handwrite_option_3').innerHTML = language["Ambidextrous"];
-
-            document.getElementById('smoke_question_text').innerHTML = language["Do You Smoke?"];
-            document.getElementById('yes_smoke_text').innerHTML = language["Yes"];
-            document.getElementById('no_smoke_text').innerHTML = language["No"];
-            document.getElementById('never_smoke_text').innerHTML = language["Never"];
-            document.getElementById('no_since_smoke_text').innerHTML = language["If no, when did you quite smoking"];
-            document.getElementById('yes_years_smoke_text').innerHTML = language["If Yes, For How Many Years?"];
-            document.getElementById('more_than_20_years').innerHTML = language["More than 20 years"];
-            document.getElementById('cigarettes_text').innerHTML = language["How Many Cigarettes Per Day"];
-            document.getElementById('more_than_1_pack').innerHTML = language["More than 1 Pack"];
-
-            document.getElementById('Drink_alcohol_text').innerHTML = language["Do You Drink Alcohol"];
-            document.getElementById('yes_alcohol_text').innerHTML = language["Yes"];
-            document.getElementById('no_alcohol_text').innerHTML = language["No"];
-            //document.getElementById('no_since_alcohol').innerHTML = language["If No, Since When Have You Been Off Work?"];
-            document.getElementById('yes_drinks_alcohol').innerHTML = language["If Yes, How Many Drinks Per Week?"];
-            document.getElementById('drinks_more_than_20').innerHTML = language["More than 20 Drinks"];
-
-            document.getElementById('recreational_text').innerHTML = language["Do You Take Any Recreational Drugs Or Herbal / Natural Remedies?"];
-            document.getElementById('yes_recreational_text').innerHTML = language["Yes"];
-            document.getElementById('no_recreational_text').innerHTML = language["No"];
-            document.getElementById('never_recreational_text').innerHTML = language["Never Taken"];
-            document.getElementById('no_since_recreational_text').innerHTML = language["If No, Since When Have You Been Off The Drug?"];
-            document.getElementById('yes_often_recreational_text').innerHTML = language["If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?"];
-            document.getElementById('recreational_often_option_0').innerHTML = language["Choose Option"];
-            document.getElementById('recreational_often_option_1').innerHTML = language["Rarely"];
-            document.getElementById('recreational_often_option_2').innerHTML = language["Monthly"];
-            document.getElementById('recreational_often_option_3').innerHTML = language["Weekly"];
-            document.getElementById('recreational_often_option_4').innerHTML = language["Daily"];
-            document.getElementById('recreational_often_option_5').innerHTML = language["2 or more times per day"];
-
-            document.getElementById('recreational_what_text').innerHTML = language["If Yes, Which Drug or Herbal / Natural Remedy do you Use?"];
-            document.getElementById('recreational_what_option_0').innerHTML = language["Choose Option"];
-            document.getElementById('recreational_what_option_1').innerHTML = language["chondroitin"];
-            document.getElementById('recreational_what_option_2').innerHTML = language["glucosamine"];
-            document.getElementById('recreational_what_option_3').innerHTML = language["ginger"];
-            document.getElementById('recreational_what_option_4').innerHTML = language["ginkgo biloba"];
-            document.getElementById('recreational_what_option_5').innerHTML = language["ginseng"];
-            document.getElementById('recreational_what_option_6').innerHTML = language["st - John’s Wort"];
-            document.getElementById('recreational_what_option_7').innerHTML = language["turmeric"];
-            document.getElementById('recreational_what_option_8').innerHTML = language["Canabis / Marijuana"];
-            document.getElementById('recreational_what_option_9').innerHTML = language["Stimulants (e.g.cocaine, amphetamines,methamphetamine, ecstacy[MDMA]) "];
-            document.getElementById('recreational_what_option_10').innerHTML = language["Opium - related painkillers (e.g.heroin, morphine, fentanyl, oxycodone, dilaudid)"];
-            document.getElementById('recreational_what_option_11').innerHTML = language["Hallucinogens (e.g.LSD)"];
-            document.getElementById('recreational_what_option_12').innerHTML = language["Benzodiazepines (e.g.ativan, valium)"];
-            document.getElementById('recreational_what_option_13').innerHTML = language["Ketamine"];
-            document.getElementById('recreational_what_option_14').innerHTML = language["Ritalin"];
-            document.getElementById('recreational_what_option_15').innerHTML = language["Other"];
-
-
-            document.getElementById('medical_conditions_text').innerHTML = language["Do You Have Any Of the Following Medical Conditions?"];
-            document.getElementById('medical_AIDS_or_HIV').innerHTML = language["AIDS or HIV"];
-            document.getElementById('medical_Alcohol_Dependency_or_Abuse').innerHTML = language["Alcohol Dependency or Abuse"];
-            document.getElementById('medical_Anemia').innerHTML = language["Anemia"];
-            document.getElementById('medical_Anxiety').innerHTML = language["Anxiety"]; 
-            document.getElementById('medical_Arthritis').innerHTML = language["Arthritis"];
-            document.getElementById('medical_BleedingProblems').innerHTML = language["Bleeding Problems"];
-            document.getElementById('medical_BloodClots').innerHTML = language["Blood Clots"];
-            document.getElementById('medical_Cancer').innerHTML = language["Cancer"];
-            document.getElementById('medical_Dementia').innerHTML = language["Dementia"];
-            document.getElementById('medical_ChronicObstructive').innerHTML = language["Chronic Obstructive Pulmonary Disease or Emphysema"];
-            document.getElementById('medical_Depression').innerHTML = language["Depression"];
-            document.getElementById('medical_DrugDependency').innerHTML = language["Drug Dependency or Abuse"];
-            document.getElementById('medical_Diabetes').innerHTML = language["Diabetes"];
-            document.getElementById('medical_Gout').innerHTML = language["Gout"];
-            document.getElementById('medical_HeartDisease').innerHTML = language["Heart Disease"];
-            document.getElementById('medical_HeartArrythmia').innerHTML = language["Heart Arrythmia"];
-            document.getElementById('medical_HighCholesterol').innerHTML = language["High Cholesterol"];
-            document.getElementById('medical_HighBloodPressure').innerHTML = language["High Blood Pressure"];
-            document.getElementById('medical_Hypothyroidism').innerHTML = language["Hypothyroidism"];
-            document.getElementById('medical_Hyperthyroidism').innerHTML = language["Hyperthyroidism"];
-            document.getElementById('medical_KidneyDisease').innerHTML = language["Kidney Disease"];
-            document.getElementById('medical_Leukemia').innerHTML = language["Leukemia"];
-            document.getElementById('medical_LiverDisease').innerHTML = language["Liver Disease"];
-            document.getElementById('medical_Hepatitis').innerHTML = language["Hepatitis"];
-            document.getElementById('medical_Osteoporosis').innerHTML = language["Osteoporosis"];
-            document.getElementById('medical_Pancreatitis').innerHTML = language["Pancreatitis"];
-            document.getElementById('medical_PeripheralVascularDisease').innerHTML = language["Peripheral Vascular Disease"];
-            document.getElementById('medical_Pulmonary').innerHTML = language["Pulmonary Embolism"];
-            document.getElementById('medical_RefluxorGERD').innerHTML = language["Reflux or GERD"];
-            document.getElementById('medical_Seizures').innerHTML = language["Seizures"];
-            document.getElementById('medical_SleepApnea').innerHTML = language["Sleep Apnea"];
-            document.getElementById('medical_Stroke').innerHTML = language["Stroke"];
-            document.getElementById('medical_Other').innerHTML = language["Other"];
-
-            document.getElementById('bleeding_problems_text').innerHTML = language["Bleeding Problems.Type ?"];
-            document.getElementById('bleeding_option_0').innerHTML = language["Choose Option"];
-            document.getElementById('bleeding_option_1').innerHTML = language["Von Willebrand Hemophilia A (Factor 8 deficiency)"];
-            document.getElementById('bleeding_option_2').innerHTML = language["Hemophilia B (Christmas disease)"];
-            document.getElementById('bleeding_option_3').innerHTML = language["Factor 5 Leiden"];
-            document.getElementById('bleeding_option_4').innerHTML = language["Factor 2 deficiency"];
-            document.getElementById('bleeding_option_5').innerHTML = language["Factor 7 deficiency"];
-            document.getElementById('bleeding_option_6').innerHTML = language["Factor 10 deficiency"];
-            document.getElementById('bleeding_option_7').innerHTML = language["Factor 12 deficiency"];
-            document.getElementById('bleeding_option_8').innerHTML = language["Other"];
-
-            document.getElementById('Cancer_type_text').innerHTML = language["Cancer.Type ?"];
-
-            document.getElementById('breast_option_0').innerHTML = language["Choose Option"];
-            document.getElementById('breast_option_1').innerHTML = language["Breast"];
-            document.getElementById('breast_option_2').innerHTML = language["Prostate"];
-            document.getElementById('breast_option_3').innerHTML = language["Lung"];
-            document.getElementById('breast_option_4').innerHTML = language["Colon / Colorectal"];
-            document.getElementById('breast_option_5').innerHTML = language["Kidney"];
-            document.getElementById('breast_option_6').innerHTML = language["Bladder"];
-            document.getElementById('breast_option_7').innerHTML = language["Thyroid"];
-            document.getElementById('breast_option_8').innerHTML = language["Lymphoma"];
-            document.getElementById('breast_option_9').innerHTML = language["Melanoma"];
-            document.getElementById('breast_option_10').innerHTML = language["Endometrial"];
-            document.getElementById('breast_option_11').innerHTML = language["Leukemia"];
-            document.getElementById('breast_option_12').innerHTML = language["Pancreatitis"];
-            document.getElementById('breast_option_13').innerHTML = language["Liver"];
-            document.getElementById('breast_option_14').innerHTML = language["Other"];
-
-            document.getElementById('Hepatitis_problem_text').innerHTML = language["Hepatitis.Type ?"];
-
-            document.getElementById('Hepatitis_option_0').innerHTML = language["Choose Option"];
-            document.getElementById('Hepatitis_option_1').innerHTML = language["Auto - immune"];
-            document.getElementById('Hepatitis_option_2').innerHTML = language["Alcohol - induced"];
-            document.getElementById('Hepatitis_option_3').innerHTML = language["Hepatitis A"];
-            document.getElementById('Hepatitis_option_4').innerHTML = language["Hepatitis B – Active"];
-            document.getElementById('Hepatitis_option_5').innerHTML = language["Hepatitis B – Chronic"];
-            document.getElementById('Hepatitis_option_6').innerHTML = language["Hepatitis B – Cured"];
-            document.getElementById('Hepatitis_option_7').innerHTML = language["Hepatitis C – Active"];
-            document.getElementById('Hepatitis_option_8').innerHTML = language["Hepatitis C – Chronic"];
-            document.getElementById('Hepatitis_option_9').innerHTML = language["Hepatitis C – Cured"];
-            document.getElementById('Hepatitis_option_10').innerHTML = language["Hepatitis D"];
-            document.getElementById('Hepatitis_option_11').innerHTML = language["Hepatis E"];
-            document.getElementById('Hepatitis_option_12').innerHTML = language["Fatty-Liver"];
-            document.getElementById('Hepatitis_option_13').innerHTML = language["Other"];
-
-            document.getElementById('surgery_question_text').innerHTML = language["Have you Ever Had Surgery?"];
-            document.getElementById('yes_surgery_text').innerHTML = language["Yes"];
-            document.getElementById('no_surgery_text').innerHTML = language["No Previous Surgeries"];
-            document.getElementById('surgery_type_text').innerHTML = language["What Type of Surgery?"];
-            document.getElementById('surgery_date_text').innerHTML = language["When Was Your Surgery?"];
-            document.getElementById('Before_1970_text').innerHTML = language["Before 1970"];
-            document.getElementById('surgeon_name_text').innerHTML = language["What Was the Surgeon’s Name?"];
-            document.getElementById('medications_regularly_text').innerHTML = language["Do You Take Any Medications Regularly?"];
-            document.getElementById('yes_medications_regularly_text').innerHTML = language["Yes"];
-            document.getElementById('no_medications_regularly_text').innerHTML = language["No"];
-            document.getElementById('upload_file_medication_text').innerHTML = language["Please Upload Your Medication File (or Take Photograph)"];
-            document.getElementById('referral_text').innerHTML = language["Do You Have a Referral?"];
-            document.getElementById('yes_referral_text').innerHTML = language["Yes"];
-            document.getElementById('no_referral_text').innerHTML = language["No"];
-            document.getElementById('referral_file_text').innerHTML = language["Please Upload Your Referral File (or Take Photograph)"];
-
-
-            document.getElementById('medical_file_button').innerHTML = language["Choose"];
-            document.getElementById('referral_button').innerHTML = language["Choose"];
-
-            document.getElementById('submit_button_text').innerHTML = language["Submit"];
-
-
-
-
-        }
-
-        function no_medicare_card_changed(termsCheckBox) {
-
-
-            if (termsCheckBox.checked) {
-                $("#medicare_number").prop("disabled", true);
-                $("#medicare_number").prop("style", "background-color: #D3D3D3;");
-                $("#medicare_number").val("");
-                $("#expiration_date_Box").hide();
-
-
-            } else {
-                $("#medicare_number").prop("disabled", false);
-                $("#medicare_number").prop("style", "background-color: #fafafa;");
-
-                $("#expiration_date_Box").show();
+                }
             }
-        }
-        function yes_medicare_card_changed(termsCheckBox) {
+            function never_drug_changed(termsCheckBox) {
+                if (termsCheckBox.checked) {
+                    $("#drug_off_Box").hide();
+                    $("#How_many_weeks_drug").hide();
+                    $("#what_drug").hide();
 
-            if (termsCheckBox.checked) {
-                $("#medicare_number").prop("disabled", false);
-                $("#medicare_number").prop("style", "background-color: #fafafa;");
-                $("#expiration_date_Box").show();
-            } else {
-                $("#medicare_number").prop("disabled", true);
-                $("#medicare_number").prop("style", "background-color: #D3D3D3;");
-                $("#medicare_number").val("");
-                $("#expiration_date_Box").hide();
-            }
-        }
-        function never_offworking_changed(termsCheckBox) {
+                    $("#what_drug_parent3").hide();
+                    $("#what_drug_parent2").hide();
 
-            if (termsCheckBox.checked) {
-                $("#date_offwork_Box").hide();
-                $("#never_offwork_Box").show();
-                $("#living_activities_Box").hide();
-
-            } else {
-                $("#never_offwork_Box").hide();
-            }
-        }
-        function no_offworking_changed(termsCheckBox) {
-
-            if (termsCheckBox.checked) {
-                $("#date_offwork_Box").show();
-                $("#never_offwork_Box").hide();
-                $("#living_activities_Box").hide();
-            } else {
-                $("#date_offwork_Box").hide();
-            }
-        }
-        function yes_offworking_changed(termsCheckBox) {
-
-            if (termsCheckBox.checked) {
-                $("#date_offwork_Box").hide();
-                $("#never_offwork_Box").hide();
-                $("#living_activities_Box").show();
-            }
-            else {
-                $("#living_activities_Box").hide();
-            }
-        }
-        function no_smoke_changed(termsCheckBox) {
-
-            if (termsCheckBox.checked) {
-                $("#smoke_off_Box").show();
-                $("#how_many_cigarettes_perday").hide();
-                $("#How_many_years_smoke").hide();
-            } else {
-                $("#smoke_off_Box").hide();
-                $("#how_many_cigarettes_perday").show();
-                $("#How_many_years_smoke").show();
-            }
-        }
-        function yes_smoke_changed(termsCheckBox) {
-
-            if (termsCheckBox.checked) {
-                $("#smoke_off_Box").hide();
-                $("#how_many_cigarettes_perday").show();
-                $("#How_many_years_smoke").show();
-
-            } else {
-                $("#smoke_off_Box").show();
-                $("#how_many_cigarettes_perday").hide();
-                $("#How_many_years_smoke").hide();
-            }
-        }
-        function never_smoke_changed(termsCheckBox) {
-            if (termsCheckBox.checked) {
-                $("#smoke_off_Box").hide();
-                $("#how_many_cigarettes_perday").hide();
-                $("#How_many_years_smoke").hide();
-            }
-        }
-        function no_alcohol_changed(termsCheckBox) {
-
-            if (termsCheckBox.checked) {
-                //$("#alcohol_off_Box").show();
-                $("#How_many_weeks_alcohol").hide();
-            } else {
-                //$("#alcohol_off_Box").hide();
-                $("#How_many_weeks_alcohol").show();
-            }
-        }
-        function yes_alcohol_changed(termsCheckBox) {
-
-            if (termsCheckBox.checked) {
-                //$("#alcohol_off_Box").hide();
-                $("#How_many_weeks_alcohol").show();
-
-            } else {
-                //$("#alcohol_off_Box").show();
-                $("#How_many_weeks_alcohol").hide();
-            }
-        }
-        function never_alcohol_changed(termsCheckBox) {
-            //if (termsCheckBox.checked) {
-            //    $("#alcohol_off_Box").hide();
-            //    $("#How_many_weeks_alcohol").hide();
-            //}
-        }
-
-        function no_drug_changed(termsCheckBox) {
-
-            if (termsCheckBox.checked) {
-                $("#drug_off_Box").show();
-                $("#How_many_weeks_drug").hide();
-                $("#what_drug").hide();
-            } else {
-                $("#drug_off_Box").hide();
-                $("#How_many_weeks_drug").show();
-                $("#what_drug").show();
-            }
-        }
-        function yes_drug_changed(termsCheckBox) {
-
-            if (termsCheckBox.checked) {
-                $("#drug_off_Box").hide();
-                $("#How_many_weeks_drug").show();
-                $("#what_drug").show();
-            } else {
-                $("#drug_off_Box").show();
-                $("#How_many_weeks_drug").hide();
-                $("#what_drug").hide();
-
-            }
-        }
-        function never_drug_changed(termsCheckBox) {
-            if (termsCheckBox.checked) {
-                $("#drug_off_Box").hide();
-                $("#How_many_weeks_drug").hide();
-                $("#what_drug").hide();
-            }
-        }
-
-        function no_surgery_changed(termsCheckBox) {
-
-            if (termsCheckBox.checked) {
-                $("#surgery_date_Box").hide();
-                $("#surgon_name").hide();
-                $("#surgery_names").hide();
-            } else {
-                $("#surgery_date_Box").show();
-                $("#surgery_names").show();
-                $("#surgon_name").show();
-            }
-        }
-        function yes_surgery_changed(termsCheckBox) {
-
-            if (termsCheckBox.checked) {
-                $("#surgery_date_Box").show();
-                $("#surgon_name").show();
-                $("#surgery_names").show();
-            } else {
-                $("#surgery_date_Box").hide();
-                $("#surgon_name").hide();
-                $("#surgery_names").hide();
-
-            }
-        }
-        function yes_file_medication_changed(termsCheckBox) {
-            if (termsCheckBox.checked) {
-                $("#Box_medical_file_form").show();
-            } else {
-                $("#Box_medical_file_form").hide();
-            }
-        }
-        function no_file_medication_changed(termsCheckBox) {
-
-            if (termsCheckBox.checked) {
-                $("#Box_medical_file_form").hide();
-            } else {
-                $("#Box_medical_file_form").show();
-
-            } yes_file_medication_changed
-        }
-
-        function yes_referral_changed(termsCheckBox) {
-            if (termsCheckBox.checked) {
-                $("#Box_referral_form").show();
-            } else {
-                $("#Box_referral_form").hide();
-            }
-        }
-        function no_referral_changed(termsCheckBox) {
-
-            if (termsCheckBox.checked) {
-                $("#Box_referral_form").hide();
-            } else {
-                $("#Box_referral_form").show();
-
-            }
-        }
-        function BleedingProblems_changed(termsCheckBox) {
-            if (termsCheckBox.checked) {
-                $("#bleeding_problems").show();
-            } else {
-                $("#bleeding_problems").hide();
-
-            }
-        }
-        function Cancer_changed(termsCheckBox) {
-            if (termsCheckBox.checked) {
-                $("#cancer_type").show();
-            } else {
-                $("#cancer_type").hide();
-            }
-        }
-        function Hepatitis_changed(termsCheckBox) {
-            if (termsCheckBox.checked) {
-                $("#hepatitis_type").show();
-            } else {
-                $("#hepatitis_type").hide();
-            }
-        }
-        function button_file_medication_click() {
-            //   document.getElementById('medical_file').click();
-            $("[id$=FileUploadMedical]").click();
-        }
-        function change_file_medication_click() {
-
-            //let input = document.getElementById('medical_file');
-            let input = $("[id$=FileUploadMedical]");
-
-            console.dir(input);
-            if (input != null && input.length > 0) {
-                alert('File has been successfully uploaded');
-                //document.getElementById('text_medical_file').innerHTML = input.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-                document.getElementById('text_medical_file').innerHTML = input.val().substring(input.val().lastIndexOf('\\') + 1);
+                }
             }
 
-            else {
-                document.getElementById('text_medical_file').innerHTML = "No file chosen, yet.";
+            function no_surgery_changed(termsCheckBox) {
+
+                if (termsCheckBox.checked) {
+                    $("#surgery_date_Box").hide();
+                    $("#surgon_name").hide();
+                    $("#surgery_names").hide();
+
+                    $("#surgery_main_parent2").hide();
+                    $("#surgery_main_parent3").hide();
+
+                } else {
+                    $("#surgery_date_Box").show();
+                    $("#surgery_names").show();
+                    $("#surgon_name").show();
+                }
             }
-        }
+            function yes_surgery_changed(termsCheckBox) {
 
-        function button_referral_click() {
-            // document.getElementById('referral_file').click(); FileUploadReferal
-            $("[id$=FileUploadReferal_]").click();
-        }
-        function change_referral_click() {
-            //let input = document.getElementById('referral_file');
-            let input = $("[id$=FileUploadReferal_]");
+                if (termsCheckBox.checked) {
+                    $("#surgery_date_Box").show();
+                    $("#surgon_name").show();
+                    $("#surgery_names").show();
+                } else {
+                    $("#surgery_date_Box").hide();
+                    $("#surgon_name").hide();
+                    $("#surgery_names").hide();
 
-            //console.dir(input.files[0]);
-            if (input != null && input.length > 0) {
-                alert('File has been successfully uploaded');
-                document.getElementById('text_referral_file').innerHTML = input.val().substring(input.val().lastIndexOf('\\') + 1);
+                    $("#surgery_main_parent2").hide();
+                    $("#surgery_main_parent3").hide();
+                }
             }
-            else {
-                document.getElementById('text_referral_file').innerHTML = "No file chosen, yet.";
+            function yes_file_medication_changed(termsCheckBox) {
+                if (termsCheckBox.checked) {
+                    $("#Box_medical_file_form").show();
+                } else {
+                    $("#Box_medical_file_form").hide();
+                }
             }
-        }
+            function no_file_medication_changed(termsCheckBox) {
 
+                if (termsCheckBox.checked) {
+                    $("#Box_medical_file_form").hide();
+                } else {
+                    $("#Box_medical_file_form").show();
 
-        function submit_button_click() {
-
-
-            //alert(hand_write.selectedIndex);
-
-
-            //window.open("exit.html", "Thanks for Visiting!");
-
-            //var txtFirstName = document.getElementById('first_name');
-
-
-
-            //questionnaireformat.setAttribute("style", "pointer-events: none;");
-
-            txtFirstName.style.backgroundColor = "#fafafa";
-            txtLastName.style.backgroundColor = "#fafafa";
-            txtBirthday.style.backgroundColor = "#fafafa";
-
-            //txtLastName.style.backgroundColor = "#C0C0C0";
-
-
-            txtMedicareNumber.style.backgroundColor = "#fafafa";;
-            txtExpirationDate.style.backgroundColor = "#fafafa";
-            txtEmail.style.backgroundColor = "#fafafa";
-            txtPhoneNumber.style.backgroundColor = "#fafafa";
-            livingActivities.style.backgroundColor = "#fafafa";
-            dateOffWork.style.backgroundColor = "#fafafa";
-            sportsActivites.style.backgroundColor = "#fafafa";
-            familynameOfDoctor.style.backgroundColor = "#fafafa";
-            handWrite.style.backgroundColor = "#fafafa";
-            smokeHowmanyYears.style.backgroundColor = "#fafafa";
-            smokeHowmanyPerday.style.backgroundColor = "#fafafa";
-            smokeOffDate.style.backgroundColor = "#fafafa";
-
-            alcoholHowmanyPerweek.style.backgroundColor = "#fafafa";
-            alcoholOffDate.style.backgroundColor = "#fafafa";
-
-            recreationalDrugHowmanyPerweeks.style.backgroundColor = "#fafafa";
-            recreationalDrugWhatDrugs.style.backgroundColor = "#fafafa";
-            recreationalDrugOffDate.style.backgroundColor = "#fafafa";
-
-            bleedingProblemsTypes.style.backgroundColor = "#fafafa";
-            cancerProblemsTypes.style.backgroundColor = "#fafafa";
-            hepatitisProblemTypes.style.backgroundColor = "#fafafa";
-
-            surgeryNames.style.backgroundColor = "#fafafa";
-            surgeryDate.style.backgroundColor = "#fafafa";
-            surgonName.style.backgroundColor = "#fafafa";
-
-            //medicalFile.style.backgroundColor = "#fafafa";
-
-            //referralFile.style.backgroundColor = "#fafafa";
-
-
-
-            if (txtFirstName.value == "") {
-
-                alert("Please fill out your Frist Name");
-                txtFirstName.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (txtLastName.value == "") {
-                alert("Please fill out your Last Name");
-                txtLastName.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (txtBirthday.value == "") {
-                alert("Please fill out your Birthday");
-                txtBirthday.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (txtMedicareNumber.value == "" && document.getElementById('yes_medicare_card').checked) {
-                alert("Please fill out your Medicare Number");
-                txtMedicareNumber.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (txtExpirationDate.value == "" && document.getElementById('yes_medicare_card').checked) {
-                alert("Please fill out your Expiration Date");
-                txtExpirationDate.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (txtEmail.value == "") {
-                alert("Please fill out your Email");
-                txtEmail.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (txtPhoneNumber.value == "") {
-                alert("Please fill out your Phone Number");
-                txtPhoneNumber.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (familynameOfDoctor.value == "") {
-                alert("Please write your Family Doctor");
-                familynameOfDoctor.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (livingActivities.value == "Choose option" && document.getElementById('yes_working_question').checked) {
-                alert("Please fill out your Living Activities");
-                livingActivities.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (dateOffWork.value == "" && document.getElementById('no_working_question').checked) {
-                alert("Please fill out your off work date");
-                dateOffWork.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (neverworkoption.value == "" && document.getElementById('never_working_question').checked) {
-                alert("Please select one of the work options");
-                dateOffWork.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (sportsActivites.value == "Choose option") {
-                alert("Please fill out your Sport Activities");
-                sportsActivites.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (handWrite.value == "Choose option") {
-                alert("Please fill out your Hand Write");
-                handWrite.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (smokeHowmanyYears.value == "Choose option" && document.getElementById('yes_smoke').checked) {
-                alert("Please fill out, How Many Years Do You Smoke");
-                smokeHowmanyYears.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (smokeHowmanyPerday.value == "Choose option" && document.getElementById('yes_smoke').checked) {
-                alert("Please fill out, How Many Smoke Per Day");
-                smokeHowmanyPerday.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (smokeOffDate.value == "" && document.getElementById('no_smoke').checked) {
-                alert("Please fill out your Smoke Off Date");
-                smokeOffDate.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (alcoholHowmanyPerweek.value == "Choose option" && document.getElementById('yes_alcohol').checked) {
-                alert("Please fill out, How Many Time Do You Drink Per week");
-                alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            //else if (alcoholOffDate.value == "" && document.getElementById('no_alcohol').checked) {
-            //    alert("Please fill out your Drinking Off Date");
-            //    alcoholOffDate.style.backgroundColor = "#ffcfcf";
-            //    return false;
-            //}
-            else if (recreationalDrugHowmanyPerweeks.value == "Choose option" && document.getElementById('yes_drug').checked) {
-                alert("Please fill out, How Many Recreational Drug Per Week");
-                recreationalDrugHowmanyPerweeks.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (recreationalDrugWhatDrugs.value == "Choose option" && document.getElementById('yes_drug').checked) {
-                alert("Please fill out, What Recreational Drug Do you Use");
-                recreationalDrugWhatDrugs.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (recreationalDrugOffDate.value == "" && document.getElementById('no_drug').checked) {
-                alert("Please fill out your Recreational Drug Off Date");
-                recreationalDrugOffDate.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (bleedingProblemsTypes.value == "Choose option" && document.getElementById('BleedingProblems').checked) {
-                alert("Please select your Bleeding Problem Type");
-                bleedingProblemsTypes.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (cancerProblemsTypes.value == "Choose option" && document.getElementById('Cancer').checked) {
-                alert("Please select your Cancer Problem Type");
-                cancerProblemsTypes.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (hepatitisProblemTypes.value == "Choose option" && document.getElementById('Hepatitis').checked) {
-                alert("Please select your Hepatitis Problem Type");
-                hepatitisProblemTypes.style.backgroundColor = "#ffcfcf";
-                return false;
+                } yes_file_medication_changed
             }
 
-            else if (surgeryNames.value == "" && document.getElementById('yes_surgery').checked) {
-                alert("Please write your Surgery Name");
-                surgeryNames.style.backgroundColor = "#ffcfcf";
-                return false;
+            function yes_referral_changed(termsCheckBox) {
+                if (termsCheckBox.checked) {
+                    $("#Box_referral_form").show();
+                } else {
+                    $("#Box_referral_form").hide();
+                }
             }
-            else if (surgeryDate.value == "" && document.getElementById('yes_surgery').checked) {
-                alert("Please fill out your Surgery Date");
-                surgeryDate.style.backgroundColor = "#ffcfcf";
-                return false;
+            function no_referral_changed(termsCheckBox) {
+
+                if (termsCheckBox.checked) {
+                    $("#Box_referral_form").hide();
+                } else {
+                    $("#Box_referral_form").show();
+
+                }
             }
-            else if (surgonName.value == "" && document.getElementById('yes_surgery').checked) {
-                alert("Please write your Surgeon's Name");
-                surgonName.style.backgroundColor = "#ffcfcf";
-                return false;
+            function BleedingProblems_changed(termsCheckBox) {
+                if (termsCheckBox.checked) {
+                    $("#bleeding_problems").show();
+                } else {
+                    $("#bleeding_problems").hide();
+
+                }
+            }
+            function Cancer_changed(termsCheckBox) {
+                if (termsCheckBox.checked) {
+                    $("#cancer_type").show();
+                } else {
+                    $("#cancer_type").hide();
+                }
+            }
+            function Hepatitis_changed(termsCheckBox) {
+                if (termsCheckBox.checked) {
+                    $("#hepatitis_type").show();
+                } else {
+                    $("#hepatitis_type").hide();
+                }
+            }
+            function button_file_medication_click() {
+                //   document.getElementById('medical_file').click();
+                $("[id$=FileUploadMedical]").click();
+            }
+            function change_file_medication_click() {
+
+                //let input = document.getElementById('medical_file');
+                let input = $("[id$=FileUploadMedical]");
+
+                console.dir(input);
+                if (input != null && input.length > 0) {
+                    alert('File has been successfully uploaded');
+                    //document.getElementById('text_medical_file').innerHTML = input.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                    document.getElementById('text_medical_file').innerHTML = input.val().substring(input.val().lastIndexOf('\\') + 1);
+                }
+
+                else {
+                    document.getElementById('text_medical_file').innerHTML = "No file chosen, yet.";
+                }
             }
 
-            else if (medicalFile.value == 'undefined' && document.getElementById('yes_question_file_medication').checked) {
-                alert("Please upload your Medical File");
-                //      medicalFile.style.backgroundColor = "#ffcfcf";
-                return false;
+            function button_referral_click() {
+                // document.getElementById('referral_file').click(); FileUploadReferal
+                $("[id$=FileUploadReferal_]").click();
             }
-            else if (referralFile.value == 'undefined' && document.getElementById('yes_Referral').checked) {
-                alert("Please upload your Referral File");
-                //    referralFile.style.backgroundColor = "#ffcfcf";
-                return false;
+            function change_referral_click() {
+                //let input = document.getElementById('referral_file');
+                let input = $("[id$=FileUploadReferal_]");
+
+                //console.dir(input.files[0]);
+                if (input != null && input.length > 0) {
+                    alert('File has been successfully uploaded');
+                    document.getElementById('text_referral_file').innerHTML = input.val().substring(input.val().lastIndexOf('\\') + 1);
+                }
+                else {
+                    document.getElementById('text_referral_file').innerHTML = "No file chosen, yet.";
+                }
             }
 
 
+            function submit_button_click() {
 
-            //....................
+                //if ($('#sport_activites_parent2:visible').length == 0) {
 
-            if (document.getElementById('gender_Male').checked) {
-                genderselection = 'Male';
-            }
-            else if (document.getElementById('gender_Female').checked) {
-                genderselection = 'Female';
-            }
-            else if (document.getElementById('gender_Other').checked) {
-                genderselection = 'Other/Prefer not to answer';
-            }
-
-            if (document.getElementById('no_medicare_card').checked) {
-                txtMedicareNumber.value = 'Null';
-            }
-
-            if (confirm("Are you sure all the information above is correct?")) {
-
-
-                var userArray = {};
-
-                //alert(document.getElementById("referral_file").src);
-                // alert(referralFile.value);
-
-                userArray.Name = txtFirstName.value;
-                userArray.Family = txtLastName.value;
-                userArray.Email = txtEmail.value;
-                userArray.Gender = genderselection;
-                userArray.PhoneNumber = txtPhoneNumber.value;
-                userArray.MedicareNumber = txtMedicareNumber.value;
-                //userArray.MedicareNumber ='hi';
-                userArray.ExpirationDate = txtExpirationDate.value;
-                userArray.Birthday = txtBirthday.value;
-
-
-
-                //  questionnaireArray.ReferralImage = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-
-                //  questionnaireArray.MedicationFile = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-
-
-
-
-
-
-
-                //if (referralFile.files && referralFile.files[0]) {
-                //    var reader = new FileReader();
-
-                //    reader.addEventListener(
-                //        "load",
-                //        function () {
-                //            var avatarImg = new Image();
-                //            var src = reader.result;
-                //            avatarImg.src = src;
-
-                //        //    document.getElementById("dataUrl").innerText = src;
-
-                //             questionnaireArray.ReferralImage = src;
-
-
-                //            $.ajax({
-                //                url: 'Default.aspx/addUserQuestionnaire',
-                //                contentType: 'application/json;charset=utf-8',
-                //                method: 'post',
-                //                data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
-                //                success: function () {
-                //                    //$("#MoneyType").val = "";
-                //                    //$("#progress").hide();
-                //                    alert("ok");
-                //                    //$("#saveSuccess").show();
-                //                    //fetchMoneyTypeData();
-                //                },
-                //                error: function (er) {
-                //                    alert(er);
-                //                    //$("#saveError").show();
-                //                },
-
-                //            });
-
-                //            //avatarImg.onload = function () {
-                //            //    var c = document.getElementById("myCanvas");
-                //            //    var ctx = c.getContext("2d");
-                //            //    ctx.canvas.width = avatarImg.width;
-                //            //    ctx.canvas.height = avatarImg.height;
-
-                //            //    ctx.drawImage(avatarImg, 0, 0);
-                //            //};
-                //        },
-                //        false
-                //    );
-
-                //    reader.readAsDataURL(referralFile.files[0]);
+                //    alert('no');
+                //}
+                //else {
+                //    alert('yes');
                 //}
 
+                //alert(handWrite.value);
+                //alert(hand_write.selectedIndex);
 
 
-                //questionnaireArray.MedicationFile = medicalFile.value;
+                //window.open("exit.html", "Thanks for Visiting!");
+
+                //var txtFirstName = document.getElementById('first_name');
+
+                //questionnaireformat.setAttribute("style", "pointer-events: none;");
+
+                txtFirstName.style.backgroundColor = "#fafafa";
+                txtLastName.style.backgroundColor = "#fafafa";
+                txtBirthday.style.backgroundColor = "#fafafa";
+
+                //txtLastName.style.backgroundColor = "#C0C0C0";
 
 
-                //alert($('#referral_file')[0].files.toDataURL("image/png"));
-                //      alert(questionnaireArray.MedicationFile);
+                txtMedicareNumber.style.backgroundColor = "#fafafa";;
+                txtExpirationDate.style.backgroundColor = "#fafafa";
+                txtEmail.style.backgroundColor = "#fafafa";
+                txtPhoneNumber.style.backgroundColor = "#fafafa";
+                livingActivities.style.backgroundColor = "#fafafa";
+                dateOffWork.style.backgroundColor = "#fafafa";
+                sportsActivites.style.backgroundColor = "#fafafa";
+                sportsActivites2.style.backgroundColor = "#fafafa";
+                sportsActivites3.style.backgroundColor = "#fafafa";
 
-                //questionnaireArray.ReferralImage = referralFile.value;
-                //questionnaireArray.MedicationFile = medicalFile.value;
-                //questionnaireArray.ReferralImage = window.URL.createObjectURL(referralFile.files[0]);
-                //questionnaireArray.MedicationFile = window.URL.createObjectURL(medicalFile.files[0]);
-                //userArray.PersonalPhoto = txtFirstName.value;
-                //userArray.MedicarePhoto = txtFirstName.value;
-                //userArray.UserId =null;
+                familynameOfDoctor.style.backgroundColor = "#fafafa";
+                handWrite.style.backgroundColor = "#fafafa";
+                smokeHowmanyYears.style.backgroundColor = "#fafafa";
+                smokeHowmanyPerday.style.backgroundColor = "#fafafa";
+                smokeOffDate.style.backgroundColor = "#fafafa";
 
+                alcoholHowmanyPerweek.style.backgroundColor = "#fafafa";
+                alcoholOffDate.style.backgroundColor = "#fafafa";
 
-
-                // this is ok for user
-                //$.ajax({
-                //    url: 'Default.aspx/addUser',
-                //    contentType: 'application/json;charset=utf-8',
-                //    method: 'post',
-                //    data: '{user:' + JSON.stringify(userArray) + '}',
-                //    success: function () {
-                //        //$("#MoneyType").val = "";
-                //        //$("#progress").hide();
-                //        alert("ok");
-                //        //$("#saveSuccess").show();
-                //        //fetchMoneyTypeData();
-                //    },
-                //    error: function (er) {
-                //        alert(er);
-                //        //$("#saveError").show();
-                //    }, 
-                //});
+                recreationalDrugHowmanyPerweeks.style.backgroundColor = "#fafafa";
+                recreationalDrugWhatDrugs.style.backgroundColor = "#fafafa";
 
 
-                //checkUserExist
+                recreationalDrugHowmanyPerweeks2.style.backgroundColor = "#fafafa";
+                recreationalDrugWhatDrugs2.style.backgroundColor = "#fafafa";
+
+
+                recreationalDrugHowmanyPerweeks3.style.backgroundColor = "#fafafa";
+                recreationalDrugWhatDrugs3.style.backgroundColor = "#fafafa";
+
+                recreationalDrugOffDate.style.backgroundColor = "#fafafa";
+
+                bleedingProblemsTypes.style.backgroundColor = "#fafafa";
+                cancerProblemsTypes.style.backgroundColor = "#fafafa";
+                hepatitisProblemTypes.style.backgroundColor = "#fafafa";
+
+                surgeryNames.style.backgroundColor = "#fafafa";
+                surgeryDate.style.backgroundColor = "#fafafa";
+                surgonName.style.backgroundColor = "#fafafa";
+
+                surgeryNames2.style.backgroundColor = "#fafafa";
+                surgeryDate2.style.backgroundColor = "#fafafa";
+                surgonName2.style.backgroundColor = "#fafafa";
+
+
+                surgeryNames3.style.backgroundColor = "#fafafa";
+                surgeryDate3.style.backgroundColor = "#fafafa";
+                surgonName3.style.backgroundColor = "#fafafa";
+
+
+                //medicalFile.style.backgroundColor = "#fafafa";
+
+                //referralFile.style.backgroundColor = "#fafafa";
+
+
+
+                if (txtFirstName.value == "") {
+
+                    alert("Please fill out your Frist Name");
+                    txtFirstName.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (txtLastName.value == "") {
+                    alert("Please fill out your Last Name");
+                    txtLastName.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (txtBirthday.value == "") {
+                    alert("Please fill out your Birthday");
+                    txtBirthday.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (txtMedicareNumber.value == "" && document.getElementById('yes_medicare_card').checked) {
+                    alert("Please fill out your Medicare Number");
+                    txtMedicareNumber.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (txtExpirationDate.value == "" && document.getElementById('yes_medicare_card').checked) {
+                    alert("Please fill out your Expiration Date");
+                    txtExpirationDate.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (txtEmail.value == "") {
+                    alert("Please fill out your Email");
+                    txtEmail.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (txtPhoneNumber.value == "") {
+                    alert("Please fill out your Phone Number");
+                    txtPhoneNumber.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (familynameOfDoctor.value == "") {
+                    alert("Please write your Family Doctor");
+                    familynameOfDoctor.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (livingActivities.selectedIndex == 0 && document.getElementById('yes_working_question').checked) {
+                    alert("Please fill out your Living Activities");
+                    livingActivities.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (dateOffWork.value == "" && document.getElementById('no_working_question').checked) {
+                    alert("Please fill out your off work date");
+                    dateOffWork.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (neverworkoption.value == "" && document.getElementById('never_working_question').checked) {
+                    alert("Please select one of the work options");
+                    dateOffWork.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (sportsActivites.selectedIndex == 0) {
+                    alert("Please fill out your Sport Activities");
+                    sportsActivites.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (handWrite.selectedIndex == 0) {
+                    alert("Please fill out your Hand Write");
+                    handWrite.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (smokeHowmanyYears.selectedIndex == 0 && document.getElementById('yes_smoke').checked) {
+                    alert("Please fill out, How Many Years Do You Smoke");
+                    smokeHowmanyYears.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (smokeHowmanyPerday.selectedIndex == 0 && document.getElementById('yes_smoke').checked) {
+                    alert("Please fill out, How Many Smoke Per Day");
+                    smokeHowmanyPerday.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (smokeOffDate.value == "" && document.getElementById('no_smoke').checked) {
+                    alert("Please fill out your Smoke Off Date");
+                    smokeOffDate.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (alcoholHowmanyPerweek.selectedIndex == 0 && document.getElementById('yes_alcohol').checked) {
+                    alert("Please fill out, How Many Time Do You Drink Per week");
+                    alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                //else if (alcoholOffDate.value == "" && document.getElementById('no_alcohol').checked) {
+                //    alert("Please fill out your Drinking Off Date");
+                //    alcoholOffDate.style.backgroundColor = "#ffcfcf";
+                //    return false;
+                //}
+                else if (recreationalDrugHowmanyPerweeks.selectedIndex == 0 && document.getElementById('yes_drug').checked) {
+                    alert("Please fill out, How Many Recreational Drug Per Week");
+                    recreationalDrugHowmanyPerweeks.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (recreationalDrugWhatDrugs.selectedIndex == 0 && document.getElementById('yes_drug').checked) {
+                    alert("Please fill out, What Recreational Drug Do you Use");
+                    recreationalDrugWhatDrugs.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (recreationalDrugOffDate.value == "" && document.getElementById('no_drug').checked) {
+                    alert("Please fill out your Recreational Drug Off Date");
+                    recreationalDrugOffDate.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (bleedingProblemsTypes.selectedIndex == 0 && document.getElementById('BleedingProblems').checked) {
+                    alert("Please select your Bleeding Problem Type");
+                    bleedingProblemsTypes.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (cancerProblemsTypes.selectedIndex == 0 && document.getElementById('Cancer').checked) {
+                    alert("Please select your Cancer Problem Type");
+                    cancerProblemsTypes.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (hepatitisProblemTypes.selectedIndex == 0 && document.getElementById('Hepatitis').checked) {
+                    alert("Please select your Hepatitis Problem Type");
+                    hepatitisProblemTypes.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+
+                else if (surgeryNames.value == "" && document.getElementById('yes_surgery').checked) {
+                    alert("Please write your Surgery Name");
+                    surgeryNames.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (surgeryDate.value == "" && document.getElementById('yes_surgery').checked) {
+                    alert("Please fill out your Surgery Date");
+                    surgeryDate.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (surgonName.value == "" && document.getElementById('yes_surgery').checked) {
+                    alert("Please write your Surgeon's Name");
+                    surgonName.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+
+                else if (medicalFile.value == 'undefined' && document.getElementById('yes_question_file_medication').checked) {
+                    alert("Please upload your Medical File");
+                    //      medicalFile.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+                else if (referralFile.value == 'undefined' && document.getElementById('yes_Referral').checked) {
+                    alert("Please upload your Referral File");
+                    //    referralFile.style.backgroundColor = "#ffcfcf";
+                    return false;
+                }
+
+
+
+                //....................
+
+                if (document.getElementById('gender_Male').checked) {
+                    genderselection = 'Male';
+                }
+                else if (document.getElementById('gender_Female').checked) {
+                    genderselection = 'Female';
+                }
+                else if (document.getElementById('gender_Other').checked) {
+                    genderselection = 'Other/Prefer not to answer';
+                }
+
+                if (document.getElementById('no_medicare_card').checked) {
+                    txtMedicareNumber.value = 'Null';
+                }
+
+                if (confirm("Are you sure all the information above is correct?")) {
+
+
+                    var userArray = {};
+
+                    //alert(document.getElementById("referral_file").src);
+                    // alert(referralFile.value);
+
+                    userArray.Name = txtFirstName.value;
+                    userArray.Family = txtLastName.value;
+                    userArray.Email = txtEmail.value;
+                    userArray.Gender = genderselection;
+                    userArray.PhoneNumber = txtPhoneNumber.value;
+                    userArray.MedicareNumber = txtMedicareNumber.value;
+                    //userArray.MedicareNumber ='hi';
+                    userArray.ExpirationDate = txtExpirationDate.value;
+                    userArray.Birthday = txtBirthday.value;
+
+
+
+                    //  questionnaireArray.ReferralImage = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+
+                    //  questionnaireArray.MedicationFile = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+
+
+                    //if (referralFile.files && referralFile.files[0]) {
+                    //    var reader = new FileReader();
+
+                    //    reader.addEventListener(
+                    //        "load",
+                    //        function () {
+                    //            var avatarImg = new Image();
+                    //            var src = reader.result;
+                    //            avatarImg.src = src;
+
+                    //        //    document.getElementById("dataUrl").innerText = src;
+
+                    //             questionnaireArray.ReferralImage = src;
+
+
+                    //            $.ajax({
+                    //                url: 'Default.aspx/addUserQuestionnaire',
+                    //                contentType: 'application/json;charset=utf-8',
+                    //                method: 'post',
+                    //                data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
+                    //                success: function () {
+                    //                    //$("#MoneyType").val = "";
+                    //                    //$("#progress").hide();
+                    //                    alert("ok");
+                    //                    //$("#saveSuccess").show();
+                    //                    //fetchMoneyTypeData();
+                    //                },
+                    //                error: function (er) {
+                    //                    alert(er);
+                    //                    //$("#saveError").show();
+                    //                },
+
+                    //            });
+
+                    //            //avatarImg.onload = function () {
+                    //            //    var c = document.getElementById("myCanvas");
+                    //            //    var ctx = c.getContext("2d");
+                    //            //    ctx.canvas.width = avatarImg.width;
+                    //            //    ctx.canvas.height = avatarImg.height;
+
+                    //            //    ctx.drawImage(avatarImg, 0, 0);
+                    //            //};
+                    //        },
+                    //        false
+                    //    );
+
+                    //    reader.readAsDataURL(referralFile.files[0]);
+                    //}
+
+
+
+                    //questionnaireArray.MedicationFile = medicalFile.value;
+
+
+                    //alert($('#referral_file')[0].files.toDataURL("image/png"));
+                    //      alert(questionnaireArray.MedicationFile);
+
+                    //questionnaireArray.ReferralImage = referralFile.value;
+                    //questionnaireArray.MedicationFile = medicalFile.value;
+                    //questionnaireArray.ReferralImage = window.URL.createObjectURL(referralFile.files[0]);
+                    //questionnaireArray.MedicationFile = window.URL.createObjectURL(medicalFile.files[0]);
+                    //userArray.PersonalPhoto = txtFirstName.value;
+                    //userArray.MedicarePhoto = txtFirstName.value;
+                    //userArray.UserId =null;
+
+
+
+                    // this is ok for user
+                    //$.ajax({
+                    //    url: 'Default.aspx/addUser',
+                    //    contentType: 'application/json;charset=utf-8',
+                    //    method: 'post',
+                    //    data: '{user:' + JSON.stringify(userArray) + '}',
+                    //    success: function () {
+                    //        //$("#MoneyType").val = "";
+                    //        //$("#progress").hide();
+                    //        alert("ok");
+                    //        //$("#saveSuccess").show();
+                    //        //fetchMoneyTypeData();
+                    //    },
+                    //    error: function (er) {
+                    //        alert(er);
+                    //        //$("#saveError").show();
+                    //    }, 
+                    //});
+
+
+                    //checkUserExist
+
+
+                    $.ajax({
+                        url: 'Default.aspx/checkUserExist',
+                        contentType: 'application/json;charset=utf-8',
+                        method: 'post',
+                        data: '{user:' + JSON.stringify(userArray) + '}',
+                        success: function (data) {
+
+                            //  alert(data.d); 
+                            //alert("ok");
+
+                            buildAnswers(data.d);
+
+                        },
+                        error: function (er) {
+                            alert(er);
+                            //$("#saveError").show();
+                        },
+                    });
+
+
+
+                    // THIS IS OK FOR addUserQuestionnaire
+
+                    //$.ajax({
+                    //    url: 'Default.aspx/addUserQuestionnaire',
+                    //    contentType: 'application/json;charset=utf-8',
+                    //    method: 'post',
+                    //    data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
+                    //    success: function () {
+                    //        //$("#MoneyType").val = "";
+                    //        //$("#progress").hide();
+                    //        alert("ok");
+                    //        //$("#saveSuccess").show();
+                    //        //fetchMoneyTypeData();
+                    //    },
+                    //    error: function (er) {
+                    //        alert(er);
+                    //        //$("#saveError").show();
+                    //    },
+
+                    //});
+
+
+
+
+
+                    //var file1 = $("#referral_file").get(0).files;
+                    //var file2 = $("#medical_file").get(0).files;
+                    //var data = new FormData;
+                    // data.append("ImageFile", file[0]);
+
+
+
+                }
+                else {
+                    return false;
+                }
+            }
+
+
+            function buildAnswers(userId) {
+
+                //var sb = new StringBuilder();
+                //sb.AppendLine("Some text with line one");
+                //sb.AppendLine("Some mpre text with line two");
+
+
+
+                var answer = '';
+
+                answer += 'What Is The Name Of Your Family Doctor?<br />';
+                answer += familynameOfDoctor.value; answer += '<br />';
+
+                answer += '<br /><br />';
+
+                answer = 'Are You Working Now ?<br />';
+                if (document.getElementById('yes_working_question').checked) {
+                    answer += 'Yes<br />';
+                    answer += 'What do you do for a living/what is your profession?<br />';
+                    answer += livingActivities.value; answer += '<br />';
+                }
+                else if (document.getElementById('no_working_question').checked) {
+                    answer += 'No; Retired<br />';
+                    answer += 'If No, Since When Have You Been Off Work?<br />';
+                    answer += dateOffWork.value; answer += '<br />';
+                }
+                else if (document.getElementById('never_working_question').checked) {
+                    answer += 'Never<br />';
+                    answer += 'If Never, Please Select One Of The Following ​Options?<br />';
+                    answer += neverworkoption.value; answer += '<br />';
+                }
+
+                answer += '<br /><br />';
+
+                answer += 'What Sports/Activities Do You Do?<br />';
+                answer += sportsActivites.value; answer += '<br />';
+                answer += 'How Often?<br />';
+                answer += howoftensports.value; answer += '<br />';
+
+                // section 2 if selected
+                if ($('#sport_activites_parent2:visible').length != 0) {
+
+                    answer += 'Second : What Sports/Activities Do You Do?<br />';
+                    answer += sportsActivites2.value; answer += '<br />';
+                    answer += 'How Often?<br />';
+                    answer += howoftensports2.value; answer += '<br />';
+
+                }
+                // section 3 if selected
+                if ($('#sport_activites_parent3:visible').length != 0) {
+
+                    answer += 'Second : What Sports/Activities Do You Do?<br />';
+                    answer += sportsActivites3.value; answer += '<br />';
+                    answer += 'How Often?<br />';
+                    answer += howoftensports3.value; answer += '<br />';
+                }
+
+
+                answer += '<br /><br />';
+
+                answer += 'What Hand Do You Write With?<br />';
+                answer += handWrite.value; answer += '<br />';
+
+                answer += '<br /><br />';
+
+                answer += 'Do You Smoke?<br />';
+                if (document.getElementById('yes_smoke').checked) {
+                    answer += 'Yes<br />';
+                    answer += 'If Yes, For How Many Years?<br />';
+                    answer += smokeHowmanyYears.value; answer += '<br />';
+
+                    answer += 'How Many Cigarettes Per Day?<br />';
+
+                    answer += smokeHowmanyPerday.value; answer += '<br />';
+
+                }
+                else if (document.getElementById('no_smoke').checked) {
+                    answer += 'No<br />';
+                    answer += 'If No, When Did You Quit Smoking?<br />';
+                    answer += smokeOffDate.value; answer += '<br />';
+                }
+                else if (document.getElementById('never_smoke').checked) {
+                    answer += 'Never<br />';
+                }
+
+                answer += '<br /><br />';
+
+                answer += 'Do You Drink Alcohol?<br />';
+                if (document.getElementById('yes_alcohol').checked) {
+                    answer += 'Yes<br />';
+                    answer += 'If Yes, How Many Drinks Per Week?<br />';
+                    answer += alcoholHowmanyPerweek.value; answer += '<br />';
+                }
+                else if (document.getElementById('no_alcohol').checked) {
+                    answer += 'No<br />';
+                    //answer += 'If No, Since When Have You Been Off Work?\n';
+                    //answer += alcoholOffDate.value; answer += '\n';
+                }
+
+                answer += '<br /><br />';
+
+                answer += 'Do You Take Any Recreational Drugs Or Herbal/Natural Remedies?<br />';
+                if (document.getElementById('yes_drug').checked) {
+                    answer += 'Yes<br />';
+
+                    answer += 'If Yes, Which Drug Or Herbal/Natural Remedy Do You Use?​<br />';
+                    answer += recreationalDrugWhatDrugs.value; answer += '<br />';
+
+                    answer += 'If Yes, How Often Do You Take The Drug Or Herbal/Natural Remedies?<br />';
+                    answer += recreationalDrugHowmanyPerweeks.value; answer += '<br />';
+
+
+                    // section 2 if selected
+                    if ($('#what_drug_parent2:visible').length != 0) {
+
+                        answer += 'If Yes, Which Drug Or Herbal/Natural Remedy Do You Use?​<br />';
+                        answer += recreationalDrugWhatDrugs2.value; answer += '<br />';
+
+                        answer += 'If Yes, How Often Do You Take The Drug Or Herbal/Natural Remedies?<br />';
+                        answer += recreationalDrugHowmanyPerweeks2.value; answer += '<br />';
+
+                    }
+                    // section 3 if selected
+                    if ($('#what_drug_parent3:visible').length != 0) {
+
+                        answer += 'If Yes, Which Drug Or Herbal/Natural Remedy Do You Use?​<br />';
+                        answer += recreationalDrugWhatDrugs3.value; answer += '<br />';
+
+                        answer += 'If Yes, How Often Do You Take The Drug Or Herbal/Natural Remedies?<br />';
+                        answer += recreationalDrugHowmanyPerweeks3.value; answer += '<br />';
+                    }
+
+                }
+                else if (document.getElementById('no_drug').checked) {
+                    answer += 'No<br />';
+                    answer += 'If No, Since When Have You Been Off Drug ?<br />';
+                    answer += recreationalDrugOffDate.value; answer += '<br />';
+                }
+                else if (document.getElementById('never_drug').checked) {
+                    answer += 'Never taken<br />';
+                }
+
+                answer += '<br /><br />';
+
+                answer += 'Do You Have Any Of The Following Medical Conditions?<br />';
+
+                if (document.getElementById('AIDS_or_HIV').checked) {
+                    answer += 'AIDS or HIV<br />';
+                }
+                if (document.getElementById('Alcohol_Dependency_or_Abuse').checked) {
+                    answer += 'Alcohol Dependency or Abuse<br />';
+                }
+                if (document.getElementById('Anemia').checked) {
+                    answer += 'Anemia<br />';
+                }
+                if (document.getElementById('Anxiety').checked) {
+                    answer += 'Anxiety<br />';
+                }
+                if (document.getElementById('Arthritis').checked) {
+                    answer += 'Arthritis<br />';
+                }
+                if (document.getElementById('BleedingProblems').checked) {
+                    answer += 'Bleeding Problems<br />';
+                    answer += 'Bleeding Problems. Type?<br />';
+                    answer += bleedingProblemsTypes.value; answer += '<br />';
+                }
+                if (document.getElementById('BloodClots').checked) {
+                    answer += 'BloodClots<br />';
+                }
+                if (document.getElementById('Cancer').checked) {
+                    answer += 'Cancer<br />';
+                    answer += 'Cancer. Type?<br />';
+                    answer += cancerProblemsTypes.value; answer += '<br />';
+                }
+                if (document.getElementById('Dementia').checked) {
+                    answer += 'Dementia<br />';
+                }
+                if (document.getElementById('ChronicObstructive').checked) {
+                    answer += 'Chronic Obstructive Pulmonary Disease or Emphysema<br />';
+                }
+                if (document.getElementById('Depression').checked) {
+                    answer += 'Depression<br />';
+                }
+                if (document.getElementById('DrugDependency').checked) {
+                    answer += 'Drug Dependency or Abuse<br />';
+                }
+                if (document.getElementById('Diabetes').checked) {
+                    answer += 'Diabetes<br />';
+                }
+                if (document.getElementById('Gout').checked) {
+                    answer += 'Gout<br />';
+                }
+                if (document.getElementById('HeartDisease').checked) {
+                    answer += 'Heart Disease<br />';
+                }
+                if (document.getElementById('HighCholesterol').checked) {
+                    answer += 'Heart Cholesterol<br />';
+                }
+                if (document.getElementById('HighBloodPressure').checked) {
+                    answer += 'High Blood Pressure<br />';
+                }
+                if (document.getElementById('HeartArrythmia').checked) {
+                    answer += 'Heart Arrythmia<br />';
+                }
+                if (document.getElementById('Hypothyroidism').checked) {
+                    answer += 'Hypothyroidism<br />';
+                }
+                if (document.getElementById('Hyperthyroidism').checked) {
+                    answer += 'Hyperthyroidism<br />';
+                }
+                if (document.getElementById('KidneyDisease').checked) {
+                    answer += 'KidneyDisease<br />';
+                }
+                if (document.getElementById('Leukemia').checked) {
+                    answer += 'Leukemia<br />';
+                }
+                if (document.getElementById('LiverDisease').checked) {
+                    answer += 'LiverDisease<br />';
+
+                }
+                if (document.getElementById('Hepatitis').checked) {
+                    answer += 'Hepatitis<br />';
+                    answer += 'Hepatitis. Type?<br />';
+                    answer += hepatitisProblemTypes.value; answer += '<br />';
+
+                }
+                if (document.getElementById('Osteoporosis').checked) {
+                    answer += 'Osteoporosis<br />';
+
+                }
+                if (document.getElementById('Pancreatitis').checked) {
+                    answer += 'Pancreatitis<br />';
+                }
+                if (document.getElementById('PeripheralVascularDisease').checked) {
+                    answer += 'Peripheral Vascular Disease<br />';
+
+                }
+                if (document.getElementById('Pulmonary').checked) {
+                    answer += 'Pulmonary<br />';
+
+                }
+                if (document.getElementById('RefluxorGERD').checked) {
+                    answer += 'Reflux o GERD<br />';
+
+                }
+                if (document.getElementById('Seizures').checked) {
+                    answer += 'Seizures<br />';
+
+                }
+                if (document.getElementById('SleepApnea').checked) {
+                    answer += 'SleepApnea<br />';
+                }
+
+                if (document.getElementById('Stroke').checked) {
+                    answer += 'Stroke<br />';
+                }
+                if (document.getElementById('Other').checked) {
+                    answer += 'Other<br />';
+                }
+
+
+                answer += '<br /><br />';
+
+
+                answer += 'Have You Had Surgery?<br />';
+                if (document.getElementById('yes_surgery').checked) {
+                    answer += 'Yes<br />';
+                    answer += 'What Type Of Surgery?<br />';
+                    answer += surgeryNames.value; answer += '<br />';
+                    answer += 'When Was Your Surgery?<br />';
+                    answer += surgeryDate.value; answer += '<br />';
+                    answer += 'What Was The Surgeon Name?<br />';
+                    answer += surgonName.value; answer += '<br />';
+
+
+
+                    // section 2 if selected
+                    if ($('#surgery_main_parent2:visible').length != 0) {
+
+                        answer += 'What Type Of Surgery?<br />';
+                        answer += surgeryNames2.value; answer += '<br />';
+                        answer += 'When Was Your Surgery?<br />';
+                        answer += surgeryDate2.value; answer += '<br />';
+                        answer += 'What Was The Surgeon Name?<br />';
+                        answer += surgonName2.value; answer += '<br />';
+
+                    }
+                    // section 3 if selected
+                    if ($('#surgery_main_parent3:visible').length != 0) {
+
+                        answer += 'What Type Of Surgery?<br />';
+                        answer += surgeryNames3.value; answer += '<br />';
+                        answer += 'When Was Your Surgery?<br />';
+                        answer += surgeryDate3.value; answer += '<br />';
+                        answer += 'What Was The Surgeon Name?<br />';
+                        answer += surgonName3.value; answer += '<br />';
+                    }
+
+                }
+                else if (document.getElementById('no_surgery').checked) {
+                    answer += 'No previous surgeries<br />';
+                }
+
+                answer += '<br /><br />';
+
+
+                answer += 'Do You Take Any Medications Regularly?<br />';
+                if (document.getElementById('yes_question_file_medication').checked) {
+                    answer += 'Yes<br />';
+                }
+                else if (document.getElementById('no_question_file_medication').checked) {
+                    answer += 'No<br />';
+                }
+                answer += '<br /><br />';
+                answer += 'Do You Have A Referral?<br />';
+                if (document.getElementById('yes_Referral').checked) {
+                    answer += 'Yes<br />';
+                }
+                else if (document.getElementById('no_Referral').checked) {
+                    answer += 'No<br />';
+                }
+
+
+                var questionnaireArray = {};
+
+                questionnaireArray.QuestionnaireAnswer = answer;
+                questionnaireArray.LanguageType = languageType;
+                questionnaireArray.UserId = userId;
+
+                var today = new Date();
+
+                var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+
+                var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+                var dateTime = date + ' ' + time;
+
+
+                questionnaireArray.Date = dateTime;
+
+
+                //var s = document.getElementById('imagePreview');
+                //s.src = URL.createObjectURL(file1[0]);
+                //document.getElementById("dataUrl").innerText = URL.createObjectURL(file1[0]);
+
+                //  questionnaireArray.ImageFile = file[0];
+                questionnaireArray.ReferralImage = "";
+                questionnaireArray.MedicationFile = "";
+
+
+                // in karrr mikoneeeeee $$$$$$$$$$$
+
 
 
                 $.ajax({
-                    url: 'Default.aspx/checkUserExist',
+                    url: 'Default.aspx/addUserQuestionnaire',
                     contentType: 'application/json;charset=utf-8',
                     method: 'post',
-                    data: '{user:' + JSON.stringify(userArray) + '}',
+                    //processData: false,
+                    data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
+                    success: function () {
+                        //$("#MoneyType").val = "";
+                        //$("#progress").hide();
+                        //alert("ok");
+                        checkRegisteration(userId);
+                        //  $("[id$=Submit_Button]").click();
+
+                        //$("#saveSuccess").show();
+                        //fetchMoneyTypeData();
+                    },
+                    error: function (er) {
+                        alert('error ' + er);
+                        //$("#saveError").show();
+                    },
+
+                });
+                console.log(answer);
+            }
+
+            // for sports buttons
+            function add_sport_activites_parent1_click() {
+                $("#sport_activites_parent2").show();
+
+            }
+
+            function add_sport_activites_parent2_click() {
+                $("#sport_activites_parent3").show();
+
+            }
+            function remove_sport_activites_parent2_click() {
+                $("#sport_activites_parent2").hide();
+
+            }
+
+            function remove_sport_activites_parent3_click() {
+
+                $("#sport_activites_parent3").hide();
+
+            }
+
+            // for recreation drugs
+            function add_what_drug_parent1_click() {
+                $("#what_drug_parent2").show();
+            }
+
+            function add_what_drug_parent2_click() {
+                $("#what_drug_parent3").show();
+
+            }
+            function remove_what_drug_parent2_click() {
+                $("#what_drug_parent2").hide();
+            }
+
+            function remove_what_drug_parent3_click() {
+
+                $("#what_drug_parent3").hide();
+
+            }
+
+            // for medcal surgery
+            function add_surgery_main_parent1_click() {
+                $("#surgery_main_parent2").show();
+            }
+
+            function add_surgery_main_parent2_click() {
+                $("#surgery_main_parent3").show();
+
+            }
+            function remove_surgery_main_parent2_click() {
+                $("#surgery_main_parent2").hide();
+            }
+
+            function remove_surgery_main_parent3_click() {
+
+                $("#surgery_main_parent3").hide();
+
+            }
+
+
+
+            function checkRegisteration(userId) {
+
+
+                $.ajax({
+                    url: 'Default.aspx/checkRegisteration',
+                    contentType: 'application/json;charset=utf-8',
+                    method: 'post',
+                    //processData: false,
+                    data: '{userId:' + JSON.stringify(userId) + '}',
                     success: function (data) {
 
-                        //  alert(data.d); 
-                        //alert("ok");
 
-                        buildAnswers(data.d);
+                        if (data.d) {
+                            window.open("Confirmation.aspx", "_blank");
+
+                        }
+                        else {
+                            window.open("Password.aspx?pid=" + userId, "_blank");
+                            //alert('Ji');
+                        }
+
+
+                        $("[id$=Submit_Button]").click();
 
                     },
                     error: function (er) {
-                        alert(er);
+                        alert('error ' + er);
                         //$("#saveError").show();
                     },
+
                 });
-
-
-
-                // THIS IS OK FOR addUserQuestionnaire
-
-                //$.ajax({
-                //    url: 'Default.aspx/addUserQuestionnaire',
-                //    contentType: 'application/json;charset=utf-8',
-                //    method: 'post',
-                //    data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
-                //    success: function () {
-                //        //$("#MoneyType").val = "";
-                //        //$("#progress").hide();
-                //        alert("ok");
-                //        //$("#saveSuccess").show();
-                //        //fetchMoneyTypeData();
-                //    },
-                //    error: function (er) {
-                //        alert(er);
-                //        //$("#saveError").show();
-                //    },
-
-                //});
-
-
-
-
-
-                //var file1 = $("#referral_file").get(0).files;
-                //var file2 = $("#medical_file").get(0).files;
-                //var data = new FormData;
-                // data.append("ImageFile", file[0]);
-
-
-
-            }
-            else {
-                return false;
-            }
-        }
-
-
-        function buildAnswers(userId) {
-
-            //var sb = new StringBuilder();
-            //sb.AppendLine("Some text with line one");
-            //sb.AppendLine("Some mpre text with line two");
-
-
-
-            var answer = '';
-
-            answer += 'What Is The Name Of Your Family Doctor?<br />';
-            answer += familynameOfDoctor.value; answer += '<br />';
-
-            answer += '<br /><br />';
-
-            answer = 'Are You Working Now ?<br />';
-            if (document.getElementById('yes_working_question').checked) {
-                answer += 'Yes<br />';
-                answer += 'What do you do for a living/what is your profession?<br />';
-                answer += livingActivities.value; answer += '<br />';
-            }
-            else if (document.getElementById('no_working_question').checked) {
-                answer += 'No; Retired<br />';
-                answer += 'If No, Since When Have You Been Off Work?<br />';
-                answer += dateOffWork.value; answer += '<br />';
-            }
-            else if (document.getElementById('never_working_question').checked) {
-                answer += 'Never<br />';
-                answer += 'If Never, Please Select One Of The Following ​Options?<br />';
-                answer += neverworkoption.value; answer += '<br />';
             }
 
-            answer += '<br /><br />';
+            function sports_activites_changed() {
 
-            answer += 'What Sports/Activities Do You Do?<br />';
-            answer += sportsActivites.value; answer += '<br />';
-            answer += 'How Often?<br />';
-            answer += howoftensports.value; answer += '<br />';
+                if (sportsActivites.selectedIndex == 1) {
 
-            answer += '<br /><br />';
+                    $("#parent_how_often").hide();
 
-            answer += 'What Hand Do You Write With?<br />';
-            answer += handWrite.value; answer += '<br />';
+                }
+                else {
+                    $("#parent_how_often").show();
 
-            answer += '<br /><br />';
+                }
+                if (sportsActivites2.selectedIndex == 1) {
 
-            answer += 'Do You Smoke?<br />';
-            if (document.getElementById('yes_smoke').checked) {
-                answer += 'Yes<br />';
-                answer += 'If Yes, For How Many Years?<br />';
-                answer += smokeHowmanyYears.value; answer += '<br />';
+                    $("#1parent_how_often").hide();
 
-                answer += 'How Many Cigarettes Per Day?<br />';
+                }
+                else {
+                    $("#1parent_how_often").show();
 
-                answer += smokeHowmanyPerday.value; answer += '<br />';
+                } if (sportsActivites3.selectedIndex == 1) {
 
-            }
-            else if (document.getElementById('no_smoke').checked) {
-                answer += 'No<br />';
-                answer += 'If No, When Did You Quit Smoking?<br />';
-                answer += smokeOffDate.value; answer += '<br />';
-            }
-            else if (document.getElementById('never_smoke').checked) {
-                answer += 'Never<br />';
+                    $("#2parent_how_often").hide();
+
+                }
+                else {
+                    $("#2parent_how_often").show();
+
+                }
             }
 
-            answer += '<br /><br />';
+            function clickSpanishTranslation() {
+                //  alert('spanish language');
+                alert('Spanish Language');
+                makeTranslaton('Spanish');
+            }
+            function clickFrenchTranslation() {
+                alert('French Language');
+                makeTranslaton('French');
+            }
+            function clickChineseTranslation() {
+                alert('Chineae Language');
+                makeTranslaton('Chinese');
+            }
+            function clickEnglishTranslation() {
+                alert('English Language');
+                makeTranslaton('English');
+            }
+            function getDataUrl(img) {
+                // Create canvas
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                // Set width and height
+                canvas.width = img.width;
+                canvas.height = img.height;
+                // Draw the image
+                ctx.drawImage(img, 0, 0);
+                return canvas.toDataURL();
 
-            answer += 'Do You Drink Alcohol?<br />';
-            if (document.getElementById('yes_alcohol').checked) {
-                answer += 'Yes<br />';
-                answer += 'If Yes, How Many Drinks Per Week?<br />';
-                answer += alcoholHowmanyPerweek.value; answer += '<br />';
-            }
-            else if (document.getElementById('no_alcohol').checked) {
-                answer += 'No<br />';
-                //answer += 'If No, Since When Have You Been Off Work?\n';
-                //answer += alcoholOffDate.value; answer += '\n';
-            }
-
-            answer += '<br /><br />';
-
-            answer += 'Do You Take Any Recreational Drugs Or Herbal/Natural Remedies?<br />';
-            if (document.getElementById('yes_drug').checked) {
-                answer += 'Yes<br />';
-
-                answer += 'If Yes, Which Drug Or Herbal/Natural Remedy Do You Use?​<br />';
-                answer += recreationalDrugWhatDrugs.value; answer += '<br />';
-
-                answer += 'If Yes, How Often Do You Take The Drug Or Herbal/Natural Remedies?<br />';
-                answer += recreationalDrugHowmanyPerweeks.value; answer += '<br />';
-            }
-            else if (document.getElementById('no_drug').checked) {
-                answer += 'No<br />';
-                answer += 'If No, Since When Have You Been Off Drug ?<br />';
-                answer += recreationalDrugOffDate.value; answer += '<br />';
-            }
-            else if (document.getElementById('never_drug').checked) {
-                answer += 'Never taken<br />';
-            }
-
-            answer += '<br /><br />';
-
-            answer += 'Do You Have Any Of The Following Medical Conditions?<br />';
-
-            if (document.getElementById('AIDS_or_HIV').checked) {
-                answer += 'AIDS or HIV<br />';
-            }
-            else if (document.getElementById('Alcohol_Dependency_or_Abuse').checked) {
-                answer += 'Alcohol Dependency or Abuse<br />';
-            }
-            else if (document.getElementById('Anemia').checked) {
-                answer += 'Anemia<br />';
-            }
-            else if (document.getElementById('Anxiety').checked) {
-                answer += 'Anxiety<br />';
-            }
-            else if (document.getElementById('Arthritis').checked) {
-                answer += 'Arthritis<br />';
-            }
-            else if (document.getElementById('BleedingProblems').checked) {
-                answer += 'Bleeding Problems<br />';
-                answer += 'Bleeding Problems. Type?<br />';
-                answer += bleedingProblemsTypes.value; answer += '<br />';
-            }
-            else if (document.getElementById('BloodClots').checked) {
-                answer += 'BloodClots<br />';
-            }
-            else if (document.getElementById('Cancer').checked) {
-                answer += 'Cancer<br />';
-                answer += 'Cancer. Type?<br />';
-                answer += cancerProblemsTypes.value; answer += '<br />';
-            }
-            else if (document.getElementById('Dementia').checked) {
-                answer += 'Dementia<br />';
-            }
-            else if (document.getElementById('ChronicObstructive').checked) {
-                answer += 'Chronic Obstructive Pulmonary Disease or Emphysema<br />';
-            }
-            else if (document.getElementById('Depression').checked) {
-                answer += 'Depression<br />';
-            }
-            else if (document.getElementById('DrugDependency').checked) {
-                answer += 'Drug Dependency or Abuse<br />';
-            }
-            else if (document.getElementById('Diabetes').checked) {
-                answer += 'Diabetes<br />';
-            }
-            else if (document.getElementById('Gout').checked) {
-                answer += 'Gout<br />';
-            }
-            else if (document.getElementById('HeartDisease').checked) {
-                answer += 'Heart Disease<br />';
-            }
-            else if (document.getElementById('HighCholesterol').checked) {
-                answer += 'Heart Cholesterol<br />';
-            }
-            else if (document.getElementById('HighBloodPressure').checked) {
-                answer += 'High Blood Pressure<br />';
-            }
-            else if (document.getElementById('HeartArrythmia').checked) {
-                answer += 'Heart Arrythmia<br />';
-            }
-            else if (document.getElementById('Hypothyroidism').checked) {
-                answer += 'Hypothyroidism<br />';
-            }
-            else if (document.getElementById('Hyperthyroidism').checked) {
-                answer += 'Hyperthyroidism<br />';
-            }
-            else if (document.getElementById('KidneyDisease').checked) {
-                answer += 'KidneyDisease<br />';
-            }
-            else if (document.getElementById('Leukemia').checked) {
-                answer += 'Leukemia<br />';
-            } else if (document.getElementById('LiverDisease').checked) {
-                answer += 'LiverDisease<br />';
-
-            } else if (document.getElementById('Hepatitis').checked) {
-                answer += 'Hepatitis<br />';
-                answer += 'Hepatitis. Type?<br />';
-                answer += hepatitisProblemTypes.value; answer += '<br />';
-
-            } else if (document.getElementById('Osteoporosis').checked) {
-                answer += 'Osteoporosis<br />';
-
-            } else if (document.getElementById('Pancreatitis').checked) {
-                answer += 'Pancreatitis<br />';
-            }
-            else if (document.getElementById('PeripheralVascularDisease').checked) {
-                answer += 'Peripheral Vascular Disease<br />';
-
-            } else if (document.getElementById('Pulmonary').checked) {
-                answer += 'Pulmonary<br />';
-
-            } else if (document.getElementById('RefluxorGERD').checked) {
-                answer += 'Reflux o GERD<br />';
-
-            } else if (document.getElementById('Seizures').checked) {
-                answer += 'Seizures<br />';
-
-            } else if (document.getElementById('SleepApnea').checked) {
-                answer += 'SleepApnea<br />';
-            }
-            else if (document.getElementById('Stroke').checked) {
-                answer += 'Stroke<br />';
-            }
-            else if (document.getElementById('Other').checked) {
-                answer += 'Other<br />';
+                //return canvas.toDataURL('image/jpeg');
             }
 
 
-            answer += '<br /><br />';
+            function toDataURLs(src) {
+                var image = new Image();
+                image.crossOrigin = 'Anonymous';
 
+                image.onload = function () {
+                    var canvas = document.createElement('canvas');
+                    var context = canvas.getContext('2d');
+                    canvas.height = this.naturalHeight;
+                    canvas.width = this.naturalWidth;
+                    context.drawImage(this, 0, 0);
+                    var dataURL = canvas.toDataURL('image/jpeg');
+                    console.log(dataURL);
+                    return dataURL;
+                };
 
-            answer += 'Have You Had Surgery?<br />';
-            if (document.getElementById('yes_surgery').checked) {
-                answer += 'Yes<br />';
-                answer += 'What Type Of Surgery?<br />';
-                answer += surgeryNames.value; answer += '<br />';
-                answer += 'When Was Your Surgery?<br />';
-                answer += surgeryDate.value; answer += '<br />';
-                answer += 'What Was The Surgeon Name?<br />';
-                answer += surgonName.value; answer += '<br />';
-            }
-            else if (document.getElementById('no_surgery').checked) {
-                answer += 'No previous surgeries<br />';
-            }
-
-            answer += '<br /><br />';
-
-
-            answer += 'Do You Take Any Medications Regularly?<br />';
-            if (document.getElementById('yes_question_file_medication').checked) {
-                answer += 'Yes<br />';
-            }
-            else if (document.getElementById('no_question_file_medication').checked) {
-                answer += 'No<br />';
-            }
-            answer += '<br /><br />';
-            answer += 'Do You Have A Referral?<br />';
-            if (document.getElementById('yes_Referral').checked) {
-                answer += 'Yes<br />';
-            }
-            else if (document.getElementById('no_Referral').checked) {
-                answer += 'No<br />';
+                image.src = src;
             }
 
-
-            var questionnaireArray = {};
-
-            questionnaireArray.QuestionnaireAnswer = answer;
-            questionnaireArray.LanguageType = languageType;
-            questionnaireArray.UserId = userId;
-
-            var today = new Date();
-
-            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-
-            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
-            var dateTime = date + ' ' + time;
-
-
-            questionnaireArray.Date = dateTime;
-
-
-            //var s = document.getElementById('imagePreview');
-            //s.src = URL.createObjectURL(file1[0]);
-            //document.getElementById("dataUrl").innerText = URL.createObjectURL(file1[0]);
-
-            //  questionnaireArray.ImageFile = file[0];
-            questionnaireArray.ReferralImage = "";
-            questionnaireArray.MedicationFile = "";
-
-
-            // in karrr mikoneeeeee $$$$$$$$$$$
-
-
-
-            $.ajax({
-                url: 'Default.aspx/addUserQuestionnaire',
-                contentType: 'application/json;charset=utf-8',
-                method: 'post',
-                //processData: false,
-                data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
-                success: function () {
-                    //$("#MoneyType").val = "";
-                    //$("#progress").hide();
-                    //alert("ok");
-                    checkRegisteration(userId);
-                    //  $("[id$=Submit_Button]").click();
-
-                    //$("#saveSuccess").show();
-                    //fetchMoneyTypeData();
-                },
-                error: function (er) {
-                    alert('error ' + er);
-                    //$("#saveError").show();
-                },
-
-            });
-            console.log(answer);
-        }
-
-
-        function checkRegisteration(userId) {
-
-
-            $.ajax({
-                url: 'Default.aspx/checkRegisteration',
-                contentType: 'application/json;charset=utf-8',
-                method: 'post',
-                //processData: false,
-                data: '{userId:' + JSON.stringify(userId) + '}',
-                success: function (data) {
-
-
-                    if (data.d) {
-                        window.open("Confirmation.aspx", "_blank");
-
-                    }
-                    else {
-                        window.open("Password.aspx?pid=" + userId, "_blank");
-                        //alert('Ji');
-                    }
-
-
-                    $("[id$=Submit_Button]").click();
-
-                },
-                error: function (er) {
-                    alert('error ' + er);
-                    //$("#saveError").show();
-                },
-
-            });
-        }
-
-        function sports_activites_changed() {
-
-            if (sportsActivites.selectedIndex == 1) {
-
-                $("#parent_how_often").hide();
-
+            function makeid(length) {
+                var result = '';
+                var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                var charactersLength = characters.length;
+                for (var i = 0; i < length; i++) {
+                    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                }
+                return result;
             }
-            else {
-                $("#parent_how_often").show();
+            function getBase64Images(img) {
+                // Create an empty canvas element
+                var canvas = document.createElement("canvas");
+                canvas.width = img.width;
+                canvas.height = img.height;
 
+                // Copy the image contents to the canvas
+                var ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0);
+
+                // Get the data-URL formatted image
+                // Firefox supports PNG and JPEG. You could check img.src to
+                // guess the original format, but be aware the using "image/jpg"
+                // will re-encode the image.
+                var dataURL = canvas.toDataURL("image/png");
+                alert(dataURL);
+                return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
             }
-        }
-        function clickUser(userId) {
-
-            //alert(userId);
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-        //var formData = new FormData();
-        //var file = referralFile.files[0];
-
-        //formData.append("QuestionnaireAnswer", 'ssd');
-        //formData.append("countryLanguageType", 'sdsd');
-        //formData.append("file", file);
-
-
-        //var formData = new FormData();
-        //var formData = new FormData();
-
-        //var file = referralFile.files[0];
-        //formData.append("PhotoPath", file);
-        //formData.append('Title', 'dsfsf');
-        //formData.append('Description','sdfsdf');
-        //formData.append('Priority', 'sdfsfsdf');
-        //formData.append('City', 'sdfsdfd');
-        //formData.append('Region','sdfsf');
-        //var fileData = formData;
-
-        //fd.append('file', 'file');
-
-
-        //    var fd = new FormData();
-        //    fd.append('ImageFile', referralFile.files[0]);
-        //    var fileData = fd;
-
-
-        //    //PageMethods.GetCurrentTime("Hiii", OnSuccess);
-
-
-
-        //    $.ajax({
-        //        //url: 'Default.aspx/sendFile',
-        //        //url: '@Url.Action("Default.aspx", "ImageUpload")',
-        //        url: 'Default.aspx/ImageUploads',
-        //        //url: 'WebService1.cs/',
-        //        data: fd,
-        //        //data: '{ImageFile:' +'ImageFile'+ '}',
-        //        //    contentType: 'application/json;charset=utf-8',
-        //        type: "POST",
-        //        cache: false,
-        //        contentType: false, // Not to set any content header
-        //        processData: false, // Not to process data
-        //        traditional: true,
-        //        error: function (xhr, ajaxOptions, thrownError) {
-        //            alert(xhr.status);
-        //            alert(thrownError);
-        //        },
-        //        success: function (result) {
-        //            alert(result);
-        //        }
-        //    });
-
-        //}
-        //$.ajax({
-        //    type: "POST",
-        //    url: 'Default.aspx/sendFile',
-        //    //'@Default.Action("Index", "Company")',
-        //    data: formData,
-        //    //dataType: 'json',
-        //    //contentType: false,
-        //    //processData: false,
-        //    success: function (response) {
-        //      alert("ok"); 
-        //    },
-        //    error: function (jqXHR, textStatus, errorThrown) {
-        //        alert(errorThrown + '  ' + jqXHR + '  ' + textStatus); 
-        //    } 
-        //});
-
-
-
-
-
-
-
-
-
-
-        //var img = new Image();
-        //img.scr = URL.createObjectURL(referralFile.files[0]);
-        //const dataUrl = _getBase64Image(img);
-        //console.log(dataUrl);
-
-        //const dataUrl2 = toDataURLs(URL.createObjectURL(referralFile.files[0]));
-        //    // do something with dataURL
-        //  //  document.getElementById('result').innerHTML = dataURL;
-        //    console.log(dataUrl2);
-
-
-        //    if (referralFile.files && referralFile.files[0]) {
-        //        var reader = new FileReader();
-
-        //        reader.addEventListener(
-        //            "load",
-        //            function () {
-        //                //var avatarImg = new Image();
-        //                var src = reader.result;
-        //                //avatarImg.src = src;
-        //                questionnaireArray.ReferralImage = src;
-        //                //questionnaireArray.MedicationFile = URL.createObjectURL(file2[0]);
-
-        //                $.ajax({
-        //                    url: 'Default.aspx/addUserQuestionnaire',
-        //                    contentType: 'application/json;charset=utf-8',
-        //                    method: 'post',
-        //                    //processData: false,
-        //                    data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
-        //                    success: function () {
-        //                        //$("#MoneyType").val = "";
-        //                        //$("#progress").hide();
-        //                        alert("ok");
-        //                        //$("#saveSuccess").show();
-        //                        //fetchMoneyTypeData();
-        //                    },
-        //                    error: function (jqXHR, textStatus, errorThrown) {
-        //                       alert(errorThrown + '  ' + jqXHR + '  ' + textStatus);
-
-        //                    },
-
-        //                });
-
-        //                //   document.getElementById("dataUrl").innerText = src;
-        //                alert('hi');
-
-        //                //avatarImg.onload = function () {
-        //                //    var c = document.getElementById("myCanvas");
-        //                //    var ctx = c.getContext("2d");
-        //                //    ctx.canvas.width = avatarImg.width;
-        //                //    ctx.canvas.height = avatarImg.height;
-
-        //                //    ctx.drawImage(avatarImg, 0, 0);
-        //                //};
-        //            },
-        //            false
-        //        );
-
-        //        reader.readAsDataURL(referralFile.files[0]);
-        //    }
-
-
-        //}
-
-        //questionnaireArray.QuestionnaireAnswer = 'uhhu';
-        //questionnaireArray.LanguageType = 'uhuh';
-        //questionnaireArray.UserId = 1;
-        //questionnaireArray.Date = txtBirthday.value;
-        //questionnaireArray.ReferralImage = 'Images/ReferralImage/' + makeid(10) + referralFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-        //questionnaireArray.MedicationFile = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s
-
-
-
-        // $.ajax({
-        //    url: 'Default.aspx/addUserQuestionnaire',
-        //    contentType: 'application/json;charset=utf-8',
-        //    method: 'post',
-        //     //data: '{questionnaireForm:' + JSON.stringify(data) + '}',
-        //     data, data,
-        //    success: function () {
-        //        //$("#MoneyType").val = "";
-        //        //$("#progress").hide();
-        //        alert("ok");
-        //        //$("#saveSuccess").show();
-        //        //fetchMoneyTypeData();
-        //    },
-        //    error: function (er) {
-        //        alert(er);
-        //        //$("#saveError").show();
-        //    },
-
-        //});
-
-
-
-        //var file = $("#referral_file").get(0).files;
-
-
-        //    $.ajax({
-        //        url: 'Default.aspx/addUserQuestionnaire',
-        //        contentType: 'application/json;charset=utf-8',
-        //        method: 'post',
-        //        //data: '{questionnaireForm:' + JSON.stringify(questionnaireArray) + '}',
-        //        data: file[0],
-        //        success: function () {
-        //            //$("#MoneyType").val = "";
-        //            //$("#progress").hide();
-        //            alert("ok");
-        //            //$("#saveSuccess").show();
-        //            //fetchMoneyTypeData();
-        //        },
-        //        error: function (er) {
-        //            alert(er);
-        //            //$("#saveError").show();
-        //        },
-
-        //    });
-
-
-
-
-
-
-
-
-
-
-
-        //var fd = new FormData();
-        //var files = $('#referral_file')[0].files;
-
-        //// Check file selected or not
-        //if (files.length > 0) {
-        //    fd.append('file', files[0]);
-
-
-        //    alert('value'+fd.value);
-
-
-
-
-
-
-
-
-        //    $.ajax({
-        //        url: 'Default.aspx/addUserQuestionnaire',
-        //         contentType: 'application/json;charset=utf-8',
-        //        type: 'post',
-        //        data: '{questionnaireForms:' + fd /*JSON.stringify(referralFile.value)*/ + '}',
-
-        //        //data: fd,
-        //        contentType: false,
-        //        processData: false,
-
-        //        success: function () {
-        //            //$("#MoneyType").val = "";
-        //            //$("#progress").hide();
-        //            alert("ok");
-        //            //$("#saveSuccess").show();
-        //            //fetchMoneyTypeData();
-        //        },
-        //        error: function (er) {
-        //            alert(er);
-        //            //$("#saveError").show();
-        //        },
-
-
-        //    });
-        //}
-
-
-        //var canvasData = referralFile.toDataURL("image/png");
-        //var ajax = new XMLHttpRequest();
-        //ajax.open("POST", 'Default.aspx/addUserQuestionnaire', false);
-        //ajax.setRequestHeader('Content-Type', 'application/upload');
-        //ajax.send(canvasData);
-
-        //var file_data = referralFile.value;
-        //var form_data = new FormData();
-        //form_data.append('file', file_data);
-        //alert(form_data);
-        //$.ajax({
-        //    url: 'Default.aspx/addUserQuestionnaire',
-        //    contentType: 'application/json;charset=utf-8',
-        //    dataType: 'text',  // what to expect back from the PHP script, if anything
-        //    cache: false,
-        //    contentType: false,
-        //    processData: false,
-        //    data: '{questionnaireForm:' + form_data /*JSON.stringify(referralFile.value)*/ + '}',
-        //     type: 'post',
-        //    success: function (php_script_response) {
-        //        alert(php_script_response); // display response from the PHP script, if any
-        //    }
-        //});
-
-        //    $.ajax({
-        //        url: 'Default.aspx/addUserQuestionnaire',
-        //        contentType: 'application/json;charset=utf-8',
-        //        method: 'post',
-        //        data: '{questionnaireForm:' + referralFile.value /*JSON.stringify(referralFile.value)*/ + '}',
-        //        //data: JSON.stringify({ user: JSON.stringify(userArray), questionnaireForm: JSON.stringify(questionnaireArray) }),
-        //        //data: JSON.stringify({ user: s, questionnaireForm: y }),
-
-        //        success: function () {
-        //            //$("#MoneyType").val = "";
-        //            //$("#progress").hide();
-        //            alert("ok");
-        //            //$("#saveSuccess").show();
-        //            //fetchMoneyTypeData();
-        //        },
-        //        error: function (er) {
-        //            alert(er);
-        //            //$("#saveError").show();
-        //        },
-
-
-        //    });
-        //}
-
-
-        function clickSpanishTranslation() {
-            //  alert('spanish language');
-            alert('Spanish Language');
-            makeTranslaton('Spanish');
-        }
-        function clickFrenchTranslation() {
-            alert('French Language');
-            makeTranslaton('French');
-        }
-        function clickChineseTranslation() {
-            alert('Chineae Language');
-            makeTranslaton('Chinese');
-        }
-        function clickEnglishTranslation() {
-            alert('English Language');
-            makeTranslaton('English');
-        }
-        function getDataUrl(img) {
-            // Create canvas
-            const canvas = document.createElement('canvas');
-            const ctx = canvas.getContext('2d');
-            // Set width and height
-            canvas.width = img.width;
-            canvas.height = img.height;
-            // Draw the image
-            ctx.drawImage(img, 0, 0);
-            return canvas.toDataURL();
-
-            //return canvas.toDataURL('image/jpeg');
-        }
-
-
-        function toDataURLs(src) {
-            var image = new Image();
-            image.crossOrigin = 'Anonymous';
-
-            image.onload = function () {
-                var canvas = document.createElement('canvas');
-                var context = canvas.getContext('2d');
-                canvas.height = this.naturalHeight;
-                canvas.width = this.naturalWidth;
-                context.drawImage(this, 0, 0);
-                var dataURL = canvas.toDataURL('image/jpeg');
-                console.log(dataURL);
-                return dataURL;
-            };
-
-            image.src = src;
-        }
-
-        function makeid(length) {
-            var result = '';
-            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            var charactersLength = characters.length;
-            for (var i = 0; i < length; i++) {
-                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            function getBase64Image(imgElem) {
+                // imgElem must be on the same server otherwise a cross-origin error will be thrown "SECURITY_ERR: DOM Exception 18"
+                var canvas = document.createElement("canvas");
+                canvas.width = imgElem.clientWidth;
+                canvas.height = imgElem.clientHeight;
+                var ctx = canvas.getContext("2d");
+                ctx.drawImage(imgElem, 0, 0);
+                var dataURL = canvas.toDataURL("image/png");
+                return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
             }
-            return result;
-        }
-        function getBase64Images(img) {
-            // Create an empty canvas element
-            var canvas = document.createElement("canvas");
-            canvas.width = img.width;
-            canvas.height = img.height;
 
-            // Copy the image contents to the canvas
-            var ctx = canvas.getContext("2d");
-            ctx.drawImage(img, 0, 0);
+            function _getBase64Image(img) {
+                // Create an empty canvas element
+                var canvas = document.createElement("canvas");
+                canvas.width = img.width;
+                canvas.height = img.height;
+                console.log(canvas.width);
+                // Copy the image contents to the canvas
+                var ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0);
 
-            // Get the data-URL formatted image
-            // Firefox supports PNG and JPEG. You could check img.src to
-            // guess the original format, but be aware the using "image/jpg"
-            // will re-encode the image.
-            var dataURL = canvas.toDataURL("image/png");
-            alert(dataURL);
-            return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-        }
-        function getBase64Image(imgElem) {
-            // imgElem must be on the same server otherwise a cross-origin error will be thrown "SECURITY_ERR: DOM Exception 18"
-            var canvas = document.createElement("canvas");
-            canvas.width = imgElem.clientWidth;
-            canvas.height = imgElem.clientHeight;
-            var ctx = canvas.getContext("2d");
-            ctx.drawImage(imgElem, 0, 0);
-            var dataURL = canvas.toDataURL("image/png");
-            return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-        }
+                // Get the data-URL formatted image
+                // Firefox supports PNG and JPEG. You could check img.src to
+                // guess the original format, but be aware the using "image/jpg"
+                // will re-encode the image.
+                var dataURL = canvas.toDataURL("image/png");
 
-        function _getBase64Image(img) {
-            // Create an empty canvas element
-            var canvas = document.createElement("canvas");
-            canvas.width = img.width;
-            canvas.height = img.height;
-            console.log(canvas.width);
-            // Copy the image contents to the canvas
-            var ctx = canvas.getContext("2d");
-            ctx.drawImage(img, 0, 0);
+                return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+            }
 
-            // Get the data-URL formatted image
-            // Firefox supports PNG and JPEG. You could check img.src to
-            // guess the original format, but be aware the using "image/jpg"
-            // will re-encode the image.
-            var dataURL = canvas.toDataURL("image/png");
-
-            return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-        }
-
-
-
-    </script>
-
+        </script>
 </asp:Content>
