@@ -201,7 +201,7 @@
                         $("#scopeMoneyTypeData").html("");
                         var tableContent = "";
                         tableContent += '<table class="table table-boardered table-hover" style="text-align:center;direction:ltr;">';
-                        tableContent += '<tr style="font-weight:bold; background-color:darkseagreen">  <td> Row</td>  <td> Name</td> <td> Family</td> <td> Medical Number</td> <td> Medical Number</td> </tr >';
+                        tableContent += '<tr style="font-weight:bold; background-color:darkseagreen">  <td> Row</td>  <td> Name</td> <td> Family</td> <td> Medical Number</td> <td> Remove</td> </tr >';
                         alert(data.d[0].Name);
                         for (var i = 0; i < data.d.length; i++) {
                             var j = i + 1;
