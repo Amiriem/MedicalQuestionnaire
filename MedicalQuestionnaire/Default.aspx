@@ -93,7 +93,7 @@
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <div class="input-group" style="display: block;" id="expiration_date_Box">
+                            <div class="input-group" style="display: none;" id="expiration_date_Box">
                                 <label class="label" id="Expiration_Date_text">Expiration Date</label>
                                 <div class="input-group-icon">
                                     <input class="input--style-4 js-datepicker" style="margin-right: 70px;" type="text" id="expiration_date" name="expiration_date">
@@ -1704,7 +1704,7 @@
 
             'More than 1 Pack': 'plus q’un paquet',
 
-            'Do You Drink Alcohol': 'Est-ce que vouz buvez de l’alcohol?',
+            'Do You Drink Alcohol': 'est-ce que vous buvez de l\'alcohol?',
 
             'If Yes, How Many Drinks Per Week': 'Si Oui, Combien de Consommations par Semaine?',
 
@@ -1820,7 +1820,7 @@
 
             'Pulmonary Embolism': 'Embolie Pulmonaire',
 
-            'Reflux or GERD': 'Reflus o RGO',
+            'Reflux or GERD': 'Reflus ou RGO',
 
             'Seizures': 'Crise dépilepsie',
 
@@ -2891,8 +2891,7 @@
 
             questionnaireformat = document.getElementById('questionnaire_format');
 
-            //  language=  engLanguage
-            //  alert(language.home);
+            //alert('est-ce que vous buvez de l\'alcohol?');
         });
 
         function makeTranslaton(type) {
@@ -3411,7 +3410,7 @@
                 $("#medicare_number").prop("disabled", false);
                 $("#medicare_number").prop("style", "background-color: #fafafa;");
 
-                $("#expiration_date_Box").show();
+            //    $("#expiration_date_Box").show();
             }
         }
         function yes_medicare_card_changed(termsCheckBox) {
@@ -3419,7 +3418,7 @@
             if (termsCheckBox.checked) {
                 $("#medicare_number").prop("disabled", false);
                 $("#medicare_number").prop("style", "background-color: #fafafa;");
-                $("#expiration_date_Box").show();
+             //   $("#expiration_date_Box").show();
             } else {
                 $("#medicare_number").prop("disabled", true);
                 $("#medicare_number").prop("style", "background-color: #D3D3D3;");
@@ -3790,19 +3789,19 @@
                 txtMedicareNumber.style.backgroundColor = "#ffcfcf";
                 return false;
             }
-            else if (txtExpirationDate.value == "" && document.getElementById('yes_medicare_card').checked) {
-                alert("Please fill out your Expiration Date");
-                txtExpirationDate.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (txtEmail.value == "") {
-                alert("Please fill out your Email");
-                txtEmail.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (!ValidateEmail(txtEmail))
+    //        else if (txtExpirationDate.value == "" && document.getElementById('yes_medicare_card').checked) {
+    //            alert("Please fill out your Expiration Date");
+   //             txtExpirationDate.style.backgroundColor = "#ffcfcf";
+   //             return false;
+    //        }
+   //         else if (txtEmail.value == "") {
+   //             alert("Please fill out your Email");
+   //             txtEmail.style.backgroundColor = "#ffcfcf";
+   //             return false;
+   //         }
+            else if (txtEmail.value != "" && !ValidateEmail(txtEmail))
             {
-                alert("Please check your Email text");
+                alert("Please check your Email input, it's wrong!");
                 txtEmail.style.backgroundColor = "#ffcfcf";
                 return false;
             }
@@ -3941,6 +3940,12 @@
             if (document.getElementById('no_medicare_card').checked) {
                 txtMedicareNumber.value = 'Null';
             }
+
+            if (txtExpirationDate.value == "")
+                txtExpirationDate.value = 'Null';
+
+            if (txtEmail.value == "")
+                txtEmail.value = 'Null@Null.com';
 
             if (confirm("Are you sure all the information above is correct?")) {
 
@@ -4620,7 +4625,6 @@
         }
 
         function clickSpanishTranslation() {
-            //  alert('spanish language');
             alert('Spanish Language');
             makeTranslaton('Spanish');
         }
@@ -4629,7 +4633,7 @@
             makeTranslaton('French');
         }
         function clickChineseTranslation() {
-            alert('Chineae Language');
+            alert('Chinese Language');
             makeTranslaton('Chinese');
         }
         function clickEnglishTranslation() {

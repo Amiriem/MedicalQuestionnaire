@@ -314,9 +314,11 @@
                                 url: 'UserDetails.aspx/removeQuestionnaire',
                                 contentType: 'application/json;charset=utf-8',
                                 method: 'post',
-                                data: '{userId:' + id + '}',
+                                data: '{questionnaireId:' + id + '}',
                                 success: function () {
-                                    fetchUserData();
+                                  //  fetchUserData();
+                                    location.reload();
+                                    return false;
                                 },
                                 error: function (er) {
                                     alert(er);
