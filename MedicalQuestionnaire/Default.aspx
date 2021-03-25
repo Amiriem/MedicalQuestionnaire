@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" id="Main-Form" style="pointer-events:auto ;" >
 
         <button class="btn btn--radius-2" type="button" style="width: 65px; margin-left: 80px" onclick="clickSpanishTranslation()">
             <img src="Images/spanish-flag.png" style="width: 65px;" />
@@ -19,6 +19,12 @@
         <button class="btn btn--radius-2" type="button" style="width: 65px; margin-left: 40px" onclick="clickEnglishTranslation()">
             <img src="Images/english-flag.png" style="width: 65px;" />
         </button>
+
+       <%-- <div class="wrapper wrapper--w780">
+
+            <label class="label" id="" style="position: fixed;">Please wait and do not close the page till </label>
+        </div>--%>
+
 
         <div class="wrapper wrapper--w780">
             <div class="card card-4">
@@ -1375,8 +1381,8 @@
                             </div>
                         </div>
                 </div>
-           <div class="input-group">
-           </div>
+                <div class="input-group">
+                </div>
             </div>
 
 
@@ -1933,7 +1939,7 @@
             'Enter Information Manually': 'Saisir les Informations Manuellement',
 
             'Submit': 'Soumettre',
- 
+
             'No': 'Non',
 
             'Never': 'Jamais',
@@ -2891,6 +2897,8 @@
 
             questionnaireformat = document.getElementById('questionnaire_format');
 
+            document.getElementById('Main-Form').menu("disable");
+
             //alert('est-ce que vous buvez de l\'alcohol?');
         });
 
@@ -3410,7 +3418,7 @@
                 $("#medicare_number").prop("disabled", false);
                 $("#medicare_number").prop("style", "background-color: #fafafa;");
 
-            //    $("#expiration_date_Box").show();
+                //    $("#expiration_date_Box").show();
             }
         }
         function yes_medicare_card_changed(termsCheckBox) {
@@ -3418,7 +3426,7 @@
             if (termsCheckBox.checked) {
                 $("#medicare_number").prop("disabled", false);
                 $("#medicare_number").prop("style", "background-color: #fafafa;");
-             //   $("#expiration_date_Box").show();
+                //   $("#expiration_date_Box").show();
             } else {
                 $("#medicare_number").prop("disabled", true);
                 $("#medicare_number").prop("style", "background-color: #D3D3D3;");
@@ -3703,6 +3711,7 @@
 
             //var txtFirstName = document.getElementById('first_name');
 
+
             //questionnaireformat.setAttribute("style", "pointer-events: none;");
 
             txtFirstName.style.backgroundColor = "#fafafa";
@@ -3789,18 +3798,17 @@
                 txtMedicareNumber.style.backgroundColor = "#ffcfcf";
                 return false;
             }
-    //        else if (txtExpirationDate.value == "" && document.getElementById('yes_medicare_card').checked) {
-    //            alert("Please fill out your Expiration Date");
-   //             txtExpirationDate.style.backgroundColor = "#ffcfcf";
-   //             return false;
-    //        }
-   //         else if (txtEmail.value == "") {
-   //             alert("Please fill out your Email");
-   //             txtEmail.style.backgroundColor = "#ffcfcf";
-   //             return false;
-   //         }
-            else if (txtEmail.value != "" && !ValidateEmail(txtEmail))
-            {
+            //        else if (txtExpirationDate.value == "" && document.getElementById('yes_medicare_card').checked) {
+            //            alert("Please fill out your Expiration Date");
+            //             txtExpirationDate.style.backgroundColor = "#ffcfcf";
+            //             return false;
+            //        }
+            //         else if (txtEmail.value == "") {
+            //             alert("Please fill out your Email");
+            //             txtEmail.style.backgroundColor = "#ffcfcf";
+            //             return false;
+            //         }
+            else if (txtEmail.value != "" && !ValidateEmail(txtEmail)) {
                 alert("Please check your Email input, it's wrong!");
                 txtEmail.style.backgroundColor = "#ffcfcf";
                 return false;
@@ -3941,8 +3949,8 @@
                 txtMedicareNumber.value = 'Null';
             }
 
-            if (txtExpirationDate.value == "")
-                txtExpirationDate.value = 'Null';
+            //  if (txtExpirationDate.value == "")
+            txtExpirationDate.value = 'Null';
 
             if (txtEmail.value == "")
                 txtEmail.value = 'Null@Null.com';
@@ -3964,6 +3972,7 @@
                 userArray.ExpirationDate = txtExpirationDate.value;
                 userArray.Birthday = txtBirthday.value;
 
+                document.getElementById('Main-Form').setAttribute("style", "pointer-events: none;");
 
 
                 //  questionnaireArray.ReferralImage = 'Images/MedicalFile/' + makeid(10) + medicalFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
@@ -4072,10 +4081,12 @@
                         //alert("ok");
 
                         buildAnswers(data.d);
-
+                        // disable
+                        alert("Please wait and don't close the tap windows till refreshing the page!");
                     },
                     error: function (er) {
                         alert(er);
+                        document.getElementById('Main-Form').setAttribute("style", "pointer-events: auto;");
                         //$("#saveError").show();
                     },
                 });
@@ -4493,6 +4504,7 @@
                 },
                 error: function (er) {
                     alert('error ' + er);
+                    document.getElementById('Main-Form').setAttribute("style", "pointer-events: auto;");
                     //$("#saveError").show();
                 },
 
@@ -4588,6 +4600,7 @@
                 },
                 error: function (er) {
                     alert('error ' + er);
+                    document.getElementById('Main-Form').setAttribute("style", "pointer-events: auto;");
                     //$("#saveError").show();
                 },
 
@@ -4670,11 +4683,11 @@
             var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
             if (inputText.value.match(mailformat)) {
                 //alert("Valid email address!");
-              //  document.form1.text1.focus();
+                //  document.form1.text1.focus();
                 return true;
             }
             else {
-              //  alert("You have entered an invalid email address!");
+                //  alert("You have entered an invalid email address!");
                 //document.form1.text1.focus();
                 return false;
             }
