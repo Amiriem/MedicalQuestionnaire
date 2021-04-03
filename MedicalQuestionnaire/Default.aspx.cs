@@ -8,7 +8,7 @@ namespace MedicalQuestionnaire
 {
     public partial class Default : Page
     {
-        private static MedicalQuestionnaireEntities entities = new MedicalQuestionnaireEntities();
+        private static MedicalQuestionnaire_Entities entities = new MedicalQuestionnaire_Entities();
         static QuestionnaireForm _questionnaireForm = new QuestionnaireForm();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -69,7 +69,14 @@ namespace MedicalQuestionnaire
                     selectedUser.MedicarePhoto = user.MedicarePhoto;
                     selectedUser.PersonalPhoto = user.PersonalPhoto;
 
+                    entities.User.Attach(selectedUser);
+
                     entities.Entry(selectedUser).State = System.Data.Entity.EntityState.Modified;
+
+ 
+
+                    System.Diagnostics.Debug.WriteLine("user modified : " + selectedUser.Name);
+
                     entities.SaveChanges();
 
                     //System.Diagnostics.Debug.WriteLine("Hi1  " + selectedUser.ID);
@@ -93,9 +100,8 @@ namespace MedicalQuestionnaire
                     _user.PersonalPhoto = user.PersonalPhoto;
                     //System.Diagnostics.Debug.WriteLine("Hi2");
                     entities.User.Add(_user);
-                    entities.SaveChanges();
-                    //System.Diagnostics.Debug.WriteLine("Hi2  " + _user.ID);
-
+                    entities.Entry(_user).State = System.Data.Entity.EntityState.Added;
+                    entities.SaveChanges(); 
                     return _user.ID;
                 }
             }

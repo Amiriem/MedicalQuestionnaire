@@ -10,7 +10,7 @@ namespace MedicalQuestionnaire.adminPanel
 {
     public partial class UserDetails : System.Web.UI.Page
     {
-        private static MedicalQuestionnaireEntities entities = new MedicalQuestionnaireEntities();
+        private static MedicalQuestionnaire_Entities entities = new MedicalQuestionnaire_Entities();
 
         protected void Page_Load(object sender, EventArgs e)
         {

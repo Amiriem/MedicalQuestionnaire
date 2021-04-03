@@ -14,7 +14,7 @@ namespace MedicalQuestionnaire
         {
 
         }
-        private static readonly MedicalQuestionnaireEntities entities = new MedicalQuestionnaireEntities();
+        private static readonly MedicalQuestionnaire_Entities entities = new MedicalQuestionnaire_Entities();
         [WebMethod]
         public User getUserDetails()
         {

@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MedicalQuestionnaire.Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" id="Main-Form" style="pointer-events:auto ;" >
+     
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" id="Main-Form" style="pointer-events: auto;">
 
         <button class="btn btn--radius-2" type="button" style="width: 65px; margin-left: 80px" onclick="clickSpanishTranslation()">
             <img src="Images/spanish-flag.png" style="width: 65px;" />
@@ -20,11 +20,11 @@
             <img src="Images/english-flag.png" style="width: 65px;" />
         </button>
 
-       <%-- <div class="wrapper wrapper--w780">
+        <%-- <div class="wrapper wrapper--w780">
 
             <label class="label" id="" style="position: fixed;">Please wait and do not close the page till </label>
         </div>--%>
-
+       
 
         <div class="wrapper wrapper--w780">
             <div class="card card-4">
@@ -166,9 +166,9 @@
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="subject" id="never_work_option">
                                         <option disabled="disabled" id="never_workoption0_text" selected="selected">----</option>
-                                        <option id="never_workoption1_text" value="">Student</option>
-                                        <option id="never_workoption2_text" value="">Housewife/Househusband</option>
-                                        <option id="never_workoption3_text" value="">Other</option>
+                                        <option id="never_workoption1_text" value="Student">Student</option>
+                                        <option id="never_workoption2_text" value="Housewife/Househusband">Housewife/Househusband</option>
+                                        <option id="never_workoption3_text" value="Other">Other</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
@@ -176,14 +176,14 @@
                             <div class="input-group" style="display: block;" id="living_activities_Box">
                                 <label class="label" id="living_profession_text">What do you do for a living/what is your profession?</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject" id="living_activities">
+                                    <select name="subject" id="living_activities" onchange="living_activities_changed()">
                                         <option disabled="disabled" id="living_option_0" selected="selected">----</option>
                                         <option id="living_option_1" value="Accountant">Accountant</option>
-                                        <option id="living_option_2" value="Actor/Actress">Actor/Actress</option>
-                                        <option id="living_option_3" value="Architect">Architect</option>
+                                        <%--<option id="living_option_2" value="Actor/Actress">Actor/Actress</option>--%>
+                                        <%--<option id="living_option_3" value="Architect">Architect</option>--%>
                                         <option id="living_option_4" value="Author">Author</option>
-                                        <option id="living_option_5" value="Baker">Baker</option>
-                                        <option id="living_option_6" value="Bricklayer">Bricklayer</option>
+                                        <%--<option id="living_option_5" value="Baker">Baker</option>--%>
+                                        <%--<option id="living_option_6" value="Bricklayer">Bricklayer</option>--%>
                                         <option id="living_option_7" value="Bus driver">Bus driver</option>
                                         <option id="living_option_8" value="Butcher">Butcher</option>
                                         <option id="living_option_9" value="Carpenter">Carpenter</option>
@@ -195,30 +195,30 @@
                                         <option id="living_option_15" value="Electrician">Electrician</option>
                                         <option id="living_option_16" value="Engineer">Engineer</option>
                                         <option id="living_option_17" value="Factory worker">Factory worker</option>
-                                        <option id="living_option_18" value="Farmer">Farmer</option>
+                                        <%--<option id="living_option_18" value="Farmer">Farmer</option>--%>
                                         <option id="living_option_19" value="Fireman/Fire fighter">Fireman/Fire fighter</option>
-                                        <option id="living_option_20" value="Fisherman">Fisherman</option>
+                                        <%--<option id="living_option_20" value="Fisherman">Fisherman</option>--%>
                                         <option id="living_option_21" value="Florist">Florist</option>
-                                        <option id="living_option_22" value="Gardener">Gardener</option>
+                                        <%--<option id="living_option_22" value="Gardener">Gardener</option>--%>
                                         <option id="living_option_23" value="Hairdresser">Hairdresser</option>
-                                        <option id="living_option_24" value="Journalist">Journalist</option>
+                                        <%--<option id="living_option_24" value="Journalist">Journalist</option>--%>
                                         <option id="living_option_25" value="Lawyer">Lawyer</option>
-                                        <option id="living_option_26" value="Librarian">Librarian</option>
+                                        <%--<option id="living_option_26" value="Librarian">Librarian</option>--%>
                                         <option id="living_option_27" value="Mechanic">Mechanic</option>
-                                        <option id="living_option_28" value="Model">Model</option>
+                                        <%--<option id="living_option_28" value="Model">Model</option>--%>
                                         <option id="living_option_29" value="Nurse">Nurse</option>
-                                        <option id="living_option_30" value="Optician">Optician</option>
+                                        <%--<option id="living_option_30" value="Optician">Optician</option>--%>
                                         <option id="living_option_31" value="Orderly">Orderly</option>
                                         <option id="living_option_32" value="Painter">Painter</option>
                                         <option id="living_option_33" value="Pharmacist">Pharmacist</option>
-                                        <option id="living_option_34" value="Photographer">Photographer</option>
+                                        <%--<option id="living_option_34" value="Photographer">Photographer</option>--%>
                                         <option id="living_option_35" value="Pilot">Pilot</option>
                                         <option id="living_option_36" value="Plumber">Plumber</option>
-                                        <option id="living_option_37" value="Politician">Politician</option>
+                                        <%--<option id="living_option_37" value="Politician">Politician</option>--%>
                                         <option id="living_option_38" value="Policeman/Policewoman">Policeman/Policewoman</option>
                                         <option id="living_option_39" value="Postman">Postman</option>
                                         <option id="living_option_40" value="Real estate agent">Real estate agent</option>
-                                        <option id="living_option_41" value="Scientist">Scientist</option>
+                                        <%--<option id="living_option_41" value="Scientist">Scientist</option>--%>
                                         <option id="living_option_42" value="Secretary">Secretary</option>
                                         <option id="living_option_43" value="Soldier">Soldier</option>
                                         <option id="living_option_44" value="Tailor/Seamstress">Tailor/Seamstress</option>
@@ -231,6 +231,13 @@
                                     <div class="select-dropdown"></div>
                                 </div>
                             </div>
+                            <div id="other_livingActivities_parent" style="display: none;">
+                                <label class="label" style="width: 500px;" id="other_livingActivities_text">You choose other, please type your word here</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <input class="input--style-4" type="text" id="other_livingActivities" name="other_livingActivities">
+                                </div>
+                                <br />
+                            </div>
                         </div>
 
                         <div class="input-group" id="sport_activites_parent1">
@@ -240,40 +247,50 @@
                                     <select name="subject" id="sports_activites" onchange="sports_activites_changed()">
                                         <option disabled="disabled" id="sports_option_0" selected="selected">----</option>
                                         <option id="sports_option_1" value="none">none</option>
-                                        <option id="sports_option_2" value="kayaking">kayaking</option>
+                                        <%--<option id="sports_option_2" value="kayaking">kayaking</option>--%>
                                         <option id="sports_option_3" value="canoeing">canoeing</option>
                                         <option id="sports_option_4" value="cross-country skiing">cross-country skiing</option>
                                         <option id="sports_option_5" value="swimming">swimming</option>
-                                        <option id="sports_option_6" value="freediving">freediving</option>
+                                        <%--<option id="sports_option_6" value="freediving">freediving</option>--%>
                                         <option id="sports_option_7" value="paddle boarding">paddle boarding</option>
                                         <option id="sports_option_8" value="scuba diving">scuba diving</option>
                                         <option id="sports_option_9" value="aerobics">aerobics</option>
-                                        <option id="sports_option_10" value="archery">archery</option>
+                                        <%--<option id="sports_option_10" value="archery">archery</option>--%>
                                         <option id="sports_option_11" value="boxing">boxing</option>
                                         <option id="sports_option_12" value="running">running</option>
                                         <option id="sports_option_13" value="cycling">cycling</option>
-                                        <option id="sports_option_14" value="skating">skating</option>
-                                        <option id="sports_option_15" value="horseback riding">horseback riding</option>
+                                        <%--<option id="sports_option_14" value="skating">skating</option>--%>
+                                        <%--<option id="sports_option_15" value="horseback riding">horseback riding</option>--%>
                                         <option id="sports_option_16" value="kickboxing">kickboxing</option>
                                         <option id="sports_option_17" value="ultimate frisbee">ultimate frisbee</option>
                                         <option id="sports_option_18" value="walking">walking</option>
                                         <option id="sports_option_19" value="weightlifting">weightlifting</option>
-                                        <option id="sports_option_20" value="wrestling">wrestling</option>
-                                        <option id="sports_option_21" value="Softball">Softball</option>
-                                        <option id="sports_option_22" value="baseball">baseball</option>
+                                        <%--<option id="sports_option_20" value="wrestling">wrestling</option>--%>
+                                        <%--<option id="sports_option_21" value="Softball">Softball</option>--%>
+                                        <%--<option id="sports_option_22" value="baseball">baseball</option>--%>
                                         <option id="sports_option_23" value="basketball">basketball</option>
                                         <option id="sports_option_24" value="tennis">tennis</option>
-                                        <option id="sports_option_25" value="badminton">badminton</option>
-                                        <option id="sports_option_26" value="bowling">bowling</option>
-                                        <option id="sports_option_27" value="curling">curling</option>
+                                        <%--<option id="sports_option_25" value="badminton">badminton</option>--%>
+                                        <%--<option id="sports_option_26" value="bowling">bowling</option>--%>
+                                        <%--<option id="sports_option_27" value="curling">curling</option>--%>
                                         <option id="sports_option_28" value="soccer">soccer</option>
-                                        <option id="sports_option_29" value="football">football</option>
+                                        <%--<option id="sports_option_29" value="football">football</option>--%>
                                         <option id="sports_option_30" value="Ski">Ski</option>
                                         <option id="sports_option_31" value="Hockey">Hockey</option>
                                         <option id="sports_option_32" value="Other">Other</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
+
+                                <div id="other_sport_activites_parent1" style="display: none;">
+                                    <br />
+                                    <label class="label" style="width: 500px;" id="other_sports_activites_text">You choose other, please type your word here</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input class="input--style-4" type="text" id="other_sports_activites" name="other_sports_activites">
+                                    </div>
+                                    <br />
+                                </div>
+
                             </div>
                             <div class="input-group" id="parent_how_often" style="display: block;">
                                 <label class="label" id="how_often_text">How often?</label>
@@ -305,40 +322,49 @@
                                     <select name="subject" id="1sports_activites" onchange="sports_activites_changed()">
                                         <option disabled="disabled" id="1sports_option_0" selected="selected">----</option>
                                         <option id="1sports_option_1" value="none">none</option>
-                                        <option id="1sports_option_2" value="kayaking">kayaking</option>
+                                        <%--<option id="1sports_option_2" value="kayaking">kayaking</option>--%>
                                         <option id="1sports_option_3" value="canoeing">canoeing</option>
                                         <option id="1sports_option_4" value="cross-country skiing">cross-country skiing</option>
                                         <option id="1sports_option_5" value="swimming">swimming</option>
-                                        <option id="1sports_option_6" value="freediving">freediving</option>
+                                        <%--<option id="1sports_option_6" value="freediving">freediving</option>--%>
                                         <option id="1sports_option_7" value="paddle boarding">paddle boarding</option>
                                         <option id="1sports_option_8" value="scuba diving">scuba diving</option>
                                         <option id="1sports_option_9" value="aerobics">aerobics</option>
-                                        <option id="1sports_option_10" value="archery">archery</option>
+                                        <%--<option id="1sports_option_10" value="archery">archery</option>--%>
                                         <option id="1sports_option_11" value="boxing">boxing</option>
                                         <option id="1sports_option_12" value="running">running</option>
                                         <option id="1sports_option_13" value="cycling">cycling</option>
-                                        <option id="1sports_option_14" value="skating">skating</option>
-                                        <option id="1sports_option_15" value="horseback riding">horseback riding</option>
+                                        <%--<option id="1sports_option_14" value="skating">skating</option>--%>
+                                        <%--<option id="1sports_option_15" value="horseback riding">horseback riding</option>--%>
                                         <option id="1sports_option_16" value="kickboxing">kickboxing</option>
                                         <option id="1sports_option_17" value="ultimate frisbee">ultimate frisbee</option>
                                         <option id="1sports_option_18" value="walking">walking</option>
                                         <option id="1sports_option_19" value="weightlifting">weightlifting</option>
-                                        <option id="1sports_option_20" value="wrestling">wrestling</option>
-                                        <option id="1sports_option_21" value="Softball">Softball</option>
-                                        <option id="1sports_option_22" value="baseball">baseball</option>
+                                        <%--<option id="1sports_option_20" value="wrestling">wrestling</option>--%>
+                                        <%--<option id="1sports_option_21" value="Softball">Softball</option>--%>
+                                        <%--<option id="1sports_option_22" value="baseball">baseball</option>--%>
                                         <option id="1sports_option_23" value="basketball">basketball</option>
                                         <option id="1sports_option_24" value="tennis">tennis</option>
-                                        <option id="1sports_option_25" value="badminton">badminton</option>
-                                        <option id="1sports_option_26" value="bowling">bowling</option>
-                                        <option id="1sports_option_27" value="curling">curling</option>
+                                        <%--<option id="1sports_option_25" value="badminton">badminton</option>--%>
+                                        <%--<option id="1sports_option_26" value="bowling">bowling</option>--%>
+                                        <%--<option id="1sports_option_27" value="curling">curling</option>--%>
                                         <option id="1sports_option_28" value="soccer">soccer</option>
-                                        <option id="1sports_option_29" value="football">football</option>
+                                        <%--<option id="1sports_option_29" value="football">football</option>--%>
                                         <option id="1sports_option_30" value="Ski">Ski</option>
                                         <option id="1sports_option_31" value="Hockey">Hockey</option>
                                         <option id="1sports_option_32" value="Other">Other</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
+
+                                <div id="other_sport_activites_parent2" style="display: none;">
+                                    <br />
+                                    <label class="label" style="width: 500px;" id="other_1sports_activites_text">You choose other, please type your word here</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input class="input--style-4" type="text" id="other_1sports_activites" name="other_1sports_activites">
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="input-group" id="1parent_how_often" style="display: block;">
                                 <label class="label" id="1how_often_text">How often?</label>
@@ -369,40 +395,49 @@
                                     <select name="subject" id="2sports_activites" onchange="sports_activites_changed()">
                                         <option disabled="disabled" id="2sports_option_0" selected="selected">----</option>
                                         <option id="2sports_option_1" value="none">none</option>
-                                        <option id="2sports_option_2" value="kayaking">kayaking</option>
+                                        <%--<option id="2sports_option_2" value="kayaking">kayaking</option>--%>
                                         <option id="2sports_option_3" value="canoeing">canoeing</option>
                                         <option id="2sports_option_4" value="cross-country skiing">cross-country skiing</option>
                                         <option id="2sports_option_5" value="swimming">swimming</option>
-                                        <option id="2sports_option_6" value="freediving">freediving</option>
+                                        <%--<option id="2sports_option_6" value="freediving">freediving</option>--%>
                                         <option id="2sports_option_7" value="paddle boarding">paddle boarding</option>
                                         <option id="2sports_option_8" value="scuba diving">scuba diving</option>
                                         <option id="2sports_option_9" value="aerobics">aerobics</option>
-                                        <option id="2sports_option_10" value="archery">archery</option>
+                                        <%--<option id="2sports_option_10" value="archery">archery</option>--%>
                                         <option id="2sports_option_11" value="boxing">boxing</option>
                                         <option id="2sports_option_12" value="running">running</option>
                                         <option id="2sports_option_13" value="cycling">cycling</option>
-                                        <option id="2sports_option_14" value="skating">skating</option>
-                                        <option id="2sports_option_15" value="horseback riding">horseback riding</option>
+                                        <%--<option id="2sports_option_14" value="skating">skating</option>--%>
+                                        <%--<option id="2sports_option_15" value="horseback riding">horseback riding</option>--%>
                                         <option id="2sports_option_16" value="kickboxing">kickboxing</option>
                                         <option id="2sports_option_17" value="ultimate frisbee">ultimate frisbee</option>
                                         <option id="2sports_option_18" value="walking">walking</option>
                                         <option id="2sports_option_19" value="weightlifting">weightlifting</option>
-                                        <option id="2sports_option_20" value="wrestling">wrestling</option>
-                                        <option id="2sports_option_21" value="Softball">Softball</option>
-                                        <option id="2sports_option_22" value="baseball">baseball</option>
+                                        <%--<option id="2sports_option_20" value="wrestling">wrestling</option>--%>
+                                        <%--<option id="2sports_option_21" value="Softball">Softball</option>--%>
+                                        <%--<option id="2sports_option_22" value="baseball">baseball</option>--%>
                                         <option id="2sports_option_23" value="basketball">basketball</option>
                                         <option id="2sports_option_24" value="tennis">tennis</option>
-                                        <option id="2sports_option_25" value="badminton">badminton</option>
-                                        <option id="2sports_option_26" value="bowling">bowling</option>
-                                        <option id="2sports_option_27" value="curling">curling</option>
+                                        <%--<option id="2sports_option_25" value="badminton">badminton</option>--%>
+                                        <%--<option id="2sports_option_26" value="bowling">bowling</option>--%>
+                                        <%--<option id="2sports_option_27" value="curling">curling</option>--%>
                                         <option id="2sports_option_28" value="soccer">soccer</option>
-                                        <option id="2sports_option_29" value="football">football</option>
+                                        <%--<option id="2sports_option_29" value="football">football</option>--%>
                                         <option id="2sports_option_30" value="Ski">Ski</option>
                                         <option id="2sports_option_31" value="Hockey">Hockey</option>
                                         <option id="2sports_option_32" value="Other">Other</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
+
+                                <div id="other_sport_activites_parent3" style="display: none;">
+                                    <br />
+                                    <label class="label" style="width: 500px;" id="other_2sports_activites_text">You choose other, please type your word here</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input class="input--style-4" type="text" id="other_2sports_activites" name="other_2sports_activites">
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="input-group" id="2parent_how_often" style="display: block;">
                                 <label class="label" id="2how_often_text">How often?</label>
@@ -642,7 +677,7 @@
                                 <div class="input-group" id="what_drug" style="display: block;">
                                     <label class="label" id="recreational_what_text">If yes, Which Drug or Herbal/Natural Remedy do you Use?​</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="subject" id="recreationalDrug_whatDrugs">
+                                        <select name="subject" id="recreationalDrug_whatDrugs" onchange="what_drugs_changed()">
                                             <option disabled="disabled" id="recreational_what_option_0" selected="selected">----</option>
                                             <option id="recreational_what_option_1" value="chondroitin">chondroitin</option>
                                             <option id="recreational_what_option_2" value="glucosamine">glucosamine</option>
@@ -662,6 +697,15 @@
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
+
+                                    <div id="other_what_drug_parent1" style="display: none;">
+                                        <br />
+                                        <label class="label" style="width: 500px;" id="other_recreational_what_text">You choose other, please type your word here</label>
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <input class="input--style-4" type="text" id="other_recreational_what" name="other_recreational_what">
+                                        </div>
+                                    </div>
+
                                 </div>
 
                                 <div class="input-group" id="How_many_weeks_drug" style="display: block;">
@@ -687,7 +731,7 @@
                                 <div class="input-group" id="2what_drug" style="display: block;">
                                     <label class="label" id="2recreational_what_text">If yes, Which Drug or Herbal/Natural Remedy do you Use?​</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="subject" id="2recreationalDrug_whatDrugs">
+                                        <select name="subject" id="2recreationalDrug_whatDrugs" onchange="what_drugs_changed()">
                                             <option disabled="disabled" id="2recreational_what_option_0" selected="selected">----</option>
                                             <option id="2recreational_what_option_1" value="chondroitin">chondroitin</option>
                                             <option id="2recreational_what_option_2" value="glucosamine">glucosamine</option>
@@ -707,6 +751,15 @@
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
+
+                                    <div id="other_what_drug_parent2" style="display: none;">
+                                        <br />
+                                        <label class="label" style="width: 500px;" id="other_2recreational_what_text">You choose other, please type your word here</label>
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <input class="input--style-4" type="text" id="other_2recreational_what" name="other_2recreational_what">
+                                        </div>
+                                    </div>
+
                                 </div>
 
                                 <div class="input-group" id="2How_many_weeks_drug" style="display: block;">
@@ -731,7 +784,7 @@
                                 <div class="input-group" id="3what_drug" style="display: block;">
                                     <label class="label" id="3recreational_what_text">If yes, Which Drug or Herbal/Natural Remedy do you Use?​</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="subject" id="3recreationalDrug_whatDrugs">
+                                        <select name="subject" id="3recreationalDrug_whatDrugs" onchange="what_drugs_changed()">
                                             <option disabled="disabled" id="3recreational_what_option_0" selected="selected">----</option>
                                             <option id="3recreational_what_option_1" value="chondroitin">chondroitin</option>
                                             <option id="3recreational_what_option_2" value="glucosamine">glucosamine</option>
@@ -751,6 +804,15 @@
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
+
+                                    <div id="other_what_drug_parent3" style="display: none;">
+                                        <br />
+                                        <label class="label" style="width: 500px;" id="other_3recreational_what_text">You choose other, please type your word here</label>
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <input class="input--style-4" type="text" id="other_3recreational_what" name="other_3recreational_what">
+                                        </div>
+                                    </div>
+
                                 </div>
 
                                 <div class="input-group" id="3How_many_weeks_drug" style="display: block;">
@@ -971,10 +1033,19 @@
                                     <label id="" class="radio-container">
                                         <label id="medical_Other">Other</label>
 
-                                        <input type="checkbox" id="Other" name="Other">
+                                        <input type="checkbox" id="Other" name="Other" onclick="other_medical_conditions_change(this)">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
+
+                                <div id="other_medical_conditions_parent" style="display: none;">
+                                    <br />
+                                    <label class="label" style="width: 500px;" id="other_medical_conditions_text">You choose other, please type your word here</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input class="input--style-4" type="text" id="other_medical_conditions" name="other_medical_conditions">
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
@@ -1336,6 +1407,13 @@
 
                                     <%--<input type="file" id="medical_file" accept="image/*" onchange="change_file_medication_click()" hidden="hidden" capture multiple />--%>
                                     <div id="Box_medical_file_form" style="display: block;">
+
+                                        <label class="label" style="width: 500px;" id="medicalFile_additional_text">Type about your medication file here</label>
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <input class="input--style-4" type="text" id="medicalFile_additional" name="medicalFile_additional">
+                                        </div>
+                                        <br />
+
                                         <label class="label" for="capture" id="upload_file_medication_text">Please Upload Your Medication File (or Take Photograph)</label>
                                         <button class="btn btn--radius-2 btn--blue" style="background: #a338cd;" id="medical_file_button" onclick="button_file_medication_click()" type="button">Choose</button>
                                         <span id="text_medical_file">No file chosen, yet.</span>
@@ -1343,6 +1421,7 @@
                                     <br />
                                 </form>
                             </div>
+                            <br />
                             <br />
 
                             <div class="col-6">
@@ -1362,6 +1441,13 @@
                                     </div>
                                 </div>
                                 <div class="p-t-12" id="Box_referral_form" style="display: block;">
+
+                                    <label class="label" style="width: 500px;" id="Referral_additional_text">Type about your Referral here</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input class="input--style-4" type="text" id="Referral_additional" name="Referral_additional">
+                                    </div>
+                                    <br />
+
                                     <form action="#" id="referral_form" enctype="multipart/form-data">
                                         <label class="label" for="capture" id="referral_file_text">Please Upload Your Referral File (or Take Photograph)</label>
                                         <%--<input type="file" id="referral_file" accept="image/*" onchange="change_referral_click()" hidden="hidden" capture multiple />--%>
@@ -1388,6 +1474,8 @@
 
         </div>
     </div>
+
+    
     <!-- Jquery JS-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->
@@ -2897,8 +2985,6 @@
 
             questionnaireformat = document.getElementById('questionnaire_format');
 
-            document.getElementById('Main-Form').menu("disable");
-
             //alert('est-ce que vous buvez de l\'alcohol?');
         });
 
@@ -2959,11 +3045,11 @@
             document.getElementById('living_profession_text').innerHTML = language["Yes; What Do You Do For A Living/What is Your Profession ?"];
             document.getElementById('living_option_0').innerHTML = language["Choose Option"];
             document.getElementById('living_option_1').innerHTML = language["Accountant"];
-            document.getElementById('living_option_2').innerHTML = language["Actor / Actress"];
-            document.getElementById('living_option_3').innerHTML = language["Architect"];
+            //document.getElementById('living_option_2').innerHTML = language["Actor / Actress"];  // these items for working have been removed by Dr Mutch
+            //document.getElementById('living_option_3').innerHTML = language["Architect"];
             document.getElementById('living_option_4').innerHTML = language["Author"];
-            document.getElementById('living_option_5').innerHTML = language["Baker"];
-            document.getElementById('living_option_6').innerHTML = language["Bricklayer"];
+            //document.getElementById('living_option_5').innerHTML = language["Baker"];
+            //document.getElementById('living_option_6').innerHTML = language["Bricklayer"];
             document.getElementById('living_option_7').innerHTML = language["Bus Driver"];
             document.getElementById('living_option_8').innerHTML = language["Butcher"];
             document.getElementById('living_option_9').innerHTML = language["Carpenter"];
@@ -2975,30 +3061,30 @@
             document.getElementById('living_option_15').innerHTML = language["Electrician"];
             document.getElementById('living_option_16').innerHTML = language["Engineer"];
             document.getElementById('living_option_17').innerHTML = language["Factory Worker"];
-            document.getElementById('living_option_18').innerHTML = language["Farmer"];
+            //document.getElementById('living_option_18').innerHTML = language["Farmer"];
             document.getElementById('living_option_19').innerHTML = language["Fireman/Fire Fighter"];
-            document.getElementById('living_option_20').innerHTML = language["Fisherman"];
+            //document.getElementById('living_option_20').innerHTML = language["Fisherman"];
             document.getElementById('living_option_21').innerHTML = language["Florist"];
-            document.getElementById('living_option_22').innerHTML = language["Gardener"];
+            //document.getElementById('living_option_22').innerHTML = language["Gardener"];
             document.getElementById('living_option_23').innerHTML = language["Hairdresser"];
-            document.getElementById('living_option_24').innerHTML = language["Journalist"];
+            //document.getElementById('living_option_24').innerHTML = language["Journalist"];
             document.getElementById('living_option_25').innerHTML = language["Lawyer"];
-            document.getElementById('living_option_26').innerHTML = language["Librarian"];
+            //document.getElementById('living_option_26').innerHTML = language["Librarian"];
             document.getElementById('living_option_27').innerHTML = language["Mechanic"];
-            document.getElementById('living_option_28').innerHTML = language["Model"];
+            //document.getElementById('living_option_28').innerHTML = language["Model"];
             document.getElementById('living_option_29').innerHTML = language["Nurse"];
-            document.getElementById('living_option_30').innerHTML = language["Optician"];
+            //document.getElementById('living_option_30').innerHTML = language["Optician"];
             document.getElementById('living_option_31').innerHTML = language["Orderly"];
             document.getElementById('living_option_32').innerHTML = language["Painter"];
             document.getElementById('living_option_33').innerHTML = language["Pharmacist"];
-            document.getElementById('living_option_34').innerHTML = language["Photographer"];
+            //document.getElementById('living_option_34').innerHTML = language["Photographer"];
             document.getElementById('living_option_35').innerHTML = language["Pilot"];
             document.getElementById('living_option_36').innerHTML = language["Plumber"];
-            document.getElementById('living_option_37').innerHTML = language["Politician"];
+            //document.getElementById('living_option_37').innerHTML = language["Politician"];
             document.getElementById('living_option_38').innerHTML = language["Policeman / Policewoman"];
             document.getElementById('living_option_39').innerHTML = language["Postman"];
             document.getElementById('living_option_40').innerHTML = language["Real Estate Agent"];
-            document.getElementById('living_option_41').innerHTML = language["Scientist"];
+            //document.getElementById('living_option_41').innerHTML = language["Scientist"];
             document.getElementById('living_option_42').innerHTML = language["Secretary"];
             document.getElementById('living_option_43').innerHTML = language["Soldier"];
             document.getElementById('living_option_44').innerHTML = language["Tailor/Seamstress"];
@@ -3012,34 +3098,34 @@
             document.getElementById('sports_question_text').innerHTML = language["What Sports/Activities Do You Do?"];
             document.getElementById('sports_option_0').innerHTML = language["Choose Option"];
             document.getElementById('sports_option_1').innerHTML = language["None"];
-            document.getElementById('sports_option_2').innerHTML = language["Kayaking"];
+            //document.getElementById('sports_option_2').innerHTML = language["Kayaking"];
             document.getElementById('sports_option_3').innerHTML = language["Canoeing"];
             document.getElementById('sports_option_4').innerHTML = language["Cross – Country Skiing"];
             document.getElementById('sports_option_5').innerHTML = language["Swimming"];
-            document.getElementById('sports_option_6').innerHTML = language["Freediving"];
+            //document.getElementById('sports_option_6').innerHTML = language["Freediving"];
             document.getElementById('sports_option_7').innerHTML = language["Paddleboarding"];
             document.getElementById('sports_option_8').innerHTML = language["Scuba Diving"];
             document.getElementById('sports_option_9').innerHTML = language["Aerobics"];
-            document.getElementById('sports_option_10').innerHTML = language["Archery"];
+            //document.getElementById('sports_option_10').innerHTML = language["Archery"];
             document.getElementById('sports_option_11').innerHTML = language["Boxing"];
             document.getElementById('sports_option_12').innerHTML = language["Running"];
             document.getElementById('sports_option_13').innerHTML = language["Cycling"];
-            document.getElementById('sports_option_14').innerHTML = language["Figure Skating"];
-            document.getElementById('sports_option_15').innerHTML = language["Horseback Riding"];
+            //document.getElementById('sports_option_14').innerHTML = language["Figure Skating"];
+            //document.getElementById('sports_option_15').innerHTML = language["Horseback Riding"];
             document.getElementById('sports_option_16').innerHTML = language["Kickboxing"];
             document.getElementById('sports_option_17').innerHTML = language["Ultimate Frisbee"];
             document.getElementById('sports_option_18').innerHTML = language["Walking"];
             document.getElementById('sports_option_19').innerHTML = language["Weightlifting"];
-            document.getElementById('sports_option_20').innerHTML = language["Wrestling"];
-            document.getElementById('sports_option_21').innerHTML = language["Baseball"];
-            document.getElementById('sports_option_22').innerHTML = language["Softball"];
+            //document.getElementById('sports_option_20').innerHTML = language["Wrestling"];
+            //document.getElementById('sports_option_21').innerHTML = language["Baseball"];
+            //document.getElementById('sports_option_22').innerHTML = language["Softball"];
             document.getElementById('sports_option_23').innerHTML = language["Basketball"];
             document.getElementById('sports_option_24').innerHTML = language["Tennis"];
-            document.getElementById('sports_option_25').innerHTML = language["Badminton"];
-            document.getElementById('sports_option_26').innerHTML = language["Bowling"];
-            document.getElementById('sports_option_27').innerHTML = language["Curling"];
+            //document.getElementById('sports_option_25').innerHTML = language["Badminton"];
+            //document.getElementById('sports_option_26').innerHTML = language["Bowling"];
+            //document.getElementById('sports_option_27').innerHTML = language["Curling"];
             document.getElementById('sports_option_28').innerHTML = language["Soccer"];
-            document.getElementById('sports_option_29').innerHTML = language["Football"];
+            //document.getElementById('sports_option_29').innerHTML = language["Football"];
             document.getElementById('sports_option_30').innerHTML = language["Ski"];
             document.getElementById('sports_option_31').innerHTML = language["Hockey"];
             document.getElementById('sports_option_32').innerHTML = language["Other"];
@@ -3060,34 +3146,34 @@
             document.getElementById('1sports_question_text').innerHTML = language["What Sports/Activities Do You Do?"];
             document.getElementById('1sports_option_0').innerHTML = language["Choose Option"];
             document.getElementById('1sports_option_1').innerHTML = language["None"];
-            document.getElementById('1sports_option_2').innerHTML = language["Kayaking"];
+            //document.getElementById('1sports_option_2').innerHTML = language["Kayaking"];
             document.getElementById('1sports_option_3').innerHTML = language["Canoeing"];
             document.getElementById('1sports_option_4').innerHTML = language["Cross – Country Skiing"];
             document.getElementById('1sports_option_5').innerHTML = language["Swimming"];
-            document.getElementById('1sports_option_6').innerHTML = language["Freediving"];
+            //document.getElementById('1sports_option_6').innerHTML = language["Freediving"];
             document.getElementById('1sports_option_7').innerHTML = language["Paddleboarding"];
             document.getElementById('1sports_option_8').innerHTML = language["Scuba Diving"];
             document.getElementById('1sports_option_9').innerHTML = language["Aerobics"];
-            document.getElementById('1sports_option_10').innerHTML = language["Archery"];
+            //document.getElementById('1sports_option_10').innerHTML = language["Archery"];
             document.getElementById('1sports_option_11').innerHTML = language["Boxing"];
             document.getElementById('1sports_option_12').innerHTML = language["Running"];
             document.getElementById('1sports_option_13').innerHTML = language["Cycling"];
-            document.getElementById('1sports_option_14').innerHTML = language["Figure Skating"];
-            document.getElementById('1sports_option_15').innerHTML = language["Horseback Riding"];
+            //document.getElementById('1sports_option_14').innerHTML = language["Figure Skating"];
+            //document.getElementById('1sports_option_15').innerHTML = language["Horseback Riding"];
             document.getElementById('1sports_option_16').innerHTML = language["Kickboxing"];
             document.getElementById('1sports_option_17').innerHTML = language["Ultimate Frisbee"];
             document.getElementById('1sports_option_18').innerHTML = language["Walking"];
             document.getElementById('1sports_option_19').innerHTML = language["Weightlifting"];
-            document.getElementById('1sports_option_20').innerHTML = language["Wrestling"];
-            document.getElementById('1sports_option_21').innerHTML = language["Baseball"];
-            document.getElementById('1sports_option_22').innerHTML = language["Softball"];
+            //document.getElementById('1sports_option_20').innerHTML = language["Wrestling"];
+            //document.getElementById('1sports_option_21').innerHTML = language["Baseball"];
+            //document.getElementById('1sports_option_22').innerHTML = language["Softball"];
             document.getElementById('1sports_option_23').innerHTML = language["Basketball"];
             document.getElementById('1sports_option_24').innerHTML = language["Tennis"];
-            document.getElementById('1sports_option_25').innerHTML = language["Badminton"];
-            document.getElementById('1sports_option_26').innerHTML = language["Bowling"];
-            document.getElementById('1sports_option_27').innerHTML = language["Curling"];
+            //document.getElementById('1sports_option_25').innerHTML = language["Badminton"];
+            //document.getElementById('1sports_option_26').innerHTML = language["Bowling"];
+            //document.getElementById('1sports_option_27').innerHTML = language["Curling"];
             document.getElementById('1sports_option_28').innerHTML = language["Soccer"];
-            document.getElementById('1sports_option_29').innerHTML = language["Football"];
+            //document.getElementById('1sports_option_29').innerHTML = language["Football"];
             document.getElementById('1sports_option_30').innerHTML = language["Ski"];
             document.getElementById('1sports_option_31').innerHTML = language["Hockey"];
             document.getElementById('1sports_option_32').innerHTML = language["Other"];
@@ -3108,34 +3194,34 @@
             document.getElementById('2sports_question_text').innerHTML = language["What Sports/Activities Do You Do?"];
             document.getElementById('2sports_option_0').innerHTML = language["Choose Option"];
             document.getElementById('2sports_option_1').innerHTML = language["None"];
-            document.getElementById('2sports_option_2').innerHTML = language["Kayaking"];
+            //document.getElementById('2sports_option_2').innerHTML = language["Kayaking"];
             document.getElementById('2sports_option_3').innerHTML = language["Canoeing"];
             document.getElementById('2sports_option_4').innerHTML = language["Cross – Country Skiing"];
             document.getElementById('2sports_option_5').innerHTML = language["Swimming"];
-            document.getElementById('2sports_option_6').innerHTML = language["Freediving"];
+            //document.getElementById('2sports_option_6').innerHTML = language["Freediving"];
             document.getElementById('2sports_option_7').innerHTML = language["Paddleboarding"];
             document.getElementById('2sports_option_8').innerHTML = language["Scuba Diving"];
             document.getElementById('2sports_option_9').innerHTML = language["Aerobics"];
-            document.getElementById('2sports_option_10').innerHTML = language["Archery"];
+            //document.getElementById('2sports_option_10').innerHTML = language["Archery"];
             document.getElementById('2sports_option_11').innerHTML = language["Boxing"];
             document.getElementById('2sports_option_12').innerHTML = language["Running"];
             document.getElementById('2sports_option_13').innerHTML = language["Cycling"];
-            document.getElementById('2sports_option_14').innerHTML = language["Figure Skating"];
-            document.getElementById('2sports_option_15').innerHTML = language["Horseback Riding"];
+            //document.getElementById('2sports_option_14').innerHTML = language["Figure Skating"];
+            //document.getElementById('2sports_option_15').innerHTML = language["Horseback Riding"];
             document.getElementById('2sports_option_16').innerHTML = language["Kickboxing"];
             document.getElementById('2sports_option_17').innerHTML = language["Ultimate Frisbee"];
             document.getElementById('2sports_option_18').innerHTML = language["Walking"];
             document.getElementById('2sports_option_19').innerHTML = language["Weightlifting"];
-            document.getElementById('2sports_option_20').innerHTML = language["Wrestling"];
-            document.getElementById('2sports_option_21').innerHTML = language["Baseball"];
-            document.getElementById('2sports_option_22').innerHTML = language["Softball"];
+            //document.getElementById('2sports_option_20').innerHTML = language["Wrestling"];
+            //document.getElementById('2sports_option_21').innerHTML = language["Baseball"];
+            //document.getElementById('2sports_option_22').innerHTML = language["Softball"];
             document.getElementById('2sports_option_23').innerHTML = language["Basketball"];
             document.getElementById('2sports_option_24').innerHTML = language["Tennis"];
-            document.getElementById('2sports_option_25').innerHTML = language["Badminton"];
-            document.getElementById('2sports_option_26').innerHTML = language["Bowling"];
-            document.getElementById('2sports_option_27').innerHTML = language["Curling"];
+            //document.getElementById('2sports_option_25').innerHTML = language["Badminton"];
+            //document.getElementById('2sports_option_26').innerHTML = language["Bowling"];
+            //document.getElementById('2sports_option_27').innerHTML = language["Curling"];
             document.getElementById('2sports_option_28').innerHTML = language["Soccer"];
-            document.getElementById('2sports_option_29').innerHTML = language["Football"];
+            //document.getElementById('2sports_option_29').innerHTML = language["Football"];
             document.getElementById('2sports_option_30').innerHTML = language["Ski"];
             document.getElementById('2sports_option_31').innerHTML = language["Hockey"];
             document.getElementById('2sports_option_32').innerHTML = language["Other"];
@@ -3692,7 +3778,6 @@
             }
         }
 
-
         function submit_button_click() {
 
             //if ($('#sport_activites_parent2:visible').length == 0) {
@@ -4142,16 +4227,26 @@
 
             var answer = '';
 
-            answer += 'What Is The Name Of Your Family Doctor?<br />';
+            answer = 'What Is The Name Of Your Family Doctor?<br />';
             answer += familynameOfDoctor.value; answer += '<br />';
 
             answer += '<br /><br />';
 
-            answer = 'Are You Working Now ?<br />';
+            answer += 'Are You Working Now ?<br />';
+
             if (document.getElementById('yes_working_question').checked) {
                 answer += 'Yes<br />';
                 answer += 'What do you do for a living/what is your profession?<br />';
-                answer += livingActivities.value; answer += '<br />';
+
+                if (livingActivities.value == 'Other') {
+                    answer += 'Other selected : <br />';
+                    answer += document.getElementById('other_livingActivities').value; answer += '<br />';
+                }
+
+                else {
+                    answer += livingActivities.value; answer += '<br />';
+                }
+
             }
             else if (document.getElementById('no_working_question').checked) {
                 answer += 'No; Retired<br />';
@@ -4167,7 +4262,17 @@
             answer += '<br /><br />';
 
             answer += 'What Sports/Activities Do You Do?<br />';
-            answer += sportsActivites.value; answer += '<br />';
+
+            if (sportsActivites.value == 'Other') {
+                answer += 'Other selected : <br />';
+                answer += document.getElementById('other_sports_activites').value; answer += '<br />';
+            }
+
+            else {
+                answer += sportsActivites.value; answer += '<br />';
+            }
+
+
             answer += 'How Often?<br />';
             answer += howoftensports.value; answer += '<br />';
 
@@ -4175,7 +4280,16 @@
             if ($('#sport_activites_parent2:visible').length != 0) {
 
                 answer += 'Second : What Sports/Activities Do You Do?<br />';
-                answer += sportsActivites2.value; answer += '<br />';
+
+                if (sportsActivites2.value == 'Other') {
+                    answer += 'Other selected : <br />';
+                    answer += document.getElementById('other_1sports_activites').value; answer += '<br />';
+                }
+
+                else {
+                    answer += sportsActivites2.value; answer += '<br />';
+                }
+
                 answer += 'How Often?<br />';
                 answer += howoftensports2.value; answer += '<br />';
 
@@ -4183,8 +4297,18 @@
             // section 3 if selected
             if ($('#sport_activites_parent3:visible').length != 0) {
 
-                answer += 'Second : What Sports/Activities Do You Do?<br />';
-                answer += sportsActivites3.value; answer += '<br />';
+                answer += 'Third : What Sports/Activities Do You Do?<br />';
+
+                if (sportsActivites3.value == 'Other') {
+                    answer += 'Other selected : <br />';
+                    answer += document.getElementById('other_2sports_activites').value; answer += '<br />';
+                }
+
+                else {
+                    answer += sportsActivites3.value; answer += '<br />';
+                }
+
+
                 answer += 'How Often?<br />';
                 answer += howoftensports3.value; answer += '<br />';
             }
@@ -4217,7 +4341,9 @@
                 answer += 'Never<br />';
             }
 
+
             answer += '<br /><br />';
+
 
             answer += 'Do You Drink Alcohol?<br />';
             if (document.getElementById('yes_alcohol').checked) {
@@ -4231,14 +4357,25 @@
                 //answer += alcoholOffDate.value; answer += '\n';
             }
 
+
             answer += '<br /><br />';
+
 
             answer += 'Do You Take Any Recreational Drugs Or Herbal/Natural Remedies?<br />';
             if (document.getElementById('yes_drug').checked) {
                 answer += 'Yes<br />';
 
                 answer += 'If Yes, Which Drug Or Herbal/Natural Remedy Do You Use?​<br />';
-                answer += recreationalDrugWhatDrugs.value; answer += '<br />';
+
+                if (recreationalDrugWhatDrugs.value == 'Other') {
+                    answer += 'Other selected : <br />';
+                    answer += document.getElementById('other_recreational_what').value; answer += '<br />';
+                }
+
+                else {
+                    answer += recreationalDrugWhatDrugs.value; answer += '<br />';
+                }
+
 
                 answer += 'If Yes, How Often Do You Take The Drug Or Herbal/Natural Remedies?<br />';
                 answer += recreationalDrugHowmanyPerweeks.value; answer += '<br />';
@@ -4248,7 +4385,15 @@
                 if ($('#what_drug_parent2:visible').length != 0) {
 
                     answer += 'If Yes, Which Drug Or Herbal/Natural Remedy Do You Use?​<br />';
-                    answer += recreationalDrugWhatDrugs2.value; answer += '<br />';
+
+                    if (recreationalDrugWhatDrugs2.value == 'Other') {
+                        answer += 'Other selected : <br />';
+                        answer += document.getElementById('other_2recreational_what').value; answer += '<br />';
+                    }
+
+                    else {
+                        answer += recreationalDrugWhatDrugs2.value; answer += '<br />';
+                    }
 
                     answer += 'If Yes, How Often Do You Take The Drug Or Herbal/Natural Remedies?<br />';
                     answer += recreationalDrugHowmanyPerweeks2.value; answer += '<br />';
@@ -4258,7 +4403,16 @@
                 if ($('#what_drug_parent3:visible').length != 0) {
 
                     answer += 'If Yes, Which Drug Or Herbal/Natural Remedy Do You Use?​<br />';
-                    answer += recreationalDrugWhatDrugs3.value; answer += '<br />';
+
+                    if (recreationalDrugWhatDrugs3.value == 'Other') {
+                        answer += 'Other selected : <br />';
+                        answer += document.getElementById('other_3recreational_what').value; answer += '<br />';
+                    }
+
+                    else {
+                        answer += recreationalDrugWhatDrugs3.value; answer += '<br />';
+                    }
+
 
                     answer += 'If Yes, How Often Do You Take The Drug Or Herbal/Natural Remedies?<br />';
                     answer += recreationalDrugHowmanyPerweeks3.value; answer += '<br />';
@@ -4296,7 +4450,7 @@
             if (document.getElementById('BleedingProblems').checked) {
                 answer += 'Bleeding Problems<br />';
                 answer += 'Bleeding Problems. Type?<br />';
-                answer += bleedingProblemsTypes.value; answer += '<br />< br />';
+                answer += bleedingProblemsTypes.value; answer += '<br /><br />';
             }
             if (document.getElementById('BloodClots').checked) {
                 answer += 'BloodClots<br />';
@@ -4304,7 +4458,7 @@
             if (document.getElementById('Cancer').checked) {
                 answer += 'Cancer<br />';
                 answer += 'Cancer. Type?<br />';
-                answer += cancerProblemsTypes.value; answer += '<br />< br />';
+                answer += cancerProblemsTypes.value; answer += '<br /><br />';
             }
             if (document.getElementById('Dementia').checked) {
                 answer += 'Dementia<br />';
@@ -4355,7 +4509,7 @@
             if (document.getElementById('Hepatitis').checked) {
                 answer += 'Hepatitis<br />';
                 answer += 'Hepatitis. Type?<br />';
-                answer += hepatitisProblemTypes.value; answer += '<br />< br />';
+                answer += hepatitisProblemTypes.value; answer += '<br /><br />';
 
             }
             if (document.getElementById('Osteoporosis').checked) {
@@ -4390,6 +4544,7 @@
             }
             if (document.getElementById('Other').checked) {
                 answer += 'Other<br />';
+                answer += document.getElementById('other_medical_conditions').value; answer += '<br />';
             }
 
 
@@ -4441,6 +4596,7 @@
             answer += 'Do You Take Any Medications Regularly?<br />';
             if (document.getElementById('yes_question_file_medication').checked) {
                 answer += 'Yes<br />';
+                answer += document.getElementById('medicalFile_additional').value; answer += '<br />';
             }
             else if (document.getElementById('no_question_file_medication').checked) {
                 answer += 'No<br />';
@@ -4449,11 +4605,13 @@
             answer += 'Do You Have A Referral?<br />';
             if (document.getElementById('yes_Referral').checked) {
                 answer += 'Yes<br />';
+                answer += document.getElementById('Referral_additional').value; answer += '<br />';
             }
             else if (document.getElementById('no_Referral').checked) {
                 answer += 'No<br />';
             }
 
+            console.log(answer);
 
             var questionnaireArray = {};
 
@@ -4496,9 +4654,14 @@
                     //$("#MoneyType").val = "";
                     //$("#progress").hide();
                     //alert("ok");
-                    checkRegisteration(userId);
-                    //  $("[id$=Submit_Button]").click();
 
+                    // this part added because registeration removed
+                    window.open("Confirmation.aspx", "_blank");
+                    //checkRegisteration(userId);
+                    $("[id$=Submit_Button]").click();
+
+
+                    //  $("[id$=Submit_Button]").click();
                     //$("#saveSuccess").show();
                     //fetchMoneyTypeData();
                 },
@@ -4507,9 +4670,9 @@
                     document.getElementById('Main-Form').setAttribute("style", "pointer-events: auto;");
                     //$("#saveError").show();
                 },
+                // this part added because registeration removed
 
             });
-            console.log(answer);
         }
 
         // for sports buttons
@@ -4635,8 +4798,89 @@
                 $("#2parent_how_often").show();
 
             }
+
+            //...................
+
+            if (sportsActivites.value == 'Other') {
+
+                $("#other_sport_activites_parent1").show();
+
+            }
+            else {
+                $("#other_sport_activites_parent1").hide();
+
+            }
+
+            if (sportsActivites2.value == 'Other') {
+
+                $("#other_sport_activites_parent2").show();
+
+            }
+            else {
+                $("#other_sport_activites_parent2").hide();
+
+            }
+
+            if (sportsActivites3.value == 'Other') {
+
+                $("#other_sport_activites_parent3").show();
+            }
+            else {
+                $("#other_sport_activites_parent3").hide();
+
+            }
+
         }
 
+
+        function what_drugs_changed() {
+
+            if (recreationalDrugWhatDrugs.value == 'Other') {
+
+                $("#other_what_drug_parent1").show();
+
+            }
+            else {
+                $("#other_what_drug_parent1").hide();
+
+            }
+
+            if (recreationalDrugWhatDrugs2.value == 'Other') {
+
+                $("#other_what_drug_parent2").show();
+
+            }
+            else {
+                $("#other_what_drug_parent2").hide();
+
+            }
+
+            if (recreationalDrugWhatDrugs3.value == 'Other') {
+
+                $("#other_what_drug_parent3").show();
+            }
+            else {
+                $("#other_what_drug_parent3").hide();
+
+            }
+
+        }
+
+        function living_activities_changed() {
+            if (livingActivities.value == 'Other') {
+                $("#other_livingActivities_parent").show();
+            }
+            else {
+                $("#other_livingActivities_parent").hide();
+            }
+        }
+        function other_medical_conditions_change(termsCheckBox) {
+            if (termsCheckBox.checked) {
+                $("#other_medical_conditions_parent").show();
+            }
+            else
+                $("#other_medical_conditions_parent").hide();
+        }
         function clickSpanishTranslation() {
             alert('Spanish Language');
             makeTranslaton('Spanish');

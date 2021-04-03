@@ -155,7 +155,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="MedicalQuestionnaireEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="MedicalQuestionnaire_Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Login" EntityType="Self.Login" />
           <EntitySet Name="QuestionnaireForm" EntityType="Self.QuestionnaireForm" />
           <EntitySet Name="User" EntityType="Self.User" />
@@ -173,7 +173,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MedicalQuestionnaireModelStoreContainer" CdmEntityContainer="MedicalQuestionnaireEntities">
+        <EntityContainerMapping StorageEntityContainer="MedicalQuestionnaireModelStoreContainer" CdmEntityContainer="MedicalQuestionnaire_Entities">
           <EntitySetMapping Name="Login">
             <EntityTypeMapping TypeName="MedicalQuestionnaireModel.Login">
               <MappingFragment StoreEntitySet="Login">

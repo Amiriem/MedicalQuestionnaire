@@ -142,6 +142,9 @@
                        // fetchUserData();
                     //    $("#page-wrapper").hide();
 
+                        //$("#page-wrapper").show();
+                        //fetchUserData();
+
                     });
 
                     function fetchUserData() {

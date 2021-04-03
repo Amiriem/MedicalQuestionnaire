@@ -13,10 +13,10 @@ namespace MedicalQuestionnaire
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MedicalQuestionnaireEntities : DbContext
+    public partial class MedicalQuestionnaire_Entities : DbContext
     {
-        public MedicalQuestionnaireEntities()
-            : base("name=MedicalQuestionnaireEntities")
+        public MedicalQuestionnaire_Entities()
+            : base("name=MedicalQuestionnaire_Entities")
         {
         }
     
