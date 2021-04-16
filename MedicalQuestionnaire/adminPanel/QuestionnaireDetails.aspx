@@ -90,7 +90,7 @@
 
                       
                     </div>
-                    <%string urlMediacalFile = "../" + questionnaire.ReferralImage; 
+                    <%string urlMediacalFile = "../" + questionnaire.MedicationFile; 
                      string urlReferalFile = "../" + questionnaire.ReferralImage; %>
 
                     <br />
@@ -185,6 +185,7 @@
 
                     $(document).ready(function () {
 
+                        //$("#page-wrapper").show();
 
 <%-- var a = '<%=questionnaire.QuestionnaireAnswer%>';--%>
 

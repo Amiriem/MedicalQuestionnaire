@@ -205,6 +205,7 @@
 
 
                         //$("#scopeMoneyTypeData").html(tableContent);
+                        //$("#page-wrapper").show();
 
                     });
 

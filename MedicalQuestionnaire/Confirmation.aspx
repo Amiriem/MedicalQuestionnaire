@@ -8,10 +8,11 @@
                     <h2 class="title">Your Questionnaire Successfully Recieved</h2>
                     <form method="POST">
                         <div class="row row-space">
-                           <label class="label">Thank you for filling the questionnaire, it has been submitted successfully</label>
+                           <label class="label">Thank you for filling the questionnaire, please return the tablet to the secretary</label>
                         </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- Jquery JS-->
@@ -34,8 +35,8 @@
 
         $(document).ready(function () {
 
-            txtpassword1 = document.getElementById('password1');
-            txtpassword2 = document.getElementById('password2');
+      //      txtpassword1 = document.getElementById('password1');
+        //    txtpassword2 = document.getElementById('password2');
 
 
 

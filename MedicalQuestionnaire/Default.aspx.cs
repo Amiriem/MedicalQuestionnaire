@@ -12,12 +12,12 @@ namespace MedicalQuestionnaire
         static QuestionnaireForm _questionnaireForm = new QuestionnaireForm();
         protected void Page_Load(object sender, EventArgs e)
         {
-      //System.Diagnostics.Debug.WriteLine("fddfdf");
+            //System.Diagnostics.Debug.WriteLine("fddfdf");
             //fileUploadMedical = FileUploadMedical;
             //fileUploadReferal = FileUploadReferal;
 
             //getFileUploadReferal();
-          //  Page.Form.Attributes.Add("enctype", "multipart/form-data");
+            //  Page.Form.Attributes.Add("enctype", "multipart/form-data");
 
         }
         //public void RaisePostBackEvent(string eventArgument)
@@ -47,15 +47,15 @@ namespace MedicalQuestionnaire
         public static int checkUserExist(User user)
         {
             entities.Configuration.ProxyCreationEnabled = false;
-        
-            User selectedUser = new User();
+
 
             //if(!string.IsNullOrEmpty( selectedUser.MedicareNumber))
             try
             {
-                if (!string.IsNullOrEmpty(user.MedicareNumber) && user.MedicareNumber!="Null" && entities.User.Any(e => e.MedicareNumber == user.MedicareNumber))
+                if (!string.IsNullOrEmpty(user.MedicareNumber) && user.MedicareNumber != "Null" && entities.User.Any(e => e.MedicareNumber == user.MedicareNumber))
                 {
                     //System.Diagnostics.Debug.WriteLine("Hi");
+                    User selectedUser = new User();
                     selectedUser = entities.User.Where(e => e.MedicareNumber == user.MedicareNumber).FirstOrDefault<User>();
                     selectedUser.Name = user.Name;
                     selectedUser.Family = user.Family;
@@ -73,7 +73,7 @@ namespace MedicalQuestionnaire
 
                     entities.Entry(selectedUser).State = System.Data.Entity.EntityState.Modified;
 
- 
+
 
                     System.Diagnostics.Debug.WriteLine("user modified : " + selectedUser.Name);
 
@@ -100,8 +100,19 @@ namespace MedicalQuestionnaire
                     _user.PersonalPhoto = user.PersonalPhoto;
                     //System.Diagnostics.Debug.WriteLine("Hi2");
                     entities.User.Add(_user);
-                    entities.Entry(_user).State = System.Data.Entity.EntityState.Added;
-                    entities.SaveChanges(); 
+                    //entities.Entry(_user).State = System.Data.Entity.EntityState.Added;
+
+                    if (_user.ID > 0)
+                    {
+                        entities.Entry(_user).State = System.Data.Entity.EntityState.Modified;
+                    }
+                    else
+                    {
+                        entities.Entry(_user).State = System.Data.Entity.EntityState.Added;
+                    }
+
+
+                    entities.SaveChanges();
                     return _user.ID;
                 }
             }
@@ -455,8 +466,11 @@ namespace MedicalQuestionnaire
             //    Console.WriteLine();
             try
             {
-                string medicalPath = "Images/MedicalFiles/" + GenerateRandomString(10) + FileUploadMedical.FileName.ToString();
-                string referalPath = "Images/ReferalFiles/" + GenerateRandomString(10) + FileUploadReferal_.FileName.ToString();
+                //string dateName = string.Format("text-{0:yyyy-MM-dd_hh-mm-ss-tt}", DateTime.Now);
+                string dateName = DateTime.Now.ToString("yyyy-MM-dd HHmmtt");
+                //FileUploadMedical.FileName.ToString()
+                string medicalPath = "Images/MedicalFiles/" + dateName + "-" + GenerateRandomString(10) + ".jpg";
+                string referalPath = "Images/ReferalFiles/" + dateName + "-" + GenerateRandomString(10) + ".jpg";
 
                 //    FileUploadMedical.SaveAs(Request.PhysicalApplicationPath + "./" + "Images/MedicalFiles/hi");
 

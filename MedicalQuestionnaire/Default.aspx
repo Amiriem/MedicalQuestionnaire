@@ -1,8 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MedicalQuestionnaire.Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     
-    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" id="Main-Form" style="pointer-events: auto;">
+
+        <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" id="confirmation-message" style="display: none;">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Please wait .... Your questionnaire is submitting</h2>
+                    <form method="POST">
+                        <div class="row row-space">
+                           <label class="label">Done! Thank you for submitting, Please don't close the page until refreshing.</label>
+                        </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" id="Main-Form" style="pointer-events: auto;display:block;">
 
         <button class="btn btn--radius-2" type="button" style="width: 65px; margin-left: 80px" onclick="clickSpanishTranslation()">
             <img src="Images/spanish-flag.png" style="width: 65px;" />
@@ -16,6 +30,10 @@
             <img src="Images/chinese-flag.png" style="width: 65px;" />
         </button>
 
+        <button class="btn btn--radius-2" type="button" style="width: 65px; margin-left: 40px" onclick="clickItalianTranslation()">
+            <img src="Images/italian-flag.png" style="width: 65px;" />
+        </button>
+
         <button class="btn btn--radius-2" type="button" style="width: 65px; margin-left: 40px" onclick="clickEnglishTranslation()">
             <img src="Images/english-flag.png" style="width: 65px;" />
         </button>
@@ -24,7 +42,7 @@
 
             <label class="label" id="" style="position: fixed;">Please wait and do not close the page till </label>
         </div>--%>
-       
+
 
         <div class="wrapper wrapper--w780">
             <div class="card card-4">
@@ -232,7 +250,7 @@
                                 </div>
                             </div>
                             <div id="other_livingActivities_parent" style="display: none;">
-                                <label class="label" style="width: 500px;" id="other_livingActivities_text">You choose other, please type your word here</label>
+                                <label class="label" style="width: 500px;" id="other_livingActivities_text">...</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <input class="input--style-4" type="text" id="other_livingActivities" name="other_livingActivities">
                                 </div>
@@ -284,7 +302,7 @@
 
                                 <div id="other_sport_activites_parent1" style="display: none;">
                                     <br />
-                                    <label class="label" style="width: 500px;" id="other_sports_activites_text">You choose other, please type your word here</label>
+                                    <label class="label" style="width: 500px;" id="other_sports_activites_text">...</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <input class="input--style-4" type="text" id="other_sports_activites" name="other_sports_activites">
                                     </div>
@@ -359,7 +377,7 @@
 
                                 <div id="other_sport_activites_parent2" style="display: none;">
                                     <br />
-                                    <label class="label" style="width: 500px;" id="other_1sports_activites_text">You choose other, please type your word here</label>
+                                    <label class="label" style="width: 500px;" id="other_1sports_activites_text">...</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <input class="input--style-4" type="text" id="other_1sports_activites" name="other_1sports_activites">
                                     </div>
@@ -432,7 +450,7 @@
 
                                 <div id="other_sport_activites_parent3" style="display: none;">
                                     <br />
-                                    <label class="label" style="width: 500px;" id="other_2sports_activites_text">You choose other, please type your word here</label>
+                                    <label class="label" style="width: 500px;" id="other_2sports_activites_text">...</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <input class="input--style-4" type="text" id="other_2sports_activites" name="other_2sports_activites">
                                     </div>
@@ -700,7 +718,7 @@
 
                                     <div id="other_what_drug_parent1" style="display: none;">
                                         <br />
-                                        <label class="label" style="width: 500px;" id="other_recreational_what_text">You choose other, please type your word here</label>
+                                        <label class="label" style="width: 500px;" id="other_recreational_what_text">...</label>
                                         <div class="rs-select2 js-select-simple select--no-search">
                                             <input class="input--style-4" type="text" id="other_recreational_what" name="other_recreational_what">
                                         </div>
@@ -754,7 +772,7 @@
 
                                     <div id="other_what_drug_parent2" style="display: none;">
                                         <br />
-                                        <label class="label" style="width: 500px;" id="other_2recreational_what_text">You choose other, please type your word here</label>
+                                        <label class="label" style="width: 500px;" id="other_2recreational_what_text">...</label>
                                         <div class="rs-select2 js-select-simple select--no-search">
                                             <input class="input--style-4" type="text" id="other_2recreational_what" name="other_2recreational_what">
                                         </div>
@@ -807,7 +825,7 @@
 
                                     <div id="other_what_drug_parent3" style="display: none;">
                                         <br />
-                                        <label class="label" style="width: 500px;" id="other_3recreational_what_text">You choose other, please type your word here</label>
+                                        <label class="label" style="width: 500px;" id="other_3recreational_what_text">...</label>
                                         <div class="rs-select2 js-select-simple select--no-search">
                                             <input class="input--style-4" type="text" id="other_3recreational_what" name="other_3recreational_what">
                                         </div>
@@ -1040,7 +1058,7 @@
 
                                 <div id="other_medical_conditions_parent" style="display: none;">
                                     <br />
-                                    <label class="label" style="width: 500px;" id="other_medical_conditions_text">You choose other, please type your word here</label>
+                                    <label class="label" style="width: 500px;" id="other_medical_conditions_text">...</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <input class="input--style-4" type="text" id="other_medical_conditions" name="other_medical_conditions">
                                     </div>
@@ -1408,19 +1426,47 @@
                                     <%--<input type="file" id="medical_file" accept="image/*" onchange="change_file_medication_click()" hidden="hidden" capture multiple />--%>
                                     <div id="Box_medical_file_form" style="display: block;">
 
-                                        <label class="label" style="width: 500px;" id="medicalFile_additional_text">Type about your medication file here</label>
+                                        <label class="label" style="width: 500px;" id="medicalFile_additional_text">Please write your medication list</label>
                                         <div class="rs-select2 js-select-simple select--no-search">
                                             <input class="input--style-4" type="text" id="medicalFile_additional" name="medicalFile_additional">
                                         </div>
                                         <br />
 
-                                        <label class="label" for="capture" id="upload_file_medication_text">Please Upload Your Medication File (or Take Photograph)</label>
-                                        <button class="btn btn--radius-2 btn--blue" style="background: #a338cd;" id="medical_file_button" onclick="button_file_medication_click()" type="button">Choose</button>
+                                        <label class="label" for="capture" id="upload_file_medication_text">Or use photograph</label>
+                                        <button class="btn btn--radius-2 btn--blue" style="background: #a338cd;" id="medical_file_button" onclick="button_file_medication_click()" type="button">Take picture</button>
                                         <span id="text_medical_file">No file chosen, yet.</span>
                                     </div>
                                     <br />
                                 </form>
                             </div>
+                            <br />
+                            <br />
+
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <label class="label" style="width: 500px;" id="allergy_text">Do you have any allergies?</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container" style="width: 500px;">
+                                            <label id="yes_allergy_text">Yes</label>
+                                            <input type="radio" checked="checked" id="yes_allergy" name="allergy_information" onclick="yes_file_allergy_changed(this)">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container m-r-45" style="width: 500px;">
+                                            <label id="no_allergy_text">No</label>
+                                            <input type="radio" id="no_allergy" name="allergy_information" onclick="no_file_allergy_changed(this)">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="p-t-12" id="Box_allergy_form" style="display: block;">
+
+                                    <label class="label" style="width: 500px;" id="allergy_additional_text">Please write your allergies</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input class="input--style-4" type="text" id="allergy_additional" name="allergy_additional">
+                                    </div>
+                                </div>
+                            </div>
+
                             <br />
                             <br />
 
@@ -1442,16 +1488,16 @@
                                 </div>
                                 <div class="p-t-12" id="Box_referral_form" style="display: block;">
 
-                                    <label class="label" style="width: 500px;" id="Referral_additional_text">Type about your Referral here</label>
+                                   <%-- <label class="label" style="width: 500px;" id="Referral_additional_text">Type about your Referral here</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <input class="input--style-4" type="text" id="Referral_additional" name="Referral_additional">
                                     </div>
-                                    <br />
+                                    <br />--%>
 
                                     <form action="#" id="referral_form" enctype="multipart/form-data">
                                         <label class="label" for="capture" id="referral_file_text">Please Upload Your Referral File (or Take Photograph)</label>
                                         <%--<input type="file" id="referral_file" accept="image/*" onchange="change_referral_click()" hidden="hidden" capture multiple />--%>
-                                        <button class="btn btn--radius-2 btn--blue" style="background: #a338cd;" id="referral_button" onclick="button_referral_click()" type="button">Choose</button>
+                                        <button class="btn btn--radius-2 btn--blue" style="background: #a338cd;" id="referral_button" onclick="button_referral_click()" type="button">Take picture</button>
                                         <span id="text_referral_file">No file chosen, yet.</span>
                                         <br />
                                     </form>
@@ -1475,7 +1521,7 @@
         </div>
     </div>
 
-    
+
     <!-- Jquery JS-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->
@@ -2046,6 +2092,16 @@
 
             'Remove': 'Retirer',
 
+            'Please write your medication list': 'SVP ecrire votre liste de medicaments',
+
+            'Do you have any allergies?': 'Est-ce que vous avez des allergies?',
+
+            'Please write your allergies': 'SVP ecrire vos allergies',
+
+            'Or use photograph': 'Ou prenez une photographe',
+
+            'Take Picture': 'Prendre photographe',
+
 
             'Please fill out your Frist Name': '',
 
@@ -2600,6 +2656,16 @@
 
             'Remove': 'Eliminar',
 
+            'Please write your medication list': 'Por favor, puede escribir la lista de medicamentos',
+
+            'Do you have any allergies?': 'Tiene usted algunes alergias',
+
+            'Please write your allergies': 'Por favor, escribir sus alergias',
+
+            'Or use photograph': 'O, usar fotografía',
+
+            'Take Picture': 'Tomar foto',
+
 
             'Please fill out your Frist Name': '',
 
@@ -2914,7 +2980,465 @@
             'Add More': '添加更多 (Tianjia geng duo)',
 
             'Remove': '去掉 (Qudiao)',
+
+            'Please write your medication list': '请您写下现在所服用的药 (qing nin xiexia xianzai suo fuyong de yao)',
+
+            'Do you have any allergies?': '您有什么過敏吗 (nin you shenme guomin ma)',
+
+            'Please write your allergies': '请写下您过敏的项目 (qing xiexia nin guomin de xiangmu)',
+
+            'Or use photograph': '或是照相给我 (huoshi zhaoxiang geiwo)',
+
+            'Take Picture': '張相给我 (zhaoxiang gei wo)',
         };
+
+        var italianLanguage =
+        {
+
+            'Choose Option': 'Scelga l’opzione',
+
+            'First Name': 'Nome',
+
+            'Last Name': 'Cognome',
+
+            'Birthday': 'Data di nascita',
+
+            'Gender': 'Sesso',
+
+            'Male': 'Maschio',
+
+            'Female': 'Femmina',
+
+            'Other/Prefer not to answer': 'Altro/Preferisco non rispondere',
+
+            'Medicare Number': 'Numero della Carta Medicale',
+
+            'Yes': 'Si',
+
+            'No Medicare Card': 'No Carta Medicale',
+
+            'Email': 'E-mail',
+
+            'Phone Number': 'Numero di telefono',
+
+            'What is the Name of Your Family Doctor': 'Qual è il nome del suo medico curante',
+
+            'Are You Working Now ?': 'È attualmente impiegato?',
+
+            'Yes; What Do You Do For A Living/What is Your Profession ?': 'Si; Qual è il suo lavoro/ Qual è la sua professione?',
+
+            'Accountant': 'Contabile',
+
+            'Author': 'Scrittore/Scrittrice',
+
+            'Bus Driver': 'Conducente d’autobus',
+
+            'Butcher': 'Macellaio/Macellaia',
+
+            'Carpenter': 'Carpentiere',
+
+            'Cleaner': 'Addetto/a alle pulizie',
+
+            'Chef / Cook': 'Cuoco/Cuoca',
+
+            'Dentist': 'Dentista',
+
+            'Doctor': 'Dottore/Dottoressa',
+
+            'Refuse Collector': 'Addetto/a alla nettezza urbana',
+
+            'Electrician': 'Elettricista',
+
+            'Engineer': 'Ingegniere',
+
+            'Factory Worker': 'Operaio/Operaia',
+
+            'Fireman/Fire Fighter': 'Pompiere',
+
+            'Florist': 'Fiorista',
+
+            'Hairdresser': 'Parrucchiere/Parrucchiera',
+
+            'Lawyer': 'Avvocato',
+
+            'Mechanic': 'Meccanico',
+
+            'Nurse': 'Infermiere/Infermiera',
+
+            'Orderly': 'Ordinata',
+
+            'Painter': 'Pittore/Pittrice',
+
+            'Pharmacist': 'Farmacista',
+
+            'Pilot': 'Pilota',
+
+            'Plumber': 'Idraulico',
+
+            'Policeman / Policewoman': 'Polizziotto/Polizziotta',
+
+            'Postman': 'Postino/Postina',
+
+            'Real Estate Agent': 'Agente immobiliare',
+
+            'Secretary': 'Segretario/a',
+
+            'Soldier': 'Soldato',
+
+            'Tailor/Seamstress': 'Sarto/a',
+
+            'Taxi Driver': 'Taxista',
+
+            'Teacher': 'Insegnante',
+
+            'Veterinary Doctor': 'Veterinario/a',
+
+            'Waiter/Waitress': 'Cameriere/Cameriera',
+
+            'Other': 'Altro',
+
+            'No; Retired': 'No; Pensionato',
+
+            'If No, Since When Have You Been Off Work?': 'Se no, da quanto tempo ha smesso di lavorare?',
+
+            'Never Worked': 'Non ho mai lavorato',
+
+            'If Never, Please Select One of the Following Options?': 'Se non ha mai lavorato, per favore scelga una delle seguenti opzioni',
+
+            'Student': 'Studente/Studentessa',
+
+            'Housewife/Househusband': 'Casalingo/a',
+
+            'Other': 'Altro',
+
+            'What Sports/Activities Do You Do?': 'Quali sport/attività pratica?',
+
+            'None': 'Nessuno',
+
+            'Canoeing': 'Canoa',
+
+            'Cross – Country Skiing': 'Sci di fondo',
+
+            'Swimming': 'Nuoto',
+
+            'Paddleboarding': 'Paddleboarding',
+
+            'Scuba Diving': 'Immersioni subacquee',
+
+            'Aerobics': 'Aerobica',
+
+            'Boxing': 'Box',
+
+            'Running': 'Corsa',
+
+            'Cycling': 'Bicicletta',
+
+            'Kickboxing': 'Kickboxing',
+
+            'Ultimate Frisbee': 'Frisbee',
+
+            'Walking': 'Camminata',
+
+            'Weightlifting': 'Sollevamento pesi',
+
+            'Basketball': 'Basketball',
+
+            'Tennis': 'Tennis',
+
+            'Soccer': 'Calcio',
+
+            'Ski': 'Sci',
+
+            'Hockey': 'Hockey',
+
+            'Other': 'Altro',
+
+            'How Often?': 'Con che frequenza?',
+
+            'Daily': 'Tutti i giorni',
+
+            '3 times a week': '3 volte alla settimana',
+
+            '2 times a week': '2 volte alla settimana',
+
+            '1 time per week': '1 volta alla settimana',
+
+            '2 - 3 times per Month': '2-3 volte al mese',
+
+            'Monthly': '1 volta al mese',
+
+            'Rarely': 'Raramente',
+
+            'What Hand Do You Write With?': 'Con quale mano scrive?',
+
+            'Right': 'Destra',
+
+            'Left': 'Sinistra',
+
+            'Ambidextrous': 'Ambidestro',
+
+            'Do You Smoke?': 'Lei fuma?',
+
+            'If Yes, For How Many Years?': 'Se si, da quanti anni?',
+
+            'More than 20 years': 'Più di 20 anni',
+
+            'How Many Cigarettes Per Day': 'Quante sigarette al giorno?',
+
+            'More than 1 Pack': 'Più di un pacchetto',
+
+            'Do You Drink Alcohol': 'Beve alcol?',
+
+            'If Yes, How Many Drinks Per Week': 'Se si, quanti bicchieri a settimana?',
+
+            'More than 20 Drinks': 'Più di 20',
+
+            'Do You Take Any Recreational Drugs Or Herbal/Natural Remedies?': 'Assume droghe ricreazionali o erbe/rimedi naturali?',
+
+            'If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?': 'Se si, con che frequenza assume droghe o erbe/rimedi naturali?',
+
+            'Rarely': 'Raramente',
+
+            'Monthly': '1 volta al mese',
+
+            'Weekly': '1 volta alla settimana',
+
+            'Daily': '1 volta al giorno',
+
+            '2 or more times per day': '2 o più volte al giorno',
+
+            'If Yes, Which Drug or Herbal / Natural Remedy do you Use?': 'Se si, quali droghe o erbe/rimedi naturali usa?',
+
+            'chondroitin': 'condroitina',
+
+            'glucosamine': 'Glucosamina',
+
+            'ginger': 'Zenzero',
+
+            'ginkgo biloba': 'Ginkgo biloba',
+
+            'ginseng': 'Ginseng',
+
+            'st - John’s Wort': 'St-John’s Wort',
+
+            'turmeric': 'Curcuma',
+
+            'Canabis / Marijuana': 'Canabis/Marijuana',
+
+            'Stimulants (e.g.cocaine, amphetamines,methamphetamine, ecstacy[MDMA]) ': 'Stimolanti (per es. cocaina, amfetamine, metamfetamine, ecstasy)',
+
+            'Opium - related painkillers (e.g.heroin, morphine, fentanyl, oxycodone, dilaudid)': 'Antidolorifici oppiacei (per es. eroina, morfine, fentanyl, ossicodone, dilaudid)',
+
+            'Hallucinogens (e.g.LSD)': 'Allucinogeni (per es. LSD)',
+
+            'Benzodiazepines (e.g.ativan, valium)': 'Benzodiazepine (per es. Ativan, valium)',
+
+            'Ketamine': 'Chetamine',
+
+            'Ritalin': 'Ritalin',
+
+            'Other': 'Altro',
+
+            'Do You Take Any Recreational Drugs Or Herbal / Natural Remedies?': 'Assume droghe ricreazionali o erbe/ rimedi naturali?',
+
+            'If No, Since When Have You Been Off The Drug?': 'Se no, da quanto tempo ha smesso?',
+
+            'Never Taken': 'Non ne ho mai prese',
+
+            'Do You Have Any Of the Following Medical Conditions?': 'Ha una delle seguenti condizioni mediche?',
+
+            'AIDS or HIV': 'AIDS o Sieropositivo',
+
+            'Alcohol Dependency or Abuse': 'Dipendenza all’alcol o abuso',
+
+            'Anemia': 'Anemia',
+
+            'Anxiety': 'Ansia',
+
+            'Arthritis': 'Artrite',
+
+            'Bleeding Problems': 'Problemi di sanguinamento',
+
+            'Blood Clots': 'Coaguli di sangue',
+
+            'Cancer.Type ?': 'Tumori',
+
+            'Dementia': 'Demenza',
+
+            'Chronic Obstructive Pulmonary Disease or Emphysema': 'Ostruzioni polmonari corniche o enfisema',
+
+            'Depression': 'Depressione',
+
+            'Drug Dependency or Abuse': 'Dipendenza alle droghe o abuso',
+
+            'Diabetes': 'Diabete',
+
+            'Gout': 'Gotta',
+
+            'Heart Disease': 'Cardiopatia',
+
+            'Heart Arrythmia': 'Aritmia cardiaca',
+
+            'High Cholesterol': 'Colesterolo alto',
+
+            'High Blood Pressure': 'Pressione alta',
+
+            'Hypothyroidism': 'Ipotiroidismo',
+
+            'Hyperthyroidism': 'Ipertiroidismo',
+
+            'Kidney Disease': 'Problemi ai reni',
+
+            'Leukemia': 'Leucemia',
+
+            'Liver Disease': 'Problemi al fegato',
+
+            'Hepatitis': 'Epatite',
+
+            'Osteoporosis': 'Osteoporosi',
+
+            'Pancreatitis': 'Pancreatite',
+
+            'Peripheral Vascular Disease': 'Malattia vascolare periferica',
+
+            'Pulmonary Embolism': 'Embolismo polmonare',
+
+            'Reflux or GERD': 'Riflusso gastrointestinale',
+
+            'Seizures': 'Convulsioni',
+
+            'Sleep Apnea': 'Apnea notturna',
+
+            'Stroke': 'Infarto',
+
+            'Other': 'Altro',
+
+            'Do You Have Any Of the Following Medical Conditions?': 'Ha una delle seguenti condizioni mediche',
+
+            'Bleeding Problems.Type ?': 'Problemi di sanguinamento',
+
+            'Von Willebrand Hemophilia A (Factor 8 deficiency)': 'Von Willebrand',
+
+            'Hemophilia A (Factor 8 deficiency)': 'Emofilia A (deficienza del fattore 8)',
+
+            'Hemophilia B (Christmas disease)': 'Emofilia B',
+
+            'Factor 5 Leiden': 'Fattore 5 Leiden',
+
+            'Factor 2 deficiency': 'Deficienza del fattore 2',
+
+            'Factor 7 deficiency': 'Deficienza del fattore 7',
+
+            'Factor 10 deficiency': 'Deficienza del fattore 10',
+
+            'Factor 12 deficiency': 'Deficienza del fattore 12',
+
+            'Other': 'Altro',
+
+            'Cancer': 'Tumore',
+
+            'Breast': 'Seno',
+
+            'Prostate': 'Prostata',
+
+            'Lung': 'Polmome',
+
+            'Colon / Colorectal': 'Colon/ Colonrettale',
+
+            'Kidney': 'Rene',
+
+            'Bladder': 'Vescica',
+
+            'Thyroid': 'Tiroide',
+
+            'Lymphoma': 'Linfoma',
+
+            'Melanoma': 'Melanoma',
+
+            'Endometrial': 'Endometriale',
+
+            'Leukemia': 'Leucemia',
+
+            'Pancreatic': 'Pancreatico',
+
+            'Liver': 'Fegato',
+
+            'Other': 'Altro',
+
+            'Hepatitis.Type ?': 'Epatite',
+
+            'Auto - immune': 'Auto-immune',
+
+            'Alcohol - induced': 'Causato dall’alcol',
+
+            'Fatty-Liver': 'Fegato-grasso',
+
+            'Hepatitis A': 'Epatite A',
+
+            'Hepatitis B – Active': 'Epatite B - attiva',
+
+            'Hepatitis B – Chronic': 'Epatite C - cronica',
+
+            'Hepatitis B – Cured': 'Epatite B - guarita',
+
+            'Hepatitis C – Active': 'Epatite C - attiva',
+
+            'Hepatitis C – Chronic': 'Epatite C - cronica',
+
+            'Hepatitis C – Cured': 'Epatite C - guarita',
+
+            'Hepatitis D': 'Epatite D',
+
+            'Hepatis E': 'Epatite E',
+
+            'Other': 'Altro',
+
+            'Have you Ever Had Surgery?': 'Ha mai subito operazioni chirurgiche?',
+
+            'What Type of Surgery?': 'Quale tipo di operazione chirurgica?',
+
+            'When Was Your Surgery?': 'Quando ha avuto l’operazione chirurgica?',
+
+            'Before 1970': 'Prima del 1970',
+
+            'What Was the Surgeon’s Name?': 'Qual è il nome del suo medico chirurgo?',
+
+            'No Previous Surgeries': 'Nessuna precedente operazione chirurgica',
+
+            'Do You Take Any Medications Regularly?': 'Prende dei medicinali regolarmente?',
+
+            'Please Upload Your Medication File (or Take Photograph)': 'Per favore carichi il suo fascicolo di medicine (o facia una foto)',
+
+            'Do You Have a Referral?': 'Ha una ricetta?',
+
+            'Please Upload Your Referral File (or Take Photograph)': 'Per favore carichi la sua ricetta (o facia una foto)',
+
+            'Enter Information Manually': 'Inserisca le informazioni manualmente',
+
+            'Submit': 'Inviare',
+
+            'Remove': 'Rimuovere',
+
+            'Choose':'scegliere',
+
+            'No': 'No',
+
+            'Never': 'Mai',
+
+            'Add More': 'Aggiungere altro',
+
+            'If no, when did you quite smoking': 'Se no, quando smettere di fumare',
+
+            'Please write your medication list': 'Por favore scriva la sua lista di medicina',
+
+            'Do you have any allergies?': 'Ha qualche allergie?',
+
+            'Please write your allergies': 'Per favore scriva le sue allergie',
+
+            'Or use photograph': 'Pui usare una foto',
+
+            'Take Picture': 'Faccia una foto',
+        }
 
 
         $(document).ready(function () {
@@ -3007,6 +3531,11 @@
                 languageType = 'Chinese';
             }
 
+            if (type == 'Italian') {
+                language = italianLanguage;
+                languageType = 'Italian';
+            }
+
             if (type == 'English') {
                 location.reload();
                 return false;
@@ -3038,12 +3567,12 @@
             document.getElementById('never_working_text').innerHTML = language["Never Worked"];
             document.getElementById('no_offwork_text').innerHTML = language["If No, Since When Have You Been Off Work?"];
             document.getElementById('never_work_text').innerHTML = language["If Never, Please Select One of the Following Options?"];
-            document.getElementById('never_workoption0_text').innerHTML = language["Choose Option"];
+            //document.getElementById('never_workoption0_text').innerHTML = language["Choose Option"];
             document.getElementById('never_workoption1_text').innerHTML = language["Student"];
             document.getElementById('never_workoption2_text').innerHTML = language["Housewife/Househusband"];
             document.getElementById('never_workoption3_text').innerHTML = language["Other"];
             document.getElementById('living_profession_text').innerHTML = language["Yes; What Do You Do For A Living/What is Your Profession ?"];
-            document.getElementById('living_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('living_option_0').innerHTML = language["Choose Option"];
             document.getElementById('living_option_1').innerHTML = language["Accountant"];
             //document.getElementById('living_option_2').innerHTML = language["Actor / Actress"];  // these items for working have been removed by Dr Mutch
             //document.getElementById('living_option_3').innerHTML = language["Architect"];
@@ -3096,7 +3625,7 @@
 
             // sports 1
             document.getElementById('sports_question_text').innerHTML = language["What Sports/Activities Do You Do?"];
-            document.getElementById('sports_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('sports_option_0').innerHTML = language["Choose Option"];
             document.getElementById('sports_option_1').innerHTML = language["None"];
             //document.getElementById('sports_option_2').innerHTML = language["Kayaking"];
             document.getElementById('sports_option_3').innerHTML = language["Canoeing"];
@@ -3131,7 +3660,7 @@
             document.getElementById('sports_option_32').innerHTML = language["Other"];
             document.getElementById('how_often_text').innerHTML = language["How Often?"];
 
-            document.getElementById('often_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('often_option_0').innerHTML = language["Choose Option"];
             document.getElementById('often_option_1').innerHTML = language["None"];
             document.getElementById('often_option_2').innerHTML = language["Daily"];
             document.getElementById('often_option_3').innerHTML = language["3 times a week"];
@@ -3144,7 +3673,7 @@
             // sports 2
 
             document.getElementById('1sports_question_text').innerHTML = language["What Sports/Activities Do You Do?"];
-            document.getElementById('1sports_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('1sports_option_0').innerHTML = language["Choose Option"];
             document.getElementById('1sports_option_1').innerHTML = language["None"];
             //document.getElementById('1sports_option_2').innerHTML = language["Kayaking"];
             document.getElementById('1sports_option_3').innerHTML = language["Canoeing"];
@@ -3179,7 +3708,7 @@
             document.getElementById('1sports_option_32').innerHTML = language["Other"];
             document.getElementById('1how_often_text').innerHTML = language["How Often?"];
 
-            document.getElementById('1often_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('1often_option_0').innerHTML = language["Choose Option"];
             document.getElementById('1often_option_1').innerHTML = language["None"];
             document.getElementById('1often_option_2').innerHTML = language["Daily"];
             document.getElementById('1often_option_3').innerHTML = language["3 times a week"];
@@ -3192,7 +3721,7 @@
             // sports 3
 
             document.getElementById('2sports_question_text').innerHTML = language["What Sports/Activities Do You Do?"];
-            document.getElementById('2sports_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('2sports_option_0').innerHTML = language["Choose Option"];
             document.getElementById('2sports_option_1').innerHTML = language["None"];
             //document.getElementById('2sports_option_2').innerHTML = language["Kayaking"];
             document.getElementById('2sports_option_3').innerHTML = language["Canoeing"];
@@ -3227,7 +3756,7 @@
             document.getElementById('2sports_option_32').innerHTML = language["Other"];
             document.getElementById('2how_often_text').innerHTML = language["How Often?"];
 
-            document.getElementById('2often_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('2often_option_0').innerHTML = language["Choose Option"];
             document.getElementById('2often_option_1').innerHTML = language["None"];
             document.getElementById('2often_option_2').innerHTML = language["Daily"];
             document.getElementById('2often_option_3').innerHTML = language["3 times a week"];
@@ -3240,7 +3769,7 @@
             // hand
 
             document.getElementById('handwrite_text').innerHTML = language["What Hand Do You Write With?"];
-            document.getElementById('handwrite_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('handwrite_option_0').innerHTML = language["Choose Option"];
             //document.getElementById('handwrite_option_0').innerHTML = 'Hiiiiiiiii';
             document.getElementById('handwrite_option_1').innerHTML = language["Right"];
             document.getElementById('handwrite_option_2').innerHTML = language["Left"];
@@ -3272,7 +3801,7 @@
 
             // recreational drugs1
             document.getElementById('yes_often_recreational_text').innerHTML = language["If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?"];
-            document.getElementById('recreational_often_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('recreational_often_option_0').innerHTML = language["Choose Option"];
             document.getElementById('recreational_often_option_1').innerHTML = language["Rarely"];
             document.getElementById('recreational_often_option_2').innerHTML = language["Monthly"];
             document.getElementById('recreational_often_option_3').innerHTML = language["Weekly"];
@@ -3280,7 +3809,7 @@
             document.getElementById('recreational_often_option_5').innerHTML = language["2 or more times per day"];
 
             document.getElementById('recreational_what_text').innerHTML = language["If Yes, Which Drug or Herbal / Natural Remedy do you Use?"];
-            document.getElementById('recreational_what_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('recreational_what_option_0').innerHTML = language["Choose Option"];
             document.getElementById('recreational_what_option_1').innerHTML = language["chondroitin"];
             document.getElementById('recreational_what_option_2').innerHTML = language["glucosamine"];
             document.getElementById('recreational_what_option_3').innerHTML = language["ginger"];
@@ -3299,7 +3828,7 @@
 
             // recreational drugs2
             document.getElementById('2yes_often_recreational_text').innerHTML = language["If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?"];
-            document.getElementById('2recreational_often_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('2recreational_often_option_0').innerHTML = language["Choose Option"];
             document.getElementById('2recreational_often_option_1').innerHTML = language["Rarely"];
             document.getElementById('2recreational_often_option_2').innerHTML = language["Monthly"];
             document.getElementById('2recreational_often_option_3').innerHTML = language["Weekly"];
@@ -3307,7 +3836,7 @@
             document.getElementById('2recreational_often_option_5').innerHTML = language["2 or more times per day"];
 
             document.getElementById('2recreational_what_text').innerHTML = language["If Yes, Which Drug or Herbal / Natural Remedy do you Use?"];
-            document.getElementById('2recreational_what_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('2recreational_what_option_0').innerHTML = language["Choose Option"];
             document.getElementById('2recreational_what_option_1').innerHTML = language["chondroitin"];
             document.getElementById('2recreational_what_option_2').innerHTML = language["glucosamine"];
             document.getElementById('2recreational_what_option_3').innerHTML = language["ginger"];
@@ -3325,7 +3854,7 @@
             document.getElementById('2recreational_what_option_15').innerHTML = language["Other"];
             // recreational drugs3
             document.getElementById('3yes_often_recreational_text').innerHTML = language["If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?"];
-            document.getElementById('3recreational_often_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('3recreational_often_option_0').innerHTML = language["Choose Option"];
             document.getElementById('3recreational_often_option_1').innerHTML = language["Rarely"];
             document.getElementById('3recreational_often_option_2').innerHTML = language["Monthly"];
             document.getElementById('3recreational_often_option_3').innerHTML = language["Weekly"];
@@ -3333,7 +3862,7 @@
             document.getElementById('3recreational_often_option_5').innerHTML = language["2 or more times per day"];
 
             document.getElementById('3recreational_what_text').innerHTML = language["If Yes, Which Drug or Herbal / Natural Remedy do you Use?"];
-            document.getElementById('3recreational_what_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('3recreational_what_option_0').innerHTML = language["Choose Option"];
             document.getElementById('3recreational_what_option_1').innerHTML = language["chondroitin"];
             document.getElementById('3recreational_what_option_2').innerHTML = language["glucosamine"];
             document.getElementById('3recreational_what_option_3').innerHTML = language["ginger"];
@@ -3388,7 +3917,7 @@
             document.getElementById('medical_Other').innerHTML = language["Other"];
 
             document.getElementById('bleeding_problems_text').innerHTML = language["Bleeding Problems.Type ?"];
-            document.getElementById('bleeding_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('bleeding_option_0').innerHTML = language["Choose Option"];
             document.getElementById('bleeding_option_1').innerHTML = language["Von Willebrand Hemophilia A (Factor 8 deficiency)"];
             document.getElementById('bleeding_option_2').innerHTML = language["Hemophilia B (Christmas disease)"];
             document.getElementById('bleeding_option_3').innerHTML = language["Factor 5 Leiden"];
@@ -3400,7 +3929,7 @@
 
             document.getElementById('Cancer_type_text').innerHTML = language["Cancer.Type ?"];
 
-            document.getElementById('breast_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('breast_option_0').innerHTML = language["Choose Option"];
             document.getElementById('breast_option_1').innerHTML = language["Breast"];
             document.getElementById('breast_option_2').innerHTML = language["Prostate"];
             document.getElementById('breast_option_3').innerHTML = language["Lung"];
@@ -3418,7 +3947,7 @@
 
             document.getElementById('Hepatitis_problem_text').innerHTML = language["Hepatitis.Type ?"];
 
-            document.getElementById('Hepatitis_option_0').innerHTML = language["Choose Option"];
+            //document.getElementById('Hepatitis_option_0').innerHTML = language["Choose Option"];
             document.getElementById('Hepatitis_option_1').innerHTML = language["Auto - immune"];
             document.getElementById('Hepatitis_option_2').innerHTML = language["Alcohol - induced"];
             document.getElementById('Hepatitis_option_3').innerHTML = language["Hepatitis A"];
@@ -3458,18 +3987,31 @@
             document.getElementById('medications_regularly_text').innerHTML = language["Do You Take Any Medications Regularly?"];
             document.getElementById('yes_medications_regularly_text').innerHTML = language["Yes"];
             document.getElementById('no_medications_regularly_text').innerHTML = language["No"];
-            document.getElementById('upload_file_medication_text').innerHTML = language["Please Upload Your Medication File (or Take Photograph)"];
+
+            document.getElementById('upload_file_medication_text').innerHTML = language["Or use photograph"];
             document.getElementById('referral_text').innerHTML = language["Do You Have a Referral?"];
             document.getElementById('yes_referral_text').innerHTML = language["Yes"];
             document.getElementById('no_referral_text').innerHTML = language["No"];
             document.getElementById('referral_file_text').innerHTML = language["Please Upload Your Referral File (or Take Photograph)"];
 
 
-            document.getElementById('medical_file_button').innerHTML = language["Choose"];
-            document.getElementById('referral_button').innerHTML = language["Choose"];
+            
+            document.getElementById('allergy_text').innerHTML = language["Do you have any allergies?"];
+            document.getElementById('yes_allergy_text').innerHTML = language["Yes"];
+            document.getElementById('no_allergy_text').innerHTML = language["No"];
+
+            document.getElementById('allergy_additional_text').innerHTML = language["Please write your allergies"];
+            document.getElementById('no_allergy_text').innerHTML = language["No"];
+
+
+            document.getElementById('medical_file_button').innerHTML = language["Take Picture"];
+            document.getElementById('referral_button').innerHTML = language["Take Picture"];
 
             document.getElementById('submit_button_text').innerHTML = language["Submit"];
-
+            
+            
+            document.getElementById('medicalFile_additional_text').innerHTML = language["Please write your medication list"];
+            //document.getElementById('Referral_additional_text').innerHTML = language["Please write your medication list"];
 
             //buttons addmore - remove
 
@@ -3700,7 +4242,22 @@
 
             } yes_file_medication_changed
         }
+        function yes_file_allergy_changed(termsCheckBox) {
+            if (termsCheckBox.checked) {
+                $("#Box_allergy_form").show();
+            } else {
+                $("#Box_allergy_form").hide();
+            }
+        }
+        function no_file_allergy_changed(termsCheckBox) {
 
+            if (termsCheckBox.checked) {
+                $("#Box_allergy_form").hide();
+            } else {
+                $("#Box_allergy_form").show();
+
+            } yes_file_medication_changed
+        }
         function yes_referral_changed(termsCheckBox) {
             if (termsCheckBox.checked) {
                 $("#Box_referral_form").show();
@@ -4167,11 +4724,18 @@
 
                         buildAnswers(data.d);
                         // disable
-                        alert("Please wait and don't close the tap windows till refreshing the page!");
+                        alert("Please wait and don't close the page until refreshing data!");
+
+                        $("#confirmation-message").show();
+                        $("#Main-Form").hide();
+
                     },
                     error: function (er) {
                         alert(er);
                         document.getElementById('Main-Form').setAttribute("style", "pointer-events: auto;");
+
+                        $("#confirmation-message").hide();
+                        $("#Main-Form").show();
                         //$("#saveError").show();
                     },
                 });
@@ -4601,11 +5165,24 @@
             else if (document.getElementById('no_question_file_medication').checked) {
                 answer += 'No<br />';
             }
+
             answer += '<br /><br />';
+
+            answer += 'Do you have any allergies ?<br />';
+            if (document.getElementById('yes_allergy').checked) {
+                answer += 'Yes<br />';
+                answer += document.getElementById('allergy_additional').value; answer += '<br />';
+            }
+            else if (document.getElementById('no_allergy').checked) {
+                answer += 'No<br />';
+            }
+
+            answer += '<br /><br />';
+
             answer += 'Do You Have A Referral?<br />';
             if (document.getElementById('yes_Referral').checked) {
                 answer += 'Yes<br />';
-                answer += document.getElementById('Referral_additional').value; answer += '<br />';
+                //answer += document.getElementById('Referral_additional').value; answer += '<br />';
             }
             else if (document.getElementById('no_Referral').checked) {
                 answer += 'No<br />';
@@ -4658,6 +5235,8 @@
                     // this part added because registeration removed
                     window.open("Confirmation.aspx", "_blank");
                     //checkRegisteration(userId);
+
+               
                     $("[id$=Submit_Button]").click();
 
 
@@ -4668,6 +5247,10 @@
                 error: function (er) {
                     alert('error ' + er);
                     document.getElementById('Main-Form').setAttribute("style", "pointer-events: auto;");
+
+
+                    $("#confirmation-message").hide();
+                    $("#Main-Form").show();
                     //$("#saveError").show();
                 },
                 // this part added because registeration removed
@@ -4881,6 +5464,21 @@
             else
                 $("#other_medical_conditions_parent").hide();
         }
+        function yes_allergy_changed(termsCheckBox) {
+            if (termsCheckBox.checked) {
+                $("#Box_allergy_form").show();
+            }
+            else
+                $("#Box_allergy_form").hide();
+
+        }
+        function no_allergy_changed(termsCheckBox) {
+            if (termsCheckBox.checked) {
+                $("#Box_allergy_form").show();
+            }
+            else
+                $("#Box_allergy_form").hide();
+        }
         function clickSpanishTranslation() {
             alert('Spanish Language');
             makeTranslaton('Spanish');
@@ -4892,6 +5490,10 @@
         function clickChineseTranslation() {
             alert('Chinese Language');
             makeTranslaton('Chinese');
+        }
+        function clickItalianTranslation() {
+            alert('Italian Language');
+            makeTranslaton('Italian');
         }
         function clickEnglishTranslation() {
             alert('English Language');
