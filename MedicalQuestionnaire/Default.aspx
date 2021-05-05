@@ -3512,9 +3512,10 @@
             //alert('est-ce que vous buvez de l\'alcohol?');
         });
 
+        var language = null;
+
         function makeTranslaton(type) {
 
-            var language = null;
 
             if (type == 'Spanish') {
                 language = spanishLanguage;
@@ -4419,24 +4420,36 @@
 
 
 
-            if (txtFirstName.value == "") {
-
-                alert("Please fill out your Frist Name");
+            if (txtFirstName.value == "")
+            {
+                if (languageType == 'English')
+                    alert('Please fill your first name');
+                else
+                alert(language["First Name"]);
                 txtFirstName.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (txtLastName.value == "") {
-                alert("Please fill out your Last Name");
+                if (languageType == 'English')
+                    alert('Please fill your last name');
+                else
+                alert(language["Last Name"]);
                 txtLastName.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (txtBirthday.value == "") {
-                alert("Please fill out your Birthday");
+                if (languageType == 'English')
+                    alert('Please fill your birthday');
+                else
+                alert(language["Birthday"]);
                 txtBirthday.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (txtMedicareNumber.value == "" && document.getElementById('yes_medicare_card').checked) {
-                alert("Please fill out your Medicare Number");
+                if (languageType == 'English')
+                    alert('Please fill your Medicare Number');
+                else
+                alert(language["Medicare Number"]);
                 txtMedicareNumber.style.backgroundColor = "#ffcfcf";
                 return false;
             }
@@ -4456,22 +4469,34 @@
                 return false;
             }
             else if (txtPhoneNumber.value == "") {
-                alert("Please fill out your Phone Number");
+                if (languageType == 'English')
+                    alert('Please fill your phone number');
+                else
+                alert(language["Phone Number"]);
                 txtPhoneNumber.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (familynameOfDoctor.value == "") {
-                alert("Please write your Family Doctor");
+                if (languageType == 'English')
+                    alert('What is the Name of Your Family Doctor?');
+                else
+                alert(language["What is the Name of Your Family Doctor"]);
                 familynameOfDoctor.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (livingActivities.selectedIndex == 0 && document.getElementById('yes_working_question').checked) {
-                alert("Please fill out your Living Activities");
+                if (languageType == 'English')
+                    alert('Yes; What Do You Do For A Living/What is Your Profession ?');
+                else
+                alert(language["Yes; What Do You Do For A Living/What is Your Profession ?"]);
                 livingActivities.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (dateOffWork.value == "" && document.getElementById('no_working_question').checked) {
-                alert("Please fill out your off work date");
+                if (languageType == 'English')
+                    alert('If No, Since When Have You Been Off Work?');
+                else
+                alert(language["If No, Since When Have You Been Off Work?"]);
                 dateOffWork.style.backgroundColor = "#ffcfcf";
                 return false;
             }
@@ -4481,32 +4506,50 @@
             //    return false;
             //}
             else if (sportsActivites.selectedIndex == 0) {
-                alert("Please fill out your Sport Activities");
+                if (languageType == 'English')
+                    alert('What Sports/Activities do you do?');
+                else
+                alert(language["What Sports/Activities Do You Do?"]);
                 sportsActivites.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (handWrite.selectedIndex == 0) {
-                alert("Please fill out your Hand Write");
+                if (languageType == 'English')
+                    alert('What hand do you write with?');
+                else
+                alert(language["What Hand Do You Write With?"]);
                 handWrite.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (smokeHowmanyYears.selectedIndex == 0 && document.getElementById('yes_smoke').checked) {
-                alert("Please fill out, How Many Years Do You Smoke");
+                if (languageType == 'English')
+                    alert('If Yes, for how many years do you smoke?');
+                else
+                alert(language["If Yes, For How Many Years?"]);
                 smokeHowmanyYears.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (smokeHowmanyPerday.selectedIndex == 0 && document.getElementById('yes_smoke').checked) {
-                alert("Please fill out, How Many Smoke Per Day");
+                if (languageType == 'English')
+                    alert('How many Cigarettes per day do you smoke?');
+                else
+                alert(language["How Many Cigarettes Per Day"]);
                 smokeHowmanyPerday.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (smokeOffDate.value == "" && document.getElementById('no_smoke').checked) {
-                alert("Please fill out your Smoke Off Date");
+                if (languageType == 'English')
+                    alert('If no, when did you quit smoking?');
+                else
+                alert(language["If no, when did you quite smoking"]);
                 smokeOffDate.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (alcoholHowmanyPerweek.selectedIndex == 0 && document.getElementById('yes_alcohol').checked) {
-                alert("Please fill out, How Many Time Do You Drink Per week");
+                if (languageType == 'English')
+                    alert('If Yes, How many drinks per week?');
+                else
+                alert(language["If Yes, How Many Drinks Per Week"]);
                 alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
                 return false;
             }
@@ -4516,62 +4559,89 @@
             //    return false;
             //}
             else if (recreationalDrugHowmanyPerweeks.selectedIndex == 0 && document.getElementById('yes_drug').checked) {
-                alert("Please fill out, How Many Recreational Drug Per Week");
+                if (languageType == 'English')
+                    alert('If Yes, How often do you take the drug or herbal/natural remedies?');
+                else
+                alert(language["If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?"]);
                 recreationalDrugHowmanyPerweeks.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (recreationalDrugWhatDrugs.selectedIndex == 0 && document.getElementById('yes_drug').checked) {
-                alert("Please fill out, What Recreational Drug Do you Use");
+                if (languageType == 'English')
+                    alert('If Yes, which drug or herbal/natural remedy do you use?');
+                else
+                alert(language["If Yes, Which Drug or Herbal / Natural Remedy do you Use?"]);
                 recreationalDrugWhatDrugs.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (recreationalDrugOffDate.value == "" && document.getElementById('no_drug').checked) {
-                alert("Please fill out your Recreational Drug Off Date");
+                if (languageType == 'English')
+                    alert('If no, since when have you been off the drug?');
+                else
+                alert(language["If No, Since When Have You Been Off The Drug?"]);
                 recreationalDrugOffDate.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (bleedingProblemsTypes.selectedIndex == 0 && document.getElementById('BleedingProblems').checked) {
-                alert("Please select your Bleeding Problem Type");
+                if (languageType == 'English')
+                    alert('Bleeding Problems.Type ?');
+                else
+                alert(language["Bleeding Problems.Type ?"]);
                 bleedingProblemsTypes.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (cancerProblemsTypes.selectedIndex == 0 && document.getElementById('Cancer').checked) {
-                alert("Please select your Cancer Problem Type");
+                if (languageType == 'English')
+                    alert('Cancer.Type ?');
+                else
+                alert(language["Cancer.Type ?"]);
                 cancerProblemsTypes.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (hepatitisProblemTypes.selectedIndex == 0 && document.getElementById('Hepatitis').checked) {
-                alert("Please select your Hepatitis Problem Type");
+                if (languageType == 'English')
+                    alert('Hepatitis.Type ?');
+                else
+                alert(language["Hepatitis.Type ?"]);
                 hepatitisProblemTypes.style.backgroundColor = "#ffcfcf";
                 return false;
             }
 
             else if (surgeryNames.value == "" && document.getElementById('yes_surgery').checked) {
-                alert("Please write your Surgery Name");
+                if (languageType == 'English')
+                    alert('What type of Surgery?');
+                else
+                alert(language["What Type of Surgery?"]);
                 surgeryNames.style.backgroundColor = "#ffcfcf";
                 return false;
             }
             else if (surgeryDate.value == "" && document.getElementById('yes_surgery').checked) {
-                alert("Please fill out your Surgery Date");
+                if (languageType == 'English')
+                    alert('When was your surgery?');
+                else
+                alert(language["When Was Your Surgery?"]);
                 surgeryDate.style.backgroundColor = "#ffcfcf";
                 return false;
-            }
+            } 
             else if (surgonName.value == "" && document.getElementById('yes_surgery').checked) {
-                alert("Please write your Surgeon's Name");
+                if (languageType == 'English')
+                    alert('What Was the Surgeon’s Name?');
+                else
+                alert(language["What Was the Surgeon’s Name?"]);
                 surgonName.style.backgroundColor = "#ffcfcf";
                 return false;
             }
 
-            else if (medicalFile.value == 'undefined' && document.getElementById('yes_question_file_medication').checked) {
-                alert("Please upload your Medical File");
-                //      medicalFile.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
-            else if (referralFile.value == 'undefined' && document.getElementById('yes_Referral').checked) {
-                alert("Please upload your Referral File");
-                //    referralFile.style.backgroundColor = "#ffcfcf";
-                return false;
-            }
+            //else if (medicalFile.value == 'undefined' && document.getElementById('yes_question_file_medication').checked) {
+            //    alert("Please upload your Medical File");
+            //    //      medicalFile.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
+            //else if (referralFile.value == 'undefined' && document.getElementById('yes_Referral').checked) {
+            //    alert(language["Do You Have a Referral?"]);
+            //    //    referralFile.style.backgroundColor = "#ffcfcf";
+            //    return false;
+            //}
 
 
 
