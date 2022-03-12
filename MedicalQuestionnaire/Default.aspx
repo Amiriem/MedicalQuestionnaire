@@ -9,7 +9,7 @@
                     <h2 class="title">Please wait .... Your questionnaire is submitting</h2>
                     <form method="POST">
                         <div class="row row-space">
-                           <label class="label">Done! Thank you for submitting, Please don't close the page until refreshing.</label>
+                           <label class="label">Please don't close the page until refreshing! Thank you for submitting</label>
                         </div>
             </div>
         </div>
@@ -4482,7 +4482,7 @@
                 else
                 alert(language["What is the Name of Your Family Doctor"]);
                 familynameOfDoctor.style.backgroundColor = "#ffcfcf";
-                return false;
+             //   return false;
             }
             else if (livingActivities.selectedIndex == 0 && document.getElementById('yes_working_question').checked) {
                 if (languageType == 'English')
@@ -4490,7 +4490,7 @@
                 else
                 alert(language["Yes; What Do You Do For A Living/What is Your Profession ?"]);
                 livingActivities.style.backgroundColor = "#ffcfcf";
-                return false;
+             //   return false;
             }
             else if (dateOffWork.value == "" && document.getElementById('no_working_question').checked) {
                 if (languageType == 'English')
@@ -4498,7 +4498,7 @@
                 else
                 alert(language["If No, Since When Have You Been Off Work?"]);
                 dateOffWork.style.backgroundColor = "#ffcfcf";
-                return false;
+             //   return false;
             }
             //else if (neverworkoption.value == "" && document.getElementById('never_working_question').checked) {
             //    alert("Please select one of the work options");
@@ -4511,7 +4511,7 @@
                 else
                 alert(language["What Sports/Activities Do You Do?"]);
                 sportsActivites.style.backgroundColor = "#ffcfcf";
-                return false;
+            //    return false;
             }
             else if (handWrite.selectedIndex == 0) {
                 if (languageType == 'English')
@@ -4519,7 +4519,7 @@
                 else
                 alert(language["What Hand Do You Write With?"]);
                 handWrite.style.backgroundColor = "#ffcfcf";
-                return false;
+            //    return false;
             }
             else if (smokeHowmanyYears.selectedIndex == 0 && document.getElementById('yes_smoke').checked) {
                 if (languageType == 'English')
@@ -4527,7 +4527,7 @@
                 else
                 alert(language["If Yes, For How Many Years?"]);
                 smokeHowmanyYears.style.backgroundColor = "#ffcfcf";
-                return false;
+              //  return false;
             }
             else if (smokeHowmanyPerday.selectedIndex == 0 && document.getElementById('yes_smoke').checked) {
                 if (languageType == 'English')
@@ -4535,7 +4535,7 @@
                 else
                 alert(language["How Many Cigarettes Per Day"]);
                 smokeHowmanyPerday.style.backgroundColor = "#ffcfcf";
-                return false;
+            //    return false;
             }
             else if (smokeOffDate.value == "" && document.getElementById('no_smoke').checked) {
                 if (languageType == 'English')
@@ -4543,7 +4543,7 @@
                 else
                 alert(language["If no, when did you quite smoking"]);
                 smokeOffDate.style.backgroundColor = "#ffcfcf";
-                return false;
+              //  return false;
             }
             else if (alcoholHowmanyPerweek.selectedIndex == 0 && document.getElementById('yes_alcohol').checked) {
                 if (languageType == 'English')
@@ -4551,7 +4551,7 @@
                 else
                 alert(language["If Yes, How Many Drinks Per Week"]);
                 alcoholHowmanyPerweek.style.backgroundColor = "#ffcfcf";
-                return false;
+            //    return false;
             }
             //else if (alcoholOffDate.value == "" && document.getElementById('no_alcohol').checked) {
             //    alert("Please fill out your Drinking Off Date");
@@ -4564,7 +4564,7 @@
                 else
                 alert(language["If Yes, How Often Do You Take The Drug Or Herbal / Natural Remedies?"]);
                 recreationalDrugHowmanyPerweeks.style.backgroundColor = "#ffcfcf";
-                return false;
+               // return false;
             }
             else if (recreationalDrugWhatDrugs.selectedIndex == 0 && document.getElementById('yes_drug').checked) {
                 if (languageType == 'English')
@@ -4572,7 +4572,7 @@
                 else
                 alert(language["If Yes, Which Drug or Herbal / Natural Remedy do you Use?"]);
                 recreationalDrugWhatDrugs.style.backgroundColor = "#ffcfcf";
-                return false;
+            //    return false;
             }
             else if (recreationalDrugOffDate.value == "" && document.getElementById('no_drug').checked) {
                 if (languageType == 'English')
@@ -4580,7 +4580,7 @@
                 else
                 alert(language["If No, Since When Have You Been Off The Drug?"]);
                 recreationalDrugOffDate.style.backgroundColor = "#ffcfcf";
-                return false;
+               // return false;
             }
             else if (bleedingProblemsTypes.selectedIndex == 0 && document.getElementById('BleedingProblems').checked) {
                 if (languageType == 'English')
@@ -4588,7 +4588,7 @@
                 else
                 alert(language["Bleeding Problems.Type ?"]);
                 bleedingProblemsTypes.style.backgroundColor = "#ffcfcf";
-                return false;
+               // return false;
             }
             else if (cancerProblemsTypes.selectedIndex == 0 && document.getElementById('Cancer').checked) {
                 if (languageType == 'English')
@@ -4596,7 +4596,7 @@
                 else
                 alert(language["Cancer.Type ?"]);
                 cancerProblemsTypes.style.backgroundColor = "#ffcfcf";
-                return false;
+                //return false;
             }
             else if (hepatitisProblemTypes.selectedIndex == 0 && document.getElementById('Hepatitis').checked) {
                 if (languageType == 'English')
@@ -4604,7 +4604,7 @@
                 else
                 alert(language["Hepatitis.Type ?"]);
                 hepatitisProblemTypes.style.backgroundColor = "#ffcfcf";
-                return false;
+                //return false;
             }
 
             else if (surgeryNames.value == "" && document.getElementById('yes_surgery').checked) {
@@ -4613,7 +4613,7 @@
                 else
                 alert(language["What Type of Surgery?"]);
                 surgeryNames.style.backgroundColor = "#ffcfcf";
-                return false;
+                //return false;
             }
             else if (surgeryDate.value == "" && document.getElementById('yes_surgery').checked) {
                 if (languageType == 'English')
@@ -4621,7 +4621,7 @@
                 else
                 alert(language["When Was Your Surgery?"]);
                 surgeryDate.style.backgroundColor = "#ffcfcf";
-                return false;
+                //return false;
             } 
             else if (surgonName.value == "" && document.getElementById('yes_surgery').checked) {
                 if (languageType == 'English')
@@ -4629,7 +4629,7 @@
                 else
                 alert(language["What Was the Surgeon’s Name?"]);
                 surgonName.style.backgroundColor = "#ffcfcf";
-                return false;
+              //  return false;
             }
 
             //else if (medicalFile.value == 'undefined' && document.getElementById('yes_question_file_medication').checked) {
@@ -5258,7 +5258,7 @@
                 answer += 'No<br />';
             }
 
-            console.log(answer);
+        //    console.log(answer);
 
             var questionnaireArray = {};
 
@@ -5303,7 +5303,8 @@
                     //alert("ok");
 
                     // this part added because registeration removed
-                    window.open("Confirmation.aspx", "_blank");
+                   // window.open("Confirmation.aspx", "_blank");
+
                     //checkRegisteration(userId);
 
                
@@ -5327,7 +5328,9 @@
 
             });
         }
-
+        function btnSubmitButton_Click() {
+            window.open("Confirmation.aspx", "_blank");
+        }
         // for sports buttons
         function add_sport_activites_parent1_click() {
             $("#sport_activites_parent2").show();
